@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D427F62D1341A0480015C23D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62C1341A0480015C23D /* UIKit.framework */; };
+		D427F62F1341A0480015C23D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62E1341A0480015C23D /* Foundation.framework */; };
+		D427F6311341A0480015C23D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F6301341A0480015C23D /* CoreGraphics.framework */; };
+		D427F6331341A0480015C23D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F6321341A0480015C23D /* QuartzCore.framework */; };
+		D427F6351341A0480015C23D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F6341341A0480015C23D /* OpenGLES.framework */; };
+		D427F63B1341A0480015C23D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D427F6391341A0480015C23D /* InfoPlist.strings */; };
+		D427F63E1341A0480015C23D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D427F63D1341A0480015C23D /* main.m */; };
+		D427F6411341A0480015C23D /* plasma2dAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D427F6401341A0480015C23D /* plasma2dAppDelegate.m */; };
+		D427F6441341A0480015C23D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D427F6421341A0480015C23D /* MainWindow.xib */; };
+		D427F6461341A0480015C23D /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = D427F6451341A0480015C23D /* Shader.fsh */; };
+		D427F6481341A0480015C23D /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = D427F6471341A0480015C23D /* Shader.vsh */; };
+		D427F64B1341A0480015C23D /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = D427F64A1341A0480015C23D /* EAGLView.m */; };
+		D427F64E1341A0480015C23D /* plasma2dViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D427F64D1341A0480015C23D /* plasma2dViewController.m */; };
+		D427F6511341A0480015C23D /* plasma2dViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D427F64F1341A0480015C23D /* plasma2dViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D427F6281341A0480015C23D /* plasma2d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plasma2d.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D427F62C1341A0480015C23D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D427F62E1341A0480015C23D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D427F6301341A0480015C23D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D427F6321341A0480015C23D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D427F6341341A0480015C23D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		D427F6381341A0480015C23D /* plasma2d-Info.plist */ = {isa = PBXFileReference; path = "plasma2d-Info.plist"; sourceTree = "<group>"; };
+		D427F63A1341A0480015C23D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D427F63C1341A0480015C23D /* plasma2d-Prefix.pch */ = {isa = PBXFileReference; path = "plasma2d-Prefix.pch"; sourceTree = "<group>"; };
+		D427F63D1341A0480015C23D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D427F63F1341A0480015C23D /* plasma2dAppDelegate.h */ = {isa = PBXFileReference; path = plasma2dAppDelegate.h; sourceTree = "<group>"; };
+		D427F6401341A0480015C23D /* plasma2dAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = plasma2dAppDelegate.m; sourceTree = "<group>"; };
+		D427F6431341A0480015C23D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		D427F6451341A0480015C23D /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
+		D427F6471341A0480015C23D /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
+		D427F6491341A0480015C23D /* EAGLView.h */ = {isa = PBXFileReference; path = EAGLView.h; sourceTree = "<group>"; };
+		D427F64A1341A0480015C23D /* EAGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
+		D427F64C1341A0480015C23D /* plasma2dViewController.h */ = {isa = PBXFileReference; path = plasma2dViewController.h; sourceTree = "<group>"; };
+		D427F64D1341A0480015C23D /* plasma2dViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = plasma2dViewController.m; sourceTree = "<group>"; };
+		D427F6501341A0480015C23D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/plasma2dViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D427F6251341A0480015C23D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D427F62D1341A0480015C23D /* UIKit.framework in Frameworks */,
+				D427F62F1341A0480015C23D /* Foundation.framework in Frameworks */,
+				D427F6311341A0480015C23D /* CoreGraphics.framework in Frameworks */,
+				D427F6331341A0480015C23D /* QuartzCore.framework in Frameworks */,
+				D427F6351341A0480015C23D /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D427F61D1341A0470015C23D = {
+			isa = PBXGroup;
+			children = (
+				D427F6361341A0480015C23D /* plasma2d */,
+				D427F62B1341A0480015C23D /* Frameworks */,
+				D427F6291341A0480015C23D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D427F6291341A0480015C23D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D427F6281341A0480015C23D /* plasma2d.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D427F62B1341A0480015C23D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D427F62C1341A0480015C23D /* UIKit.framework */,
+				D427F62E1341A0480015C23D /* Foundation.framework */,
+				D427F6301341A0480015C23D /* CoreGraphics.framework */,
+				D427F6321341A0480015C23D /* QuartzCore.framework */,
+				D427F6341341A0480015C23D /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D427F6361341A0480015C23D /* plasma2d */ = {
+			isa = PBXGroup;
+			children = (
+				D427F63F1341A0480015C23D /* plasma2dAppDelegate.h */,
+				D427F6401341A0480015C23D /* plasma2dAppDelegate.m */,
+				D427F6421341A0480015C23D /* MainWindow.xib */,
+				D427F6451341A0480015C23D /* Shader.fsh */,
+				D427F6471341A0480015C23D /* Shader.vsh */,
+				D427F6491341A0480015C23D /* EAGLView.h */,
+				D427F64A1341A0480015C23D /* EAGLView.m */,
+				D427F64C1341A0480015C23D /* plasma2dViewController.h */,
+				D427F64D1341A0480015C23D /* plasma2dViewController.m */,
+				D427F64F1341A0480015C23D /* plasma2dViewController.xib */,
+				D427F6371341A0480015C23D /* Supporting Files */,
+			);
+			path = plasma2d;
+			sourceTree = "<group>";
+		};
+		D427F6371341A0480015C23D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D427F6381341A0480015C23D /* plasma2d-Info.plist */,
+				D427F6391341A0480015C23D /* InfoPlist.strings */,
+				D427F63C1341A0480015C23D /* plasma2d-Prefix.pch */,
+				D427F63D1341A0480015C23D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D427F6271341A0480015C23D /* plasma2d */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D427F6541341A0480015C23D /* Build configuration list for PBXNativeTarget "plasma2d" */;
+			buildPhases = (
+				D427F6241341A0480015C23D /* Sources */,
+				D427F6251341A0480015C23D /* Frameworks */,
+				D427F6261341A0480015C23D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = plasma2d;
+			productName = plasma2d;
+			productReference = D427F6281341A0480015C23D /* plasma2d.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D427F61F1341A0470015C23D /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = D427F6221341A0470015C23D /* Build configuration list for PBXProject "plasma2d" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D427F61D1341A0470015C23D;
+			productRefGroup = D427F6291341A0480015C23D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D427F6271341A0480015C23D /* plasma2d */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D427F6261341A0480015C23D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D427F63B1341A0480015C23D /* InfoPlist.strings in Resources */,
+				D427F6441341A0480015C23D /* MainWindow.xib in Resources */,
+				D427F6461341A0480015C23D /* Shader.fsh in Resources */,
+				D427F6481341A0480015C23D /* Shader.vsh in Resources */,
+				D427F6511341A0480015C23D /* plasma2dViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D427F6241341A0480015C23D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D427F63E1341A0480015C23D /* main.m in Sources */,
+				D427F6411341A0480015C23D /* plasma2dAppDelegate.m in Sources */,
+				D427F64B1341A0480015C23D /* EAGLView.m in Sources */,
+				D427F64E1341A0480015C23D /* plasma2dViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D427F6391341A0480015C23D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D427F63A1341A0480015C23D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D427F6421341A0480015C23D /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D427F6431341A0480015C23D /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		D427F64F1341A0480015C23D /* plasma2dViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D427F6501341A0480015C23D /* en */,
+			);
+			name = plasma2dViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D427F6521341A0480015C23D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		D427F6531341A0480015C23D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		D427F6551341A0480015C23D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "plasma2d/plasma2d-Prefix.pch";
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = "plasma2d/plasma2d-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D427F6561341A0480015C23D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "plasma2d/plasma2d-Prefix.pch";
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				INFOPLIST_FILE = "plasma2d/plasma2d-Info.plist";
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D427F6221341A0470015C23D /* Build configuration list for PBXProject "plasma2d" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D427F6521341A0480015C23D /* Debug */,
+				D427F6531341A0480015C23D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D427F6541341A0480015C23D /* Build configuration list for PBXNativeTarget "plasma2d" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D427F6551341A0480015C23D /* Debug */,
+				D427F6561341A0480015C23D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D427F61F1341A0470015C23D /* Project object */;
+}
