@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4271ABF1342E10A00553669 /* libplasma2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D465E0D31342D6E800E7D604 /* libplasma2d.a */; };
 		D427F62D1341A0480015C23D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62C1341A0480015C23D /* UIKit.framework */; };
 		D427F62F1341A0480015C23D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62E1341A0480015C23D /* Foundation.framework */; };
 		D427F6311341A0480015C23D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F6301341A0480015C23D /* CoreGraphics.framework */; };
@@ -14,11 +15,15 @@
 		D427F6351341A0480015C23D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F6341341A0480015C23D /* OpenGLES.framework */; };
 		D427F63B1341A0480015C23D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D427F6391341A0480015C23D /* InfoPlist.strings */; };
 		D427F63E1341A0480015C23D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D427F63D1341A0480015C23D /* main.m */; };
-		D427F6411341A0480015C23D /* plasma2dAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D427F6401341A0480015C23D /* plasma2dAppDelegate.m */; };
+		D427F6411341A0480015C23D /* plasma2dAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = D427F6401341A0480015C23D /* plasma2dAppDelegate.mm */; };
 		D427F6441341A0480015C23D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D427F6421341A0480015C23D /* MainWindow.xib */; };
 		D427F64B1341A0480015C23D /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = D427F64A1341A0480015C23D /* EAGLView.m */; };
 		D427F64E1341A0480015C23D /* plasma2dViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D427F64D1341A0480015C23D /* plasma2dViewController.mm */; };
 		D427F6511341A0480015C23D /* plasma2dViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D427F64F1341A0480015C23D /* plasma2dViewController.xib */; };
+		D465E0D41342D6E800E7D604 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62E1341A0480015C23D /* Foundation.framework */; };
+		D465E0DC1342D9E500E7D604 /* plasma2d.h in Headers */ = {isa = PBXBuildFile; fileRef = D465E0DB1342D9E500E7D604 /* plasma2d.h */; };
+		D465E0E01342DB3A00E7D604 /* engine.cc in Sources */ = {isa = PBXBuildFile; fileRef = D465E0DE1342DB3A00E7D604 /* engine.cc */; };
+		D465E0E11342DB3A00E7D604 /* engine.h in Headers */ = {isa = PBXBuildFile; fileRef = D465E0DF1342DB3A00E7D604 /* engine.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,13 +38,18 @@
 		D427F63C1341A0480015C23D /* plasma2d-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "plasma2d-Prefix.pch"; sourceTree = "<group>"; };
 		D427F63D1341A0480015C23D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D427F63F1341A0480015C23D /* plasma2dAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = plasma2dAppDelegate.h; sourceTree = "<group>"; };
-		D427F6401341A0480015C23D /* plasma2dAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = plasma2dAppDelegate.m; sourceTree = "<group>"; };
+		D427F6401341A0480015C23D /* plasma2dAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = plasma2dAppDelegate.mm; sourceTree = "<group>"; };
 		D427F6431341A0480015C23D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		D427F6491341A0480015C23D /* EAGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
 		D427F64A1341A0480015C23D /* EAGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
 		D427F64C1341A0480015C23D /* plasma2dViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = plasma2dViewController.h; sourceTree = "<group>"; };
 		D427F64D1341A0480015C23D /* plasma2dViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = plasma2dViewController.mm; sourceTree = "<group>"; };
 		D427F6501341A0480015C23D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/plasma2dViewController.xib; sourceTree = "<group>"; };
+		D465E0D31342D6E800E7D604 /* libplasma2d.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libplasma2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D465E0D71342D6E800E7D604 /* libplasma2d-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libplasma2d-Prefix.pch"; sourceTree = "<group>"; };
+		D465E0DB1342D9E500E7D604 /* plasma2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plasma2d.h; sourceTree = "<group>"; };
+		D465E0DE1342DB3A00E7D604 /* engine.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = engine.cc; sourceTree = "<group>"; };
+		D465E0DF1342DB3A00E7D604 /* engine.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = engine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,11 +57,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4271ABF1342E10A00553669 /* libplasma2d.a in Frameworks */,
 				D427F62D1341A0480015C23D /* UIKit.framework in Frameworks */,
 				D427F62F1341A0480015C23D /* Foundation.framework in Frameworks */,
 				D427F6311341A0480015C23D /* CoreGraphics.framework in Frameworks */,
 				D427F6331341A0480015C23D /* QuartzCore.framework in Frameworks */,
 				D427F6351341A0480015C23D /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D465E0D01342D6E800E7D604 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D465E0D41342D6E800E7D604 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +80,9 @@
 		D427F61D1341A0470015C23D = {
 			isa = PBXGroup;
 			children = (
+				D465E0D31342D6E800E7D604 /* libplasma2d.a */,
 				D427F6361341A0480015C23D /* plasma2d-ios */,
+				D465E0D51342D6E800E7D604 /* libplasma2d */,
 				D427F62B1341A0480015C23D /* Frameworks */,
 				D427F6291341A0480015C23D /* Products */,
 			);
@@ -91,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				D427F63F1341A0480015C23D /* plasma2dAppDelegate.h */,
-				D427F6401341A0480015C23D /* plasma2dAppDelegate.m */,
+				D427F6401341A0480015C23D /* plasma2dAppDelegate.mm */,
 				D427F6421341A0480015C23D /* MainWindow.xib */,
 				D427F6491341A0480015C23D /* EAGLView.h */,
 				D427F64A1341A0480015C23D /* EAGLView.m */,
@@ -114,7 +135,46 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D465E0D51342D6E800E7D604 /* libplasma2d */ = {
+			isa = PBXGroup;
+			children = (
+				D465E0DD1342DA6B00E7D604 /* engine */,
+				D465E0D61342D6E800E7D604 /* Supporting Files */,
+				D465E0DB1342D9E500E7D604 /* plasma2d.h */,
+			);
+			path = libplasma2d;
+			sourceTree = "<group>";
+		};
+		D465E0D61342D6E800E7D604 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D465E0D71342D6E800E7D604 /* libplasma2d-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D465E0DD1342DA6B00E7D604 /* engine */ = {
+			isa = PBXGroup;
+			children = (
+				D465E0DE1342DB3A00E7D604 /* engine.cc */,
+				D465E0DF1342DB3A00E7D604 /* engine.h */,
+			);
+			path = engine;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D465E0D11342D6E800E7D604 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D465E0DC1342D9E500E7D604 /* plasma2d.h in Headers */,
+				D465E0E11342DB3A00E7D604 /* engine.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		D427F6271341A0480015C23D /* plasma2d */ = {
@@ -134,6 +194,23 @@
 			productReference = D427F6281341A0480015C23D /* plasma2d.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D465E0D21342D6E800E7D604 /* libplasma2d */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D465E0D81342D6E800E7D604 /* Build configuration list for PBXNativeTarget "libplasma2d" */;
+			buildPhases = (
+				D465E0CF1342D6E800E7D604 /* Sources */,
+				D465E0D01342D6E800E7D604 /* Frameworks */,
+				D465E0D11342D6E800E7D604 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libplasma2d;
+			productName = libplasma2d;
+			productReference = D465E0D31342D6E800E7D604 /* libplasma2d.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -152,6 +229,7 @@
 			projectRoot = "";
 			targets = (
 				D427F6271341A0480015C23D /* plasma2d */,
+				D465E0D21342D6E800E7D604 /* libplasma2d */,
 			);
 		};
 /* End PBXProject section */
@@ -175,9 +253,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D427F63E1341A0480015C23D /* main.m in Sources */,
-				D427F6411341A0480015C23D /* plasma2dAppDelegate.m in Sources */,
+				D427F6411341A0480015C23D /* plasma2dAppDelegate.mm in Sources */,
 				D427F64B1341A0480015C23D /* EAGLView.m in Sources */,
 				D427F64E1341A0480015C23D /* plasma2dViewController.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D465E0CF1342D6E800E7D604 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D465E0E01342DB3A00E7D604 /* engine.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +362,32 @@
 			};
 			name = Release;
 		};
+		D465E0D91342D6E800E7D604 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/libplasma2d.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libplasma2d/libplasma2d-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = plasma2d;
+			};
+			name = Debug;
+		};
+		D465E0DA1342D6E800E7D604 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/libplasma2d.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libplasma2d/libplasma2d-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = plasma2d;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -293,6 +405,15 @@
 			buildConfigurations = (
 				D427F6551341A0480015C23D /* Debug */,
 				D427F6561341A0480015C23D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D465E0D81342D6E800E7D604 /* Build configuration list for PBXNativeTarget "libplasma2d" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D465E0D91342D6E800E7D604 /* Debug */,
+				D465E0DA1342D6E800E7D604 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

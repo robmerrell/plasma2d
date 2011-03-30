@@ -13,6 +13,8 @@
 #import <OpenGLES/ES1/gl.h>
 #import <OpenGLES/ES1/glext.h>
 
+#include "plasma2d.h"
+
 @interface plasma2dViewController : UIViewController {
 @private
     EAGLContext *context;

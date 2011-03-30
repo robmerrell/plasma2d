@@ -24,6 +24,8 @@
 {
     EAGLContext *aContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
     
+    p2d::Engine engine;
+    
     if (!aContext)
         NSLog(@"Failed to create ES context");
     else if (![EAGLContext setCurrentContext:aContext])
