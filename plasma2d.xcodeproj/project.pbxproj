@@ -16,10 +16,8 @@
 		D427F63E1341A0480015C23D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D427F63D1341A0480015C23D /* main.m */; };
 		D427F6411341A0480015C23D /* plasma2dAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D427F6401341A0480015C23D /* plasma2dAppDelegate.m */; };
 		D427F6441341A0480015C23D /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D427F6421341A0480015C23D /* MainWindow.xib */; };
-		D427F6461341A0480015C23D /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = D427F6451341A0480015C23D /* Shader.fsh */; };
-		D427F6481341A0480015C23D /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = D427F6471341A0480015C23D /* Shader.vsh */; };
 		D427F64B1341A0480015C23D /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = D427F64A1341A0480015C23D /* EAGLView.m */; };
-		D427F64E1341A0480015C23D /* plasma2dViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D427F64D1341A0480015C23D /* plasma2dViewController.m */; };
+		D427F64E1341A0480015C23D /* plasma2dViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D427F64D1341A0480015C23D /* plasma2dViewController.mm */; };
 		D427F6511341A0480015C23D /* plasma2dViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D427F64F1341A0480015C23D /* plasma2dViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -30,19 +28,17 @@
 		D427F6301341A0480015C23D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D427F6321341A0480015C23D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D427F6341341A0480015C23D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		D427F6381341A0480015C23D /* plasma2d-Info.plist */ = {isa = PBXFileReference; path = "plasma2d-Info.plist"; sourceTree = "<group>"; };
+		D427F6381341A0480015C23D /* plasma2d-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "plasma2d-Info.plist"; sourceTree = "<group>"; };
 		D427F63A1341A0480015C23D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D427F63C1341A0480015C23D /* plasma2d-Prefix.pch */ = {isa = PBXFileReference; path = "plasma2d-Prefix.pch"; sourceTree = "<group>"; };
+		D427F63C1341A0480015C23D /* plasma2d-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "plasma2d-Prefix.pch"; sourceTree = "<group>"; };
 		D427F63D1341A0480015C23D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D427F63F1341A0480015C23D /* plasma2dAppDelegate.h */ = {isa = PBXFileReference; path = plasma2dAppDelegate.h; sourceTree = "<group>"; };
+		D427F63F1341A0480015C23D /* plasma2dAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = plasma2dAppDelegate.h; sourceTree = "<group>"; };
 		D427F6401341A0480015C23D /* plasma2dAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = plasma2dAppDelegate.m; sourceTree = "<group>"; };
 		D427F6431341A0480015C23D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		D427F6451341A0480015C23D /* Shader.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = Shaders/Shader.fsh; sourceTree = "<group>"; };
-		D427F6471341A0480015C23D /* Shader.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = Shaders/Shader.vsh; sourceTree = "<group>"; };
-		D427F6491341A0480015C23D /* EAGLView.h */ = {isa = PBXFileReference; path = EAGLView.h; sourceTree = "<group>"; };
+		D427F6491341A0480015C23D /* EAGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
 		D427F64A1341A0480015C23D /* EAGLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
-		D427F64C1341A0480015C23D /* plasma2dViewController.h */ = {isa = PBXFileReference; path = plasma2dViewController.h; sourceTree = "<group>"; };
-		D427F64D1341A0480015C23D /* plasma2dViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = plasma2dViewController.m; sourceTree = "<group>"; };
+		D427F64C1341A0480015C23D /* plasma2dViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = plasma2dViewController.h; sourceTree = "<group>"; };
+		D427F64D1341A0480015C23D /* plasma2dViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = plasma2dViewController.mm; sourceTree = "<group>"; };
 		D427F6501341A0480015C23D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/plasma2dViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,7 +61,7 @@
 		D427F61D1341A0470015C23D = {
 			isa = PBXGroup;
 			children = (
-				D427F6361341A0480015C23D /* plasma2d */,
+				D427F6361341A0480015C23D /* plasma2d-ios */,
 				D427F62B1341A0480015C23D /* Frameworks */,
 				D427F6291341A0480015C23D /* Products */,
 			);
@@ -91,22 +87,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D427F6361341A0480015C23D /* plasma2d */ = {
+		D427F6361341A0480015C23D /* plasma2d-ios */ = {
 			isa = PBXGroup;
 			children = (
 				D427F63F1341A0480015C23D /* plasma2dAppDelegate.h */,
 				D427F6401341A0480015C23D /* plasma2dAppDelegate.m */,
 				D427F6421341A0480015C23D /* MainWindow.xib */,
-				D427F6451341A0480015C23D /* Shader.fsh */,
-				D427F6471341A0480015C23D /* Shader.vsh */,
 				D427F6491341A0480015C23D /* EAGLView.h */,
 				D427F64A1341A0480015C23D /* EAGLView.m */,
 				D427F64C1341A0480015C23D /* plasma2dViewController.h */,
-				D427F64D1341A0480015C23D /* plasma2dViewController.m */,
+				D427F64D1341A0480015C23D /* plasma2dViewController.mm */,
 				D427F64F1341A0480015C23D /* plasma2dViewController.xib */,
 				D427F6371341A0480015C23D /* Supporting Files */,
 			);
-			path = plasma2d;
+			path = "plasma2d-ios";
 			sourceTree = "<group>";
 		};
 		D427F6371341A0480015C23D /* Supporting Files */ = {
@@ -169,8 +163,6 @@
 			files = (
 				D427F63B1341A0480015C23D /* InfoPlist.strings in Resources */,
 				D427F6441341A0480015C23D /* MainWindow.xib in Resources */,
-				D427F6461341A0480015C23D /* Shader.fsh in Resources */,
-				D427F6481341A0480015C23D /* Shader.vsh in Resources */,
 				D427F6511341A0480015C23D /* plasma2dViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,7 +177,7 @@
 				D427F63E1341A0480015C23D /* main.m in Sources */,
 				D427F6411341A0480015C23D /* plasma2dAppDelegate.m in Sources */,
 				D427F64B1341A0480015C23D /* EAGLView.m in Sources */,
-				D427F64E1341A0480015C23D /* plasma2dViewController.m in Sources */,
+				D427F64E1341A0480015C23D /* plasma2dViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +251,9 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "plasma2d/plasma2d-Prefix.pch";
+				GCC_PREFIX_HEADER = "plasma2d-ios/plasma2d-Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = "plasma2d/plasma2d-Info.plist";
+				INFOPLIST_FILE = "plasma2d-ios/plasma2d-Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -274,9 +266,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "plasma2d/plasma2d-Prefix.pch";
+				GCC_PREFIX_HEADER = "plasma2d-ios/plasma2d-Prefix.pch";
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
-				INFOPLIST_FILE = "plasma2d/plasma2d-Info.plist";
+				INFOPLIST_FILE = "plasma2d-ios/plasma2d-Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
@@ -303,6 +295,7 @@
 				D427F6561341A0480015C23D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
