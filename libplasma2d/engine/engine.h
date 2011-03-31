@@ -36,6 +36,11 @@ namespace p2d {
          */
         void initialize();
         
+        /**
+         * Passes control to the director and runs the main script
+         */
+        void run();
+        
     };
     
 }

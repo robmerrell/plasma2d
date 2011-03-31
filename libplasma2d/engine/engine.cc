@@ -22,3 +22,10 @@ void p2d::Engine::initialize() {
     glViewport(0, 0, 1024, 768);
     glOrthof(0.0f, 1024, 768, 0.0f, 1000.0f, -1000.0f);
 }
+
+
+void p2d::Engine::run() {
+    // run the main script or run the scene from the config file?
+    
+    
+}

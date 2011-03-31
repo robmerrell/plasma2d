@@ -41,6 +41,9 @@
     self.displayLink = nil;
     
     engine.initialize();
+    
+    // pass control to the engine so that the main script can run
+    engine.run();
 }
 
 - (void)dealloc
@@ -64,7 +67,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self startAnimation];
+//    [self startAnimation];
     
     [super viewWillAppear:animated];
 }
@@ -132,6 +135,12 @@
 {
     [(EAGLView *)self.view setFramebuffer];
     
+//    engine.tick();
+//    p2d::Director::Inst()->tick();
+    
+    
+    
+    /*
     // Replace the implementation of this method to do your own custom drawing.
     static const GLfloat squareVertices[] = {
         -50.0f, -33.0f,
@@ -160,6 +169,7 @@
     glEnableClientState(GL_COLOR_ARRAY);
     
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+     */
     
     [(EAGLView *)self.view presentFramebuffer];
 }
