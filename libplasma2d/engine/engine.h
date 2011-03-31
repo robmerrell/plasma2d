@@ -6,6 +6,9 @@
 #ifndef P2D_ENGINE_H
 #define P2D_ENGINE_H
 
+#include <OpenGLES/ES1/gl.h>
+#include <OpenGLES/ES1/glext.h>
+
 namespace p2d {
     
     class Engine {
@@ -18,16 +21,20 @@ namespace p2d {
     public:
       
         /**
-         * Initialize the game engine and the display
-         * system
+         * Empty constructor
          */
-        Engine();
+        Engine() {};
         
         /**
          * Destructor
          * Clean up any sub systems not previously shut down
          */
         ~Engine();
+        
+        /**
+         * Initialize the game engine and the display system
+         */
+        void initialize();
         
     };
     

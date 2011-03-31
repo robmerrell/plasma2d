@@ -19,6 +19,8 @@
 @private
     EAGLContext *context;
     
+    p2d::Engine engine;
+    
     BOOL animating;
     NSInteger animationFrameInterval;
     CADisplayLink *displayLink;

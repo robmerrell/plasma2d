@@ -23,8 +23,7 @@
 - (void)awakeFromNib
 {
     EAGLContext *aContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
-    
-    p2d::Engine engine;
+
     
     if (!aContext)
         NSLog(@"Failed to create ES context");
@@ -40,6 +39,8 @@
     animating = FALSE;
     animationFrameInterval = 1;
     self.displayLink = nil;
+    
+    engine.initialize();
 }
 
 - (void)dealloc
@@ -133,10 +134,10 @@
     
     // Replace the implementation of this method to do your own custom drawing.
     static const GLfloat squareVertices[] = {
-        -0.5f, -0.33f,
-        0.5f, -0.33f,
-        -0.5f,  0.33f,
-        0.5f,  0.33f,
+        -50.0f, -33.0f,
+        50.0f, -33.0f,
+        -50.0f,  33.0f,
+        50.0f,  33.0f,
     };
     
     static const GLubyte squareColors[] = {
@@ -148,13 +149,8 @@
     
     static float transY = 0.0f;
     
-    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
     
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
     glTranslatef(0.0f, (GLfloat)(sinf(transY)/2.0f), 0.0f);
     transY += 0.075f;
     
