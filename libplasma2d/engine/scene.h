@@ -6,6 +6,9 @@
 #ifndef P2D_SCENE_H
 #define P2D_SCENE_H
 
+#include <OpenGLES/ES1/gl.h>
+#include <OpenGLES/ES1/glext.h>
+
 #include "animator.h"
 #include "display_object.h"
 

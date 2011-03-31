@@ -29,8 +29,8 @@ p2d::Director* p2d::Director::Inst() {
 }
 
 
-void p2d::Director::playScene(Scene* scene) {
-    current_scene = scene;
+void p2d::Director::playScene(Scene*& _scene) {
+    current_scene = _scene;
 }
 
 

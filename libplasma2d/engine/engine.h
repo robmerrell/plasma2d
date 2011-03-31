@@ -9,6 +9,9 @@
 #include <OpenGLES/ES1/gl.h>
 #include <OpenGLES/ES1/glext.h>
 
+#include "director.h"
+#include "scene.h"
+
 namespace p2d {
     
     class Engine {
@@ -39,7 +42,12 @@ namespace p2d {
         /**
          * Passes control to the director and runs the main script
          */
-        void run();
+        void run(Scene*);
+        
+        /**
+         * Proxies "tick" to the director
+         */
+        void tick();
         
     };
     

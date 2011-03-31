@@ -32,6 +32,7 @@
 		D4A022601345300800E1031F /* defs.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A0225E1345300700E1031F /* defs.h */; };
 		D4A022631345303900E1031F /* animator.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4A022611345303800E1031F /* animator.cc */; };
 		D4A022641345303900E1031F /* animator.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A022621345303900E1031F /* animator.h */; };
+		D4A02267134537C000E1031F /* test_scene.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4A02265134537C000E1031F /* test_scene.cc */; };
 		D4DEDEE11344438F00699EA9 /* director.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4DEDEDF1344438F00699EA9 /* director.cc */; };
 		D4DEDEE21344438F00699EA9 /* director.h in Headers */ = {isa = PBXBuildFile; fileRef = D4DEDEE01344438F00699EA9 /* director.h */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,8 @@
 		D4A0225E1345300700E1031F /* defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defs.h; sourceTree = "<group>"; };
 		D4A022611345303800E1031F /* animator.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = animator.cc; sourceTree = "<group>"; };
 		D4A022621345303900E1031F /* animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = animator.h; sourceTree = "<group>"; };
+		D4A02265134537C000E1031F /* test_scene.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_scene.cc; sourceTree = "<group>"; };
+		D4A02266134537C000E1031F /* test_scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_scene.h; sourceTree = "<group>"; };
 		D4DEDEDF1344438F00699EA9 /* director.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = director.cc; sourceTree = "<group>"; };
 		D4DEDEE01344438F00699EA9 /* director.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = director.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +142,8 @@
 				D427F64C1341A0480015C23D /* plasma2dViewController.h */,
 				D427F64D1341A0480015C23D /* plasma2dViewController.mm */,
 				D427F64F1341A0480015C23D /* plasma2dViewController.xib */,
+				D4A02265134537C000E1031F /* test_scene.cc */,
+				D4A02266134537C000E1031F /* test_scene.h */,
 				D427F6371341A0480015C23D /* Supporting Files */,
 			);
 			path = "plasma2d-ios";
@@ -291,6 +296,7 @@
 				D427F6411341A0480015C23D /* plasma2dAppDelegate.mm in Sources */,
 				D427F64B1341A0480015C23D /* EAGLView.m in Sources */,
 				D427F64E1341A0480015C23D /* plasma2dViewController.mm in Sources */,
+				D4A02267134537C000E1031F /* test_scene.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

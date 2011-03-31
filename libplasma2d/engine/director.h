@@ -40,7 +40,7 @@ namespace p2d {
         /**
          * Start playing a scene
          */
-        void playScene(Scene*);
+        void playScene(Scene*&);
         
         /**
          * Get the current scene

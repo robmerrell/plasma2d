@@ -14,6 +14,7 @@
 #import <OpenGLES/ES1/glext.h>
 
 #include "plasma2d.h"
+#include "test_scene.h"
 
 @interface plasma2dViewController : UIViewController {
 @private

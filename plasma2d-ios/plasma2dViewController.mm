@@ -42,8 +42,10 @@
     
     engine.initialize();
     
+    TestScene* test_scene = new TestScene();
+    
     // pass control to the engine so that the main script can run
-    engine.run();
+    engine.run(test_scene);
 }
 
 - (void)dealloc
@@ -67,7 +69,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-//    [self startAnimation];
+    [self startAnimation];
     
     [super viewWillAppear:animated];
 }
@@ -135,8 +137,7 @@
 {
     [(EAGLView *)self.view setFramebuffer];
     
-//    engine.tick();
-//    p2d::Director::Inst()->tick();
+    engine.tick();
     
     
     

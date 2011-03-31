@@ -34,6 +34,8 @@ void p2d::Scene::addObjectWithAnimator(DisplayObject* object, char* animator) {
 
 
 void p2d::Scene::tick(float dt) {
+    glClear(GL_COLOR_BUFFER_BIT);
+    
     std::vector<DisplayObject*>::iterator iter;
     for (iter = display_objects.begin(); iter != display_objects.end(); iter++) {
         (*iter)->update(dt);

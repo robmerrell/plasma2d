@@ -24,8 +24,14 @@ void p2d::Engine::initialize() {
 }
 
 
-void p2d::Engine::run() {
+void p2d::Engine::run(Scene* _scene) {
     // run the main script or run the scene from the config file?
     
-    
+    // TODO: read start scene from config file
+    p2d::Director::Inst()->playScene(_scene);
+}
+
+
+void p2d::Engine::tick() {
+    p2d::Director::Inst()->getCurrentScene()->tick(0.16f);
 }
