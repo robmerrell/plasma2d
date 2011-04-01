@@ -33,6 +33,8 @@
 		D4A022631345303900E1031F /* animator.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4A022611345303800E1031F /* animator.cc */; };
 		D4A022641345303900E1031F /* animator.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A022621345303900E1031F /* animator.h */; };
 		D4A02267134537C000E1031F /* test_scene.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4A02265134537C000E1031F /* test_scene.cc */; };
+		D4A0226A13453E2600E1031F /* actor.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4A0226813453E2300E1031F /* actor.cc */; };
+		D4A0226B13453E2600E1031F /* actor.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A0226913453E2400E1031F /* actor.h */; };
 		D4DEDEE11344438F00699EA9 /* director.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4DEDEDF1344438F00699EA9 /* director.cc */; };
 		D4DEDEE21344438F00699EA9 /* director.h in Headers */ = {isa = PBXBuildFile; fileRef = D4DEDEE01344438F00699EA9 /* director.h */; };
 /* End PBXBuildFile section */
@@ -71,6 +73,8 @@
 		D4A022621345303900E1031F /* animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = animator.h; sourceTree = "<group>"; };
 		D4A02265134537C000E1031F /* test_scene.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_scene.cc; sourceTree = "<group>"; };
 		D4A02266134537C000E1031F /* test_scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_scene.h; sourceTree = "<group>"; };
+		D4A0226813453E2300E1031F /* actor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = actor.cc; sourceTree = "<group>"; };
+		D4A0226913453E2400E1031F /* actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = actor.h; sourceTree = "<group>"; };
 		D4DEDEDF1344438F00699EA9 /* director.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = director.cc; sourceTree = "<group>"; };
 		D4DEDEE01344438F00699EA9 /* director.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = director.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +197,8 @@
 				D4A0225E1345300700E1031F /* defs.h */,
 				D4A022611345303800E1031F /* animator.cc */,
 				D4A022621345303900E1031F /* animator.h */,
+				D4A0226813453E2300E1031F /* actor.cc */,
+				D4A0226913453E2400E1031F /* actor.h */,
 			);
 			path = engine;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 				D4A0225C13452FA100E1031F /* display_object.h in Headers */,
 				D4A022601345300800E1031F /* defs.h in Headers */,
 				D4A022641345303900E1031F /* animator.h in Headers */,
+				D4A0226B13453E2600E1031F /* actor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +317,7 @@
 				D4A0225B13452FA100E1031F /* display_object.cc in Sources */,
 				D4A0225F1345300800E1031F /* defs.cc in Sources */,
 				D4A022631345303900E1031F /* animator.cc in Sources */,
+				D4A0226A13453E2600E1031F /* actor.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

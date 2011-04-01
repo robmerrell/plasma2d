@@ -7,3 +7,4 @@
 #include "engine/scene.h"
 #include "engine/director.h"
 #include "engine/defs.h"
+#include "engine/actor.h"

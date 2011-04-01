@@ -7,5 +7,10 @@
 
 
 TestScene::TestScene() {
+    char *me = "something";
+    p2d::Actor *actor = new p2d::Actor(p2d::pxy(0.0f, 0.0f), me);
+    addObject(actor);
     
+    p2d::Actor *actor2 = new p2d::Actor(p2d::pxy(300.0f, 300.0f), me);
+    addObject(actor2);
 }
