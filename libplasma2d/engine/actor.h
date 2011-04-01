@@ -3,8 +3,8 @@
  * Copyright (C) 2011 Rob Merrell
  */
 
-#ifndef P2D_ACTOR
-#define P2D_ACTOR
+#ifndef P2D_ACTOR_H
+#define P2D_ACTOR_H
 
 #include <OpenGLES/ES1/gl.h>
 #include <OpenGLES/ES1/glext.h>
@@ -33,6 +33,11 @@ namespace p2d {
          * Destructor
          */
         ~Actor();
+        
+        /**
+         * Transform to the actor's anchor point
+         */
+        void transformForAnchor();
         
         /**
          * Draw the actor

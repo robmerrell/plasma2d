@@ -6,6 +6,9 @@
 #ifndef P2D_DISPLAY_OBJECT_H
 #define P2D_DISPLAY_OBJECT_H
 
+#include <OpenGLES/ES1/gl.h>
+#include <OpenGLES/ES1/glext.h>
+
 #include "defs.h"
 
 namespace p2d {
@@ -14,7 +17,11 @@ namespace p2d {
     protected:
         p2d::pxyCoords pos;
         float angle; // degrees
-        float scale; // defaults at 1.0f
+        float scale; // defaults to 1.0f
+        
+        // anchors are the transformation point of an object
+        // Can be 0.0f,0.0f (top left) to 1.0f,1.0f (bottom right)
+        p2d::pxyCoords anchor; // defaults to 0.0f, 0.0f
         
     public:
         /**
@@ -39,6 +46,17 @@ namespace p2d {
          */
         void setScale(float);
         float getScale();
+        
+        /**
+         * Set/Get anchor points
+         */
+        void setAnchor(p2d::pxyCoords);
+        p2d::pxyCoords getAnchor();
+        
+        /**
+         * Transform the position of an object to it's anchor
+         */
+        virtual void transformForAnchor() {};
         
         /**
          * update method that should be defined in the scripted

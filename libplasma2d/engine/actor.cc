@@ -21,6 +21,14 @@ p2d::Actor::~Actor() {
 }
 
 
+void p2d::Actor::transformForAnchor() {
+    if (anchor.x != 0.0f || anchor.y != 0.0f) {
+        glLoadIdentity();
+        glTranslatef(dim_x * -anchor.x, dim_y * -anchor.y, 0.0f);
+    }
+}
+
+
 void p2d::Actor::draw() {
     
     static const GLfloat squareVertices[] = {
@@ -29,15 +37,9 @@ void p2d::Actor::draw() {
         0.0f, dim_y, 0.0f,
         dim_x, dim_y, 0.0f
     };
-    
-//    static const GLfloat squareVertices[] = {
-//        0.0f, dim_y, 0.0f,
-//        dim_x, dim_y, 0.0f, 
-//        0.0f, 0.0f, 0.0f, 
-//        dim_x, 0.0f, 0.0f
-//    };
 
     glLoadIdentity();
+    transformForAnchor();
     glTranslatef(pos.x, pos.y, 0.0f);
     
     glEnableClientState(GL_VERTEX_ARRAY);

@@ -7,6 +7,7 @@
 
 p2d::DisplayObject::DisplayObject() {
     pos = p2d::pxy(0.0f, 0.0f);
+    anchor = p2d::pxy(0.0f, 0.0f);
     angle = 0.0f;
     scale = 1.0f;
 }
@@ -36,4 +37,19 @@ void p2d::DisplayObject::setScale(float _scale) {
 
 float p2d::DisplayObject::getScale() {
     return scale;
+}
+
+
+void p2d::DisplayObject::setAnchor(p2d::pxyCoords _anchor) {
+    if (_anchor.x < 0.0f) _anchor.x = 0.0f;
+    if (_anchor.x > 1.0f) _anchor.x = 1.0f;
+    
+    if (_anchor.y < 0.0f) _anchor.y = 0.0f;
+    if (_anchor.y > 1.0f) _anchor.y = 1.0f;
+    
+    anchor = _anchor;
+}
+
+p2d::pxyCoords p2d::DisplayObject::getAnchor() {
+    return anchor;
 }
