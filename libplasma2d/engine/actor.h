@@ -9,6 +9,8 @@
 #include <OpenGLES/ES1/gl.h>
 #include <OpenGLES/ES1/glext.h>
 
+#include "SOIL.h"
+
 #include "display_object.h"
 #include "defs.h"
 

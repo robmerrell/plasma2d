@@ -37,6 +37,18 @@
 		D4A0226B13453E2600E1031F /* actor.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A0226913453E2400E1031F /* actor.h */; };
 		D4DEDEE11344438F00699EA9 /* director.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4DEDEDF1344438F00699EA9 /* director.cc */; };
 		D4DEDEE21344438F00699EA9 /* director.h in Headers */ = {isa = PBXBuildFile; fileRef = D4DEDEE01344438F00699EA9 /* director.h */; };
+		D4F05DC5134773C4002A4827 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62E1341A0480015C23D /* Foundation.framework */; };
+		D4F05DCC1347742F002A4827 /* libsoil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F05DC4134773C4002A4827 /* libsoil.a */; };
+		D4F05DD713477488002A4827 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = D4F05DCD13477488002A4827 /* image_DXT.c */; };
+		D4F05DD813477488002A4827 /* image_DXT.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DCE13477488002A4827 /* image_DXT.h */; };
+		D4F05DD913477488002A4827 /* image_helper.c in Sources */ = {isa = PBXBuildFile; fileRef = D4F05DCF13477488002A4827 /* image_helper.c */; };
+		D4F05DDA13477488002A4827 /* image_helper.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DD013477488002A4827 /* image_helper.h */; };
+		D4F05DDB13477488002A4827 /* SOIL.c in Sources */ = {isa = PBXBuildFile; fileRef = D4F05DD113477488002A4827 /* SOIL.c */; };
+		D4F05DDC13477488002A4827 /* SOIL.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DD213477488002A4827 /* SOIL.h */; };
+		D4F05DDD13477488002A4827 /* stb_image_aug.c in Sources */ = {isa = PBXBuildFile; fileRef = D4F05DD313477488002A4827 /* stb_image_aug.c */; };
+		D4F05DDE13477488002A4827 /* stb_image_aug.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DD413477488002A4827 /* stb_image_aug.h */; };
+		D4F05DDF13477488002A4827 /* stbi_DDS_aug_c.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DD513477488002A4827 /* stbi_DDS_aug_c.h */; };
+		D4F05DE013477488002A4827 /* stbi_DDS_aug.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DD613477488002A4827 /* stbi_DDS_aug.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +89,18 @@
 		D4A0226913453E2400E1031F /* actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = actor.h; sourceTree = "<group>"; };
 		D4DEDEDF1344438F00699EA9 /* director.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = director.cc; sourceTree = "<group>"; };
 		D4DEDEE01344438F00699EA9 /* director.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = director.h; sourceTree = "<group>"; };
+		D4F05DC4134773C4002A4827 /* libsoil.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsoil.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4F05DC8134773C4002A4827 /* soil-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "soil-Prefix.pch"; sourceTree = "<group>"; };
+		D4F05DCD13477488002A4827 /* image_DXT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = image_DXT.c; sourceTree = "<group>"; };
+		D4F05DCE13477488002A4827 /* image_DXT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image_DXT.h; sourceTree = "<group>"; };
+		D4F05DCF13477488002A4827 /* image_helper.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = image_helper.c; sourceTree = "<group>"; };
+		D4F05DD013477488002A4827 /* image_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = image_helper.h; sourceTree = "<group>"; };
+		D4F05DD113477488002A4827 /* SOIL.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SOIL.c; sourceTree = "<group>"; };
+		D4F05DD213477488002A4827 /* SOIL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOIL.h; sourceTree = "<group>"; };
+		D4F05DD313477488002A4827 /* stb_image_aug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stb_image_aug.c; sourceTree = "<group>"; };
+		D4F05DD413477488002A4827 /* stb_image_aug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image_aug.h; sourceTree = "<group>"; };
+		D4F05DD513477488002A4827 /* stbi_DDS_aug_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_DDS_aug_c.h; sourceTree = "<group>"; };
+		D4F05DD613477488002A4827 /* stbi_DDS_aug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_DDS_aug.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +121,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4F05DCC1347742F002A4827 /* libsoil.a in Frameworks */,
 				D465E0D41342D6E800E7D604 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4F05DC1134773C4002A4827 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4F05DC5134773C4002A4827 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +140,7 @@
 		D427F61D1341A0470015C23D = {
 			isa = PBXGroup;
 			children = (
+				D4F05DC4134773C4002A4827 /* libsoil.a */,
 				D465E0D31342D6E800E7D604 /* libplasma2d.a */,
 				D427F6361341A0480015C23D /* plasma2d-ios */,
 				D465E0D51342D6E800E7D604 /* libplasma2d */,
@@ -167,6 +201,7 @@
 		D465E0D51342D6E800E7D604 /* libplasma2d */ = {
 			isa = PBXGroup;
 			children = (
+				D47B9A3A134771590002FC57 /* external */,
 				D465E0DD1342DA6B00E7D604 /* engine */,
 				D465E0D61342D6E800E7D604 /* Supporting Files */,
 				D465E0DB1342D9E500E7D604 /* plasma2d.h */,
@@ -203,6 +238,40 @@
 			path = engine;
 			sourceTree = "<group>";
 		};
+		D47B9A3A134771590002FC57 /* external */ = {
+			isa = PBXGroup;
+			children = (
+				D4F05DC6134773C4002A4827 /* soil */,
+			);
+			path = external;
+			sourceTree = "<group>";
+		};
+		D4F05DC6134773C4002A4827 /* soil */ = {
+			isa = PBXGroup;
+			children = (
+				D4F05DCD13477488002A4827 /* image_DXT.c */,
+				D4F05DCE13477488002A4827 /* image_DXT.h */,
+				D4F05DCF13477488002A4827 /* image_helper.c */,
+				D4F05DD013477488002A4827 /* image_helper.h */,
+				D4F05DD113477488002A4827 /* SOIL.c */,
+				D4F05DD213477488002A4827 /* SOIL.h */,
+				D4F05DD313477488002A4827 /* stb_image_aug.c */,
+				D4F05DD413477488002A4827 /* stb_image_aug.h */,
+				D4F05DD513477488002A4827 /* stbi_DDS_aug_c.h */,
+				D4F05DD613477488002A4827 /* stbi_DDS_aug.h */,
+				D4F05DC7134773C4002A4827 /* Supporting Files */,
+			);
+			path = soil;
+			sourceTree = "<group>";
+		};
+		D4F05DC7134773C4002A4827 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4F05DC8134773C4002A4827 /* soil-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -218,6 +287,19 @@
 				D4A022601345300800E1031F /* defs.h in Headers */,
 				D4A022641345303900E1031F /* animator.h in Headers */,
 				D4A0226B13453E2600E1031F /* actor.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4F05DC2134773C4002A4827 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4F05DD813477488002A4827 /* image_DXT.h in Headers */,
+				D4F05DDA13477488002A4827 /* image_helper.h in Headers */,
+				D4F05DDC13477488002A4827 /* SOIL.h in Headers */,
+				D4F05DDE13477488002A4827 /* stb_image_aug.h in Headers */,
+				D4F05DDF13477488002A4827 /* stbi_DDS_aug_c.h in Headers */,
+				D4F05DE013477488002A4827 /* stbi_DDS_aug.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +340,23 @@
 			productReference = D465E0D31342D6E800E7D604 /* libplasma2d.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		D4F05DC3134773C4002A4827 /* soil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4F05DC9134773C4002A4827 /* Build configuration list for PBXNativeTarget "soil" */;
+			buildPhases = (
+				D4F05DC0134773C4002A4827 /* Sources */,
+				D4F05DC1134773C4002A4827 /* Frameworks */,
+				D4F05DC2134773C4002A4827 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = soil;
+			productName = soil;
+			productReference = D4F05DC4134773C4002A4827 /* libsoil.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -277,6 +376,7 @@
 			targets = (
 				D427F6271341A0480015C23D /* plasma2d */,
 				D465E0D21342D6E800E7D604 /* libplasma2d */,
+				D4F05DC3134773C4002A4827 /* soil */,
 			);
 		};
 /* End PBXProject section */
@@ -318,6 +418,17 @@
 				D4A0225F1345300800E1031F /* defs.cc in Sources */,
 				D4A022631345303900E1031F /* animator.cc in Sources */,
 				D4A0226A13453E2600E1031F /* actor.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4F05DC0134773C4002A4827 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4F05DD713477488002A4827 /* image_DXT.c in Sources */,
+				D4F05DD913477488002A4827 /* image_helper.c in Sources */,
+				D4F05DDB13477488002A4827 /* SOIL.c in Sources */,
+				D4F05DDD13477488002A4827 /* stb_image_aug.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +537,7 @@
 				GCC_PREFIX_HEADER = "libplasma2d/libplasma2d-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = plasma2d;
+				USER_HEADER_SEARCH_PATHS = "libplasma2d/external/soil/**";
 			};
 			name = Debug;
 		};
@@ -439,6 +551,33 @@
 				GCC_PREFIX_HEADER = "libplasma2d/libplasma2d-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = plasma2d;
+				USER_HEADER_SEARCH_PATHS = "libplasma2d/external/soil/**";
+			};
+			name = Release;
+		};
+		D4F05DCA134773C4002A4827 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/soil.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libplasma2d/external/soil/soil-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D4F05DCB134773C4002A4827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/soil.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "libplasma2d/external/soil/soil-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -471,6 +610,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D4F05DC9134773C4002A4827 /* Build configuration list for PBXNativeTarget "soil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4F05DCA134773C4002A4827 /* Debug */,
+				D4F05DCB134773C4002A4827 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
