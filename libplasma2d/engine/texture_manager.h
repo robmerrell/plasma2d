@@ -26,12 +26,21 @@ namespace p2d {
         
         static TextureManager* obj;
         
+        // the path to external resources (images, sounds, etc.)
+        std::string resource_path;
+        
         GLuint texture[TEXTURE_COUNT];
         int texture_ref;
         int current_ref;
         
     public:
         static TextureManager* Inst();
+        
+        /**
+         * setter/getter for the resource path
+         */
+        void setResourcePath(std::string);
+        std::string getResourcePath();
         
         /**
          * Load the specified texture

@@ -5,12 +5,17 @@
 
 #include "engine.h"
 
+
 p2d::Engine::~Engine() {
     // shutdown systems
 }
 
 
-void p2d::Engine::initialize() {
+void p2d::Engine::initialize(std::string _resource_path) {
+    // save the resource path in the director so that
+    // the other classes have access to it
+    p2d::TextureManager::Inst()->setResourcePath(_resource_path);
+    
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     
     glMatrixMode(GL_PROJECTION);

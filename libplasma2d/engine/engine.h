@@ -8,9 +8,11 @@
 
 #include <OpenGLES/ES1/gl.h>
 #include <OpenGLES/ES1/glext.h>
+#include <string>
 
 #include "director.h"
 #include "scene.h"
+#include "texture_manager.h"
 
 namespace p2d {
     
@@ -37,7 +39,7 @@ namespace p2d {
         /**
          * Initialize the game engine and the display system
          */
-        void initialize();
+        void initialize(std::string);
         
         /**
          * Passes control to the director and runs the main script

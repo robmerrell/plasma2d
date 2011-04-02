@@ -8,7 +8,7 @@
 
 #include "scene.h"
 
-#include <cstdlib> // for NULL
+#include <cstdlib>
 
 namespace p2d {
     

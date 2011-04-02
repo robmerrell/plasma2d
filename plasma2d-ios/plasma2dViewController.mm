@@ -40,11 +40,10 @@
     animationFrameInterval = 1;
     self.displayLink = nil;
     
-    engine.initialize();
-    
     NSString* bundlePath = [[NSBundle mainBundle] resourcePath];
+    engine.initialize([bundlePath UTF8String]);
     
-    TestScene* test_scene = new TestScene([bundlePath UTF8String]);
+    TestScene* test_scene = new TestScene();
     
     // pass control to the engine so that the main script can run
     engine.run(test_scene);
