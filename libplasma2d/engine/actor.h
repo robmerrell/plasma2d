@@ -44,6 +44,11 @@ namespace p2d {
         void transformForAnchor();
         
         /**
+         * Scale the geometry
+         */
+        void transformForScale();
+        
+        /**
          * Draw the actor
          */
         void draw();

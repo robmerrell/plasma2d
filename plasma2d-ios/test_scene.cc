@@ -21,5 +21,6 @@ TestScene::TestScene(const char* _resource) {
 //    addObject(actor);
     
     p2d::Actor *actor2 = new p2d::Actor(p2d::pxy(300.0f, 300.0f), (char*)final.c_str());
+    actor2->setScale(5.0f);
     addObject(actor2);
 }
