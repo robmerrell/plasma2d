@@ -7,9 +7,7 @@
 #define P2D_ACTOR_H
 
 #include <OpenGLES/ES1/gl.h>
-#include <OpenGLES/ES1/glext.h>
-
-#include "SOIL.h"
+#include <OpenGLES/ES1/glext.h>\
 
 #include "display_object.h"
 #include "defs.h"

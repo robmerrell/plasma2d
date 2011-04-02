@@ -49,6 +49,8 @@
 		D4F05DDE13477488002A4827 /* stb_image_aug.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DD413477488002A4827 /* stb_image_aug.h */; };
 		D4F05DDF13477488002A4827 /* stbi_DDS_aug_c.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DD513477488002A4827 /* stbi_DDS_aug_c.h */; };
 		D4F05DE013477488002A4827 /* stbi_DDS_aug.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DD613477488002A4827 /* stbi_DDS_aug.h */; };
+		D4F05DE313477E3E002A4827 /* texture_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4F05DE113477E3D002A4827 /* texture_manager.cc */; };
+		D4F05DE413477E3E002A4827 /* texture_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DE213477E3D002A4827 /* texture_manager.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +103,8 @@
 		D4F05DD413477488002A4827 /* stb_image_aug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image_aug.h; sourceTree = "<group>"; };
 		D4F05DD513477488002A4827 /* stbi_DDS_aug_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_DDS_aug_c.h; sourceTree = "<group>"; };
 		D4F05DD613477488002A4827 /* stbi_DDS_aug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_DDS_aug.h; sourceTree = "<group>"; };
+		D4F05DE113477E3D002A4827 /* texture_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture_manager.cc; sourceTree = "<group>"; };
+		D4F05DE213477E3D002A4827 /* texture_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture_manager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +238,8 @@
 				D4A022621345303900E1031F /* animator.h */,
 				D4A0226813453E2300E1031F /* actor.cc */,
 				D4A0226913453E2400E1031F /* actor.h */,
+				D4F05DE113477E3D002A4827 /* texture_manager.cc */,
+				D4F05DE213477E3D002A4827 /* texture_manager.h */,
 			);
 			path = engine;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 				D4A022601345300800E1031F /* defs.h in Headers */,
 				D4A022641345303900E1031F /* animator.h in Headers */,
 				D4A0226B13453E2600E1031F /* actor.h in Headers */,
+				D4F05DE413477E3E002A4827 /* texture_manager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +425,7 @@
 				D4A0225F1345300800E1031F /* defs.cc in Sources */,
 				D4A022631345303900E1031F /* animator.cc in Sources */,
 				D4A0226A13453E2600E1031F /* actor.cc in Sources */,
+				D4F05DE313477E3E002A4827 /* texture_manager.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
