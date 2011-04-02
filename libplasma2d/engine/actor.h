@@ -8,6 +8,7 @@
 
 #include <OpenGLES/ES1/gl.h>
 #include <OpenGLES/ES1/glext.h>
+#include <string>
 
 #include "display_object.h"
 #include "defs.h"
@@ -22,7 +23,7 @@ namespace p2d {
         int dim_y;
         
         // image name
-        char* image;
+        std::string image;
         
     public:
         
@@ -31,7 +32,7 @@ namespace p2d {
          * pxy coordinates
          * char* image name
          */
-        Actor(p2d::pxyCoords, char*);
+        Actor(p2d::pxyCoords, std::string);
         
         /**
          * Destructor

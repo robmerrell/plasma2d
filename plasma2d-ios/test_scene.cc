@@ -20,7 +20,7 @@ TestScene::TestScene(const char* _resource) {
 //    actor->setAnchor(p2d::pxy(0.5f, 0.5f));
 //    addObject(actor);
     
-    p2d::Actor *actor2 = new p2d::Actor(p2d::pxy(300.0f, 300.0f), (char*)final.c_str());
+    p2d::Actor *actor2 = new p2d::Actor(p2d::pxy(300.0f, 300.0f), final);
     actor2->setScale(5.0f);
     addObject(actor2);
 }

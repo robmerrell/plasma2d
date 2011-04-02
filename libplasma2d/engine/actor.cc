@@ -5,7 +5,7 @@
 
 #include "actor.h"
 
-p2d::Actor::Actor(p2d::pxyCoords _coords, char* _image) {
+p2d::Actor::Actor(p2d::pxyCoords _coords, std::string _image) {
     pos = _coords;
     
     // load the image
