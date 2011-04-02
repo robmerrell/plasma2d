@@ -42,7 +42,9 @@
     
     engine.initialize();
     
-    TestScene* test_scene = new TestScene();
+    NSString* bundlePath = [[NSBundle mainBundle] resourcePath];
+    
+    TestScene* test_scene = new TestScene([bundlePath UTF8String]);
     
     // pass control to the engine so that the main script can run
     engine.run(test_scene);

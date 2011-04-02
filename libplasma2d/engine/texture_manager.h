@@ -36,12 +36,13 @@ namespace p2d {
         /**
          * Load the specified texture
          */
-        void loadTexture(std::string, bool);
+        // TODO change this to char*
+        void loadTexture(char*);
         
         /**
          * Bind the referenced texture
          */
-        void bindTexture(int);
+        void bindTexture(char*);
         
         /**
          * Unbind a texture

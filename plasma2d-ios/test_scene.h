@@ -11,7 +11,7 @@
 
 class TestScene : public p2d::Scene {
 public:
-    TestScene();
+    TestScene(const char*);
     
 };
 

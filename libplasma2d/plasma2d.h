@@ -8,3 +8,4 @@
 #include "engine/director.h"
 #include "engine/defs.h"
 #include "engine/actor.h"
+#include "engine/texture_manager.h"

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D41F2EBF1347C3CD00E84862 /* img_test.bmp in Resources */ = {isa = PBXBuildFile; fileRef = D41F2EBD1347C3CD00E84862 /* img_test.bmp */; };
+		D41F2EC01347C3CD00E84862 /* img_test.png in Resources */ = {isa = PBXBuildFile; fileRef = D41F2EBE1347C3CD00E84862 /* img_test.png */; };
 		D4271ABF1342E10A00553669 /* libplasma2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D465E0D31342D6E800E7D604 /* libplasma2d.a */; };
 		D427F62D1341A0480015C23D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62C1341A0480015C23D /* UIKit.framework */; };
 		D427F62F1341A0480015C23D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62E1341A0480015C23D /* Foundation.framework */; };
@@ -54,6 +56,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D41F2EBD1347C3CD00E84862 /* img_test.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = img_test.bmp; sourceTree = "<group>"; };
+		D41F2EBE1347C3CD00E84862 /* img_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_test.png; sourceTree = "<group>"; };
 		D427F6281341A0480015C23D /* plasma2d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plasma2d.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D427F62C1341A0480015C23D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D427F62E1341A0480015C23D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -144,6 +148,8 @@
 		D427F61D1341A0470015C23D = {
 			isa = PBXGroup;
 			children = (
+				D41F2EBD1347C3CD00E84862 /* img_test.bmp */,
+				D41F2EBE1347C3CD00E84862 /* img_test.png */,
 				D4F05DC4134773C4002A4827 /* libsoil.a */,
 				D465E0D31342D6E800E7D604 /* libplasma2d.a */,
 				D427F6361341A0480015C23D /* plasma2d-ios */,
@@ -393,6 +399,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D41F2EBF1347C3CD00E84862 /* img_test.bmp in Resources */,
+				D41F2EC01347C3CD00E84862 /* img_test.png in Resources */,
 				D427F63B1341A0480015C23D /* InfoPlist.strings in Resources */,
 				D427F6441341A0480015C23D /* MainWindow.xib in Resources */,
 				D427F6511341A0480015C23D /* plasma2dViewController.xib in Resources */,
@@ -626,6 +634,7 @@
 				D4F05DCB134773C4002A4827 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

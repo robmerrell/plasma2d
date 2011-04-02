@@ -7,10 +7,11 @@
 #define P2D_ACTOR_H
 
 #include <OpenGLES/ES1/gl.h>
-#include <OpenGLES/ES1/glext.h>\
+#include <OpenGLES/ES1/glext.h>
 
 #include "display_object.h"
 #include "defs.h"
+#include "texture_manager.h"
 
 namespace p2d {
     
@@ -19,6 +20,9 @@ namespace p2d {
         // image dimensions
         int dim_x;
         int dim_y;
+        
+        // image name
+        char* image;
         
     public:
         

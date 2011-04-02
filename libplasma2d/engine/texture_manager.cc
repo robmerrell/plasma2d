@@ -22,13 +22,12 @@ p2d::TextureManager* p2d::TextureManager::Inst() {
     return obj;
 }
 
-void p2d::TextureManager::loadTexture(std::string filename, bool alpha) {
+void p2d::TextureManager::loadTexture(char* _filename) {
     unsigned int flags = SOIL_FLAG_MIPMAPS;
-    if (alpha) flags = flags | SOIL_FLAG_MULTIPLY_ALPHA;
     
     obj->texture[obj->texture_ref] = SOIL_load_OGL_texture
     (   
-     filename.c_str(),
+     _filename,
      SOIL_LOAD_AUTO,
      SOIL_CREATE_NEW_ID,
      flags
@@ -43,9 +42,9 @@ void p2d::TextureManager::loadTexture(std::string filename, bool alpha) {
     obj->texture_ref++;
 }
 
-void p2d::TextureManager::bindTexture(int ref) {
+void p2d::TextureManager::bindTexture(char* _image_name) {
     // if (current_ref != ref) {
-    glBindTexture(GL_TEXTURE_2D, obj->texture[ref]);
+    glBindTexture(GL_TEXTURE_2D, obj->texture[0]);
     // current_ref = ref;
     // }
 }

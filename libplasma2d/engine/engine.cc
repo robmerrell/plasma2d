@@ -20,6 +20,8 @@ void p2d::Engine::initialize() {
     
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
+    
+    glEnable(GL_TEXTURE_2D);
 }
 
 
