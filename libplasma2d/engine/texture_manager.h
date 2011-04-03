@@ -6,21 +6,20 @@
 #ifndef TEXTURE_MANAGER_H
 #define TEXTURE_MANAGER_H
 
-// TODO: this class needs to hold textures in a hash instead of an array
-const int TEXTURE_COUNT = 100;
-
 #include <OpenGLES/ES1/gl.h>
 #include <OpenGLES/ES1/glext.h>
+#include <iostream>
+#include <ext/hash_map>
 
 #include "SOIL.h"
-#include <iostream>
-#include <string>
+
+#include "hash_map_defs.h"
 
 namespace p2d {
 
     class TextureManager {
     private:
-        TextureManager();
+        TextureManager() {};
         TextureManager(const TextureManager&);
         TextureManager& operator=(const TextureManager&);
         
@@ -29,9 +28,7 @@ namespace p2d {
         // the path to external resources (images, sounds, etc.)
         std::string resource_path;
         
-        GLuint texture[TEXTURE_COUNT];
-        int texture_ref;
-        int current_ref;
+        __gnu_cxx::hash_map<std::string, GLuint, __gnu_cxx::hash<std::string>, eqstr> textures;
         
     public:
         static TextureManager* Inst();

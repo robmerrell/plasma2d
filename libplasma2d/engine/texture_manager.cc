@@ -7,20 +7,14 @@
 
 p2d::TextureManager* p2d::TextureManager::obj = NULL;
 
-p2d::TextureManager::TextureManager() {
-    texture_ref = 0;
-}
-
 
 p2d::TextureManager* p2d::TextureManager::Inst() {
     if (!obj) {
         obj = new TextureManager();
-        obj->current_ref = 0;
     }
     
     return obj;
 }
-
 
 
 void p2d::TextureManager::setResourcePath(std::string _resource_path) {
@@ -38,19 +32,17 @@ void p2d::TextureManager::loadTexture(std::string _filename) {
     std::string separator = "/";
     std::string filepath = getResourcePath() + separator + _filename;
     
-    obj->texture[obj->texture_ref] = SOIL_load_OGL_texture
+    obj->textures[_filename] = SOIL_load_OGL_texture
     (   
-     filepath.c_str(),
-     SOIL_LOAD_AUTO,
-     SOIL_CREATE_NEW_ID,
-     flags
-     );
+        filepath.c_str(),
+        SOIL_LOAD_AUTO,
+        SOIL_CREATE_NEW_ID,
+        flags
+    );
     
-    if (obj->texture[obj->texture_ref] == 0) {
+    if (obj->textures[_filename] == 0) {
         printf( "SOIL loading error: '%s'\n", SOIL_last_result() );
     }
-    
-    obj->texture_ref++;
 }
 
 
@@ -58,7 +50,7 @@ void p2d::TextureManager::bindTexture(std::string _image_name) {
     // TODO only bind the texture if it hasn't been bound yet
     
     // if (current_ref != ref) {
-    glBindTexture(GL_TEXTURE_2D, obj->texture[0]);
+    glBindTexture(GL_TEXTURE_2D, obj->textures[_image_name]);
     // current_ref = ref;
     // }
 }
@@ -69,11 +61,7 @@ void p2d::TextureManager::unbindTexture() {
 }
 
 
-int p2d::TextureManager::getTextureRef() {
-    return obj->texture_ref;
-}
-
-
 void p2d::TextureManager::deleteAllTextures() {
-    glDeleteTextures(TEXTURE_COUNT, obj->texture);
+//    glDeleteTextures(obj->texture_count, obj->texture);
+    // TODO swap this to an iterator
 }

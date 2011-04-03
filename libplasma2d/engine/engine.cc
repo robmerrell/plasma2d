@@ -16,7 +16,7 @@ void p2d::Engine::initialize(std::string _resource_path) {
     // the other classes have access to it
     p2d::TextureManager::Inst()->setResourcePath(_resource_path);
     
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
     
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();

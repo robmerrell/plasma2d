@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D41F2EBF1347C3CD00E84862 /* img_test.bmp in Resources */ = {isa = PBXBuildFile; fileRef = D41F2EBD1347C3CD00E84862 /* img_test.bmp */; };
 		D41F2EC01347C3CD00E84862 /* img_test.png in Resources */ = {isa = PBXBuildFile; fileRef = D41F2EBE1347C3CD00E84862 /* img_test.png */; };
+		D41F2F6013484C5C00E84862 /* hash_map_defs.h in Headers */ = {isa = PBXBuildFile; fileRef = D41F2F5F13484C5C00E84862 /* hash_map_defs.h */; };
 		D4271ABF1342E10A00553669 /* libplasma2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D465E0D31342D6E800E7D604 /* libplasma2d.a */; };
 		D427F62D1341A0480015C23D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62C1341A0480015C23D /* UIKit.framework */; };
 		D427F62F1341A0480015C23D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62E1341A0480015C23D /* Foundation.framework */; };
@@ -58,6 +59,7 @@
 /* Begin PBXFileReference section */
 		D41F2EBD1347C3CD00E84862 /* img_test.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = img_test.bmp; sourceTree = "<group>"; };
 		D41F2EBE1347C3CD00E84862 /* img_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_test.png; sourceTree = "<group>"; };
+		D41F2F5F13484C5C00E84862 /* hash_map_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash_map_defs.h; sourceTree = "<group>"; };
 		D427F6281341A0480015C23D /* plasma2d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plasma2d.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D427F62C1341A0480015C23D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D427F62E1341A0480015C23D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -246,6 +248,7 @@
 				D4A0226913453E2400E1031F /* actor.h */,
 				D4F05DE113477E3D002A4827 /* texture_manager.cc */,
 				D4F05DE213477E3D002A4827 /* texture_manager.h */,
+				D41F2F5F13484C5C00E84862 /* hash_map_defs.h */,
 			);
 			path = engine;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				D4A022641345303900E1031F /* animator.h in Headers */,
 				D4A0226B13453E2600E1031F /* actor.h in Headers */,
 				D4F05DE413477E3E002A4827 /* texture_manager.h in Headers */,
+				D41F2F6013484C5C00E84862 /* hash_map_defs.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +557,7 @@
 				GCC_PREFIX_HEADER = "libplasma2d/libplasma2d-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = plasma2d;
-				USER_HEADER_SEARCH_PATHS = "libplasma2d/external/soil/**";
+				USER_HEADER_SEARCH_PATHS = "libplasma2d/external/soil/** libplasma2d/external";
 			};
 			name = Debug;
 		};
@@ -567,7 +571,7 @@
 				GCC_PREFIX_HEADER = "libplasma2d/libplasma2d-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = plasma2d;
-				USER_HEADER_SEARCH_PATHS = "libplasma2d/external/soil/**";
+				USER_HEADER_SEARCH_PATHS = "libplasma2d/external/soil/** libplasma2d/external";
 			};
 			name = Release;
 		};
