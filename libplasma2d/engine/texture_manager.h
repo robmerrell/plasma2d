@@ -42,7 +42,6 @@ namespace p2d {
         /**
          * Load the specified texture
          */
-        // TODO change this to char*
         void loadTexture(std::string);
         
         /**
@@ -56,9 +55,9 @@ namespace p2d {
         void unbindTexture();
         
         /**
-         * Delete all textures
+         * Delete a texture
          */
-        void deleteAllTextures();
+        void deleteTexture(std::string);
         
         /**
          * Return the current texture refernce count

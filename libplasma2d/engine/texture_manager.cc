@@ -61,7 +61,6 @@ void p2d::TextureManager::unbindTexture() {
 }
 
 
-void p2d::TextureManager::deleteAllTextures() {
-//    glDeleteTextures(obj->texture_count, obj->texture);
-    // TODO swap this to an iterator
+void p2d::TextureManager::deleteTexture(std::string _filename) {
+    glDeleteTextures(1, &textures[_filename]);
 }
