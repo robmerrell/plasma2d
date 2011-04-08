@@ -31,23 +31,20 @@ void p2d::Actor::transformForAnchor() {
 }
 
 
-void p2d::Actor::transformForScale() {
-    if (scale != 1.0f) {
-        dim_x *= scale;
-        dim_y *= scale;
-    }
+inline void p2d::Actor::transformForScale() {
+    scaled_dim_x = dim_x * scale;
+    scaled_dim_y = dim_y * scale;
 }
 
 
 void p2d::Actor::draw() {
-    
     transformForScale();
     
     static const GLfloat squareVertices[] = {
         0.0f, 0.0f, 0.0f,
-        dim_x, 0.0f, 0.0f,
-        0.0f, dim_y, 0.0f,
-        dim_x, dim_y, 0.0f
+        scaled_dim_x, 0.0f, 0.0f,
+        0.0f, scaled_dim_y, 0.0f,
+        scaled_dim_x, scaled_dim_y, 0.0f
     };
     
     static const GLfloat textureVerticies[] = {
@@ -61,8 +58,8 @@ void p2d::Actor::draw() {
     p2d::TextureManager::Inst()->bindTexture(image);
     
     // move and rotate the geometry
-    glLoadIdentity();
     transformForAnchor();
+    glLoadIdentity();
     glTranslatef(pos.x, pos.y, 0.0f);
     
     // handle states and draw the geometry and texture

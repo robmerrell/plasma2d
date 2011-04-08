@@ -19,8 +19,10 @@ namespace p2d {
     class Actor : public DisplayObject {
     private:
         // image dimensions
-        int dim_x;
-        int dim_y;
+        float dim_x;
+        float dim_y;
+        float scaled_dim_x;
+        float scaled_dim_y;
         
         // image name
         std::string image;
