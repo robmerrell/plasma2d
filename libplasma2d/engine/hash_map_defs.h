@@ -3,6 +3,8 @@
  * Copyright (C) 2011 Rob Merrell
  */
 
+#ifndef HASH_MAP_DEFS_H
+#define HASH_MAP_DEFS_H
 
 // equality function for the hash_map
 struct eqstr {
@@ -21,3 +23,5 @@ namespace __gnu_cxx
         }
     };
 }
+
+#endif
