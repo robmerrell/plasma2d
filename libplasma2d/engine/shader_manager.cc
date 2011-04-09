@@ -11,6 +11,7 @@ p2d::ShaderManager* p2d::ShaderManager::obj = NULL;
 p2d::ShaderManager* p2d::ShaderManager::Inst() {
     if (!obj) {
         obj = new ShaderManager();
+        obj->shader_path = "shaders/";
     }
     
     return obj;

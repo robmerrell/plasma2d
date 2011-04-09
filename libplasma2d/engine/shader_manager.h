@@ -47,38 +47,6 @@ namespace p2d {
          * The program is stored in a hash_map by name
          */
         bool buildProgram(std::string, std::string, std::string);
-        
-//        /**
-//         * setter/getter for the resource path
-//         */
-//        void setResourcePath(std::string);
-//        std::string getResourcePath();
-//        
-//        /**
-//         * Load the specified texture
-//         */
-//        void loadTexture(std::string);
-//        
-//        /**
-//         * Bind the referenced texture
-//         */
-//        void bindTexture(std::string);
-//        
-//        /**
-//         * Unbind a texture
-//         */
-//        void unbindTexture();
-//        
-//        /**
-//         * Delete a texture
-//         */
-//        void deleteTexture(std::string);
-//        
-//        /**
-//         * Return the current texture refernce count
-//         */
-//        int getTextureRef();
-        
     };
     
 }
