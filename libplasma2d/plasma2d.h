@@ -9,3 +9,4 @@
 #include "engine/defs.h"
 #include "engine/actor.h"
 #include "engine/texture_manager.h"
+#include "engine/shader_manager.h"

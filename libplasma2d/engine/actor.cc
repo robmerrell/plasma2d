@@ -23,6 +23,7 @@ p2d::Actor::~Actor() {
 }
 
 
+/*
 void p2d::Actor::transformForAnchor() {
     if (anchor.x != 0.0f || anchor.y != 0.0f) {
         glLoadIdentity();
@@ -35,42 +36,74 @@ inline void p2d::Actor::transformForScale() {
     scaled_dim_x = dim_x * scale;
     scaled_dim_y = dim_y * scale;
 }
-
+*/
 
 void p2d::Actor::draw() {
-    transformForScale();
+    // TODO: this shouldn't be rebuilt every frame...
+//    static const GLfloat squareVertices[] = {
+//        0.0f, 0.0f, 0.0f,
+//        scaled_dim_x, 0.0f, 0.0f,
+//        0.0f, scaled_dim_y, 0.0f,
+//        scaled_dim_x, scaled_dim_y, 0.0f
+//    };
     
     static const GLfloat squareVertices[] = {
-        0.0f, 0.0f, 0.0f,
-        scaled_dim_x, 0.0f, 0.0f,
-        0.0f, scaled_dim_y, 0.0f,
-        scaled_dim_x, scaled_dim_y, 0.0f
+        -0.5f, -0.33f,
+        0.5f, -0.33f,
+        -0.5f,  0.33f,
+        0.5f,  0.33f,
     };
     
-    static const GLfloat textureVerticies[] = {
-        0.0f, 0.0f, 0.0f,
-        1.0f, 0.0f, 0.0f,
-        0.0f, 1.0f, 0.0f,
-        1.0f, 1.0f, 0.0f
-    };
-
-    glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
-    p2d::TextureManager::Inst()->bindTexture(image);
+    p2d::ShaderManager::Inst()->useProgram("move_color");
     
-    // move and rotate the geometry
-    transformForAnchor();
-    glLoadIdentity();
-    glTranslatef(pos.x, pos.y, 0.0f);
+    GLuint pos = p2d::ShaderManager::Inst()->getAttribLocation("position");
     
-    // handle states and draw the geometry and texture
-    glEnableClientState(GL_VERTEX_ARRAY);
-    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
-    
-    glVertexPointer(3, GL_FLOAT, 0, squareVertices);
-    glTexCoordPointer(3, GL_FLOAT, 0, textureVerticies);
+    glVertexAttribPointer(pos, 2, GL_FLOAT, 0, 0, squareVertices);
+    glEnableVertexAttribArray(pos);
     
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+    
+//    GLuint m_a_positionHandle = glGetAttribLocation(m_shaderProgram, "a_position");
 
-    glDisableClientState(GL_TEXTURE_COORD_ARRAY);
-    glDisableClientState(GL_VERTEX_ARRAY);
+    
+//    glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, 0, 0, squareVertices);
+//    glEnableVertexAttribArray(ATTRIB_VERTEX);
 }
+
+//void p2d::Actor::draw() {
+//    transformForScale();
+//    
+//    static const GLfloat squareVertices[] = {
+//        0.0f, 0.0f, 0.0f,
+//        scaled_dim_x, 0.0f, 0.0f,
+//        0.0f, scaled_dim_y, 0.0f,
+//        scaled_dim_x, scaled_dim_y, 0.0f
+//    };
+//    
+//    static const GLfloat textureVerticies[] = {
+//        0.0f, 0.0f, 0.0f,
+//        1.0f, 0.0f, 0.0f,
+//        0.0f, 1.0f, 0.0f,
+//        1.0f, 1.0f, 0.0f
+//    };
+//
+//    glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+//    p2d::TextureManager::Inst()->bindTexture(image);
+//    
+//    // move and rotate the geometry
+//    transformForAnchor();
+//    glLoadIdentity();
+//    glTranslatef(pos.x, pos.y, 0.0f);
+//    
+//    // handle states and draw the geometry and texture
+//    glEnableClientState(GL_VERTEX_ARRAY);
+//    glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+//    
+//    glVertexPointer(3, GL_FLOAT, 0, squareVertices);
+//    glTexCoordPointer(3, GL_FLOAT, 0, textureVerticies);
+//    
+//    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+//
+//    glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+//    glDisableClientState(GL_VERTEX_ARRAY);
+// }

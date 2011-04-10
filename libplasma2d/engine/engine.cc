@@ -8,6 +8,12 @@
 
 p2d::Engine::~Engine() {
     // shutdown systems
+    
+    // TODO: unload all textures
+    
+    // TODO: unload all shader programs
+    
+    // TODO: destroy all shaders
 }
 
 
@@ -16,8 +22,14 @@ void p2d::Engine::initialize(std::string _resource_path) {
     // the other classes have access to it
     p2d::TextureManager::Inst()->setResourcePath(_resource_path);
     
-    glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
+    glClearColor(0.0f, 0.7f, 0.5f, 1.0f);
     
+    // build standard shaders
+    p2d::ShaderManager::Inst()->compileShader("move_color.vert");
+    p2d::ShaderManager::Inst()->compileShader("move_color.frag");
+    p2d::ShaderManager::Inst()->buildProgram("move_color.vert", "move_color.frag", "move_color");
+    
+    /*
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     
@@ -27,6 +39,7 @@ void p2d::Engine::initialize(std::string _resource_path) {
     glLoadIdentity();
     
     glEnable(GL_TEXTURE_2D);
+     */
 }
 
 

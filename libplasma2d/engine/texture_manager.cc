@@ -27,22 +27,22 @@ std::string p2d::TextureManager::getResourcePath() {
 
 
 void p2d::TextureManager::loadTexture(std::string _filename) {
-    unsigned int flags = SOIL_FLAG_MIPMAPS;
-    
-    std::string separator = "/";
-    std::string filepath = getResourcePath() + separator + _filename;
-    
-    obj->textures[_filename] = SOIL_load_OGL_texture
-    (   
-        filepath.c_str(),
-        SOIL_LOAD_AUTO,
-        SOIL_CREATE_NEW_ID,
-        flags
-    );
-    
-    if (obj->textures[_filename] == 0) {
-        printf( "SOIL loading error: '%s'\n", SOIL_last_result() );
-    }
+//    unsigned int flags = SOIL_FLAG_MIPMAPS;
+//    
+//    std::string separator = "/";
+//    std::string filepath = getResourcePath() + separator + _filename;
+//    
+//    obj->textures[_filename] = SOIL_load_OGL_texture
+//    (   
+//        filepath.c_str(),
+//        SOIL_LOAD_AUTO,
+//        SOIL_CREATE_NEW_ID,
+//        flags
+//    );
+//    
+//    if (obj->textures[_filename] == 0) {
+//        printf( "SOIL loading error: '%s'\n", SOIL_last_result() );
+//    }
 }
 
 
@@ -50,17 +50,17 @@ void p2d::TextureManager::bindTexture(std::string _image_name) {
     // TODO only bind the texture if it hasn't been bound yet
     
     // if (current_ref != ref) {
-    glBindTexture(GL_TEXTURE_2D, obj->textures[_image_name]);
+//    glBindTexture(GL_TEXTURE_2D, obj->textures[_image_name]);
     // current_ref = ref;
     // }
 }
 
 
 void p2d::TextureManager::unbindTexture() {
-    glBindTexture(GL_TEXTURE_2D, 0);
+//    glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 
 void p2d::TextureManager::deleteTexture(std::string _filename) {
-    glDeleteTextures(1, &textures[_filename]);
+//    glDeleteTextures(1, &textures[_filename]);
 }

@@ -6,12 +6,12 @@
 #ifndef TEXTURE_MANAGER_H
 #define TEXTURE_MANAGER_H
 
-#include <OpenGLES/ES1/gl.h>
-#include <OpenGLES/ES1/glext.h>
+#include <OpenGLES/ES2/gl.h>
+#include <OpenGLES/ES2/glext.h>
 #include <iostream>
 #include <ext/hash_map>
 
-#include "SOIL.h"
+//#include "SOIL.h"
 
 #include "hash_map_defs.h"
 

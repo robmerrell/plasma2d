@@ -12,6 +12,7 @@ p2d::ShaderManager* p2d::ShaderManager::Inst() {
     if (!obj) {
         obj = new ShaderManager();
         obj->shader_path = "shaders/";
+        obj->current_program = 0;
     }
     
     return obj;
@@ -24,7 +25,7 @@ bool p2d::ShaderManager::compileShader(std::string _filename) {
     GLenum type;
     
     // extract the type based on the extension
-    if (_filename.substr(_filename.size()-3, 3) == "vsh")
+    if (_filename.substr(_filename.size()-3, 3) == "vert")
         type = GL_VERTEX_SHADER;
     else
         type = GL_FRAGMENT_SHADER;
@@ -34,7 +35,7 @@ bool p2d::ShaderManager::compileShader(std::string _filename) {
     if (shader == 0) return false;
     
     // read the shader source
-    std::ifstream shader_stream(_filename.c_str());
+    std::ifstream shader_stream(_filename.c_str());    
     std::stringstream buffer;
     buffer << shader_stream.rdbuf();
     
@@ -49,7 +50,7 @@ bool p2d::ShaderManager::compileShader(std::string _filename) {
     if (!compiled) {
         GLchar messages[256];
         glGetShaderInfoLog(shader, sizeof(messages), 0, &messages[0]);
-        std::cout << messages;
+        std::cout << "(" << _filename << ") " << messages;
         return false;
     }
     
@@ -82,3 +83,13 @@ bool p2d::ShaderManager::buildProgram(std::string _vertex, std::string _fragment
     return true;
 }
 
+
+void p2d::ShaderManager::useProgram(std::string _name) {
+    current_program = obj->programs[_name];
+    glUseProgram(current_program);
+}
+
+
+GLuint p2d::ShaderManager::getAttribLocation(const GLchar* _attr) {
+    return glGetAttribLocation(current_program, _attr);
+}

@@ -22,7 +22,7 @@
 
 - (void)awakeFromNib
 {
-    EAGLContext *aContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
+    EAGLContext *aContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
 
     
     if (!aContext)
@@ -139,39 +139,6 @@
     [(EAGLView *)self.view setFramebuffer];
     
     engine.tick();
-    
-    
-    
-    /*
-    // Replace the implementation of this method to do your own custom drawing.
-    static const GLfloat squareVertices[] = {
-        -50.0f, -33.0f,
-        50.0f, -33.0f,
-        -50.0f,  33.0f,
-        50.0f,  33.0f,
-    };
-    
-    static const GLubyte squareColors[] = {
-        255, 255,   0, 255,
-        0,   255, 255, 255,
-        0,     0,   0,   0,
-        255,   0, 255, 255,
-    };
-    
-    static float transY = 0.0f;
-    
-    glClear(GL_COLOR_BUFFER_BIT);
-    
-    glTranslatef(0.0f, (GLfloat)(sinf(transY)/2.0f), 0.0f);
-    transY += 0.075f;
-    
-    glVertexPointer(2, GL_FLOAT, 0, squareVertices);
-    glEnableClientState(GL_VERTEX_ARRAY);
-    glColorPointer(4, GL_UNSIGNED_BYTE, 0, squareColors);
-    glEnableClientState(GL_COLOR_ARRAY);
-    
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-     */
     
     [(EAGLView *)self.view presentFramebuffer];
 }

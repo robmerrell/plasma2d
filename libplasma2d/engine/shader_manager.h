@@ -31,6 +31,9 @@ namespace p2d {
         // the path to the shaders
         std::string shader_path;
         
+        // the currently bound program
+        GLuint current_program;
+        
         __gnu_cxx::hash_map<std::string, GLuint, __gnu_cxx::hash<std::string>, eqstr> shaders;
         __gnu_cxx::hash_map<std::string, GLuint, __gnu_cxx::hash<std::string>, eqstr> programs;
         
@@ -47,6 +50,16 @@ namespace p2d {
          * The program is stored in a hash_map by name
          */
         bool buildProgram(std::string, std::string, std::string);
+        
+        /**
+         * Retreive a shader program
+         */
+        void useProgram(std::string);
+        
+        /**
+         * Get an attribute location
+         */
+        GLuint getAttribLocation(const GLchar*);
     };
     
 }

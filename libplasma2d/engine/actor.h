@@ -6,13 +6,14 @@
 #ifndef P2D_ACTOR_H
 #define P2D_ACTOR_H
 
-#include <OpenGLES/ES1/gl.h>
-#include <OpenGLES/ES1/glext.h>
+#include <OpenGLES/ES2/gl.h>
+#include <OpenGLES/ES2/glext.h>
 #include <string>
 
 #include "display_object.h"
 #include "defs.h"
 #include "texture_manager.h"
+#include "shader_manager.h"
 
 namespace p2d {
     
@@ -44,12 +45,12 @@ namespace p2d {
         /**
          * Transform to the actor's anchor point
          */
-        void transformForAnchor();
+        //void transformForAnchor();
         
         /**
          * Scale the geometry
          */
-        void transformForScale();
+        //void transformForScale();
         
         /**
          * Draw the actor

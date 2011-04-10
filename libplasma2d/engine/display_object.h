@@ -6,8 +6,8 @@
 #ifndef P2D_DISPLAY_OBJECT_H
 #define P2D_DISPLAY_OBJECT_H
 
-#include <OpenGLES/ES1/gl.h>
-#include <OpenGLES/ES1/glext.h>
+#include <OpenGLES/ES2/gl.h>
+#include <OpenGLES/ES2/glext.h>
 
 #include "defs.h"
 
