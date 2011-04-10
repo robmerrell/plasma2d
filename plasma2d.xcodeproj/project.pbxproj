@@ -27,6 +27,8 @@
 		D465E0DC1342D9E500E7D604 /* plasma2d.h in Headers */ = {isa = PBXBuildFile; fileRef = D465E0DB1342D9E500E7D604 /* plasma2d.h */; };
 		D465E0E01342DB3A00E7D604 /* engine.cc in Sources */ = {isa = PBXBuildFile; fileRef = D465E0DE1342DB3A00E7D604 /* engine.cc */; };
 		D465E0E11342DB3A00E7D604 /* engine.h in Headers */ = {isa = PBXBuildFile; fileRef = D465E0DF1342DB3A00E7D604 /* engine.h */; };
+		D48749CD135254A200308CD7 /* move_color.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = D48749C7135241E800308CD7 /* move_color.vert */; };
+		D48749CF1352567C00308CD7 /* move_color.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = D48749CE1352563300308CD7 /* move_color.frag */; };
 		D4A0225613452EF600E1031F /* scene.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4A0225413452EF600E1031F /* scene.cc */; };
 		D4A0225713452EF600E1031F /* scene.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A0225513452EF600E1031F /* scene.h */; };
 		D4A0225B13452FA100E1031F /* display_object.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4A0225913452FA100E1031F /* display_object.cc */; };
@@ -58,6 +60,20 @@
 		D4F05DE413477E3E002A4827 /* texture_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DE213477E3D002A4827 /* texture_manager.h */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D48749CC1352549000308CD7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = shaders;
+			dstSubfolderSpec = 6;
+			files = (
+				D48749CF1352567C00308CD7 /* move_color.frag in CopyFiles */,
+				D48749CD135254A200308CD7 /* move_color.vert in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D41F2EBD1347C3CD00E84862 /* img_test.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = img_test.bmp; sourceTree = "<group>"; };
 		D41F2EBE1347C3CD00E84862 /* img_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_test.png; sourceTree = "<group>"; };
@@ -85,6 +101,8 @@
 		D465E0DB1342D9E500E7D604 /* plasma2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plasma2d.h; sourceTree = "<group>"; };
 		D465E0DE1342DB3A00E7D604 /* engine.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = engine.cc; sourceTree = "<group>"; };
 		D465E0DF1342DB3A00E7D604 /* engine.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = engine.h; sourceTree = "<group>"; };
+		D48749C7135241E800308CD7 /* move_color.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = move_color.vert; sourceTree = "<group>"; };
+		D48749CE1352563300308CD7 /* move_color.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = move_color.frag; sourceTree = "<group>"; };
 		D4A0225413452EF600E1031F /* scene.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cc; sourceTree = "<group>"; };
 		D4A0225513452EF600E1031F /* scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene.h; sourceTree = "<group>"; };
 		D4A0225913452FA100E1031F /* display_object.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = display_object.cc; sourceTree = "<group>"; };
@@ -160,6 +178,7 @@
 				D465E0D31342D6E800E7D604 /* libplasma2d.a */,
 				D427F6361341A0480015C23D /* plasma2d-ios */,
 				D465E0D51342D6E800E7D604 /* libplasma2d */,
+				D48749C51352416700308CD7 /* shaders */,
 				D427F62B1341A0480015C23D /* Frameworks */,
 				D427F6291341A0480015C23D /* Products */,
 			);
@@ -267,6 +286,15 @@
 			path = external;
 			sourceTree = "<group>";
 		};
+		D48749C51352416700308CD7 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				D48749C7135241E800308CD7 /* move_color.vert */,
+				D48749CE1352563300308CD7 /* move_color.frag */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
 		D4F05DC6134773C4002A4827 /* soil */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +365,7 @@
 				D427F6241341A0480015C23D /* Sources */,
 				D427F6251341A0480015C23D /* Frameworks */,
 				D427F6261341A0480015C23D /* Resources */,
+				D48749CC1352549000308CD7 /* CopyFiles */,
 			);
 			buildRules = (
 			);

@@ -24,8 +24,11 @@ bool p2d::ShaderManager::compileShader(std::string _filename) {
     GLint compiled;
     GLenum type;
     
+    // TODO: Change the resource path to not rely on texture manager
+    std::string fullpath = TextureManager::Inst()->getResourcePath() + "/shaders/" + _filename;
+    
     // extract the type based on the extension
-    if (_filename.substr(_filename.size()-3, 3) == "vert")
+    if (_filename.substr(_filename.size()-4, 4) == "vert")
         type = GL_VERTEX_SHADER;
     else
         type = GL_FRAGMENT_SHADER;
@@ -35,7 +38,7 @@ bool p2d::ShaderManager::compileShader(std::string _filename) {
     if (shader == 0) return false;
     
     // read the shader source
-    std::ifstream shader_stream(_filename.c_str());    
+    std::ifstream shader_stream(fullpath.c_str());    
     std::stringstream buffer;
     buffer << shader_stream.rdbuf();
     
@@ -51,6 +54,7 @@ bool p2d::ShaderManager::compileShader(std::string _filename) {
         GLchar messages[256];
         glGetShaderInfoLog(shader, sizeof(messages), 0, &messages[0]);
         std::cout << "(" << _filename << ") " << messages;
+        std::flush(std::cout);
         return false;
     }
     

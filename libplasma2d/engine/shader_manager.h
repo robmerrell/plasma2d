@@ -16,6 +16,8 @@
 #include <sstream>
 #include <ext/hash_map>
 
+#include "texture_manager.h"
+
 #include "hash_map_defs.h"
 
 namespace p2d {
