@@ -97,3 +97,8 @@ void p2d::ShaderManager::useProgram(std::string _name) {
 GLuint p2d::ShaderManager::getAttribLocation(const GLchar* _attr) {
     return glGetAttribLocation(current_program, _attr);
 }
+
+
+GLuint p2d::ShaderManager::getUniformLocation(const GLchar* _uniform) {
+    return glGetUniformLocation(current_program, _uniform);
+}

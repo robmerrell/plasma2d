@@ -46,6 +46,17 @@ void p2d::Actor::draw() {
 //        0.0f, scaled_dim_y, 0.0f,
 //        scaled_dim_x, scaled_dim_y, 0.0f
 //    };
+
+    // modelview - rotation
+    float rads = DEG2RAD(angle);
+    float y = sin(rads);
+    float x = cos(rads);
+    static const GLfloat modelview_matrix[16] = {
+         x, y, 0.0f, 0.0f,
+        -y, x, 0.0f, 0.0f,
+        0.0f, 0.0f, 1.0f, 0.0f,
+        0.0f, 0.0f, 0.0f, 1.0f
+    };
     
     static const GLfloat squareVertices[] = {
         -0.5f, -0.33f,
@@ -57,7 +68,9 @@ void p2d::Actor::draw() {
     p2d::ShaderManager::Inst()->useProgram("move_color");
     
     GLuint pos = p2d::ShaderManager::Inst()->getAttribLocation("position");
-    
+    GLuint modelview = p2d::ShaderManager::Inst()->getUniformLocation("modelview");
+
+    glUniformMatrix4fv(modelview, 1, 0, &modelview_matrix[0]);
     glVertexAttribPointer(pos, 2, GL_FLOAT, 0, 0, squareVertices);
     glEnableVertexAttribArray(pos);
     

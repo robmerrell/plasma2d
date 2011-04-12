@@ -62,6 +62,11 @@ namespace p2d {
          * Get an attribute location
          */
         GLuint getAttribLocation(const GLchar*);
+        
+        /**
+         * Get a uniform location
+         */
+        GLuint getUniformLocation(const GLchar*);
     };
     
 }

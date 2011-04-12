@@ -23,7 +23,7 @@ p2d::pxyCoords p2d::DisplayObject::getPos() {
 
 
 void p2d::DisplayObject::setAngle(float _angle) {
-    angle = angle;
+    angle = _angle;
 }
 
 float p2d::DisplayObject::getAngle() {
