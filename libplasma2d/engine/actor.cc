@@ -15,6 +15,9 @@ p2d::Actor::Actor(p2d::pxyCoords _coords, std::string _image) {
     // get the dimensions of the image
     dim_x = 64.0f;
     dim_y = 64.0f;
+    
+    t1 = 0.0f;
+    count = 1;
 }
 
 
@@ -39,48 +42,52 @@ inline void p2d::Actor::transformForScale() {
 */
 
 void p2d::Actor::draw() {
-    // TODO: this shouldn't be rebuilt every frame...
+//    scaled_dim_x = 64.0f;
+//    scaled_dim_y = 64.0f;
+//    // TODO: this shouldn't be rebuilt every frame...
 //    static const GLfloat squareVertices[] = {
-//        0.0f, 0.0f, 0.0f,
-//        scaled_dim_x, 0.0f, 0.0f,
-//        0.0f, scaled_dim_y, 0.0f,
-//        scaled_dim_x, scaled_dim_y, 0.0f
+//        0.0f, 0.0f, 99.0f,
+//        scaled_dim_x, 0.0f, 99.0f,
+//        0.0f, scaled_dim_y, 99.0f,
+//        scaled_dim_x, scaled_dim_y, 99.0f
 //    };
+    
+    if (count == 1) {
+        t1++;
+//        std::cout << t1 << std::endl;
+        count = 0;
+    }
+    count++;
+    
+    p2d::matrix projection_matrix;
+    p2d::generateIdentityMatrix(&projection_matrix);
+//    p2d::generateFrustumMatrix(&projection_matrix, 0.0f, 1.0f, 0.0f, 1.0f, 0.1f, 100.0f);
 
-    // modelview - rotation
-    float rads = DEG2RAD(angle);
-    float y = sin(rads);
-    float x = cos(rads);
-    static const GLfloat modelview_matrix[16] = {
-         x, y, 0.0f, 0.0f,
-        -y, x, 0.0f, 0.0f,
-        0.0f, 0.0f, 1.0f, 0.0f,
-        0.0f, 0.0f, 0.0f, 1.0f
-    };
+
+    p2d::matrix actor_matrix;
+    p2d::generateIdentityMatrix(&actor_matrix);
+    p2d::translateMatrix(&actor_matrix, 0.0f, 0.0f, 0.0f);
+//    p2d::rotateMatrix(&actor_matrix, 33.0f, 0.0f, 0.0f, 1.0f);
     
     static const GLfloat squareVertices[] = {
-        -0.5f, -0.33f,
-        0.5f, -0.33f,
-        -0.5f,  0.33f,
-        0.5f,  0.33f,
+        -0.5f, -0.33f, 0.0f,
+        0.5f, -0.33f, 0.0f,
+        -0.5f,  0.33f, 0.0f,
+        0.5f,  0.33f, 0.0f
     };
     
     p2d::ShaderManager::Inst()->useProgram("move_color");
     
     GLuint pos = p2d::ShaderManager::Inst()->getAttribLocation("position");
     GLuint modelview = p2d::ShaderManager::Inst()->getUniformLocation("modelview");
+    GLuint projection_view = p2d::ShaderManager::Inst()->getUniformLocation("projection");
 
-    glUniformMatrix4fv(modelview, 1, 0, &modelview_matrix[0]);
-    glVertexAttribPointer(pos, 2, GL_FLOAT, 0, 0, squareVertices);
+    glVertexAttribPointer(pos, 3, GL_FLOAT, 0, 0, squareVertices);
+    glUniformMatrix4fv(modelview, 1, GL_FALSE, (GLfloat*) &actor_matrix.m[0][0] );
+    glUniformMatrix4fv(projection_view, 1, GL_FALSE, (GLfloat*) &projection_matrix.m[0][0] );
     glEnableVertexAttribArray(pos);
     
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-    
-//    GLuint m_a_positionHandle = glGetAttribLocation(m_shaderProgram, "a_position");
-
-    
-//    glVertexAttribPointer(ATTRIB_VERTEX, 2, GL_FLOAT, 0, 0, squareVertices);
-//    glEnableVertexAttribArray(ATTRIB_VERTEX);
 }
 
 //void p2d::Actor::draw() {

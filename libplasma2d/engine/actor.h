@@ -11,6 +11,7 @@
 #include <string>
 #include <math.h>
 
+#include "matrix.h"
 #include "display_object.h"
 #include "defs.h"
 #include "texture_manager.h"
@@ -25,6 +26,9 @@ namespace p2d {
         float dim_y;
         float scaled_dim_x;
         float scaled_dim_y;
+        
+        float t1;
+        float count;
         
         // image name
         std::string image;

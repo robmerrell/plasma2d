@@ -44,6 +44,8 @@
 		D4BA3957134EAFD600D39D50 /* shader_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = D4BA3955134EAFD600D39D50 /* shader_manager.h */; };
 		D4DEDEE11344438F00699EA9 /* director.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4DEDEDF1344438F00699EA9 /* director.cc */; };
 		D4DEDEE21344438F00699EA9 /* director.h in Headers */ = {isa = PBXBuildFile; fileRef = D4DEDEE01344438F00699EA9 /* director.h */; };
+		D4E16C6F135699F700009D1B /* matrix.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4E16C6D135699F600009D1B /* matrix.cc */; };
+		D4E16C70135699F700009D1B /* matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = D4E16C6E135699F600009D1B /* matrix.h */; };
 		D4F05DC5134773C4002A4827 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62E1341A0480015C23D /* Foundation.framework */; };
 		D4F05DCC1347742F002A4827 /* libsoil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F05DC4134773C4002A4827 /* libsoil.a */; };
 		D4F05DD713477488002A4827 /* image_DXT.c in Sources */ = {isa = PBXBuildFile; fileRef = D4F05DCD13477488002A4827 /* image_DXT.c */; };
@@ -119,6 +121,8 @@
 		D4BA3955134EAFD600D39D50 /* shader_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shader_manager.h; sourceTree = "<group>"; };
 		D4DEDEDF1344438F00699EA9 /* director.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = director.cc; sourceTree = "<group>"; };
 		D4DEDEE01344438F00699EA9 /* director.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = director.h; sourceTree = "<group>"; };
+		D4E16C6D135699F600009D1B /* matrix.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = matrix.cc; sourceTree = "<group>"; };
+		D4E16C6E135699F600009D1B /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
 		D4F05DC4134773C4002A4827 /* libsoil.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsoil.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F05DC8134773C4002A4827 /* soil-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "soil-Prefix.pch"; sourceTree = "<group>"; };
 		D4F05DCD13477488002A4827 /* image_DXT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = image_DXT.c; sourceTree = "<group>"; };
@@ -274,6 +278,8 @@
 				D41F2F5F13484C5C00E84862 /* hash_map_defs.h */,
 				D4BA3954134EAFD600D39D50 /* shader_manager.cc */,
 				D4BA3955134EAFD600D39D50 /* shader_manager.h */,
+				D4E16C6D135699F600009D1B /* matrix.cc */,
+				D4E16C6E135699F600009D1B /* matrix.h */,
 			);
 			path = engine;
 			sourceTree = "<group>";
@@ -339,6 +345,7 @@
 				D4F05DE413477E3E002A4827 /* texture_manager.h in Headers */,
 				D41F2F6013484C5C00E84862 /* hash_map_defs.h in Headers */,
 				D4BA3957134EAFD600D39D50 /* shader_manager.h in Headers */,
+				D4E16C70135699F700009D1B /* matrix.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +482,7 @@
 				D4A0226A13453E2600E1031F /* actor.cc in Sources */,
 				D4F05DE313477E3E002A4827 /* texture_manager.cc in Sources */,
 				D4BA3956134EAFD600D39D50 /* shader_manager.cc in Sources */,
+				D4E16C6F135699F700009D1B /* matrix.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
