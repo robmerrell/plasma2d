@@ -131,3 +131,29 @@ void p2d::generateFrustumMatrix(p2d::matrix* _matrix, float _left, float _right,
     
     p2d::multiplyMatrices(_matrix, &frustum, _matrix);
 }
+
+
+void p2d::setProjection(p2d::matrix* _matrix, float _fovy, float _aspect, float _near_z, float _far_z) {
+    GLfloat x_min, x_max, y_min, y_max;
+    y_max = _near_z * tanf(_fovy * M_PI / 360.0f);
+    y_min = -y_max;
+    
+    x_min = y_max * _aspect;
+    x_max = y_max * _aspect;
+    
+    p2d::generateFrustumMatrix(_matrix, x_min, x_max, y_min, y_max, _near_z, _far_z);
+    /*
+     GLfloat xmin, xmax, ymin, ymax;
+     ymax = zMin * tan(fovy * M_PI / 360.0);
+     ymin = -ymax;
+     xmin = ymin * aspect;
+     xmax = ymax * aspect;
+     glFrustum(xmin, xmax, ymin, ymax, zmin, zmax);
+     }*/
+//    GLfloat frustum_width, frustum_height;
+//    
+//    frustum_height = tanf(_fovy * M_PI / 360.0f) * _near_z;
+//    frustum_width = frustum_height * _aspect;
+//    
+//    p2d::generateFrustumMatrix(_matrix, -frustum_width, frustum_width, -frustum_height, frustum_height, _near_z, _far_z);
+}

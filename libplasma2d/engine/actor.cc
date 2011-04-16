@@ -44,12 +44,12 @@ inline void p2d::Actor::transformForScale() {
 void p2d::Actor::draw() {
 //    scaled_dim_x = 64.0f;
 //    scaled_dim_y = 64.0f;
-//    // TODO: this shouldn't be rebuilt every frame...
+////    // TODO: this shouldn't be rebuilt every frame...
 //    static const GLfloat squareVertices[] = {
-//        0.0f, 0.0f, 99.0f,
-//        scaled_dim_x, 0.0f, 99.0f,
-//        0.0f, scaled_dim_y, 99.0f,
-//        scaled_dim_x, scaled_dim_y, 99.0f
+//        0.0f, 0.0f, 0.0f,
+//        scaled_dim_x, 0.0f, 0.0f,
+//        0.0f, scaled_dim_y, 0.0f,
+//        scaled_dim_x, scaled_dim_y, 0.0f
 //    };
     
     if (count == 1) {
@@ -61,13 +61,14 @@ void p2d::Actor::draw() {
     
     p2d::matrix projection_matrix;
     p2d::generateIdentityMatrix(&projection_matrix);
+//    p2d::setProjection(&projection_matrix, 60.0f, (768.0f/1024.0f), 1.0f, 20.0f);
 //    p2d::generateFrustumMatrix(&projection_matrix, 0.0f, 1.0f, 0.0f, 1.0f, 0.1f, 100.0f);
 
 
     p2d::matrix actor_matrix;
     p2d::generateIdentityMatrix(&actor_matrix);
-    p2d::translateMatrix(&actor_matrix, 0.0f, 0.0f, 0.0f);
-//    p2d::rotateMatrix(&actor_matrix, 33.0f, 0.0f, 0.0f, 1.0f);
+    p2d::translateMatrix(&actor_matrix, -1.0, 0.0f, 0.0f);
+    p2d::rotateMatrix(&actor_matrix, t1, 0.0f, 0.0f, 1.0f);
     
     static const GLfloat squareVertices[] = {
         -0.5f, -0.33f, 0.0f,

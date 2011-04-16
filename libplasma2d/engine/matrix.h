@@ -45,6 +45,11 @@ namespace p2d {
      * used like glFrustum
      */
     void generateFrustumMatrix(matrix*, float, float, float, float, float, float);
+    
+    /**
+     * An easier way of setting the projection
+     */
+    void setProjection(matrix*, float, float, float, float);
 }
 
 #endif

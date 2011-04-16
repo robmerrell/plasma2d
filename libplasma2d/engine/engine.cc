@@ -29,6 +29,8 @@ void p2d::Engine::initialize(std::string _resource_path) {
     p2d::ShaderManager::Inst()->compileShader("move_color.frag");
     p2d::ShaderManager::Inst()->buildProgram("move_color.vert", "move_color.frag", "move_color");
     
+    glViewport(0, 0, 768, 1024);
+    
     /*
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
