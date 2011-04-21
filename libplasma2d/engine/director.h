@@ -6,6 +6,9 @@
 #ifndef P2D_DIRECTOR_H
 #define P2D_DIRECTOR_H
 
+#include "../external/glm/glm.hpp"
+#include "../external/glm/gtc/matrix_transform.hpp"
+
 #include "scene.h"
 
 #include <cstdlib>
@@ -24,6 +27,9 @@ namespace p2d {
         
         // the currently running scene
         Scene* current_scene;
+        
+        // the current projection
+        glm::mat4 projection;
         
     public:
         /**
@@ -46,6 +52,11 @@ namespace p2d {
          * Get the current scene
          */
         Scene* getCurrentScene();
+        
+        /**
+         * Get the current projection
+         */
+        glm::mat4& getProjection();
     };
     
 }

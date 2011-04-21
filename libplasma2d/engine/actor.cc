@@ -13,11 +13,8 @@ p2d::Actor::Actor(p2d::pxyCoords _coords, std::string _image) {
     p2d::TextureManager::Inst()->loadTexture(_image);
     
     // get the dimensions of the image
-    dim_x = 64.0f;
-    dim_y = 64.0f;
-    
-//    t1 = 0.0f;
-//    count = 1;
+    width = 64.0f;
+    height = 64.0f;
 }
 
 
@@ -26,38 +23,25 @@ p2d::Actor::~Actor() {
 }
 
 
-/*
-void p2d::Actor::transformForAnchor() {
-    if (anchor.x != 0.0f || anchor.y != 0.0f) {
-        glLoadIdentity();
-        glTranslatef(dim_x * -anchor.x, dim_y * -anchor.y, 0.0f);
-    }
-}
-
-
-inline void p2d::Actor::transformForScale() {
-    scaled_dim_x = dim_x * scale;
-    scaled_dim_y = dim_y * scale;
-}
-*/
-
 void p2d::Actor::draw() {
-    scaled_dim_x = 64.0f;
-    scaled_dim_y = 64.0f;
 //    // TODO: this shouldn't be rebuilt every frame...
     static const GLfloat squareVertices[] = {
         0.0f, 0.0f, 0.0f,
-        scaled_dim_x, 0.0f, 0.0f,
-        0.0f, scaled_dim_y, 0.0f,
-        scaled_dim_x, scaled_dim_y, 0.0f
+        width, 0.0f, 0.0f,
+        0.0f, height, 0.0f,
+        width, height, 0.0f
     };
-
     
-    glm::mat4 ortho = glm::ortho(0.0f, 768.0f, 1024.0f, 0.0f, -100.0f, 100.0f);
+    // change the anchor point
+    float anchor_x = width * -anchor.x;
+    float anchor_y = height * -anchor.y;
     
-    glm::mat4 trans = glm::translate(glm::mat4(1.0f), glm::vec3(704.0f, 0.0f, 0.0f));
-    
-    glm::mat4 mvp = ortho * trans;
+    // transformations
+    glm::mat4 trans = glm::translate(glm::mat4(1.0f), glm::vec3(pos.x + anchor_x, pos.y + anchor_y, 0.0f));
+    glm::mat4 scale_mat = glm::scale(glm::mat4(1.0f), glm::vec3(scale, scale, 0.0f));
+        
+    glm::mat4 mvp = p2d::Director::Inst()->getProjection() * trans * scale_mat;
+    // TODO: rotation
     
     p2d::ShaderManager::Inst()->useProgram("move_color");
     
