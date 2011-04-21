@@ -11,7 +11,10 @@
 #include <string>
 #include <math.h>
 
-#include "matrix.h"
+#include "../external/glm/glm.hpp"
+#include "../external/glm/gtc/matrix_transform.hpp"
+#include "../external/glm/gtc/type_ptr.hpp"
+
 #include "display_object.h"
 #include "defs.h"
 #include "texture_manager.h"

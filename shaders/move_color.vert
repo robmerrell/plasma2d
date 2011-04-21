@@ -1,7 +1,9 @@
 attribute vec4 position;
-uniform mat4 modelview;
-uniform mat4 projection;
+//uniform mat4 modelview;
+//uniform mat4 projection;
+
+uniform mat4 uMVP;
 
 void main(void) {
-    gl_Position = modelview * projection * position;
+    gl_Position = uMVP * position;
 }

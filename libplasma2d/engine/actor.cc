@@ -16,8 +16,8 @@ p2d::Actor::Actor(p2d::pxyCoords _coords, std::string _image) {
     dim_x = 64.0f;
     dim_y = 64.0f;
     
-    t1 = 0.0f;
-    count = 1;
+//    t1 = 0.0f;
+//    count = 1;
 }
 
 
@@ -42,50 +42,30 @@ inline void p2d::Actor::transformForScale() {
 */
 
 void p2d::Actor::draw() {
-//    scaled_dim_x = 64.0f;
-//    scaled_dim_y = 64.0f;
-////    // TODO: this shouldn't be rebuilt every frame...
-//    static const GLfloat squareVertices[] = {
-//        0.0f, 0.0f, 0.0f,
-//        scaled_dim_x, 0.0f, 0.0f,
-//        0.0f, scaled_dim_y, 0.0f,
-//        scaled_dim_x, scaled_dim_y, 0.0f
-//    };
-    
-    if (count == 1) {
-        t1++;
-//        std::cout << t1 << std::endl;
-        count = 0;
-    }
-    count++;
-    
-    p2d::matrix projection_matrix;
-    p2d::generateIdentityMatrix(&projection_matrix);
-//    p2d::setProjection(&projection_matrix, 60.0f, (768.0f/1024.0f), 1.0f, 20.0f);
-//    p2d::generateFrustumMatrix(&projection_matrix, 0.0f, 1.0f, 0.0f, 1.0f, 0.1f, 100.0f);
-
-
-    p2d::matrix actor_matrix;
-    p2d::generateIdentityMatrix(&actor_matrix);
-    p2d::translateMatrix(&actor_matrix, -1.0, 0.0f, 0.0f);
-    p2d::rotateMatrix(&actor_matrix, t1, 0.0f, 0.0f, 1.0f);
-    
+    scaled_dim_x = 64.0f;
+    scaled_dim_y = 64.0f;
+//    // TODO: this shouldn't be rebuilt every frame...
     static const GLfloat squareVertices[] = {
-        -0.5f, -0.33f, 0.0f,
-        0.5f, -0.33f, 0.0f,
-        -0.5f,  0.33f, 0.0f,
-        0.5f,  0.33f, 0.0f
+        0.0f, 0.0f, 0.0f,
+        scaled_dim_x, 0.0f, 0.0f,
+        0.0f, scaled_dim_y, 0.0f,
+        scaled_dim_x, scaled_dim_y, 0.0f
     };
+
+    
+    glm::mat4 ortho = glm::ortho(0.0f, 768.0f, 1024.0f, 0.0f, -100.0f, 100.0f);
+    
+    glm::mat4 trans = glm::translate(glm::mat4(1.0f), glm::vec3(704.0f, 0.0f, 0.0f));
+    
+    glm::mat4 mvp = ortho * trans;
     
     p2d::ShaderManager::Inst()->useProgram("move_color");
     
     GLuint pos = p2d::ShaderManager::Inst()->getAttribLocation("position");
-    GLuint modelview = p2d::ShaderManager::Inst()->getUniformLocation("modelview");
-    GLuint projection_view = p2d::ShaderManager::Inst()->getUniformLocation("projection");
+    GLuint uMVP = p2d::ShaderManager::Inst()->getUniformLocation("uMVP");
 
     glVertexAttribPointer(pos, 3, GL_FLOAT, 0, 0, squareVertices);
-    glUniformMatrix4fv(modelview, 1, GL_FALSE, (GLfloat*) &actor_matrix.m[0][0] );
-    glUniformMatrix4fv(projection_view, 1, GL_FALSE, (GLfloat*) &projection_matrix.m[0][0] );
+    glUniformMatrix4fv(uMVP, 1, GL_FALSE, glm::value_ptr(mvp));
     glEnableVertexAttribArray(pos);
     
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
