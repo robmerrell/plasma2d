@@ -48,12 +48,12 @@ void p2d::Actor::draw() {
     
     p2d::ShaderManager::Inst()->useProgram("move_color");
     
-    GLuint pos = p2d::ShaderManager::Inst()->getAttribLocation("position");
+    GLuint vert_coords = p2d::ShaderManager::Inst()->getAttribLocation("vert_coords");
     GLuint uMVP = p2d::ShaderManager::Inst()->getUniformLocation("uMVP");
 
-    glVertexAttribPointer(pos, 3, GL_FLOAT, 0, 0, sprite_verts);
+    glVertexAttribPointer(vert_coords, 3, GL_FLOAT, 0, 0, sprite_verts);
     glUniformMatrix4fv(uMVP, 1, GL_FALSE, glm::value_ptr(mvp));
-    glEnableVertexAttribArray(pos);
+    glEnableVertexAttribArray(vert_coords);
     
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
 }

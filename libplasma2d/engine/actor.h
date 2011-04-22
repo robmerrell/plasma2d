@@ -11,8 +11,6 @@
 #include <string>
 #include <math.h>
 
-#include <iostream>
-
 #include "../external/glm/glm.hpp"
 #include "../external/glm/gtc/matrix_transform.hpp"
 #include "../external/glm/gtc/type_ptr.hpp"
