@@ -33,9 +33,8 @@ void p2d::Actor::draw() {
     };
     
     // change the anchor point
-    // TODO: this should be done in setAnchor, not here
-    float anchor_x = width * -anchor.x;
-    float anchor_y = height * -anchor.y;
+    float anchor_x = width * scale * -anchor.x;
+    float anchor_y = height * scale * -anchor.y;
     
     
     // transformations

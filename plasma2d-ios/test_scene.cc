@@ -11,7 +11,8 @@ TestScene::TestScene() {
     actor->setAngle(45.0f);
     addObject(actor);
     
-    p2d::Actor *actor2 = new p2d::Actor(p2d::pxy(500.0f, 300.0f), "img_test.png");
+    p2d::Actor *actor2 = new p2d::Actor(p2d::pxy(400.0f, 400.0f), "img_test.png");
     actor2->setScale(3.0f);
+    actor2->setAnchor(p2d::pxy(0.5f, 0.5f));
     addObject(actor2);
 }
