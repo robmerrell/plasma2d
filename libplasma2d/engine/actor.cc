@@ -39,8 +39,9 @@ void p2d::Actor::draw() {
     // transformations
     glm::mat4 trans = glm::translate(glm::mat4(1.0f), glm::vec3(pos.x + anchor_x, pos.y + anchor_y, 0.0f));
     glm::mat4 scale_mat = glm::scale(glm::mat4(1.0f), glm::vec3(scale, scale, 0.0f));
+    glm::mat4 rot = glm::rotate(glm::mat4(1.0f), angle, glm::vec3(0.0f, 0.0f, 1.0f));
         
-    glm::mat4 mvp = p2d::Director::Inst()->getProjection() * trans * scale_mat;
+    glm::mat4 mvp = p2d::Director::Inst()->getProjection() * rot * trans * scale_mat;
     // TODO: rotation
     
     p2d::ShaderManager::Inst()->useProgram("move_color");
