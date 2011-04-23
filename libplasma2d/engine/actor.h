@@ -26,7 +26,10 @@ namespace p2d {
     class Actor : public DisplayObject {
     private:
         // vertices for the sprite geometry
-        glm::vec3 sprite_verts[4];
+        glm::mat4x3 sprite_verts;
+        
+        // texture coords
+        glm::mat4 tex_coords;
         
         // image dimensions
         float width;

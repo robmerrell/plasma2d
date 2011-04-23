@@ -11,7 +11,7 @@
 #include <iostream>
 #include <ext/hash_map>
 
-//#include "SOIL.h"
+#include "SOIL.h"
 
 #include "hash_map_defs.h"
 
