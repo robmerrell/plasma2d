@@ -27,7 +27,7 @@ std::string p2d::TextureManager::getResourcePath() {
 
 
 void p2d::TextureManager::loadTexture(std::string _filename) {
-    unsigned int flags = SOIL_FLAG_MIPMAPS;
+    unsigned int flags = SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y;
     
     std::string separator = "/";
     std::string filepath = getResourcePath() + separator + _filename;
