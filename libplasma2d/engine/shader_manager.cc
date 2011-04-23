@@ -24,6 +24,8 @@ bool p2d::ShaderManager::compileShader(std::string _filename) {
     GLint compiled;
     GLenum type;
     
+    std::string file_contents, buf;
+    
     // TODO: Change the resource path to not rely on texture manager
     std::string fullpath = TextureManager::Inst()->getResourcePath() + "/shaders/" + _filename;
     
@@ -36,14 +38,17 @@ bool p2d::ShaderManager::compileShader(std::string _filename) {
     // generate the shader
     shader = glCreateShader(type);
     if (shader == 0) return false;
+
+    // read the file
+    std::ifstream input(fullpath.c_str()); 
+    while (!input.eof()) {
+        getline(input, buf);
+        
+        file_contents += buf;
+        file_contents += "\n";
+    }
     
-    // read the shader source
-    std::ifstream shader_stream(fullpath.c_str());    
-    std::stringstream buffer;
-    buffer << shader_stream.rdbuf();
-    
-    // compile the shader source
-    const GLchar* casted_source = buffer.str().c_str();
+    const GLchar* casted_source = file_contents.c_str();
     glShaderSource(shader, 1, &casted_source, NULL);
     glCompileShader(shader);
     
@@ -54,7 +59,7 @@ bool p2d::ShaderManager::compileShader(std::string _filename) {
         GLchar messages[256];
         glGetShaderInfoLog(shader, sizeof(messages), 0, &messages[0]);
         std::cout << "(" << _filename << ") " << messages << std::endl;
-        std::cout << buffer.str() << std::endl;
+        std::cout << file_contents << std::endl;
         return false;
     }
     
