@@ -53,8 +53,8 @@ bool p2d::ShaderManager::compileShader(std::string _filename) {
     if (!compiled) {
         GLchar messages[256];
         glGetShaderInfoLog(shader, sizeof(messages), 0, &messages[0]);
-        std::cout << "(" << _filename << ") " << messages;
-        std::flush(std::cout);
+        std::cout << "(" << _filename << ") " << messages << std::endl;
+        std::cout << buffer.str() << std::endl;
         return false;
     }
     
@@ -79,7 +79,7 @@ bool p2d::ShaderManager::buildProgram(std::string _vertex, std::string _fragment
     if (!linked) {
         GLchar messages[256];
         glGetShaderInfoLog(program_object, sizeof(messages), 0, &messages[0]);
-        std::cout << messages;
+        std::cout << messages << std::endl;
         return false;   
     }
     
