@@ -22,7 +22,7 @@ void p2d::Engine::initialize(std::string _resource_path) {
     // the other classes have access to it
     p2d::TextureManager::Inst()->setResourcePath(_resource_path);
     
-    glClearColor(0.0f, 0.7f, 0.5f, 1.0f);
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     
     // build standard shaders
     p2d::ShaderManager::Inst()->compileShader("move_color.vert");
@@ -31,17 +31,9 @@ void p2d::Engine::initialize(std::string _resource_path) {
     
     glViewport(0, 0, 768, 1024);
     
-    /*
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    
-    glOrthof(0.0f, 768.0f, 1024.0f, 0.0f, -1.0f, 1.0f);
-    
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-    
     glEnable(GL_TEXTURE_2D);
-     */
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 }
 
 
