@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D413EADF136CD6E300E0296F /* main.nut in Resources */ = {isa = PBXBuildFile; fileRef = D413EADE136CD6E300E0296F /* main.nut */; };
+		D413EAE0136CD71000E0296F /* main.nut in Copy squirrel */ = {isa = PBXBuildFile; fileRef = D413EADE136CD6E300E0296F /* main.nut */; };
 		D41F2EBF1347C3CD00E84862 /* img_test.bmp in Resources */ = {isa = PBXBuildFile; fileRef = D41F2EBD1347C3CD00E84862 /* img_test.bmp */; };
 		D41F2EC01347C3CD00E84862 /* img_test.png in Resources */ = {isa = PBXBuildFile; fileRef = D41F2EBE1347C3CD00E84862 /* img_test.png */; };
 		D41F2F6013484C5C00E84862 /* hash_map_defs.h in Headers */ = {isa = PBXBuildFile; fileRef = D41F2F5F13484C5C00E84862 /* hash_map_defs.h */; };
@@ -140,6 +142,20 @@
 		D4756947135FE03100C89D7E /* xstream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D47568D8135FE03000C89D7E /* xstream.hpp */; };
 		D48749CD135254A200308CD7 /* move_color.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = D48749C7135241E800308CD7 /* move_color.vert */; };
 		D48749CF1352567C00308CD7 /* move_color.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = D48749CE1352563300308CD7 /* move_color.frag */; };
+		D49612B8136C47FF00D33D6D /* sqratAllocator.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612AA136C47FF00D33D6D /* sqratAllocator.h */; };
+		D49612B9136C47FF00D33D6D /* sqratClass.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612AB136C47FF00D33D6D /* sqratClass.h */; };
+		D49612BA136C47FF00D33D6D /* sqratClassType.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612AC136C47FF00D33D6D /* sqratClassType.h */; };
+		D49612BB136C47FF00D33D6D /* sqratConst.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612AD136C47FF00D33D6D /* sqratConst.h */; };
+		D49612BC136C47FF00D33D6D /* sqratFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612AE136C47FF00D33D6D /* sqratFunction.h */; };
+		D49612BD136C47FF00D33D6D /* sqratGlobalMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612AF136C47FF00D33D6D /* sqratGlobalMethods.h */; };
+		D49612BE136C47FF00D33D6D /* sqratMemberMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612B0136C47FF00D33D6D /* sqratMemberMethods.h */; };
+		D49612BF136C47FF00D33D6D /* sqratObject.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612B1136C47FF00D33D6D /* sqratObject.h */; };
+		D49612C0136C47FF00D33D6D /* sqratOverloadMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612B2136C47FF00D33D6D /* sqratOverloadMethods.h */; };
+		D49612C1136C47FF00D33D6D /* sqratScript.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612B3136C47FF00D33D6D /* sqratScript.h */; };
+		D49612C2136C47FF00D33D6D /* sqratTable.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612B4136C47FF00D33D6D /* sqratTable.h */; };
+		D49612C3136C47FF00D33D6D /* sqratTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612B5136C47FF00D33D6D /* sqratTypes.h */; };
+		D49612C4136C47FF00D33D6D /* sqratUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612B6136C47FF00D33D6D /* sqratUtil.h */; };
+		D49612C5136C47FF00D33D6D /* sqrat.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612B7136C47FF00D33D6D /* sqrat.h */; };
 		D4A0225613452EF600E1031F /* scene.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4A0225413452EF600E1031F /* scene.cc */; };
 		D4A0225713452EF600E1031F /* scene.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A0225513452EF600E1031F /* scene.h */; };
 		D4A0225B13452FA100E1031F /* display_object.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4A0225913452FA100E1031F /* display_object.cc */; };
@@ -219,6 +235,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		D413EADD136CD6A000E0296F /* Copy squirrel */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = src;
+			dstSubfolderSpec = 6;
+			files = (
+				D413EAE0136CD71000E0296F /* main.nut in Copy squirrel */,
+			);
+			name = "Copy squirrel";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D48749CC1352549000308CD7 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +260,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D413EADE136CD6E300E0296F /* main.nut */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.nut; sourceTree = "<group>"; };
 		D41F2EBD1347C3CD00E84862 /* img_test.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = img_test.bmp; sourceTree = "<group>"; };
 		D41F2EBE1347C3CD00E84862 /* img_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_test.png; sourceTree = "<group>"; };
 		D41F2F5F13484C5C00E84862 /* hash_map_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash_map_defs.h; sourceTree = "<group>"; };
@@ -472,6 +500,20 @@
 		D47568D8135FE03000C89D7E /* xstream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = xstream.hpp; sourceTree = "<group>"; };
 		D48749C7135241E800308CD7 /* move_color.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = move_color.vert; sourceTree = "<group>"; };
 		D48749CE1352563300308CD7 /* move_color.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = move_color.frag; sourceTree = "<group>"; };
+		D49612AA136C47FF00D33D6D /* sqratAllocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratAllocator.h; sourceTree = "<group>"; };
+		D49612AB136C47FF00D33D6D /* sqratClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratClass.h; sourceTree = "<group>"; };
+		D49612AC136C47FF00D33D6D /* sqratClassType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratClassType.h; sourceTree = "<group>"; };
+		D49612AD136C47FF00D33D6D /* sqratConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratConst.h; sourceTree = "<group>"; };
+		D49612AE136C47FF00D33D6D /* sqratFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratFunction.h; sourceTree = "<group>"; };
+		D49612AF136C47FF00D33D6D /* sqratGlobalMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratGlobalMethods.h; sourceTree = "<group>"; };
+		D49612B0136C47FF00D33D6D /* sqratMemberMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratMemberMethods.h; sourceTree = "<group>"; };
+		D49612B1136C47FF00D33D6D /* sqratObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratObject.h; sourceTree = "<group>"; };
+		D49612B2136C47FF00D33D6D /* sqratOverloadMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratOverloadMethods.h; sourceTree = "<group>"; };
+		D49612B3136C47FF00D33D6D /* sqratScript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratScript.h; sourceTree = "<group>"; };
+		D49612B4136C47FF00D33D6D /* sqratTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratTable.h; sourceTree = "<group>"; };
+		D49612B5136C47FF00D33D6D /* sqratTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratTypes.h; sourceTree = "<group>"; };
+		D49612B6136C47FF00D33D6D /* sqratUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqratUtil.h; sourceTree = "<group>"; };
+		D49612B7136C47FF00D33D6D /* sqrat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqrat.h; sourceTree = "<group>"; };
 		D4A0225413452EF600E1031F /* scene.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scene.cc; sourceTree = "<group>"; };
 		D4A0225513452EF600E1031F /* scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene.h; sourceTree = "<group>"; };
 		D4A0225913452FA100E1031F /* display_object.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = display_object.cc; sourceTree = "<group>"; };
@@ -594,6 +636,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D413EADC136CD62500E0296F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D413EADE136CD6E300E0296F /* main.nut */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		D427F61D1341A0470015C23D = {
 			isa = PBXGroup;
 			children = (
@@ -605,6 +655,7 @@
 				D427F6361341A0480015C23D /* plasma2d-ios */,
 				D465E0D51342D6E800E7D604 /* libplasma2d */,
 				D48749C51352416700308CD7 /* shaders */,
+				D413EADC136CD62500E0296F /* src */,
 				D427F62B1341A0480015C23D /* Frameworks */,
 				D427F6291341A0480015C23D /* Products */,
 			);
@@ -956,6 +1007,7 @@
 		D47B9A3A134771590002FC57 /* external */ = {
 			isa = PBXGroup;
 			children = (
+				D49612A7136C47BD00D33D6D /* sqrat */,
 				D4DDEC34136A79A500F65892 /* squirrel */,
 				D4756802135FE03000C89D7E /* glm */,
 				D4F05DC6134773C4002A4827 /* soil */,
@@ -970,6 +1022,35 @@
 				D48749CE1352563300308CD7 /* move_color.frag */,
 			);
 			path = shaders;
+			sourceTree = "<group>";
+		};
+		D49612A7136C47BD00D33D6D /* sqrat */ = {
+			isa = PBXGroup;
+			children = (
+				D49612A9136C47FF00D33D6D /* sqrat */,
+				D49612B7136C47FF00D33D6D /* sqrat.h */,
+			);
+			path = sqrat;
+			sourceTree = "<group>";
+		};
+		D49612A9136C47FF00D33D6D /* sqrat */ = {
+			isa = PBXGroup;
+			children = (
+				D49612AA136C47FF00D33D6D /* sqratAllocator.h */,
+				D49612AB136C47FF00D33D6D /* sqratClass.h */,
+				D49612AC136C47FF00D33D6D /* sqratClassType.h */,
+				D49612AD136C47FF00D33D6D /* sqratConst.h */,
+				D49612AE136C47FF00D33D6D /* sqratFunction.h */,
+				D49612AF136C47FF00D33D6D /* sqratGlobalMethods.h */,
+				D49612B0136C47FF00D33D6D /* sqratMemberMethods.h */,
+				D49612B1136C47FF00D33D6D /* sqratObject.h */,
+				D49612B2136C47FF00D33D6D /* sqratOverloadMethods.h */,
+				D49612B3136C47FF00D33D6D /* sqratScript.h */,
+				D49612B4136C47FF00D33D6D /* sqratTable.h */,
+				D49612B5136C47FF00D33D6D /* sqratTypes.h */,
+				D49612B6136C47FF00D33D6D /* sqratUtil.h */,
+			);
+			path = sqrat;
 			sourceTree = "<group>";
 		};
 		D4DDEC34136A79A500F65892 /* squirrel */ = {
@@ -1212,6 +1293,20 @@
 				D4756945135FE03100C89D7E /* verbose_operator.hpp in Headers */,
 				D4756946135FE03100C89D7E /* wrap.hpp in Headers */,
 				D4756947135FE03100C89D7E /* xstream.hpp in Headers */,
+				D49612B8136C47FF00D33D6D /* sqratAllocator.h in Headers */,
+				D49612B9136C47FF00D33D6D /* sqratClass.h in Headers */,
+				D49612BA136C47FF00D33D6D /* sqratClassType.h in Headers */,
+				D49612BB136C47FF00D33D6D /* sqratConst.h in Headers */,
+				D49612BC136C47FF00D33D6D /* sqratFunction.h in Headers */,
+				D49612BD136C47FF00D33D6D /* sqratGlobalMethods.h in Headers */,
+				D49612BE136C47FF00D33D6D /* sqratMemberMethods.h in Headers */,
+				D49612BF136C47FF00D33D6D /* sqratObject.h in Headers */,
+				D49612C0136C47FF00D33D6D /* sqratOverloadMethods.h in Headers */,
+				D49612C1136C47FF00D33D6D /* sqratScript.h in Headers */,
+				D49612C2136C47FF00D33D6D /* sqratTable.h in Headers */,
+				D49612C3136C47FF00D33D6D /* sqratTypes.h in Headers */,
+				D49612C4136C47FF00D33D6D /* sqratUtil.h in Headers */,
+				D49612C5136C47FF00D33D6D /* sqrat.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1271,6 +1366,7 @@
 				D427F6251341A0480015C23D /* Frameworks */,
 				D427F6261341A0480015C23D /* Resources */,
 				D48749CC1352549000308CD7 /* CopyFiles */,
+				D413EADD136CD6A000E0296F /* Copy squirrel */,
 			);
 			buildRules = (
 			);
@@ -1367,6 +1463,7 @@
 				D427F63B1341A0480015C23D /* InfoPlist.strings in Resources */,
 				D427F6441341A0480015C23D /* MainWindow.xib in Resources */,
 				D427F6511341A0480015C23D /* plasma2dViewController.xib in Resources */,
+				D413EADF136CD6E300E0296F /* main.nut in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1481,9 +1578,15 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"${SOURCE_ROOT}/libplasma2d/external/squirrel/include",
+					"${SOURCE_ROOT}/libplasma2d/external/sqrat/",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -1496,10 +1599,16 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"${SOURCE_ROOT}/libplasma2d/external/squirrel/include",
+					"${SOURCE_ROOT}/libplasma2d/external/sqrat/",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -1543,9 +1652,10 @@
 				DSTROOT = /tmp/libplasma2d.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "libplasma2d/libplasma2d-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/libplasma2d/external/squirrel/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = plasma2d;
-				USER_HEADER_SEARCH_PATHS = "libplasma2d/external/soil/** libplasma2d/external";
+				USER_HEADER_SEARCH_PATHS = "libplasma2d/external/soil/** libplasma2d/external libplasma2d/external/squirrel/** ${SOURCE_ROOT}/libplasma2d/external/squirrel/include/**";
 			};
 			name = Debug;
 		};
@@ -1557,9 +1667,10 @@
 				DSTROOT = /tmp/libplasma2d.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "libplasma2d/libplasma2d-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/libplasma2d/external/squirrel/**";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = plasma2d;
-				USER_HEADER_SEARCH_PATHS = "libplasma2d/external/soil/** libplasma2d/external";
+				USER_HEADER_SEARCH_PATHS = "libplasma2d/external/soil/** libplasma2d/external libplasma2d/external/squirrel/** ${SOURCE_ROOT}/libplasma2d/external/squirrel/include/**";
 			};
 			name = Release;
 		};

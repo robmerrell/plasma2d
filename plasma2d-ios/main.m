@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define REDIRECT_STDOUT_TO_FILE 1
+#define REDIRECT_STDOUT_TO_FILE 0
 
 int main(int argc, char *argv[])
 {

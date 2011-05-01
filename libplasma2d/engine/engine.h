@@ -10,6 +10,13 @@
 #include <OpenGLES/ES2/glext.h>
 #include <string>
 
+#include <squirrel.h>
+#include <sqstdio.h> 
+#include <sqstdaux.h>
+
+#include <stdarg.h> 
+#include <stdio.h> 
+
 #include "director.h"
 #include "scene.h"
 #include "texture_manager.h"
@@ -23,6 +30,8 @@ namespace p2d {
         // no copy constructor or assignment allowed
         Engine(const Engine&);
         Engine& operator=(const Engine&);
+        
+        HSQUIRRELVM vm;
         
     public:
       
@@ -54,6 +63,10 @@ namespace p2d {
         
     };
     
+    /**
+     * Printing and error handling functions for squirrel
+     */
+    void squirrel_printfunc(HSQUIRRELVM, const SQChar*, ...);
 }
 
 #endif
