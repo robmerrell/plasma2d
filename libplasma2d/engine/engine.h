@@ -10,17 +10,11 @@
 #include <OpenGLES/ES2/glext.h>
 #include <string>
 
-#include <squirrel.h>
-#include <sqstdio.h> 
-#include <sqstdaux.h>
-
-#include <stdarg.h> 
-#include <stdio.h> 
-
 #include "director.h"
 #include "scene.h"
 #include "texture_manager.h"
 #include "shader_manager.h"
+#include "squirrel_wrapper.h"
 
 namespace p2d {
     
@@ -31,7 +25,7 @@ namespace p2d {
         Engine(const Engine&);
         Engine& operator=(const Engine&);
         
-        HSQUIRRELVM vm;
+        p2d::SquirrelWrapper sqWrapper;
         
     public:
       
@@ -62,11 +56,7 @@ namespace p2d {
         void tick();
         
     };
-    
-    /**
-     * Printing and error handling functions for squirrel
-     */
-    void squirrel_printfunc(HSQUIRRELVM, const SQChar*, ...);
+
 }
 
 #endif
