@@ -39,6 +39,10 @@ namespace p2d {
         std::string image;
         
     public:
+        /**
+         * Default constructor
+         */
+        Actor();
         
         /**
          * Constructor
@@ -51,6 +55,17 @@ namespace p2d {
          * Destructor
          */
         ~Actor();
+        
+        /**
+         * Set the position of the actor
+         * using X/Y
+         */
+        void setXY(float, float);
+        
+        /**
+         * Set the actor's image
+         */
+        void setImage(std::string);
         
         /**
          * Draw the actor
