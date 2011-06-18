@@ -15,6 +15,11 @@
 #include <stdio.h> 
 #include <string.h>
 
+// classes to bind...
+#include "actor.h"
+#include "director.h"
+#include "scene.h"
+
 namespace p2d {
     
     class SquirrelWrapper {
@@ -35,6 +40,11 @@ namespace p2d {
          * Clean up the Squirrel VM
          */
         ~SquirrelWrapper();
+        
+        /**
+         * Bind the C++ base classes
+         */
+        void bindClasses();
         
         /**
          * Run bootstrap.nut

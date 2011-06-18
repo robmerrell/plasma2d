@@ -59,6 +59,11 @@ namespace p2d {
         glm::mat4& getProjection();
     };
     
+    namespace BindingHelpers {
+        void Director_playScene(Scene*);
+        Scene* Director_getCurrentScene();
+    }
+    
 }
 
 #endif

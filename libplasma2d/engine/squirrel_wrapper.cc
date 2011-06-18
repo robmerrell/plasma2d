@@ -30,6 +30,25 @@ p2d::SquirrelWrapper::~SquirrelWrapper() {
 }
 
 
+void p2d::SquirrelWrapper::bindClasses() {
+    // Director
+    Sqrat::Table directorTable(vm);
+    directorTable.Func("playScene", &p2d::BindingHelpers::Director_playScene);
+    directorTable.Func("getCurrentScene", &p2d::BindingHelpers::Director_getCurrentScene);
+    Sqrat::RootTable(vm).Bind("director", directorTable);
+    
+    // Scene
+    Sqrat::Class<p2d::Scene> sceneClass(vm);
+    sceneClass.Func("addObject", &p2d::Scene::addObject);
+    sceneClass.Func("addObjectWithAnimator", &p2d::Scene::addObjectWithAnimator);
+    Sqrat::RootTable(vm).Bind("Scene", sceneClass);
+    
+    // Actor
+    Sqrat::Class<p2d::Actor> actorClass(vm);
+    Sqrat::RootTable(vm).Bind("Actor", actorClass);
+}
+
+
 void p2d::SquirrelWrapper::bootstrap() {
     Sqrat::Script script;
     script.CompileFile(script_path + "/src/bootstrap.nut");

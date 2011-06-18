@@ -43,3 +43,8 @@ p2d::Scene* p2d::Director::getCurrentScene() {
 glm::mat4& p2d::Director::getProjection() {
     return obj->projection;
 }
+
+
+// Binding helpers
+void p2d::BindingHelpers::Director_playScene(p2d::Scene* _scene) { p2d::Director::Inst()->playScene(_scene); }
+p2d::Scene* p2d::BindingHelpers::Director_getCurrentScene() { return p2d::Director::Inst()->getCurrentScene(); }
