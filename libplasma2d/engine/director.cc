@@ -30,7 +30,7 @@ p2d::Director* p2d::Director::Inst() {
 }
 
 
-void p2d::Director::playScene(Scene*& _scene) {
+void p2d::Director::playScene(Scene* _scene) {
     current_scene = _scene;
 }
 

@@ -46,9 +46,10 @@ namespace p2d {
         void initialize(std::string);
         
         /**
+         * TODO: is this even correct?
          * Passes control to the director and runs the main script
          */
-        void run(Scene*);
+        void run();
         
         /**
          * Proxies "tick" to the director

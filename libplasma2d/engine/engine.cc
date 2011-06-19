@@ -33,13 +33,13 @@ void p2d::Engine::initialize(std::string _resource_path) {
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     sqWrapper.setScriptPath(_resource_path);
+    sqWrapper.bindClasses();
     sqWrapper.bootstrap();
 }
 
 
-void p2d::Engine::run(Scene* _scene) {    
-    // TODO: read start scene from config file
-    p2d::Director::Inst()->playScene(_scene);
+void p2d::Engine::run() {    
+    p2d::Director::Inst()->playScene(p2d::Director::Inst()->getCurrentScene());
 }
 
 

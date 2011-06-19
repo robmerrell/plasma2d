@@ -45,6 +45,8 @@ void p2d::SquirrelWrapper::bindClasses() {
     
     // Actor
     Sqrat::Class<p2d::Actor> actorClass(vm);
+    actorClass.Func("setImage", &p2d::Actor::setImage);
+    actorClass.Func("setXY", &p2d::Actor::setXY);
     Sqrat::RootTable(vm).Bind("Actor", actorClass);
 }
 

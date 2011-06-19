@@ -43,10 +43,11 @@ namespace p2d {
          */
         ~Director();
         
+        // TODO: I don't dig how this is used within the engine.run() method. They could be combined or this renamed...
         /**
          * Start playing a scene
          */
-        void playScene(Scene*&);
+        void playScene(Scene*);
         
         /**
          * Get the current scene

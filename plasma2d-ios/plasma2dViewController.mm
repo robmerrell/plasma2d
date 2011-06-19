@@ -42,11 +42,12 @@
     
     NSString* bundlePath = [[NSBundle mainBundle] resourcePath];
     engine.initialize([bundlePath UTF8String]);
+    engine.run();
     
-    TestScene* test_scene = new TestScene();
+//    TestScene* test_scene = new TestScene();
     
     // pass control to the engine so that the main script can run
-    engine.run(test_scene);
+//    engine.run(test_scene);
 }
 
 - (void)dealloc
