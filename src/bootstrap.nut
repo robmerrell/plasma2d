@@ -6,10 +6,19 @@
  */
 function puts(str) print(str + "\n")
 
-// run the config file and play the first the scene
+/**
+ * Factory functions for the classes that need them
+ */
+function ActorFactory(image, x, y) {
+    local actor = ::Actor()
+    actor.setImage(image)
+    actor.setXY(x, y)    
+    return actor
+}
 
-// run the main file
-// require("main")
+// run the config file and play the first the scene
+//::game_config <- require("config.nut")
+
 
 class LogoScene extends Scene {
     logo = 0
@@ -17,10 +26,7 @@ class LogoScene extends Scene {
     constructor() {
         base.constructor()
 
-        logo = ::Actor()
-        logo.setImage("img_test.png")
-        logo.setXY(100, 100)
-        
+        logo = ::ActorFactory("img_test.png", 300, 500)
         addObject(logo)
     }
     
