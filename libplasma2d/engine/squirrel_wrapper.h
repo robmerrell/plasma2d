@@ -7,6 +7,8 @@
 #define P2D_SQUIRREL_WRAPPER_H
 
 #include <squirrel.h>
+#include <sqstdblob.h>
+#include <sqstdstring.h>
 #include <sqstdio.h> 
 #include <sqstdaux.h>
 #include <sqrat.h>

@@ -25,6 +25,8 @@
 		D427F64B1341A0480015C23D /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = D427F64A1341A0480015C23D /* EAGLView.m */; };
 		D427F64E1341A0480015C23D /* plasma2dViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D427F64D1341A0480015C23D /* plasma2dViewController.mm */; };
 		D427F6511341A0480015C23D /* plasma2dViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D427F64F1341A0480015C23D /* plasma2dViewController.xib */; };
+		D42B8BE313B1A1E80069C8B1 /* config.nut in Resources */ = {isa = PBXBuildFile; fileRef = D42B8BE213B1A1E80069C8B1 /* config.nut */; };
+		D42B8BE513B1A4EA0069C8B1 /* config.nut in Copy squirrel */ = {isa = PBXBuildFile; fileRef = D42B8BE213B1A1E80069C8B1 /* config.nut */; };
 		D465E0D41342D6E800E7D604 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62E1341A0480015C23D /* Foundation.framework */; };
 		D465E0DC1342D9E500E7D604 /* plasma2d.h in Headers */ = {isa = PBXBuildFile; fileRef = D465E0DB1342D9E500E7D604 /* plasma2d.h */; };
 		D465E0E01342DB3A00E7D604 /* engine.cc in Sources */ = {isa = PBXBuildFile; fileRef = D465E0DE1342DB3A00E7D604 /* engine.cc */; };
@@ -243,6 +245,7 @@
 			dstPath = src;
 			dstSubfolderSpec = 6;
 			files = (
+				D42B8BE513B1A4EA0069C8B1 /* config.nut in Copy squirrel */,
 				D413EAE0136CD71000E0296F /* bootstrap.nut in Copy squirrel */,
 			);
 			name = "Copy squirrel";
@@ -284,6 +287,7 @@
 		D427F64C1341A0480015C23D /* plasma2dViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = plasma2dViewController.h; sourceTree = "<group>"; };
 		D427F64D1341A0480015C23D /* plasma2dViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = plasma2dViewController.mm; sourceTree = "<group>"; };
 		D427F6501341A0480015C23D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/plasma2dViewController.xib; sourceTree = "<group>"; };
+		D42B8BE213B1A1E80069C8B1 /* config.nut */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.nut; sourceTree = "<group>"; };
 		D43E2671136AFFD300CBBB03 /* COPYRIGHT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYRIGHT; sourceTree = "<group>"; };
 		D465E0D31342D6E800E7D604 /* libplasma2d.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libplasma2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D465E0D71342D6E800E7D604 /* libplasma2d-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "libplasma2d-Prefix.pch"; sourceTree = "<group>"; };
@@ -644,6 +648,7 @@
 			isa = PBXGroup;
 			children = (
 				D413EADE136CD6E300E0296F /* bootstrap.nut */,
+				D42B8BE213B1A1E80069C8B1 /* config.nut */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -1471,6 +1476,7 @@
 				D427F6441341A0480015C23D /* MainWindow.xib in Resources */,
 				D427F6511341A0480015C23D /* plasma2dViewController.xib in Resources */,
 				D413EADF136CD6E300E0296F /* bootstrap.nut in Resources */,
+				D42B8BE313B1A1E80069C8B1 /* config.nut in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,6 +20,11 @@ p2d::SquirrelWrapper::SquirrelWrapper() {
     sqstd_seterrorhandlers(vm);
     sq_setprintfunc(vm, p2d::squirrel_functions::printfunc, p2d::squirrel_functions::printfunc);
     
+    sq_pushroottable(vm);
+    sqstd_register_bloblib(vm);
+    sqstd_register_iolib(vm);
+    sqstd_register_stringlib(vm);
+    
     // We are assuming that we only want one VM
     Sqrat::DefaultVM::Set(vm);
 }
@@ -30,7 +35,12 @@ p2d::SquirrelWrapper::~SquirrelWrapper() {
 }
 
 
-void p2d::SquirrelWrapper::bindClasses() {
+void p2d::SquirrelWrapper::bindClasses() { 
+    // system table used internally by the engine
+    Sqrat::Table p2dSystemTable(vm);
+    p2dSystemTable.SetValue("script_base_path", script_path);
+    Sqrat::RootTable(vm).Bind("p2d_system", p2dSystemTable);
+    
     // Director
     Sqrat::Table directorTable(vm);
     directorTable.Func("playScene", &p2d::BindingHelpers::Director_playScene);
