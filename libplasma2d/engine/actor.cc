@@ -9,13 +9,6 @@ p2d::Actor::Actor() {
     
 }
 
-p2d::Actor::Actor(p2d::pxyCoords _coords, std::string _image) {
-    pos = _coords;
-    
-    setImage(_image);
-}
-
-
 p2d::Actor::~Actor() {
     // TODO: see if we need to remove the texture
 }
@@ -45,19 +38,13 @@ void p2d::Actor::setImage(std::string _image) {
 }
 
 
-// TODO: Can this be done using the struct instead? This is freaking hacky...
-void p2d::Actor::setXY(float _x, float _y) {
-    pos = pxy(_x, _y);
-}
-
-
 void p2d::Actor::draw() {
     // change the anchor point
-    float anchor_x = width * scale * -anchor.x;
-    float anchor_y = height * scale * -anchor.y;
+    float calc_anchor_x = width * scale * -anchor_x;
+    float calc_anchor_y = height * scale * -anchor_y;
     
     // transformations
-    glm::mat4 trans = glm::translate(glm::mat4(1.0f), glm::vec3(pos.x + anchor_x, pos.y + anchor_y, 0.0f));
+    glm::mat4 trans = glm::translate(glm::mat4(1.0f), glm::vec3(x + calc_anchor_x, y + calc_anchor_y, 0.0f));
     glm::mat4 mvp = p2d::Director::Inst()->getProjection() * trans;
     
     if (angle != 0.0f)

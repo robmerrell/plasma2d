@@ -169,7 +169,6 @@
 		D4A022601345300800E1031F /* defs.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A0225E1345300700E1031F /* defs.h */; };
 		D4A022631345303900E1031F /* animator.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4A022611345303800E1031F /* animator.cc */; };
 		D4A022641345303900E1031F /* animator.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A022621345303900E1031F /* animator.h */; };
-		D4A02267134537C000E1031F /* test_scene.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4A02265134537C000E1031F /* test_scene.cc */; };
 		D4A0226A13453E2600E1031F /* actor.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4A0226813453E2300E1031F /* actor.cc */; };
 		D4A0226B13453E2600E1031F /* actor.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A0226913453E2400E1031F /* actor.h */; };
 		D4BA3956134EAFD600D39D50 /* shader_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4BA3954134EAFD600D39D50 /* shader_manager.cc */; };
@@ -546,8 +545,6 @@
 		D4A0225E1345300700E1031F /* defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defs.h; sourceTree = "<group>"; };
 		D4A022611345303800E1031F /* animator.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = animator.cc; sourceTree = "<group>"; };
 		D4A022621345303900E1031F /* animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = animator.h; sourceTree = "<group>"; };
-		D4A02265134537C000E1031F /* test_scene.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_scene.cc; sourceTree = "<group>"; };
-		D4A02266134537C000E1031F /* test_scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_scene.h; sourceTree = "<group>"; };
 		D4A0226813453E2300E1031F /* actor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = actor.cc; sourceTree = "<group>"; };
 		D4A0226913453E2400E1031F /* actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = actor.h; sourceTree = "<group>"; };
 		D4BA3954134EAFD600D39D50 /* shader_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shader_manager.cc; sourceTree = "<group>"; };
@@ -721,8 +718,6 @@
 				D427F64C1341A0480015C23D /* plasma2dViewController.h */,
 				D427F64D1341A0480015C23D /* plasma2dViewController.mm */,
 				D427F64F1341A0480015C23D /* plasma2dViewController.xib */,
-				D4A02265134537C000E1031F /* test_scene.cc */,
-				D4A02266134537C000E1031F /* test_scene.h */,
 				D427F6371341A0480015C23D /* Supporting Files */,
 			);
 			path = "plasma2d-ios";
@@ -1522,7 +1517,6 @@
 				D427F6411341A0480015C23D /* plasma2dAppDelegate.mm in Sources */,
 				D427F64B1341A0480015C23D /* EAGLView.m in Sources */,
 				D427F64E1341A0480015C23D /* plasma2dViewController.mm in Sources */,
-				D4A02267134537C000E1031F /* test_scene.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

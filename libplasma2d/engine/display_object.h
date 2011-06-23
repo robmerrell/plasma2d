@@ -15,13 +15,15 @@ namespace p2d {
     
     class DisplayObject {
     protected:
-        p2d::pxyCoords pos;
+        float x;
+        float y;
         float angle; // degrees
         float scale; // defaults to 1.0f
         
         // anchors are the transformation point of an object
         // Can be 0.0f,0.0f (top left) to 1.0f,1.0f (bottom right)
-        p2d::pxyCoords anchor; // defaults to 0.0f, 0.0f
+        float anchor_x;
+        float anchor_y;
         
     public:
         /**
@@ -32,8 +34,9 @@ namespace p2d {
         /**
          * Set/Get position
          */
-        void setPos(p2d::pxyCoords);
-        p2d::pxyCoords getPos();
+        void setXY(float, float);
+        float getX();
+        float getY();
         
         /**
          * Set/Get angle (degrees)
@@ -50,8 +53,9 @@ namespace p2d {
         /**
          * Set/Get anchor points
          */
-        void setAnchor(p2d::pxyCoords);
-        p2d::pxyCoords getAnchor();
+        void setAnchor(float, float);
+        float getAnchorX();
+        float getAnchorY();
         
         /**
          * Transform the position of an object to it's anchor

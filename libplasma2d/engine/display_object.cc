@@ -6,19 +6,26 @@
 #include "display_object.h"
 
 p2d::DisplayObject::DisplayObject() {
-    pos = p2d::pxy(0.0f, 0.0f);
-    anchor = p2d::pxy(0.0f, 0.0f);
+    x = 0.0f;
+    y = 0.0f;
+    anchor_x = 0.0f;
+    anchor_y = 0.0f;
     angle = 0.0f;
     scale = 1.0f;
 }
 
 
-void p2d::DisplayObject::setPos(p2d::pxyCoords new_pos) {
-    pos = new_pos;
+void p2d::DisplayObject::setXY(float _x, float _y) {
+    x = _x;
+    y = _y;
 }
 
-p2d::pxyCoords p2d::DisplayObject::getPos() {
-    return pos;
+float p2d::DisplayObject::getX() {
+    return x;
+}
+
+float p2d::DisplayObject::getY() {
+    return y;
 }
 
 
@@ -40,16 +47,21 @@ float p2d::DisplayObject::getScale() {
 }
 
 
-void p2d::DisplayObject::setAnchor(p2d::pxyCoords _anchor) {
-    if (_anchor.x < 0.0f) _anchor.x = 0.0f;
-    if (_anchor.x > 1.0f) _anchor.x = 1.0f;
+void p2d::DisplayObject::setAnchor(float _x, float _y) {
+    if (_x < 0.0f) _x = 0.0f;
+    if (_x > 1.0f) _x = 1.0f;
     
-    if (_anchor.y < 0.0f) _anchor.y = 0.0f;
-    if (_anchor.y > 1.0f) _anchor.y = 1.0f;
+    if (_y < 0.0f) _y = 0.0f;
+    if (_y > 1.0f) _y = 1.0f;
     
-    anchor = _anchor;
+    anchor_x = _x;
+    anchor_y = _y;
 }
 
-p2d::pxyCoords p2d::DisplayObject::getAnchor() {
-    return anchor;
+float p2d::DisplayObject::getAnchorX() {
+    return anchor_x;
+}
+
+float p2d::DisplayObject::getAnchorY() {
+    return anchor_y;
 }

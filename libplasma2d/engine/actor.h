@@ -45,22 +45,9 @@ namespace p2d {
         Actor();
         
         /**
-         * Constructor
-         * pxy coordinates
-         * char* image name
-         */
-        Actor(p2d::pxyCoords, std::string);
-        
-        /**
          * Destructor
          */
         ~Actor();
-        
-        /**
-         * Set the position of the actor
-         * using X/Y
-         */
-        void setXY(float, float);
         
         /**
          * Set the actor's image
