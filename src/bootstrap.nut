@@ -18,7 +18,7 @@ p2d_system["loaded_files"] <- {}
 function require(filename) {
     if (filename in p2d_system["loaded_files"]) return
     
-    local filepath = p2d_system["script_base_path"] + "/" + filename + ".nut"
+    local filepath = p2d_system["script_base_path"] + "/src/" + filename + ".nut"
     dofile(filepath)
     p2d_system["loaded_files"][filename] <- true
 }
@@ -32,22 +32,7 @@ function ActorFactory(image, x, y) {
     return actor
 }
 
-
-// run the config file
+// run the config file, then run main to get the party started
+game_config <- {}
 require("config")
-
-
-class LogoScene extends Scene {
-    logo = 0
-    
-    constructor() {
-        base.constructor()
-
-        logo = ::ActorFactory("img_test.png", 300, 500)
-        addObject(logo)
-    }
-    
-}
-
-logo_scene <- LogoScene()
-::director.playScene(logo_scene)
+require("main")
