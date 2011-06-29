@@ -12,7 +12,6 @@ class LoadingScene extends Scene {
         
         on("custom_event", this.handleCustomEvent)
         ::emitEvent("custom_event")
-        ::processEvents()
     }
     
     function handleCustomEvent(event) {

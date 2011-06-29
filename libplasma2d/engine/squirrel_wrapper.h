@@ -44,6 +44,11 @@ namespace p2d {
         ~SquirrelWrapper();
         
         /**
+         * Get the Squirrel VM
+         */
+        HSQUIRRELVM getVM();
+        
+        /**
          * Bind the C++ base classes
          */
         void bindClasses();
@@ -62,6 +67,11 @@ namespace p2d {
     
     
     namespace squirrel_functions {
+        
+        /**
+         * Process all pending system events in the queue
+         */
+        void processEventQueue(HSQUIRRELVM);
         
         /**
          * Printing 

@@ -5,14 +5,6 @@
 
 #include "squirrel_wrapper.h"
 
-
-void p2d::squirrel_functions::printfunc(HSQUIRRELVM vm, const SQChar *s, ...) {
-    va_list arglist;
-    va_start(arglist, s);
-    vprintf(s, arglist);
-    va_end(arglist);
-}
-
 p2d::SquirrelWrapper::SquirrelWrapper() {
     vm = sq_open(1024);
     
@@ -32,6 +24,11 @@ p2d::SquirrelWrapper::SquirrelWrapper() {
 
 p2d::SquirrelWrapper::~SquirrelWrapper() {
     sq_close(vm);
+}
+
+
+HSQUIRRELVM p2d::SquirrelWrapper::getVM() {
+    return vm;
 }
 
 
@@ -81,6 +78,29 @@ void p2d::SquirrelWrapper::setScriptPath(std::string _script_path) {
     script_path = _script_path;
 }
 
+
 std::string p2d::SquirrelWrapper::getScriptPath() {
     return script_path;
+}
+
+
+void p2d::squirrel_functions::printfunc(HSQUIRRELVM vm, const SQChar *s, ...) {
+    va_list arglist;
+    va_start(arglist, s);
+    vprintf(s, arglist);
+    va_end(arglist);
+}
+
+
+void p2d::squirrel_functions::processEventQueue(HSQUIRRELVM vm) {
+    int top = sq_gettop(vm);
+    sq_pushroottable(vm);
+    
+    sq_pushstring(vm, _SC("processEvents"), -1);
+    if (SQ_SUCCEEDED(sq_get(vm, -2))) {
+        sq_pushroottable(vm);
+        sq_call(vm, 1, SQFalse, SQFalse);
+    }
+    
+    sq_settop(vm, top);
 }
