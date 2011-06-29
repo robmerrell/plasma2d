@@ -24,6 +24,42 @@ function require(filename) {
 }
 
 
+/**** Events *****/
+p2d_system["events"] <- []
+p2d_system["listeners"] <- {}
+
+function processEvents() {
+    for (local i = 0; i < ::p2d_system["events"].len(); i++) {
+        local event_type = ::p2d_system["events"][i].event_type
+        foreach (listener in ::p2d_system["listeners"][event_type]) {
+            listener.cb(p2d_system["events"][i])
+        }
+    }
+    
+    // empty the event queue. Assume that all events were processed
+    // for a frame. This won't be the case after I solidify the
+    // event architecture
+    ::p2d_system["events"] = []
+}
+
+function emitEvent(event_type) {
+    ::p2d_system["events"].push({"event_type": event_type})
+}
+
+// This could be a bit hacky and may be unsupported in future versions of Squirrel.
+// As it stands now version 3 allows you to redefine a class to add methods to it.
+// I'm doing it this way to keep the event system logic in Squirrel while I'm still
+// architecting it.
+class Scene extends Scene {
+    function on(event_type, cb) {
+        if (!(event_type in ::p2d_system["listeners"]))
+            ::p2d_system["listeners"][event_type] <- []
+            
+        ::p2d_system["listeners"][event_type].push({"cb": cb, "environment": this})
+    }
+}
+
+
 // Factory functions for the classes that need them
 function ActorFactory(image, x, y) {
     local actor = ::Actor()
