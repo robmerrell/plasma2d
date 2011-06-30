@@ -12,10 +12,19 @@ class LoadingScene extends Scene {
         
         on("custom_event", this.handleCustomEvent)
         ::emitEvent("custom_event")
+        
+        on("touch", this.onTouch)
     }
     
     function handleCustomEvent(event) {
         ::puts("in custom event")
+    }
+    
+    function onTouch(event) {
+        ::puts(event.payload.stage)
+        if (event.payload.stage == "began") {
+            ::puts(event.payload.x + ", " + event.payload.y)
+        }
     }
 
 }

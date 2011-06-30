@@ -52,6 +52,11 @@ namespace p2d {
         void run();
         
         /**
+         * Get the SquirrelWrapper object
+         */
+        SquirrelWrapper& getSqWrapper();
+        
+        /**
          * Proxies "tick" to the director
          */
         void tick();

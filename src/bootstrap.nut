@@ -42,8 +42,17 @@ function processEvents() {
     ::p2d_system["events"] = []
 }
 
-function emitEvent(event_type) {
-    ::p2d_system["events"].push({"event_type": event_type})
+function emitEvent(event_type, event_payload={}) {
+    ::p2d_system["events"].push({"event_type": event_type, "payload": event_payload})
+}
+
+// event proxies
+function eventProxyTouchesBegan(x, y) {
+    ::emitEvent("touch", {
+        "stage": "began",
+        "x": x,
+        "y": y
+    })
 }
 
 // This could be a bit hacky and may be unsupported in future versions of Squirrel.

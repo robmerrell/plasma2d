@@ -104,3 +104,10 @@ void p2d::squirrel_functions::processEventQueue(HSQUIRRELVM vm) {
     
     sq_settop(vm, top);
 }
+
+
+void p2d::squirrel_functions::emitTouchesBeganEvent(HSQUIRRELVM _vm, float _x, float _y) {
+    Sqrat::Function func(Sqrat::RootTable(_vm), "eventProxyTouchesBegan");
+    func(_x, _y);
+    printf("Called Event\n");
+}

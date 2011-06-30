@@ -144,4 +144,31 @@
     [(EAGLView *)self.view presentFramebuffer];
 }
 
+// TODO: handle touches cancelled
+
+- (void) touchesBegan: (NSSet*) touches withEvent: (UIEvent*) event
+{
+    UITouch* touch = [touches anyObject];
+    CGPoint location  = [touch locationInView: self.view];
+    p2d::squirrel_functions::emitTouchesBeganEvent(engine.getSqWrapper().getVM(), location.x, location.y);
+}
+
+/*
+- (void) touchesEnded: (NSSet*) touches withEvent: (UIEvent*) event
+{
+    UITouch* touch = [touches anyObject];
+    CGPoint location  = [touch locationInView: self];
+//    m_renderingEngine->OnFingerUp(ivec2(location.x, location.y));
+}
+
+- (void) touchesMoved: (NSSet*) touches withEvent: (UIEvent*) event
+{
+    UITouch* touch = [touches anyObject];
+    CGPoint previous  = [touch previousLocationInView: self];
+    CGPoint current = [touch locationInView: self];
+//    m_renderingEngine->OnFingerMove(ivec2(previous.x, previous.y),
+//                                    ivec2(current.x, current.y));
+}
+ */
+
 @end

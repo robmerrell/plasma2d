@@ -43,6 +43,11 @@ void p2d::Engine::run() {
 }
 
 
+p2d::SquirrelWrapper& p2d::Engine::getSqWrapper() {
+    return sqWrapper;
+}
+
+
 void p2d::Engine::tick() {
     p2d::squirrel_functions::processEventQueue(sqWrapper.getVM());
     p2d::Director::Inst()->getCurrentScene()->tick(0.16f);
