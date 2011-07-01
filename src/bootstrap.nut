@@ -55,6 +55,24 @@ function eventProxyTouchesBegan(x, y) {
     })
 }
 
+function eventProxyTouchesEnded(x, y) {
+    ::emitEvent("touch", {
+        "stage": "ended",
+        "x": x,
+        "y": y
+    })
+}
+
+function eventProxyTouchesMoved(previous_x, previous_y, current_x, current_y) {
+    ::emitEvent("touch", {
+        "stage": "moved",
+        "previous_x": previous_x,
+        "previous_y": previous_y,
+        "current_x": current_x,
+        "current_y": current_y
+    })
+}
+
 // This could be a bit hacky and may be unsupported in future versions of Squirrel.
 // As it stands now version 3 allows you to redefine a class to add methods to it.
 // I'm doing it this way to keep the event system logic in Squirrel while I'm still

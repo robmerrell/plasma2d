@@ -74,9 +74,10 @@ namespace p2d {
         void processEventQueue(HSQUIRRELVM);
         
         /**
-         * Emit a touch event
+         * Emit a touch events
          */
-        void emitTouchesBeganEvent(HSQUIRRELVM, float, float);
+        void emitTouchesBeganOrEndedEvent(HSQUIRRELVM, const char*, float, float);
+        void emitTouchesMoved(HSQUIRRELVM, float, float, float, float);
         
         /**
          * Printing 

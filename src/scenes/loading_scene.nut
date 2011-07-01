@@ -10,7 +10,10 @@ class LoadingScene extends Scene {
         logo.setAnchor(0.5, 0.5)
         addObject(logo)
         
-        on("custom_event", this.handleCustomEvent)
+        on("custom_event", function(event) {
+           ::puts("local custom")
+        })
+        
         ::emitEvent("custom_event")
         
         on("touch", this.onTouch)
@@ -21,9 +24,13 @@ class LoadingScene extends Scene {
     }
     
     function onTouch(event) {
-        ::puts(event.payload.stage)
         if (event.payload.stage == "began") {
-            ::puts(event.payload.x + ", " + event.payload.y)
+            ::puts(event.payload.stage + " " + event.payload.x + ", " + event.payload.y)
+        } else if (event.payload.stage == "ended") {
+            ::puts(event.payload.stage + " " + event.payload.x + ", " + event.payload.y)
+        } else if (event.payload.stage == "moved") {
+            ::puts(event.payload.stage + " " + event.payload.previous_x + ", " + event.payload.previous_y)
+            ::puts(event.payload.stage + " " + event.payload.current_x + ", " + event.payload.current_y)
         }
     }
 

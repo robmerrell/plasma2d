@@ -92,6 +92,7 @@ void p2d::squirrel_functions::printfunc(HSQUIRRELVM vm, const SQChar *s, ...) {
 }
 
 
+// TODO: Convert this to use Sqrat's function handling methods
 void p2d::squirrel_functions::processEventQueue(HSQUIRRELVM vm) {
     int top = sq_gettop(vm);
     sq_pushroottable(vm);
@@ -106,8 +107,12 @@ void p2d::squirrel_functions::processEventQueue(HSQUIRRELVM vm) {
 }
 
 
-void p2d::squirrel_functions::emitTouchesBeganEvent(HSQUIRRELVM _vm, float _x, float _y) {
-    Sqrat::Function func(Sqrat::RootTable(_vm), "eventProxyTouchesBegan");
+void p2d::squirrel_functions::emitTouchesBeganOrEndedEvent(HSQUIRRELVM _vm, const char* _proxy_function, float _x, float _y) {
+    Sqrat::Function func(Sqrat::RootTable(_vm), _proxy_function);
     func(_x, _y);
-    printf("Called Event\n");
+}
+
+void p2d::squirrel_functions::emitTouchesMoved(HSQUIRRELVM _vm, float _prev_x, float _prev_y, float _cur_x, float _cur_y) {
+    Sqrat::Function func(Sqrat::RootTable(_vm), "eventProxyTouchesMoved");
+    func(_prev_x, _prev_y, _cur_x, _cur_y);    
 }
