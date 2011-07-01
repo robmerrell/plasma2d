@@ -76,7 +76,7 @@ namespace p2d {
         /**
          * Emit a touch events
          */
-        void emitTouchesBeganOrEndedEvent(HSQUIRRELVM, const char*, float, float);
+        void emitTouchesBeganOrEndedEvent(HSQUIRRELVM, const char*, float, float, int);
         void emitTouchesMoved(HSQUIRRELVM, float, float, float, float);
         
         /**

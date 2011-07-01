@@ -25,9 +25,9 @@ class LoadingScene extends Scene {
     
     function onTouch(event) {
         if (event.payload.stage == "began") {
-            ::puts(event.payload.stage + " " + event.payload.x + ", " + event.payload.y)
+            ::puts(event.payload.stage + " " + event.payload.x + ", " + event.payload.y + " -- " + event.payload.tap_count)
         } else if (event.payload.stage == "ended") {
-            ::puts(event.payload.stage + " " + event.payload.x + ", " + event.payload.y)
+            ::puts(event.payload.stage + " " + event.payload.x + ", " + event.payload.y + " -- " + event.payload.tap_count)
         } else if (event.payload.stage == "moved") {
             ::puts(event.payload.stage + " " + event.payload.previous_x + ", " + event.payload.previous_y)
             ::puts(event.payload.stage + " " + event.payload.current_x + ", " + event.payload.current_y)

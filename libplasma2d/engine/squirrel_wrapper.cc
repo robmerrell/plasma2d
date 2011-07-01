@@ -107,9 +107,9 @@ void p2d::squirrel_functions::processEventQueue(HSQUIRRELVM vm) {
 }
 
 
-void p2d::squirrel_functions::emitTouchesBeganOrEndedEvent(HSQUIRRELVM _vm, const char* _proxy_function, float _x, float _y) {
+void p2d::squirrel_functions::emitTouchesBeganOrEndedEvent(HSQUIRRELVM _vm, const char* _proxy_function, float _x, float _y, int _tap_count) {
     Sqrat::Function func(Sqrat::RootTable(_vm), _proxy_function);
-    func(_x, _y);
+    func(_x, _y, _tap_count);
 }
 
 void p2d::squirrel_functions::emitTouchesMoved(HSQUIRRELVM _vm, float _prev_x, float _prev_y, float _cur_x, float _cur_y) {

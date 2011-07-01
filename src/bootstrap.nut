@@ -47,19 +47,21 @@ function emitEvent(event_type, event_payload={}) {
 }
 
 // event proxies
-function eventProxyTouchesBegan(x, y) {
+function eventProxyTouchesBegan(x, y, tap_count) {
     ::emitEvent("touch", {
         "stage": "began",
         "x": x,
-        "y": y
+        "y": y,
+        "tap_count": tap_count
     })
 }
 
-function eventProxyTouchesEnded(x, y) {
+function eventProxyTouchesEnded(x, y, tap_count) {
     ::emitEvent("touch", {
         "stage": "ended",
         "x": x,
-        "y": y
+        "y": y,
+        "tap_count": tap_count
     })
 }
 

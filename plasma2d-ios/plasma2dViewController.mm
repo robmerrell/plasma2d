@@ -150,14 +150,14 @@
 {
     UITouch* touch = [touches anyObject];
     CGPoint location  = [touch locationInView: self.view];
-    p2d::squirrel_functions::emitTouchesBeganOrEndedEvent(engine.getSqWrapper().getVM(), "eventProxyTouchesBegan", location.x, location.y);
+    p2d::squirrel_functions::emitTouchesBeganOrEndedEvent(engine.getSqWrapper().getVM(), "eventProxyTouchesBegan", location.x, location.y, [touch tapCount]);
 }
 
 - (void) touchesEnded: (NSSet*) touches withEvent: (UIEvent*) event
 {
     UITouch* touch = [touches anyObject];
     CGPoint location  = [touch locationInView: self.view];
-    p2d::squirrel_functions::emitTouchesBeganOrEndedEvent(engine.getSqWrapper().getVM(), "eventProxyTouchesEnded", location.x, location.y);
+    p2d::squirrel_functions::emitTouchesBeganOrEndedEvent(engine.getSqWrapper().getVM(), "eventProxyTouchesEnded", location.x, location.y, [touch tapCount]);
 }
 
 - (void) touchesMoved: (NSSet*) touches withEvent: (UIEvent*) event
