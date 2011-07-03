@@ -42,7 +42,7 @@ namespace p2d {
          * Add a DisplayObject to the scene's default animator
          * - object to add
          */
-        void addObject(DisplayObject*);
+        void addToScene(DisplayObject*);
         
         /**
          * Add a DisplayObject to an animator

@@ -46,7 +46,7 @@ void p2d::SquirrelWrapper::bindClasses() {
     
     // Scene
     Sqrat::Class<p2d::Scene> sceneClass(vm);
-    sceneClass.Func("addObject", &p2d::Scene::addObject);
+    sceneClass.Func("addToScene", &p2d::Scene::addToScene);
     sceneClass.Func("addObjectWithAnimator", &p2d::Scene::addObjectWithAnimator);
     Sqrat::RootTable(vm).Bind("Scene", sceneClass);
     

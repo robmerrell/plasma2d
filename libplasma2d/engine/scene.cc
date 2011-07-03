@@ -22,7 +22,7 @@ p2d::Scene::~Scene() {
 }
 
 
-void p2d::Scene::addObject(DisplayObject* object) {
+void p2d::Scene::addToScene(DisplayObject* object) {
     display_objects.push_back(object);
 }
 

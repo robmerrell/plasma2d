@@ -144,8 +144,6 @@
     [(EAGLView *)self.view presentFramebuffer];
 }
 
-// TODO: handle touches cancelled
-
 - (void) touchesBegan: (NSSet*) touches withEvent: (UIEvent*) event
 {
     UITouch* touch = [touches anyObject];
