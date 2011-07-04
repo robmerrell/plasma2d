@@ -75,6 +75,10 @@ function eventProxyTouchesMoved(previous_x, previous_y, current_x, current_y) {
     })
 }
 
+function eventProxySceneUpdate() {
+    ::emitEvent("sceneUpdate", {})
+}
+
 // This could be a bit hacky and may be unsupported in future versions of Squirrel.
 // As it stands now version 3 allows you to redefine a class to add methods to it.
 // I'm doing it this way to keep the event system logic in Squirrel while I'm still
@@ -84,7 +88,16 @@ class Scene extends Scene {
         if (!(event_type in ::p2d_system["listeners"]))
             ::p2d_system["listeners"][event_type] <- []
             
-        ::p2d_system["listeners"][event_type].push({"cb": cb, "environment": this})
+        ::p2d_system["listeners"][event_type].push({"cb": cb, "owner": this, "environment": this})
+    }
+    
+    function ignore(event_type) {
+        if (event_type in ::p2d_system["listeners"]) {
+            for (local i = 0; i < ::p2d_system["listeners"][event_type].len(); i++) {
+                if (::p2d_system["listeners"][event_type][i]["owner"] == this)
+                    ::p2d_system["listeners"][event_type].remove(i)
+            }
+        }
     }
 }
 

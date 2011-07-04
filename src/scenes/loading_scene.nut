@@ -13,13 +13,15 @@ class LoadingScene extends Scene {
         // Listen for an event that fires after we have displayed the
         // logo image for the first time. Now we want to start preloading
         // all of our other assets
-        on("nextFrame", loadTextures.bindenv(this))
+        on("sceneUpdate", loadTextures.bindenv(this))
         on("textureLoaded", this.updateLoadedMessage.bindenv(this))
-        
-        ::emitEvent("nextFrame")
     }
     
     function loadTextures(event) {
+        // we only want this event to fire once. We only want to load the textures once and it
+        // is a very expensive event. It should be used sparingly.
+        ignore("sceneUpdate")
+        
         // Textures that we want to load. You shouldn't always load all textuers
         // at the beginning of the game. If you have a lot of textures you may want consider
         // loading only the required textures before each level.

@@ -119,3 +119,8 @@ void p2d::squirrel_functions::emitTouchesMoved(HSQUIRRELVM _vm, float _prev_x, f
     Sqrat::Function func(Sqrat::RootTable(_vm), "eventProxyTouchesMoved");
     func(_prev_x, _prev_y, _cur_x, _cur_y);    
 }
+
+void p2d::squirrel_functions::emitSceneUpdateEvent(HSQUIRRELVM _vm) {
+    Sqrat::Function func(Sqrat::RootTable(_vm), "eventProxySceneUpdate");
+    func();
+}
