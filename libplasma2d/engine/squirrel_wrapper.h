@@ -21,6 +21,7 @@
 #include "actor.h"
 #include "director.h"
 #include "scene.h"
+#include "texture_manager.h"
 
 namespace p2d {
     
@@ -83,7 +84,6 @@ namespace p2d {
          * Printing 
          */
         void printfunc(HSQUIRRELVM, const SQChar*, ...);
-
     }
     
 }

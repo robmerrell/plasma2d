@@ -65,3 +65,10 @@ void p2d::TextureManager::unbindTexture() {
 void p2d::TextureManager::deleteTexture(std::string _filename) {
     glDeleteTextures(1, &textures[_filename]);
 }
+
+// Binding helpers
+// TODO: I don't much care for the (name, completefunc, errorfunc) syntax, maybe we could do this with a table...
+void p2d::BindingHelpers::TextureManager_preloadTexture(std::string _name, Sqrat::Function _func) { 
+    p2d::TextureManager::Inst()->loadTexture(_name);
+    _func(_name);
+}

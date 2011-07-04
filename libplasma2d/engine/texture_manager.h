@@ -15,6 +15,8 @@
 
 #include "hash_map_defs.h"
 
+#include "sqrat.h"
+
 namespace p2d {
 
     class TextureManager {
@@ -65,6 +67,10 @@ namespace p2d {
         int getTextureRef();
         
     };
+    
+    namespace BindingHelpers {
+        void TextureManager_preloadTexture(std::string, Sqrat::Function);
+    }
     
 }
 

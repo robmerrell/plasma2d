@@ -20,19 +20,18 @@ class LoadingScene extends Scene {
     }
     
     function loadTextures(event) {
-        // all of the textures that we want to load. You shouldn't always load all textuers
+        // Textures that we want to load. You shouldn't always load all textuers
         // at the beginning of the game. If you have a lot of textures you may want consider
         // loading only the required textures before each level.
-        local textures = []
+        local textures = ["img_test.png", "img_test.bmp"]
         texture_count = textures.len()
         
         // iterate through the textures and load each one, when the texture is loaded
         // emit the textureLoaded custom event
         foreach (texture in textures) {
-            ::loadTexture("texture", {
-                function onComplete() {
-                    ::emitEvent("textureLoaded")
-                }
+            ::preloadTexture(texture, function(texture_name) {
+                ::puts(texture_name)
+                ::emitEvent("textureLoaded")
             })
         }
     }
