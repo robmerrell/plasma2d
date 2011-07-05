@@ -23,18 +23,24 @@ void p2d::Actor::setImage(std::string _image) {
     width = 64.0f;
     height = 64.0f;
     
-    // sprite geometry
-    sprite_verts[0] = glm::vec3(0.0f, 0.0f, 0.0f);
-    sprite_verts[1] = glm::vec3(width, 0.0f, 0.0f);
-    sprite_verts[2] = glm::vec3(0.0f, height, 0.0f);
-    sprite_verts[3] = glm::vec3(width, height, 0.0f);
+    cacheVerts();
+    cacheTextureCoords();
+}
+
+
+void p2d::Actor::setDimensions(float _width, float _height) {
+    width = _width;
+    height = _height;
     
-    // texture coords
-    // TODO: this should be a 4x2 matrix
-    tex_coords[0] = glm::vec4(0.0f, 0.0f, 0.0f, 0.0f);
-    tex_coords[1] = glm::vec4(1.0f, 0.0f, 0.0f, 0.0f);
-    tex_coords[2] = glm::vec4(0.0f, 1.0f, 0.0f, 0.0f);
-    tex_coords[3] = glm::vec4(1.0f, 1.0f, 0.0f, 0.0f);
+    cacheVerts();
+}
+
+float p2d::Actor::getWidth() {
+    return width;
+}
+
+float p2d::Actor::getHeight() {
+    return height;
 }
 
 
@@ -68,4 +74,20 @@ void p2d::Actor::draw() {
     glEnableVertexAttribArray(tex_matrix);
     
     glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+}
+
+
+void p2d::Actor::cacheVerts() {
+    sprite_verts[0] = glm::vec3(0.0f, 0.0f, 0.0f);
+    sprite_verts[1] = glm::vec3(width, 0.0f, 0.0f);
+    sprite_verts[2] = glm::vec3(0.0f, height, 0.0f);
+    sprite_verts[3] = glm::vec3(width, height, 0.0f);
+}
+
+
+void p2d::Actor::cacheTextureCoords() {
+    tex_coords[0] = glm::vec4(0.0f, 1.0f, 0.0f, 0.0f);
+    tex_coords[1] = glm::vec4(1.0f, 1.0f, 0.0f, 0.0f);
+    tex_coords[2] = glm::vec4(0.0f, 0.0f, 0.0f, 0.0f);
+    tex_coords[3] = glm::vec4(1.0f, 0.0f, 0.0f, 0.0f);
 }

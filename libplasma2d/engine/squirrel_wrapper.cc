@@ -59,6 +59,9 @@ void p2d::SquirrelWrapper::bindClasses() {
     actorClass.Func("setXY", &p2d::Actor::setXY);
     actorClass.Func("getX", &p2d::Actor::getX);
     actorClass.Func("getY", &p2d::Actor::getY);
+    actorClass.Func("setDimensions", &p2d::Actor::setDimensions);
+    actorClass.Func("getWidth", &p2d::Actor::getWidth);
+    actorClass.Func("getHeight", &p2d::Actor::getHeight);
     actorClass.Func("setAngle", &p2d::Actor::setAngle);
     actorClass.Func("getAngle", &p2d::Actor::getAngle);
     actorClass.Func("setScale", &p2d::Actor::setScale);

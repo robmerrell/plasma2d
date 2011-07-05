@@ -55,6 +55,23 @@ namespace p2d {
         void setImage(std::string);
         
         /**
+         * Set the actor's width and height
+         */
+        void setDimensions(float, float);
+        float getWidth();
+        float getHeight();
+        
+        /**
+         * Recalculate and cache the actor's vertex info
+         */
+        void cacheVerts();
+        
+        /**
+         * Recalculate and cache the actor's texture map coords
+         */
+        void cacheTextureCoords();
+        
+        /**
          * Draw the actor
          */
         void draw();

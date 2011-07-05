@@ -8,7 +8,7 @@ class LoadingScene extends Scene {
         
         // Load the logo image and add it to the scene
         logo = ::ActorFactory("logo.png", 300, 200)
-        
+        logo.setDimensions(420, 111)
         addToScene(logo)
         
         // Listen for an event that fires after we have displayed the
