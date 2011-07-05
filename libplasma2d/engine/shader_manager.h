@@ -43,6 +43,12 @@ namespace p2d {
         static ShaderManager* Inst();
         
         /**
+         * setter/getter for the shader path
+         */
+        void setShaderPath(std::string);
+        std::string getShaderPath();
+        
+        /**
          * Loads and compiles the specified shader
          */
         bool compileShader(std::string);

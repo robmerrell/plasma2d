@@ -7,7 +7,8 @@ class LoadingScene extends Scene {
         base.constructor()
         
         // Load the logo image and add it to the scene
-        logo = ::ActorFactory("img_test.png", 300, 200)
+        logo = ::ActorFactory("logo.png", 300, 200)
+        
         addToScene(logo)
         
         // Listen for an event that fires after we have displayed the
@@ -25,7 +26,7 @@ class LoadingScene extends Scene {
         // Textures that we want to load. You shouldn't always load all textuers
         // at the beginning of the game. If you have a lot of textures you may want consider
         // loading only the required textures before each level.
-        local textures = ["img_test.png", "img_test.bmp"]
+        local textures = ["logo.png"]
         texture_count = textures.len()
         
         // iterate through the textures and load each one, when the texture is loaded

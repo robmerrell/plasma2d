@@ -11,8 +11,7 @@
 		BEBC963113C2D26A00C17C1F /* config.nut in Copy main scripts */ = {isa = PBXBuildFile; fileRef = D42B8BE213B1A1E80069C8B1 /* config.nut */; };
 		BEBC963213C2D26B00C17C1F /* main.nut in Copy main scripts */ = {isa = PBXBuildFile; fileRef = D42B8BE613B2C6140069C8B1 /* main.nut */; };
 		BEBC963313C2D28600C17C1F /* loading_scene.nut in Copy scenes */ = {isa = PBXBuildFile; fileRef = D42B8BEA13B2C6B30069C8B1 /* loading_scene.nut */; };
-		D41F2EBF1347C3CD00E84862 /* img_test.bmp in Resources */ = {isa = PBXBuildFile; fileRef = D41F2EBD1347C3CD00E84862 /* img_test.bmp */; };
-		D41F2EC01347C3CD00E84862 /* img_test.png in Resources */ = {isa = PBXBuildFile; fileRef = D41F2EBE1347C3CD00E84862 /* img_test.png */; };
+		BEBC963A13C2D3AB00C17C1F /* logo.png in Copy assets/images */ = {isa = PBXBuildFile; fileRef = BEBC963713C2D37800C17C1F /* logo.png */; };
 		D41F2F6013484C5C00E84862 /* hash_map_defs.h in Headers */ = {isa = PBXBuildFile; fileRef = D41F2F5F13484C5C00E84862 /* hash_map_defs.h */; };
 		D4271ABF1342E10A00553669 /* libplasma2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D465E0D31342D6E800E7D604 /* libplasma2d.a */; };
 		D427F62D1341A0480015C23D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62C1341A0480015C23D /* UIKit.framework */; };
@@ -238,6 +237,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		BEBC963913C2D38800C17C1F /* Copy assets/images */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = examples/assets/images;
+			dstSubfolderSpec = 6;
+			files = (
+				BEBC963A13C2D3AB00C17C1F /* logo.png in Copy assets/images */,
+			);
+			name = "Copy assets/images";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D413EADD136CD6A000E0296F /* Copy main scripts */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,9 +287,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BEBC963713C2D37800C17C1F /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		D413EADE136CD6E300E0296F /* bootstrap.nut */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bootstrap.nut; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
-		D41F2EBD1347C3CD00E84862 /* img_test.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = img_test.bmp; sourceTree = "<group>"; };
-		D41F2EBE1347C3CD00E84862 /* img_test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_test.png; sourceTree = "<group>"; };
 		D41F2F5F13484C5C00E84862 /* hash_map_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash_map_defs.h; sourceTree = "<group>"; };
 		D427F6281341A0480015C23D /* plasma2d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plasma2d.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D427F62C1341A0480015C23D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -656,9 +665,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEBC963413C2D2E500C17C1F /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				BEBC963613C2D2F800C17C1F /* images */,
+				BEBC963513C2D2F100C17C1F /* sounds */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		BEBC963513C2D2F100C17C1F /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		BEBC963613C2D2F800C17C1F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				BEBC963713C2D37800C17C1F /* logo.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		D413EADC136CD62500E0296F /* examples */ = {
 			isa = PBXGroup;
 			children = (
+				BEBC963413C2D2E500C17C1F /* assets */,
 				D42B8BE913B2C66D0069C8B1 /* scenes */,
 				D413EADE136CD6E300E0296F /* bootstrap.nut */,
 				D42B8BE213B1A1E80069C8B1 /* config.nut */,
@@ -671,8 +705,6 @@
 			isa = PBXGroup;
 			children = (
 				D4DDEC32136A79A500F65892 /* libsquirrel.a */,
-				D41F2EBD1347C3CD00E84862 /* img_test.bmp */,
-				D41F2EBE1347C3CD00E84862 /* img_test.png */,
 				D4F05DC4134773C4002A4827 /* libsoil.a */,
 				D465E0D31342D6E800E7D604 /* libplasma2d.a */,
 				D427F6361341A0480015C23D /* plasma2d-ios */,
@@ -1400,6 +1432,7 @@
 				D48749CC1352549000308CD7 /* Copy Shaders */,
 				D413EADD136CD6A000E0296F /* Copy main scripts */,
 				D42B8BED13B2DC4E0069C8B1 /* Copy scenes */,
+				BEBC963913C2D38800C17C1F /* Copy assets/images */,
 			);
 			buildRules = (
 			);
@@ -1491,8 +1524,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D41F2EBF1347C3CD00E84862 /* img_test.bmp in Resources */,
-				D41F2EC01347C3CD00E84862 /* img_test.png in Resources */,
 				D427F63B1341A0480015C23D /* InfoPlist.strings in Resources */,
 				D427F6441341A0480015C23D /* MainWindow.xib in Resources */,
 				D427F6511341A0480015C23D /* plasma2dViewController.xib in Resources */,

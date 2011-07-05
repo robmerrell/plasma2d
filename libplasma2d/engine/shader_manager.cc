@@ -11,11 +11,19 @@ p2d::ShaderManager* p2d::ShaderManager::obj = NULL;
 p2d::ShaderManager* p2d::ShaderManager::Inst() {
     if (!obj) {
         obj = new ShaderManager();
-        obj->shader_path = "shaders/";
         obj->current_program = 0;
     }
     
     return obj;
+}
+
+
+void p2d::ShaderManager::setShaderPath(std::string _resource_path) {
+    shader_path = _resource_path;
+}
+
+std::string p2d::ShaderManager::getShaderPath() {
+    return shader_path;
 }
 
 
@@ -27,7 +35,7 @@ bool p2d::ShaderManager::compileShader(std::string _filename) {
     std::string file_contents, buf;
     
     // TODO: Change the resource path to not rely on texture manager
-    std::string fullpath = TextureManager::Inst()->getResourcePath() + "/shaders/" + _filename;
+    std::string fullpath = shader_path + "/" + _filename;
     
     // extract the type based on the extension
     if (_filename.substr(_filename.size()-4, 4) == "vert")
