@@ -33,7 +33,7 @@ void p2d::Engine::initialize(std::string _resource_path) {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    sqWrapper.setScriptPath(_resource_path);
+    sqWrapper.setScriptPath(_resource_path + "/examples");
     sqWrapper.bindClasses();
     sqWrapper.bootstrap();
 }
