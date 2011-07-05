@@ -72,7 +72,7 @@ void p2d::SquirrelWrapper::bindClasses() {
 
 void p2d::SquirrelWrapper::bootstrap() {
     Sqrat::Script script;
-    script.CompileFile(script_path + "/src/bootstrap.nut");
+    script.CompileFile(script_path + "/examples/bootstrap.nut");
     script.Run();
 }
 

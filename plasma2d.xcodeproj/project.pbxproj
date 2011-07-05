@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D413EADF136CD6E300E0296F /* bootstrap.nut in Resources */ = {isa = PBXBuildFile; fileRef = D413EADE136CD6E300E0296F /* bootstrap.nut */; };
-		D413EAE0136CD71000E0296F /* bootstrap.nut in Copy main scripts */ = {isa = PBXBuildFile; fileRef = D413EADE136CD6E300E0296F /* bootstrap.nut */; };
+		BEBC963013C2D26A00C17C1F /* bootstrap.nut in Copy main scripts */ = {isa = PBXBuildFile; fileRef = D413EADE136CD6E300E0296F /* bootstrap.nut */; };
+		BEBC963113C2D26A00C17C1F /* config.nut in Copy main scripts */ = {isa = PBXBuildFile; fileRef = D42B8BE213B1A1E80069C8B1 /* config.nut */; };
+		BEBC963213C2D26B00C17C1F /* main.nut in Copy main scripts */ = {isa = PBXBuildFile; fileRef = D42B8BE613B2C6140069C8B1 /* main.nut */; };
+		BEBC963313C2D28600C17C1F /* loading_scene.nut in Copy scenes */ = {isa = PBXBuildFile; fileRef = D42B8BEA13B2C6B30069C8B1 /* loading_scene.nut */; };
 		D41F2EBF1347C3CD00E84862 /* img_test.bmp in Resources */ = {isa = PBXBuildFile; fileRef = D41F2EBD1347C3CD00E84862 /* img_test.bmp */; };
 		D41F2EC01347C3CD00E84862 /* img_test.png in Resources */ = {isa = PBXBuildFile; fileRef = D41F2EBE1347C3CD00E84862 /* img_test.png */; };
 		D41F2F6013484C5C00E84862 /* hash_map_defs.h in Headers */ = {isa = PBXBuildFile; fileRef = D41F2F5F13484C5C00E84862 /* hash_map_defs.h */; };
@@ -25,11 +27,6 @@
 		D427F64B1341A0480015C23D /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = D427F64A1341A0480015C23D /* EAGLView.m */; };
 		D427F64E1341A0480015C23D /* plasma2dViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = D427F64D1341A0480015C23D /* plasma2dViewController.mm */; };
 		D427F6511341A0480015C23D /* plasma2dViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D427F64F1341A0480015C23D /* plasma2dViewController.xib */; };
-		D42B8BE313B1A1E80069C8B1 /* config.nut in Resources */ = {isa = PBXBuildFile; fileRef = D42B8BE213B1A1E80069C8B1 /* config.nut */; };
-		D42B8BE513B1A4EA0069C8B1 /* config.nut in Copy main scripts */ = {isa = PBXBuildFile; fileRef = D42B8BE213B1A1E80069C8B1 /* config.nut */; };
-		D42B8BE713B2C6140069C8B1 /* main.nut in Resources */ = {isa = PBXBuildFile; fileRef = D42B8BE613B2C6140069C8B1 /* main.nut */; };
-		D42B8BE813B2C6330069C8B1 /* main.nut in Copy main scripts */ = {isa = PBXBuildFile; fileRef = D42B8BE613B2C6140069C8B1 /* main.nut */; };
-		D42B8BEB13B2C6B30069C8B1 /* loading_scene.nut in Resources */ = {isa = PBXBuildFile; fileRef = D42B8BEA13B2C6B30069C8B1 /* loading_scene.nut */; };
 		D465E0D41342D6E800E7D604 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62E1341A0480015C23D /* Foundation.framework */; };
 		D465E0DC1342D9E500E7D604 /* plasma2d.h in Headers */ = {isa = PBXBuildFile; fileRef = D465E0DB1342D9E500E7D604 /* plasma2d.h */; };
 		D465E0E01342DB3A00E7D604 /* engine.cc in Sources */ = {isa = PBXBuildFile; fileRef = D465E0DE1342DB3A00E7D604 /* engine.cc */; };
@@ -145,8 +142,8 @@
 		D4756945135FE03100C89D7E /* verbose_operator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D47568D3135FE03000C89D7E /* verbose_operator.hpp */; };
 		D4756946135FE03100C89D7E /* wrap.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D47568D5135FE03000C89D7E /* wrap.hpp */; };
 		D4756947135FE03100C89D7E /* xstream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D47568D8135FE03000C89D7E /* xstream.hpp */; };
-		D48749CD135254A200308CD7 /* move_color.vert in CopyFiles */ = {isa = PBXBuildFile; fileRef = D48749C7135241E800308CD7 /* move_color.vert */; };
-		D48749CF1352567C00308CD7 /* move_color.frag in CopyFiles */ = {isa = PBXBuildFile; fileRef = D48749CE1352563300308CD7 /* move_color.frag */; };
+		D48749CD135254A200308CD7 /* move_color.vert in Copy Shaders */ = {isa = PBXBuildFile; fileRef = D48749C7135241E800308CD7 /* move_color.vert */; };
+		D48749CF1352567C00308CD7 /* move_color.frag in Copy Shaders */ = {isa = PBXBuildFile; fileRef = D48749CE1352563300308CD7 /* move_color.frag */; };
 		D49612B8136C47FF00D33D6D /* sqratAllocator.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612AA136C47FF00D33D6D /* sqratAllocator.h */; };
 		D49612B9136C47FF00D33D6D /* sqratClass.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612AB136C47FF00D33D6D /* sqratClass.h */; };
 		D49612BA136C47FF00D33D6D /* sqratClassType.h in Headers */ = {isa = PBXBuildFile; fileRef = D49612AC136C47FF00D33D6D /* sqratClassType.h */; };
@@ -173,7 +170,6 @@
 		D4A0226B13453E2600E1031F /* actor.h in Headers */ = {isa = PBXBuildFile; fileRef = D4A0226913453E2400E1031F /* actor.h */; };
 		D4BA3956134EAFD600D39D50 /* shader_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4BA3954134EAFD600D39D50 /* shader_manager.cc */; };
 		D4BA3957134EAFD600D39D50 /* shader_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = D4BA3955134EAFD600D39D50 /* shader_manager.h */; };
-		D4C81EAC13B2F523003A03E2 /* loading_scene.nut in Copy scenes */ = {isa = PBXBuildFile; fileRef = D42B8BEA13B2C6B30069C8B1 /* loading_scene.nut */; };
 		D4DDEC33136A79A500F65892 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62E1341A0480015C23D /* Foundation.framework */; };
 		D4DDEC58136A79E400F65892 /* sqapi.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4DDEC3C136A79E400F65892 /* sqapi.cpp */; };
 		D4DDEC59136A79E400F65892 /* sqarray.h in Headers */ = {isa = PBXBuildFile; fileRef = D4DDEC3D136A79E400F65892 /* sqarray.h */; };
@@ -245,12 +241,12 @@
 		D413EADD136CD6A000E0296F /* Copy main scripts */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = src;
+			dstPath = examples;
 			dstSubfolderSpec = 6;
 			files = (
-				D42B8BE813B2C6330069C8B1 /* main.nut in Copy main scripts */,
-				D42B8BE513B1A4EA0069C8B1 /* config.nut in Copy main scripts */,
-				D413EAE0136CD71000E0296F /* bootstrap.nut in Copy main scripts */,
+				BEBC963013C2D26A00C17C1F /* bootstrap.nut in Copy main scripts */,
+				BEBC963113C2D26A00C17C1F /* config.nut in Copy main scripts */,
+				BEBC963213C2D26B00C17C1F /* main.nut in Copy main scripts */,
 			);
 			name = "Copy main scripts";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,23 +254,24 @@
 		D42B8BED13B2DC4E0069C8B1 /* Copy scenes */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = src/scenes;
+			dstPath = examples/scenes;
 			dstSubfolderSpec = 6;
 			files = (
-				D4C81EAC13B2F523003A03E2 /* loading_scene.nut in Copy scenes */,
+				BEBC963313C2D28600C17C1F /* loading_scene.nut in Copy scenes */,
 			);
 			name = "Copy scenes";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D48749CC1352549000308CD7 /* CopyFiles */ = {
+		D48749CC1352549000308CD7 /* Copy Shaders */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = shaders;
 			dstSubfolderSpec = 6;
 			files = (
-				D48749CF1352567C00308CD7 /* move_color.frag in CopyFiles */,
-				D48749CD135254A200308CD7 /* move_color.vert in CopyFiles */,
+				D48749CF1352567C00308CD7 /* move_color.frag in Copy Shaders */,
+				D48749CD135254A200308CD7 /* move_color.vert in Copy Shaders */,
 			);
+			name = "Copy Shaders";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -659,7 +656,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D413EADC136CD62500E0296F /* src */ = {
+		D413EADC136CD62500E0296F /* examples */ = {
 			isa = PBXGroup;
 			children = (
 				D42B8BE913B2C66D0069C8B1 /* scenes */,
@@ -667,7 +664,7 @@
 				D42B8BE213B1A1E80069C8B1 /* config.nut */,
 				D42B8BE613B2C6140069C8B1 /* main.nut */,
 			);
-			path = src;
+			path = examples;
 			sourceTree = "<group>";
 		};
 		D427F61D1341A0470015C23D = {
@@ -681,7 +678,7 @@
 				D427F6361341A0480015C23D /* plasma2d-ios */,
 				D465E0D51342D6E800E7D604 /* libplasma2d */,
 				D48749C51352416700308CD7 /* shaders */,
-				D413EADC136CD62500E0296F /* src */,
+				D413EADC136CD62500E0296F /* examples */,
 				D427F62B1341A0480015C23D /* Frameworks */,
 				D427F6291341A0480015C23D /* Products */,
 			);
@@ -1400,7 +1397,7 @@
 				D427F6241341A0480015C23D /* Sources */,
 				D427F6251341A0480015C23D /* Frameworks */,
 				D427F6261341A0480015C23D /* Resources */,
-				D48749CC1352549000308CD7 /* CopyFiles */,
+				D48749CC1352549000308CD7 /* Copy Shaders */,
 				D413EADD136CD6A000E0296F /* Copy main scripts */,
 				D42B8BED13B2DC4E0069C8B1 /* Copy scenes */,
 			);
@@ -1499,10 +1496,6 @@
 				D427F63B1341A0480015C23D /* InfoPlist.strings in Resources */,
 				D427F6441341A0480015C23D /* MainWindow.xib in Resources */,
 				D427F6511341A0480015C23D /* plasma2dViewController.xib in Resources */,
-				D413EADF136CD6E300E0296F /* bootstrap.nut in Resources */,
-				D42B8BE313B1A1E80069C8B1 /* config.nut in Resources */,
-				D42B8BE713B2C6140069C8B1 /* main.nut in Resources */,
-				D42B8BEB13B2C6B30069C8B1 /* loading_scene.nut in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

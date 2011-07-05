@@ -18,7 +18,7 @@ p2d_system["loaded_files"] <- {}
 function require(filename) {
     if (filename in p2d_system["loaded_files"]) return
     
-    local filepath = p2d_system["script_base_path"] + "/src/" + filename + ".nut"
+    local filepath = p2d_system["script_base_path"] + "/examples/" + filename + ".nut"
     dofile(filepath)
     p2d_system["loaded_files"][filename] <- true
 }

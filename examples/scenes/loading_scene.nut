@@ -32,7 +32,6 @@ class LoadingScene extends Scene {
         // emit the textureLoaded custom event
         foreach (texture in textures) {
             ::preloadTexture(texture, function(texture_name) {
-                ::puts(texture_name)
                 ::emitEvent("textureLoaded")
             })
         }
