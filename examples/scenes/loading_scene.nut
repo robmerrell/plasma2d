@@ -8,6 +8,7 @@ class LoadingScene extends Scene {
         
         // Load the logo image and add it to the scene
         logo = ::ActorFactory("logo.png", 300, 200)
+        logo.setAnchor(0.5, 0.5)
         logo.setDimensions(420, 111)
         addToScene(logo)
         
@@ -15,7 +16,8 @@ class LoadingScene extends Scene {
         // logo image for the first time. Now we want to start preloading
         // all of our other assets
         on("sceneUpdate", loadTextures.bindenv(this))
-        on("textureLoaded", this.updateLoadedMessage.bindenv(this))
+        on("textureLoaded", updateLoadedMessage.bindenv(this))
+        on("touch", onTouch.bindenv(this))
     }
     
     function loadTextures(event) {
@@ -40,5 +42,11 @@ class LoadingScene extends Scene {
     
     function updateLoadedMessage(event) {
         loaded_textures++
+    }
+    
+    function onTouch(event) {
+        if (event.payload.stage == "moved") {
+            logo.setXY(event.payload.current_x, event.payload.current_y)
+        }
     }
 }
