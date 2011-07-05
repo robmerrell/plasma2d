@@ -45,7 +45,9 @@ class LoadingScene extends Scene {
     }
     
     function onTouch(event) {
-        if (event.payload.stage == "moved") {
+        if (event.payload.stage == "began") {
+            logo.setXY(event.payload.x, event.payload.y)
+        } else if (event.payload.stage == "moved") {
             logo.setXY(event.payload.current_x, event.payload.current_y)
         }
     }
