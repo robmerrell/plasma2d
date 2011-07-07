@@ -1,0 +1,79 @@
+/**
+ * Licensed under the MIT license. See LICENSE for details.
+ * Copyright (C) 2011 Rob Merrell
+ */
+
+#include "label.h"
+
+p2d::Label::Label() {
+    text = "";
+}
+
+
+void p2d::Label::setText(std::string _text) {
+    text = _text;
+}
+
+std::string p2d::Label::getText() {
+    return text;
+}
+
+
+void p2d::Label::setDimensions(float _width, float _height) {
+    width = _width;
+    height = _height;
+}
+
+float p2d::Label::getWidth() {
+    return width;
+}
+
+float p2d::Label::getHeight() {
+    return height;
+}
+
+
+void p2d::Label::draw() {
+    // change the anchor point
+    float calc_anchor_x = width * scale * -anchor_x;
+    float calc_anchor_y = height * scale * -anchor_y;
+    
+    // transformations
+    glm::mat4 trans = glm::translate(glm::mat4(1.0f), glm::vec3(x + calc_anchor_x, y + calc_anchor_y, 0.0f));
+    glm::mat4 mvp = p2d::Director::Inst()->getProjection() * trans;
+    
+    if (angle != 0.0f)
+        mvp *= glm::rotate(trans, angle, glm::vec3(0.0f, 0.0f, 1.0f));
+    
+    if (scale != 1.0f)
+        mvp *= glm::scale(glm::mat4(1.0f), glm::vec3(scale, scale, 0.0f));
+    
+    p2d::TextureManager::Inst()->bindTexture("logo.png");
+    
+    p2d::ShaderManager::Inst()->useProgram("move_color");
+    
+    GLuint vert_coords = p2d::ShaderManager::Inst()->getAttribLocation("vert_coords");
+    GLuint tex_matrix = p2d::ShaderManager::Inst()->getAttribLocation("tex_matrix");
+    GLuint uMVP = p2d::ShaderManager::Inst()->getUniformLocation("uMVP");
+    
+    glm::mat4x3 char_verts;
+    // replace the 64's with the letter sizes...
+    char_verts[0] = glm::vec3(0.0f, 0.0f, 0.0f);
+    char_verts[1] = glm::vec3(64, 0.0f, 0.0f);
+    char_verts[2] = glm::vec3(0.0f, 64, 0.0f);
+    char_verts[3] = glm::vec3(64, 64, 0.0f);
+    
+    glm::mat4 tex_coords;
+    tex_coords[0] = glm::vec4(0.0f, 1.0f, 0.0f, 0.0f);
+    tex_coords[1] = glm::vec4(1.0f, 1.0f, 0.0f, 0.0f);
+    tex_coords[2] = glm::vec4(0.0f, 0.0f, 0.0f, 0.0f);
+    tex_coords[3] = glm::vec4(1.0f, 0.0f, 0.0f, 0.0f);
+    
+    glVertexAttribPointer(vert_coords, 3, GL_FLOAT, 0, 0, glm::value_ptr(char_verts));
+    glVertexAttribPointer(tex_matrix, 4, GL_FLOAT, 0, 0, glm::value_ptr(tex_coords));
+    glUniformMatrix4fv(uMVP, 1, GL_FALSE, glm::value_ptr(mvp));
+    glEnableVertexAttribArray(vert_coords);
+    glEnableVertexAttribArray(tex_matrix);
+    
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+}

@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1E0D9513C49C6A000D88B1 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE1E0D8F13C49C6A000D88B1 /* tinystr.cpp */; };
+		BE1E0D9613C49C6A000D88B1 /* tinystr.h in Headers */ = {isa = PBXBuildFile; fileRef = BE1E0D9013C49C6A000D88B1 /* tinystr.h */; };
+		BE1E0D9713C49C6A000D88B1 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE1E0D9113C49C6A000D88B1 /* tinyxml.cpp */; };
+		BE1E0D9813C49C6A000D88B1 /* tinyxml.h in Headers */ = {isa = PBXBuildFile; fileRef = BE1E0D9213C49C6A000D88B1 /* tinyxml.h */; };
+		BE1E0D9913C49C6A000D88B1 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE1E0D9313C49C6A000D88B1 /* tinyxmlerror.cpp */; };
+		BE1E0D9A13C49C6A000D88B1 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE1E0D9413C49C6A000D88B1 /* tinyxmlparser.cpp */; };
+		BEA8198413C419BB0058D983 /* fps.fnt in Resources */ = {isa = PBXBuildFile; fileRef = BEA8198213C419BB0058D983 /* fps.fnt */; };
+		BEA8198513C419BB0058D983 /* fps.png in Resources */ = {isa = PBXBuildFile; fileRef = BEA8198313C419BB0058D983 /* fps.png */; };
+		BEA8198813C42A310058D983 /* label.cc in Sources */ = {isa = PBXBuildFile; fileRef = BEA8198613C42A310058D983 /* label.cc */; };
+		BEA8198913C42A310058D983 /* label.h in Headers */ = {isa = PBXBuildFile; fileRef = BEA8198713C42A310058D983 /* label.h */; };
 		BEBC963013C2D26A00C17C1F /* bootstrap.nut in Copy main scripts */ = {isa = PBXBuildFile; fileRef = D413EADE136CD6E300E0296F /* bootstrap.nut */; };
 		BEBC963113C2D26A00C17C1F /* config.nut in Copy main scripts */ = {isa = PBXBuildFile; fileRef = D42B8BE213B1A1E80069C8B1 /* config.nut */; };
 		BEBC963213C2D26B00C17C1F /* main.nut in Copy main scripts */ = {isa = PBXBuildFile; fileRef = D42B8BE613B2C6140069C8B1 /* main.nut */; };
@@ -287,6 +297,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE1E0D8F13C49C6A000D88B1 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
+		BE1E0D9013C49C6A000D88B1 /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinystr.h; sourceTree = "<group>"; };
+		BE1E0D9113C49C6A000D88B1 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
+		BE1E0D9213C49C6A000D88B1 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
+		BE1E0D9313C49C6A000D88B1 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
+		BE1E0D9413C49C6A000D88B1 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
+		BEA8198213C419BB0058D983 /* fps.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fps.fnt; sourceTree = "<group>"; };
+		BEA8198313C419BB0058D983 /* fps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps.png; sourceTree = "<group>"; };
+		BEA8198613C42A310058D983 /* label.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = label.cc; sourceTree = "<group>"; };
+		BEA8198713C42A310058D983 /* label.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = label.h; sourceTree = "<group>"; };
 		BEBC963713C2D37800C17C1F /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		D413EADE136CD6E300E0296F /* bootstrap.nut */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bootstrap.nut; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		D41F2F5F13484C5C00E84862 /* hash_map_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash_map_defs.h; sourceTree = "<group>"; };
@@ -665,9 +685,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE1E0D8D13C49BDB000D88B1 /* tinyxml */ = {
+			isa = PBXGroup;
+			children = (
+				BE1E0D8F13C49C6A000D88B1 /* tinystr.cpp */,
+				BE1E0D9013C49C6A000D88B1 /* tinystr.h */,
+				BE1E0D9113C49C6A000D88B1 /* tinyxml.cpp */,
+				BE1E0D9213C49C6A000D88B1 /* tinyxml.h */,
+				BE1E0D9313C49C6A000D88B1 /* tinyxmlerror.cpp */,
+				BE1E0D9413C49C6A000D88B1 /* tinyxmlparser.cpp */,
+			);
+			path = tinyxml;
+			sourceTree = "<group>";
+		};
+		BEA8198013C419180058D983 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BEA8198213C419BB0058D983 /* fps.fnt */,
+				BEA8198313C419BB0058D983 /* fps.png */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		BEBC963413C2D2E500C17C1F /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				BEA8198013C419180058D983 /* fonts */,
 				BEBC963613C2D2F800C17C1F /* images */,
 				BEBC963513C2D2F100C17C1F /* sounds */,
 			);
@@ -814,6 +857,8 @@
 				D4BA3955134EAFD600D39D50 /* shader_manager.h */,
 				D4EAC39413AAE16300ACB55C /* squirrel_wrapper.cc */,
 				D4EAC39513AAE16300ACB55C /* squirrel_wrapper.h */,
+				BEA8198613C42A310058D983 /* label.cc */,
+				BEA8198713C42A310058D983 /* label.h */,
 			);
 			path = engine;
 			sourceTree = "<group>";
@@ -1070,6 +1115,7 @@
 		D47B9A3A134771590002FC57 /* external */ = {
 			isa = PBXGroup;
 			children = (
+				BE1E0D8D13C49BDB000D88B1 /* tinyxml */,
 				D49612A7136C47BD00D33D6D /* sqrat */,
 				D4DDEC34136A79A500F65892 /* squirrel */,
 				D4756802135FE03000C89D7E /* glm */,
@@ -1371,6 +1417,9 @@
 				D49612C4136C47FF00D33D6D /* sqratUtil.h in Headers */,
 				D49612C5136C47FF00D33D6D /* sqrat.h in Headers */,
 				D4EAC39713AAE16300ACB55C /* squirrel_wrapper.h in Headers */,
+				BEA8198913C42A310058D983 /* label.h in Headers */,
+				BE1E0D9613C49C6A000D88B1 /* tinystr.h in Headers */,
+				BE1E0D9813C49C6A000D88B1 /* tinyxml.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1527,6 +1576,8 @@
 				D427F63B1341A0480015C23D /* InfoPlist.strings in Resources */,
 				D427F6441341A0480015C23D /* MainWindow.xib in Resources */,
 				D427F6511341A0480015C23D /* plasma2dViewController.xib in Resources */,
+				BEA8198413C419BB0058D983 /* fps.fnt in Resources */,
+				BEA8198513C419BB0058D983 /* fps.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1559,6 +1610,11 @@
 				D4BA3956134EAFD600D39D50 /* shader_manager.cc in Sources */,
 				D47568DC135FE03000C89D7E /* dummy.cpp in Sources */,
 				D4EAC39613AAE16300ACB55C /* squirrel_wrapper.cc in Sources */,
+				BEA8198813C42A310058D983 /* label.cc in Sources */,
+				BE1E0D9513C49C6A000D88B1 /* tinystr.cpp in Sources */,
+				BE1E0D9713C49C6A000D88B1 /* tinyxml.cpp in Sources */,
+				BE1E0D9913C49C6A000D88B1 /* tinyxmlerror.cpp in Sources */,
+				BE1E0D9A13C49C6A000D88B1 /* tinyxmlparser.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1634,7 +1690,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rob Merrell (4HS5S2YT73)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rob Merrell (4HS5S2YT73)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -1646,6 +1703,8 @@
 					"${SOURCE_ROOT}/libplasma2d/external/sqrat/",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PROVISIONING_PROFILE = "B3F33627-4F99-45E5-ADFE-203D69B03EFA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B3F33627-4F99-45E5-ADFE-203D69B03EFA";
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -1679,6 +1738,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Rob Merrell (4HS5S2YT73)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rob Merrell (4HS5S2YT73)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1687,6 +1748,8 @@
 				INFOPLIST_FILE = "plasma2d-ios/plasma2d-Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B3F33627-4F99-45E5-ADFE-203D69B03EFA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B3F33627-4F99-45E5-ADFE-203D69B03EFA";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

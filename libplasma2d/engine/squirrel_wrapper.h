@@ -17,9 +17,10 @@
 #include <stdio.h> 
 #include <string.h>
 
-// classes to bind...
+// classes to bind
 #include "actor.h"
 #include "director.h"
+#include "label.h"
 #include "scene.h"
 #include "texture_manager.h"
 

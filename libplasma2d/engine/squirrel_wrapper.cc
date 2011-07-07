@@ -70,6 +70,26 @@ void p2d::SquirrelWrapper::bindClasses() {
     actorClass.Func("getAnchorX", &p2d::Actor::getAnchorX);
     actorClass.Func("getAnchorY", &p2d::Actor::getAnchorY);
     Sqrat::RootTable(vm).Bind("Actor", actorClass);
+    
+    // Label
+    Sqrat::Class<p2d::Label> labelClass(vm);
+    labelClass.Func("setText", &p2d::Label::setText);
+//    labelClass.Func("getText", &p2d::Label::getText);
+    labelClass.Func("setXY", &p2d::Label::setXY);
+    labelClass.Func("getX", &p2d::Label::getX);
+    labelClass.Func("getY", &p2d::Label::getY);
+    labelClass.Func("setDimensions", &p2d::Label::setDimensions);
+    labelClass.Func("getWidth", &p2d::Label::getWidth);
+    labelClass.Func("getHeight", &p2d::Label::getHeight);
+    labelClass.Func("setAngle", &p2d::Label::setAngle);
+    labelClass.Func("getAngle", &p2d::Label::getAngle);
+    labelClass.Func("setScale", &p2d::Label::setScale);
+    labelClass.Func("getScale", &p2d::Label::getScale);
+    labelClass.Func("setAnchor", &p2d::Label::setAnchor);
+    labelClass.Func("getAnchorX", &p2d::Label::getAnchorX);
+    labelClass.Func("getAnchorY", &p2d::Label::getAnchorY);
+    Sqrat::RootTable(vm).Bind("Label", labelClass);
+
 }
 
 

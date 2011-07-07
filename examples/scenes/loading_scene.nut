@@ -1,18 +1,23 @@
 class LoadingScene extends Scene {
     logo = 0
+    instructions = 0
     texture_count = 0
     loaded_textures = 0
     
     constructor() {
         base.constructor()
         
-        // Load the logo image and add it to the scene
+        // load the logo image and add it to the scene
         logo = ::ActorFactory("logo.png", 300, 200)
         logo.setAnchor(0.5, 0.5)
         logo.setDimensions(420, 111)
         addToScene(logo)
         
-        // Listen for an event that fires after we have displayed the
+        // slap the instructions label on the scene
+        instructions = ::LabelFactory("Tap and drag to move the logo", 500, 500)
+        addToScene(instructions)
+        
+        // listen for an event that fires after we have displayed the
         // logo image for the first time. Now we want to start preloading
         // all of our other assets
         on("sceneUpdate", loadTextures.bindenv(this))

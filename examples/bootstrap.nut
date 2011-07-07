@@ -110,6 +110,14 @@ function ActorFactory(image, x, y) {
     return actor
 }
 
+function LabelFactory(text, x,  y) {
+    local label = ::Label()
+    label.setText(text)
+    label.setXY(x, y)
+    return label
+}
+
+
 // run the config file, then run main to get the party started
 game_config <- {}
 require("config")
