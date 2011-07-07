@@ -55,25 +55,32 @@ void p2d::Label::draw() {
     GLuint vert_coords = p2d::ShaderManager::Inst()->getAttribLocation("vert_coords");
     GLuint tex_matrix = p2d::ShaderManager::Inst()->getAttribLocation("tex_matrix");
     GLuint uMVP = p2d::ShaderManager::Inst()->getUniformLocation("uMVP");
-    
+
     glm::mat4x3 char_verts;
-    // replace the 64's with the letter sizes...
-    char_verts[0] = glm::vec3(0.0f, 0.0f, 0.0f);
-    char_verts[1] = glm::vec3(64, 0.0f, 0.0f);
-    char_verts[2] = glm::vec3(0.0f, 64, 0.0f);
-    char_verts[3] = glm::vec3(64, 64, 0.0f);
-    
     glm::mat4 tex_coords;
-    tex_coords[0] = glm::vec4(0.0f, 1.0f, 0.0f, 0.0f);
-    tex_coords[1] = glm::vec4(1.0f, 1.0f, 0.0f, 0.0f);
-    tex_coords[2] = glm::vec4(0.0f, 0.0f, 0.0f, 0.0f);
-    tex_coords[3] = glm::vec4(1.0f, 0.0f, 0.0f, 0.0f);
     
-    glVertexAttribPointer(vert_coords, 3, GL_FLOAT, 0, 0, glm::value_ptr(char_verts));
-    glVertexAttribPointer(tex_matrix, 4, GL_FLOAT, 0, 0, glm::value_ptr(tex_coords));
-    glUniformMatrix4fv(uMVP, 1, GL_FALSE, glm::value_ptr(mvp));
-    glEnableVertexAttribArray(vert_coords);
-    glEnableVertexAttribArray(tex_matrix);
-    
-    glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+    for (int i = 0; i < text.size(); i++) {
+        // replace the 64's with the char sizes...
+        char_verts[0] = glm::vec3(0.0f, 0.0f, 0.0f);
+        char_verts[1] = glm::vec3(64, 0.0f, 0.0f);
+        char_verts[2] = glm::vec3(0.0f, 64, 0.0f);
+        char_verts[3] = glm::vec3(64, 64, 0.0f);        
+        
+        tex_coords[0] = glm::vec4(0.0f, 1.0f, 0.0f, 0.0f);
+        tex_coords[1] = glm::vec4(1.0f, 1.0f, 0.0f, 0.0f);
+        tex_coords[2] = glm::vec4(0.0f, 0.0f, 0.0f, 0.0f);
+        tex_coords[3] = glm::vec4(1.0f, 0.0f, 0.0f, 0.0f);
+        
+        // horizontal advance
+        mvp *= glm::translate(glm::mat4(1.0f), glm::vec3(32.0f, 0.0f, 0.0f));
+        
+        glVertexAttribPointer(vert_coords, 3, GL_FLOAT, 0, 0, glm::value_ptr(char_verts));
+        glVertexAttribPointer(tex_matrix, 4, GL_FLOAT, 0, 0, glm::value_ptr(tex_coords));
+        glUniformMatrix4fv(uMVP, 1, GL_FALSE, glm::value_ptr(mvp));
+        glEnableVertexAttribArray(vert_coords);
+        glEnableVertexAttribArray(tex_matrix);
+        
+        glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+    }
+
 }

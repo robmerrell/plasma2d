@@ -13,6 +13,8 @@
 		BE1E0D9813C49C6A000D88B1 /* tinyxml.h in Headers */ = {isa = PBXBuildFile; fileRef = BE1E0D9213C49C6A000D88B1 /* tinyxml.h */; };
 		BE1E0D9913C49C6A000D88B1 /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE1E0D9313C49C6A000D88B1 /* tinyxmlerror.cpp */; };
 		BE1E0D9A13C49C6A000D88B1 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE1E0D9413C49C6A000D88B1 /* tinyxmlparser.cpp */; };
+		BE3647C013C5552A007CABD3 /* bitmap_font_parser.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE3647BE13C5552A007CABD3 /* bitmap_font_parser.cc */; };
+		BE3647C113C5552A007CABD3 /* bitmap_font_parser.h in Headers */ = {isa = PBXBuildFile; fileRef = BE3647BF13C5552A007CABD3 /* bitmap_font_parser.h */; };
 		BEA8198413C419BB0058D983 /* fps.fnt in Resources */ = {isa = PBXBuildFile; fileRef = BEA8198213C419BB0058D983 /* fps.fnt */; };
 		BEA8198513C419BB0058D983 /* fps.png in Resources */ = {isa = PBXBuildFile; fileRef = BEA8198313C419BB0058D983 /* fps.png */; };
 		BEA8198813C42A310058D983 /* label.cc in Sources */ = {isa = PBXBuildFile; fileRef = BEA8198613C42A310058D983 /* label.cc */; };
@@ -303,6 +305,8 @@
 		BE1E0D9213C49C6A000D88B1 /* tinyxml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinyxml.h; sourceTree = "<group>"; };
 		BE1E0D9313C49C6A000D88B1 /* tinyxmlerror.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlerror.cpp; sourceTree = "<group>"; };
 		BE1E0D9413C49C6A000D88B1 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
+		BE3647BE13C5552A007CABD3 /* bitmap_font_parser.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bitmap_font_parser.cc; sourceTree = "<group>"; };
+		BE3647BF13C5552A007CABD3 /* bitmap_font_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitmap_font_parser.h; sourceTree = "<group>"; };
 		BEA8198213C419BB0058D983 /* fps.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fps.fnt; sourceTree = "<group>"; };
 		BEA8198313C419BB0058D983 /* fps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps.png; sourceTree = "<group>"; };
 		BEA8198613C42A310058D983 /* label.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = label.cc; sourceTree = "<group>"; };
@@ -859,6 +863,8 @@
 				D4EAC39513AAE16300ACB55C /* squirrel_wrapper.h */,
 				BEA8198613C42A310058D983 /* label.cc */,
 				BEA8198713C42A310058D983 /* label.h */,
+				BE3647BE13C5552A007CABD3 /* bitmap_font_parser.cc */,
+				BE3647BF13C5552A007CABD3 /* bitmap_font_parser.h */,
 			);
 			path = engine;
 			sourceTree = "<group>";
@@ -1420,6 +1426,7 @@
 				BEA8198913C42A310058D983 /* label.h in Headers */,
 				BE1E0D9613C49C6A000D88B1 /* tinystr.h in Headers */,
 				BE1E0D9813C49C6A000D88B1 /* tinyxml.h in Headers */,
+				BE3647C113C5552A007CABD3 /* bitmap_font_parser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1615,6 +1622,7 @@
 				BE1E0D9713C49C6A000D88B1 /* tinyxml.cpp in Sources */,
 				BE1E0D9913C49C6A000D88B1 /* tinyxmlerror.cpp in Sources */,
 				BE1E0D9A13C49C6A000D88B1 /* tinyxmlparser.cpp in Sources */,
+				BE3647C013C5552A007CABD3 /* bitmap_font_parser.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
