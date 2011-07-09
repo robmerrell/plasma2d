@@ -86,8 +86,8 @@ void p2d::Actor::cacheVerts() {
 
 
 void p2d::Actor::cacheTextureCoords() {
-    tex_coords[0] = glm::vec4(0.0f, 1.0f, 0.0f, 0.0f);
-    tex_coords[1] = glm::vec4(1.0f, 1.0f, 0.0f, 0.0f);
-    tex_coords[2] = glm::vec4(0.0f, 0.0f, 0.0f, 0.0f);
-    tex_coords[3] = glm::vec4(1.0f, 0.0f, 0.0f, 0.0f);
+    tex_coords[0] = glm::vec4(0.0f, 0.0f, 0.0f, 0.0f);
+    tex_coords[1] = glm::vec4(1.0f, 0.0f, 0.0f, 0.0f);
+    tex_coords[2] = glm::vec4(0.0f, 1.0f, 0.0f, 0.0f);
+    tex_coords[3] = glm::vec4(1.0f, 1.0f, 0.0f, 0.0f);
 }

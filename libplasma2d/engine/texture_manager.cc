@@ -27,10 +27,11 @@ std::string p2d::TextureManager::getResourcePath() {
 
 
 void p2d::TextureManager::loadTexture(std::string _filename) {
-    unsigned int flags = SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y;
+    unsigned int flags = SOIL_FLAG_MIPMAPS;
     
     std::string separator = "/";
     std::string filepath = getResourcePath() + separator + _filename;
+    std::cout << filepath << std::endl;
     
     obj->textures[_filename] = SOIL_load_OGL_texture
     (   

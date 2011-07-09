@@ -14,7 +14,7 @@ class LoadingScene extends Scene {
         addToScene(logo)
         
         // slap the instructions label on the scene
-        instructions = ::LabelFactory("Tap and drag to move the logo", 500, 500)
+        instructions = ::LabelFactory("0123456789", "fps", 200, 500)
         addToScene(instructions)
         
         // listen for an event that fires after we have displayed the

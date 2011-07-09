@@ -10,6 +10,7 @@
 
 #include "display_object.h"
 #include "director.h"
+#include "bitmap_font_parser.h"
 
 namespace p2d {
     
@@ -22,6 +23,8 @@ namespace p2d {
         // dimensions
         float width;
         float height;
+        
+        p2d::BitmapFontParser font_parser;
         
     public:
         Label();

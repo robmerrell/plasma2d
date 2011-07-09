@@ -13,6 +13,12 @@ struct eqstr {
     }
 };
 
+struct eqchar {
+    bool operator()(const char* s1, const char* s2) const {
+        return strcmp(s1, s2) == 0;
+    }
+};
+
 namespace __gnu_cxx
 {
     template<> struct hash< std::string >

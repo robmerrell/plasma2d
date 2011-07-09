@@ -110,7 +110,7 @@ function ActorFactory(image, x, y) {
     return actor
 }
 
-function LabelFactory(text, x,  y) {
+function LabelFactory(text, font, x,  y) {
     local label = ::Label()
     label.setText(text)
     label.setXY(x, y)

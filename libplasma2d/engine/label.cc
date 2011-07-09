@@ -7,6 +7,10 @@
 
 p2d::Label::Label() {
     text = "";
+    
+    font_parser.setResourcePath("/tmp");
+    font_parser.parse("fps.fnt");
+    p2d::TextureManager::Inst()->loadTexture("../fonts/fps.png");
 }
 
 
@@ -48,7 +52,7 @@ void p2d::Label::draw() {
     if (scale != 1.0f)
         mvp *= glm::scale(glm::mat4(1.0f), glm::vec3(scale, scale, 0.0f));
     
-    p2d::TextureManager::Inst()->bindTexture("logo.png");
+    p2d::TextureManager::Inst()->bindTexture("../fonts/fps.png");
     
     p2d::ShaderManager::Inst()->useProgram("move_color");
     
@@ -58,21 +62,13 @@ void p2d::Label::draw() {
 
     glm::mat4x3 char_verts;
     glm::mat4 tex_coords;
-    
+
     for (int i = 0; i < text.size(); i++) {
-        // replace the 64's with the char sizes...
-        char_verts[0] = glm::vec3(0.0f, 0.0f, 0.0f);
-        char_verts[1] = glm::vec3(64, 0.0f, 0.0f);
-        char_verts[2] = glm::vec3(0.0f, 64, 0.0f);
-        char_verts[3] = glm::vec3(64, 64, 0.0f);        
-        
-        tex_coords[0] = glm::vec4(0.0f, 1.0f, 0.0f, 0.0f);
-        tex_coords[1] = glm::vec4(1.0f, 1.0f, 0.0f, 0.0f);
-        tex_coords[2] = glm::vec4(0.0f, 0.0f, 0.0f, 0.0f);
-        tex_coords[3] = glm::vec4(1.0f, 0.0f, 0.0f, 0.0f);
+        char_verts = font_parser.generateVertsForLetter(text[i]);
+        tex_coords = font_parser.generateTexCoordsForLetter(text[i]);
         
         // horizontal advance
-        mvp *= glm::translate(glm::mat4(1.0f), glm::vec3(32.0f, 0.0f, 0.0f));
+        mvp *= glm::translate(glm::mat4(1.0f), glm::vec3(64.0f, 0.0f, 0.0f));
         
         glVertexAttribPointer(vert_coords, 3, GL_FLOAT, 0, 0, glm::value_ptr(char_verts));
         glVertexAttribPointer(tex_matrix, 4, GL_FLOAT, 0, 0, glm::value_ptr(tex_coords));
