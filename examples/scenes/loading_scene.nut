@@ -8,9 +8,9 @@ class LoadingScene extends Scene {
         base.constructor()
         
         // load the logo image and add it to the scene
-        logo = ::ActorFactory("../fonts/fps.png", 256, 128)
+        logo = ::ActorFactory("logo.png", 256, 128)
         logo.setAnchor(0.5, 0.5)
-        logo.setDimensions(420, 111)
+        logo.setDimensions(256, 128)
         addToScene(logo)
         
         // slap the instructions label on the scene

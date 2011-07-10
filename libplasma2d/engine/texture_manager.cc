@@ -31,7 +31,6 @@ void p2d::TextureManager::loadTexture(std::string _filename) {
     
     std::string separator = "/";
     std::string filepath = getResourcePath() + separator + _filename;
-    std::cout << filepath << std::endl;
     
     obj->textures[_filename] = SOIL_load_OGL_texture
     (   
