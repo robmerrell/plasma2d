@@ -62,6 +62,7 @@ void p2d::Label::draw() {
     glm::mat4x3 char_verts;
     glm::mat4 tex_coords;
     float xadvance, yoffset, xoffset;
+    float prev_xadvance = 0;
     float prev_xoffset;
     float prev_yoffset;
 
@@ -73,7 +74,7 @@ void p2d::Label::draw() {
         xoffset = font_parser.getXOffsetForLetter(text[i]);
         
         // horizontal advance
-        mvp *= glm::translate(glm::mat4(1.0f), glm::vec3(xoffset - prev_xoffset, yoffset - prev_yoffset, 0.0f));
+        mvp *= glm::translate(glm::mat4(1.0f), glm::vec3(xoffset - prev_xoffset + prev_xadvance, yoffset - prev_yoffset, 0.0f));
         
         glVertexAttribPointer(vert_coords, 3, GL_FLOAT, 0, 0, glm::value_ptr(char_verts));
         glVertexAttribPointer(tex_matrix, 4, GL_FLOAT, 0, 0, glm::value_ptr(tex_coords));
@@ -83,7 +84,7 @@ void p2d::Label::draw() {
         
         glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
         
-        mvp *= glm::translate(glm::mat4(1.0f), glm::vec3(xadvance, 0.0f, 0.0f));
+        prev_xadvance = xadvance;
         prev_yoffset = yoffset;
         prev_xoffset = xoffset;
     }
