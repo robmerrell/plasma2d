@@ -8,13 +8,13 @@ class LoadingScene extends Scene {
         base.constructor()
         
         // load the logo image and add it to the scene
-        logo = ::ActorFactory("logo.png", 300, 200)
+        logo = ::ActorFactory("../fonts/fps.png", 256, 128)
         logo.setAnchor(0.5, 0.5)
         logo.setDimensions(420, 111)
         addToScene(logo)
         
         // slap the instructions label on the scene
-        instructions = ::LabelFactory("0123456789", "fps", 200, 500)
+        instructions = ::LabelFactory("0.123456789", "fps", 200, 500)
         addToScene(instructions)
         
         // listen for an event that fires after we have displayed the

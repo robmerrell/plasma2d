@@ -81,6 +81,22 @@ glm::mat4 p2d::BitmapFontParser::generateTexCoordsForLetter(char _char) {
 }
 
 
+float p2d::BitmapFontParser::getXAdvanceForLetter(char _char) {
+    int index = int(_char);
+    return char_collection[index].xadvance;
+}
+
+
+float p2d::BitmapFontParser::getXOffsetForLetter(char _char) {
+    int index = int(_char);
+    return char_collection[index].xoffset;    
+}
+
+float p2d::BitmapFontParser::getYOffsetForLetter(char _char) {
+    int index = int(_char);
+    return char_collection[index].yoffset;    
+}
+
 void p2d::BitmapFontParser::setResourcePath(std::string _resource_path) {
     resource_path = _resource_path;
 }

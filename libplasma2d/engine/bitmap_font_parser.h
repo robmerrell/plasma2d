@@ -68,6 +68,17 @@ namespace p2d {
          * Generate the texture coordinates for a single letter based on the font
          */
         glm::mat4 generateTexCoordsForLetter(char);
+        
+        /**
+         * Get the X Advance parameter for a letter
+         */
+        float getXAdvanceForLetter(char);
+        
+        /**
+         * Get offsets for a letter
+         */
+        float getXOffsetForLetter(char);
+        float getYOffsetForLetter(char);
     };
     
 }

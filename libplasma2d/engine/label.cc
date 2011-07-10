@@ -53,7 +53,6 @@ void p2d::Label::draw() {
         mvp *= glm::scale(glm::mat4(1.0f), glm::vec3(scale, scale, 0.0f));
     
     p2d::TextureManager::Inst()->bindTexture("../fonts/fps.png");
-    
     p2d::ShaderManager::Inst()->useProgram("move_color");
     
     GLuint vert_coords = p2d::ShaderManager::Inst()->getAttribLocation("vert_coords");
@@ -62,13 +61,16 @@ void p2d::Label::draw() {
 
     glm::mat4x3 char_verts;
     glm::mat4 tex_coords;
+    float xadvance, yoffset;
 
     for (int i = 0; i < text.size(); i++) {
         char_verts = font_parser.generateVertsForLetter(text[i]);
         tex_coords = font_parser.generateTexCoordsForLetter(text[i]);
+        xadvance = font_parser.getXAdvanceForLetter(text[i]);
+        yoffset = font_parser.getYOffsetForLetter(text[i]);
         
         // horizontal advance
-        mvp *= glm::translate(glm::mat4(1.0f), glm::vec3(64.0f, 0.0f, 0.0f));
+        mvp *= glm::translate(glm::mat4(1.0f), glm::vec3(xadvance, 0.0f, 0.0f));
         
         glVertexAttribPointer(vert_coords, 3, GL_FLOAT, 0, 0, glm::value_ptr(char_verts));
         glVertexAttribPointer(tex_matrix, 4, GL_FLOAT, 0, 0, glm::value_ptr(tex_coords));
