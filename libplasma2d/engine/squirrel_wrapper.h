@@ -22,7 +22,7 @@
 #include "director.h"
 #include "label.h"
 #include "scene.h"
-#include "texture_manager.h"
+#include "managers/texture_manager.h"
 
 namespace p2d {
     

@@ -247,7 +247,7 @@
 		D4F05DDF13477488002A4827 /* stbi_DDS_aug_c.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DD513477488002A4827 /* stbi_DDS_aug_c.h */; };
 		D4F05DE013477488002A4827 /* stbi_DDS_aug.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DD613477488002A4827 /* stbi_DDS_aug.h */; };
 		D4F05DE313477E3E002A4827 /* texture_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4F05DE113477E3D002A4827 /* texture_manager.cc */; };
-		D4F05DE413477E3E002A4827 /* texture_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DE213477E3D002A4827 /* texture_manager.h */; };
+		D4F05DE413477E3E002A4827 /* shader_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DE213477E3D002A4827 /* shader_manager.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -657,7 +657,7 @@
 		D4F05DD513477488002A4827 /* stbi_DDS_aug_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_DDS_aug_c.h; sourceTree = "<group>"; };
 		D4F05DD613477488002A4827 /* stbi_DDS_aug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_DDS_aug.h; sourceTree = "<group>"; };
 		D4F05DE113477E3D002A4827 /* texture_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture_manager.cc; sourceTree = "<group>"; };
-		D4F05DE213477E3D002A4827 /* texture_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture_manager.h; sourceTree = "<group>"; };
+		D4F05DE213477E3D002A4827 /* shader_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shader_manager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -714,6 +714,19 @@
 				BE1E0D9413C49C6A000D88B1 /* tinyxmlparser.cpp */,
 			);
 			path = tinyxml;
+			sourceTree = "<group>";
+		};
+		BE9B5F5F13CBC0CB00CE6A52 /* managers */ = {
+			isa = PBXGroup;
+			children = (
+				D4DEDEDF1344438F00699EA9 /* director.cc */,
+				D4DEDEE01344438F00699EA9 /* director.h */,
+				D4F05DE113477E3D002A4827 /* texture_manager.cc */,
+				D4F05DE213477E3D002A4827 /* shader_manager.h */,
+				D4BA3954134EAFD600D39D50 /* shader_manager.cc */,
+				D4BA3955134EAFD600D39D50 /* shader_manager.h */,
+			);
+			path = managers;
 			sourceTree = "<group>";
 		};
 		BEA8198013C419180058D983 /* fonts */ = {
@@ -854,10 +867,9 @@
 		D465E0DD1342DA6B00E7D604 /* engine */ = {
 			isa = PBXGroup;
 			children = (
+				BE9B5F5F13CBC0CB00CE6A52 /* managers */,
 				D465E0DE1342DB3A00E7D604 /* engine.cc */,
 				D465E0DF1342DB3A00E7D604 /* engine.h */,
-				D4DEDEDF1344438F00699EA9 /* director.cc */,
-				D4DEDEE01344438F00699EA9 /* director.h */,
 				D4A0225413452EF600E1031F /* scene.cc */,
 				D4A0225513452EF600E1031F /* scene.h */,
 				D4A0225913452FA100E1031F /* display_object.cc */,
@@ -868,11 +880,7 @@
 				D4A022621345303900E1031F /* animator.h */,
 				D4A0226813453E2300E1031F /* actor.cc */,
 				D4A0226913453E2400E1031F /* actor.h */,
-				D4F05DE113477E3D002A4827 /* texture_manager.cc */,
-				D4F05DE213477E3D002A4827 /* texture_manager.h */,
 				D41F2F5F13484C5C00E84862 /* hash_map_defs.h */,
-				D4BA3954134EAFD600D39D50 /* shader_manager.cc */,
-				D4BA3955134EAFD600D39D50 /* shader_manager.h */,
 				D4EAC39413AAE16300ACB55C /* squirrel_wrapper.cc */,
 				D4EAC39513AAE16300ACB55C /* squirrel_wrapper.h */,
 				BEA8198613C42A310058D983 /* label.cc */,
@@ -1309,7 +1317,7 @@
 				D4A022601345300800E1031F /* defs.h in Headers */,
 				D4A022641345303900E1031F /* animator.h in Headers */,
 				D4A0226B13453E2600E1031F /* actor.h in Headers */,
-				D4F05DE413477E3E002A4827 /* texture_manager.h in Headers */,
+				D4F05DE413477E3E002A4827 /* shader_manager.h in Headers */,
 				D41F2F6013484C5C00E84862 /* hash_map_defs.h in Headers */,
 				D4BA3957134EAFD600D39D50 /* shader_manager.h in Headers */,
 				D47568D9135FE03000C89D7E /* _detail.hpp in Headers */,

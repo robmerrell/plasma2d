@@ -14,8 +14,9 @@ class LoadingScene extends Scene {
         addToScene(logo)
         
         // slap the instructions label on the scene
-        instructions = ::LabelFactory("0.123456789", "fps", 200, 500)
-        addToScene(instructions)
+        // TODO: labels are jacked, they need to be polished
+//        instructions = ::LabelFactory("0.123456789", "fps", 200, 500)
+//        addToScene(instructions)
         
         // listen for an event that fires after we have displayed the
         // logo image for the first time. Now we want to start preloading

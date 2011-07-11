@@ -5,10 +5,10 @@
 
 #include "engine/engine.h"
 #include "engine/scene.h"
-#include "engine/director.h"
+#include "engine/managers/director.h"
 #include "engine/defs.h"
 #include "engine/actor.h"
 #include "engine/label.h"
-#include "engine/texture_manager.h"
-#include "engine/shader_manager.h"
+#include "engine/managers/texture_manager.h"
+#include "engine/managers/shader_manager.h"
 #include "engine/squirrel_wrapper.h"
