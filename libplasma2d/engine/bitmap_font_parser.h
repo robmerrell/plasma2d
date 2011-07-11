@@ -47,7 +47,7 @@ namespace p2d {
          * Constructor
          */
         BitmapFontParser() {};
-        BitmapFontParser(std::string _path);
+        BitmapFontParser(std::string _resource_path);
         
         /**
          * Set the resource path

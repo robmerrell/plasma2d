@@ -6,9 +6,9 @@
 #include "bitmap_font_parser.h"
 #include <iostream>
 
-p2d::BitmapFontParser::BitmapFontParser(std::string _path) {
-    resource_path = _path;
-    
+p2d::BitmapFontParser::BitmapFontParser(std::string _resource_path) :
+    resource_path   (_resource_path)
+{    
     // zero out the array
     // TODO: is this working?
     memset(char_collection, 0, sizeof char_collection);
