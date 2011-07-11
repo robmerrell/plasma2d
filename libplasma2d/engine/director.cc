@@ -23,7 +23,6 @@ p2d::Director* p2d::Director::Inst() {
         obj = new Director();
         
         obj->current_scene = NULL;
-        obj->projection = glm::ortho(0.0f, 768.0f, 1024.0f, 0.0f, -100.0f, 100.0f);
     }
     
     return obj;
@@ -37,11 +36,6 @@ void p2d::Director::playScene(Scene* _scene) {
 
 p2d::Scene* p2d::Director::getCurrentScene() {
     return obj->current_scene;
-}
-
-
-glm::mat4& p2d::Director::getProjection() {
-    return obj->projection;
 }
 
 

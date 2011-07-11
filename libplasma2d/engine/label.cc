@@ -44,7 +44,7 @@ void p2d::Label::draw() {
     
     // transformations
     glm::mat4 trans = glm::translate(glm::mat4(1.0f), glm::vec3(x + calc_anchor_x, y + calc_anchor_y, 0.0f));
-    glm::mat4 mvp = p2d::Director::Inst()->getProjection() * trans;
+    glm::mat4 mvp = PROJECTION * trans;
     
     if (angle != 0.0f)
         mvp *= glm::rotate(trans, angle, glm::vec3(0.0f, 0.0f, 1.0f));
