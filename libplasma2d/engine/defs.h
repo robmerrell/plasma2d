@@ -22,7 +22,7 @@ namespace p2d {
     /**
      * OpenGL ES projection
      */
-    const glm::mat4 PROJECTION = glm::ortho(0.0f, 768.0f, 1024.0f, 0.0f, -100.0f, 100.0f);
+    static const glm::mat4 PROJECTION = glm::ortho(0.0f, 768.0f, 1024.0f, 0.0f, -100.0f, 100.0f);
 }
 
 #endif
