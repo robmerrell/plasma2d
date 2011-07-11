@@ -68,6 +68,7 @@ namespace p2d {
         /**
          * Transform the position of an object to it's anchor
          */
+        // TODO: Can I delete this?
         virtual void transformForAnchor() {};
         
         /**

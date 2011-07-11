@@ -60,12 +60,6 @@ namespace p2d {
          * Delete a texture
          */
         void deleteTexture(std::string _filename);
-        
-        /**
-         * Return the current texture refernce count
-         */
-        int getTextureRef();
-        
     };
     
     namespace BindingHelpers {

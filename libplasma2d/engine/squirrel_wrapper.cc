@@ -74,6 +74,7 @@ void p2d::SquirrelWrapper::bindClasses() {
     // Label
     Sqrat::Class<p2d::Label> labelClass(vm);
     labelClass.Func("setText", &p2d::Label::setText);
+    // TODO fix this
 //    labelClass.Func("getText", &p2d::Label::getText);
     labelClass.Func("setXY", &p2d::Label::setXY);
     labelClass.Func("getX", &p2d::Label::getX);
@@ -110,14 +111,6 @@ std::string p2d::SquirrelWrapper::getScriptPath() {
 }
 
 
-void p2d::squirrel_functions::printfunc(HSQUIRRELVM _vm, const SQChar* _s, ...) {
-    va_list arglist;
-    va_start(arglist, _s);
-    vprintf(_s, arglist);
-    va_end(arglist);
-}
-
-
 // TODO: Convert this to use Sqrat's function handling methods
 void p2d::squirrel_functions::processEventQueue(HSQUIRRELVM _vm) {
     int top = sq_gettop(_vm);
@@ -146,4 +139,11 @@ void p2d::squirrel_functions::emitTouchesMoved(HSQUIRRELVM _vm, float _prev_x, f
 void p2d::squirrel_functions::emitSceneUpdateEvent(HSQUIRRELVM _vm) {
     Sqrat::Function func(Sqrat::RootTable(_vm), "eventProxySceneUpdate");
     func();
+}
+
+void p2d::squirrel_functions::printfunc(HSQUIRRELVM _vm, const SQChar* _s, ...) {
+    va_list arglist;
+    va_start(arglist, _s);
+    vprintf(_s, arglist);
+    va_end(arglist);
 }

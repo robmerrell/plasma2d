@@ -10,7 +10,13 @@ p2d::BitmapFontParser::BitmapFontParser(std::string _path) {
     resource_path = _path;
     
     // zero out the array
+    // TODO: is this working?
     memset(char_collection, 0, sizeof char_collection);
+}
+
+
+void p2d::BitmapFontParser::setResourcePath(std::string _resource_path) {
+    resource_path = _resource_path;
 }
 
 
@@ -95,8 +101,4 @@ float p2d::BitmapFontParser::getXOffsetForLetter(char _char) {
 float p2d::BitmapFontParser::getYOffsetForLetter(char _char) {
     int index = int(_char);
     return char_collection[index].yoffset;    
-}
-
-void p2d::BitmapFontParser::setResourcePath(std::string _resource_path) {
-    resource_path = _resource_path;
 }

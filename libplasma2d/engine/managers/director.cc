@@ -9,15 +9,6 @@
 p2d::Director* p2d::Director::obj = NULL;
 
 
-p2d::Director::~Director() {
-    delete obj;
-    obj = NULL;
-    
-    delete current_scene;
-    current_scene = NULL;
-}
-
-
 p2d::Director* p2d::Director::Inst() {
     if (!obj) {
         obj = new Director();
@@ -26,6 +17,15 @@ p2d::Director* p2d::Director::Inst() {
     }
     
     return obj;
+}
+
+
+p2d::Director::~Director() {
+    delete obj;
+    obj = NULL;
+    
+    delete current_scene;
+    current_scene = NULL;
 }
 
 
