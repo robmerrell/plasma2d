@@ -5,6 +5,12 @@
 
 #include "engine.h"
 
+
+p2d::Engine::Engine() {
+    fps = 0.0f;
+}
+
+
 p2d::Engine::~Engine() {
     // shutdown systems
     
@@ -52,5 +58,10 @@ p2d::SquirrelWrapper& p2d::Engine::getSqWrapper() {
 void p2d::Engine::tick() {
     p2d::squirrel_functions::emitSceneUpdateEvent(getSqWrapper().getVM());
     p2d::squirrel_functions::processEventQueue(sqWrapper.getVM());
-    p2d::Director::Inst()->getCurrentScene()->tick(0.16f);
+    p2d::Director::Inst()->getCurrentScene()->tick(fps);
+}
+
+
+void p2d::Engine::setFPS(float _fps) {
+    fps = _fps;
 }

@@ -7,6 +7,9 @@
 
 p2d::Scene::Scene() {
     default_animator = Animator();
+//    fps.setText("123");
+//    fps.setXY(100.0f, 100.0f);
+//    fps.setText();
 }
 
 
@@ -41,4 +44,6 @@ void p2d::Scene::tick(float dt) {
         (*iter)->update(dt);
         (*iter)->draw();
     }
+    
+//    fps.draw();
 }

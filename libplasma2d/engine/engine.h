@@ -25,6 +25,8 @@ namespace p2d {
         Engine(const Engine&);
         Engine& operator=(const Engine&);
         
+        float fps;
+        
         p2d::SquirrelWrapper sqWrapper;
         
     public:
@@ -32,7 +34,7 @@ namespace p2d {
         /**
          * Empty constructor
          */
-        Engine() {};
+        Engine();
         
         /**
          * Destructor
@@ -60,6 +62,11 @@ namespace p2d {
          * Proxies "tick" to the director
          */
         void tick();
+        
+        /**
+         * Set the FPS. Only the display system should call this
+         */
+        void setFPS(float);
         
     };
 

@@ -26,7 +26,7 @@ namespace p2d {
         static Director* obj;
         
         // the currently running scene
-        Scene* current_scene;
+        p2d::Scene* current_scene;
         
         // the current projection
         glm::mat4 projection;

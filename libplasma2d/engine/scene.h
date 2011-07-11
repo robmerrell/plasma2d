@@ -9,8 +9,8 @@
 #include <OpenGLES/ES2/gl.h>
 #include <OpenGLES/ES2/glext.h>
 
-#include "animator.h"
 #include "display_object.h"
+#include "animator.h"
 
 #include <vector>
 
@@ -24,6 +24,8 @@ namespace p2d {
         // this should be replaced with an n-ary tree,
         // multi-dim container or graph
         std::vector<DisplayObject*> display_objects;
+        
+//        Label* fps;
         
     public:
         /**
