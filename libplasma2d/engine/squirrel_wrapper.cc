@@ -110,26 +110,26 @@ std::string p2d::SquirrelWrapper::getScriptPath() {
 }
 
 
-void p2d::squirrel_functions::printfunc(HSQUIRRELVM vm, const SQChar *s, ...) {
+void p2d::squirrel_functions::printfunc(HSQUIRRELVM _vm, const SQChar* _s, ...) {
     va_list arglist;
-    va_start(arglist, s);
-    vprintf(s, arglist);
+    va_start(arglist, _s);
+    vprintf(_s, arglist);
     va_end(arglist);
 }
 
 
 // TODO: Convert this to use Sqrat's function handling methods
-void p2d::squirrel_functions::processEventQueue(HSQUIRRELVM vm) {
-    int top = sq_gettop(vm);
-    sq_pushroottable(vm);
+void p2d::squirrel_functions::processEventQueue(HSQUIRRELVM _vm) {
+    int top = sq_gettop(_vm);
+    sq_pushroottable(_vm);
     
-    sq_pushstring(vm, _SC("processEvents"), -1);
-    if (SQ_SUCCEEDED(sq_get(vm, -2))) {
-        sq_pushroottable(vm);
-        sq_call(vm, 1, SQFalse, SQFalse);
+    sq_pushstring(_vm, _SC("processEvents"), -1);
+    if (SQ_SUCCEEDED(sq_get(_vm, -2))) {
+        sq_pushroottable(_vm);
+        sq_call(_vm, 1, SQFalse, SQFalse);
     }
     
-    sq_settop(vm, top);
+    sq_settop(_vm, top);
 }
 
 

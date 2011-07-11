@@ -46,12 +46,12 @@ void p2d::TextureManager::loadTexture(std::string _filename) {
 }
 
 
-void p2d::TextureManager::bindTexture(std::string _image_name) {
+void p2d::TextureManager::bindTexture(std::string _filename) {
     // TODO only bind the texture if it hasn't been bound yet
     
     // if (current_ref != ref) {
     glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, obj->textures[_image_name]);
+    glBindTexture(GL_TEXTURE_2D, obj->textures[_filename]);
     // current_ref = ref;
     // }
 }

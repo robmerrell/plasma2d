@@ -38,18 +38,18 @@ namespace p2d {
         /**
          * setter/getter for the resource path
          */
-        void setResourcePath(std::string);
+        void setResourcePath(std::string _resource_path);
         std::string getResourcePath();
         
         /**
          * Load the specified texture
          */
-        void loadTexture(std::string);
+        void loadTexture(std::string _filename);
         
         /**
          * Bind the referenced texture
          */
-        void bindTexture(std::string);
+        void bindTexture(std::string _filename);
         
         /**
          * Unbind a texture
@@ -59,7 +59,7 @@ namespace p2d {
         /**
          * Delete a texture
          */
-        void deleteTexture(std::string);
+        void deleteTexture(std::string _filename);
         
         /**
          * Return the current texture refernce count
@@ -69,7 +69,7 @@ namespace p2d {
     };
     
     namespace BindingHelpers {
-        void TextureManager_preloadTexture(std::string, Sqrat::Function);
+        void TextureManager_preloadTexture(std::string _name, Sqrat::Function _func);
     }
     
 }

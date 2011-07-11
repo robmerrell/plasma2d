@@ -40,12 +40,12 @@ namespace p2d {
         /**
          * Set the actor's image
          */
-        void setImage(std::string);
+        void setImage(std::string _image);
         
         /**
          * Set the actor's width and height
          */
-        void setDimensions(float, float);
+        void setDimensions(float _width, float _height);
         float getWidth();
         float getHeight();
         

@@ -32,13 +32,13 @@ namespace p2d {
         /**
          * Setter/Getter for the text
          */
-        void setText(std::string);
+        void setText(std::string _text);
         std::string getText();
         
         /**
          * Setter/Getter for the dimensions
          */
-        void setDimensions(float, float);
+        void setDimensions(float _width, float _height);
         float getWidth();
         float getHeight();
         

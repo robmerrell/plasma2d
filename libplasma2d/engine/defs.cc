@@ -3,4 +3,6 @@
  * Copyright (C) 2011 Rob Merrell
  */
 
+// TODO: Get rid of this file, it's a code smell
+
 #include "defs.h"

@@ -25,23 +25,23 @@ p2d::Scene::~Scene() {
 }
 
 
-void p2d::Scene::addToScene(DisplayObject* object) {
-    display_objects.push_back(object);
+void p2d::Scene::addToScene(DisplayObject* _object) {
+    display_objects.push_back(_object);
 }
 
 
-void p2d::Scene::addObjectWithAnimator(DisplayObject* object, char* animator) {
+void p2d::Scene::addObjectWithAnimator(DisplayObject* _object, char* _animator) {
     // TODO attach this to another animator
-    display_objects.push_back(object);
+    display_objects.push_back(_object);
 }
 
 
-void p2d::Scene::tick(float dt) {
+void p2d::Scene::tick(float _delta_time) {
     glClear(GL_COLOR_BUFFER_BIT);
     
     std::vector<DisplayObject*>::iterator iter;
     for (iter = display_objects.begin(); iter != display_objects.end(); iter++) {
-        (*iter)->update(dt);
+        (*iter)->update(_delta_time);
         (*iter)->draw();
     }
     

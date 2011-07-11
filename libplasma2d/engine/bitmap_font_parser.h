@@ -47,38 +47,38 @@ namespace p2d {
          * Constructor
          */
         BitmapFontParser() {};
-        BitmapFontParser(std::string);
+        BitmapFontParser(std::string _path);
         
         /**
          * Set the resource path
          */
-        void setResourcePath(std::string);
+        void setResourcePath(std::string _resource_path);
         
         /**
          * Prase the file
          */
-        void parse(std::string);
+        void parse(std::string _filename);
         
         /**
          * Generate a set of vertecies for a single letter based on the font
          */
-        glm::mat4x3 generateVertsForLetter(char);
+        glm::mat4x3 generateVertsForLetter(char _char);
         
         /**
          * Generate the texture coordinates for a single letter based on the font
          */
-        glm::mat4 generateTexCoordsForLetter(char);
+        glm::mat4 generateTexCoordsForLetter(char _char);
         
         /**
          * Get the X Advance parameter for a letter
          */
-        float getXAdvanceForLetter(char);
+        float getXAdvanceForLetter(char _char);
         
         /**
          * Get offsets for a letter
          */
-        float getXOffsetForLetter(char);
-        float getYOffsetForLetter(char);
+        float getXOffsetForLetter(char _char);
+        float getYOffsetForLetter(char _char);
     };
     
 }

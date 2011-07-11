@@ -63,7 +63,7 @@ namespace p2d {
         /**
          * setter/getter for the script path
          */
-        void setScriptPath(std::string);
+        void setScriptPath(std::string _script_path);
         std::string getScriptPath();
     };
     
@@ -73,23 +73,23 @@ namespace p2d {
         /**
          * Process all pending system events in the queue
          */
-        void processEventQueue(HSQUIRRELVM);
+        void processEventQueue(HSQUIRRELVM _vm);
         
         /**
          * Emit touch events
          */
-        void emitTouchesBeganOrEndedEvent(HSQUIRRELVM, const char*, float, float, int);
-        void emitTouchesMoved(HSQUIRRELVM, float, float, float, float);
+        void emitTouchesBeganOrEndedEvent(HSQUIRRELVM _vm, const char* _proxy_function, float _x, float _y, int _tap_count);
+        void emitTouchesMoved(HSQUIRRELVM _vm, float _prev_x, float _prev_y, float _cur_x, float _cur_y);
         
         /**
          * Emit the update event for the scenes (still debating on the necessity of a DisplayObject update event)
          */
-        void emitSceneUpdateEvent(HSQUIRRELVM);
+        void emitSceneUpdateEvent(HSQUIRRELVM _vm);
         
         /**
          * Printing 
          */
-        void printfunc(HSQUIRRELVM, const SQChar*, ...);
+        void printfunc(HSQUIRRELVM _vm, const SQChar* _s, ...);
     }
     
 }

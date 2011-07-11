@@ -42,26 +42,26 @@ namespace p2d {
         /**
          * Set/Get position
          */
-        void setXY(float, float);
+        void setXY(float _x, float _y);
         float getX();
         float getY();
         
         /**
          * Set/Get angle (degrees)
          */
-        void setAngle(float);
+        void setAngle(float _angle);
         float getAngle();
         
         /**
          * Set/Get scale
          */
-        void setScale(float);
+        void setScale(float _scale);
         float getScale();
         
         /**
          * Set/Get anchor points
          */
-        void setAnchor(float, float);
+        void setAnchor(float _x, float _y);
         float getAnchorX();
         float getAnchorY();
         
@@ -74,7 +74,7 @@ namespace p2d {
          * update method that should be defined in the scripted
          * display object.
          */
-        virtual void update(float) {};
+        virtual void update(float _delta_time) {};
         
         /**
          * draw method that should be defined in the children

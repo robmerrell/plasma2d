@@ -45,7 +45,7 @@ namespace p2d {
         /**
          * Initialize the game engine and the display system
          */
-        void initialize(std::string);
+        void initialize(std::string _resource_path);
         
         /**
          * TODO: is this even correct?
@@ -66,7 +66,7 @@ namespace p2d {
         /**
          * Set the FPS. Only the display system should call this
          */
-        void setFPS(float);
+        void setFPS(float _fps);
         
     };
 

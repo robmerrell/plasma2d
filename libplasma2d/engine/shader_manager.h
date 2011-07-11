@@ -45,34 +45,35 @@ namespace p2d {
         /**
          * setter/getter for the shader path
          */
-        void setShaderPath(std::string);
+        void setShaderPath(std::string _resource_path);
         std::string getShaderPath();
         
         /**
          * Loads and compiles the specified shader
          */
-        bool compileShader(std::string);
+        bool compileShader(std::string _filename);
         
         /**
          * Build a shader program out of two shaders
          * The program is stored in a hash_map by name
          */
-        bool buildProgram(std::string, std::string, std::string);
+        bool buildProgram(std::string _vertex, std::string _fragment, std::string _name);
         
         /**
          * Retreive a shader program
          */
-        void useProgram(std::string);
+        void useProgram(std::string _name);
         
+        // TODO: get rid of these
         /**
          * Get an attribute location
          */
-        GLuint getAttribLocation(const GLchar*);
+        GLuint getAttribLocation(const GLchar* _attr);
         
         /**
          * Get a uniform location
          */
-        GLuint getUniformLocation(const GLchar*);
+        GLuint getUniformLocation(const GLchar* _uniform);
     };
     
 }

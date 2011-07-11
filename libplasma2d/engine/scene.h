@@ -44,20 +44,20 @@ namespace p2d {
          * Add a DisplayObject to the scene's default animator
          * - object to add
          */
-        void addToScene(DisplayObject*);
+        void addToScene(DisplayObject* _object);
         
         /**
          * Add a DisplayObject to an animator
          * - display object to add
          * - animator that controls the object
          */
-        void addObjectWithAnimator(DisplayObject*, char*);
+        void addObjectWithAnimator(DisplayObject* _object, char* _animator);
         
         /**
          * main scene loop
          * float delta time
          */
-        void tick(float);
+        void tick(float _delta_time);
     };
     
 }

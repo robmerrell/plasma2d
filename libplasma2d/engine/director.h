@@ -41,7 +41,7 @@ namespace p2d {
         /**
          * Start playing a scene
          */
-        void playScene(Scene*);
+        void playScene(Scene* _scene);
         
         /**
          * Get the current scene
@@ -50,7 +50,7 @@ namespace p2d {
     };
     
     namespace BindingHelpers {
-        void Director_playScene(Scene*);
+        void Director_playScene(Scene* _scene);
         Scene* Director_getCurrentScene();
     }
     
