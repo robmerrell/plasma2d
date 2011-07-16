@@ -14,10 +14,8 @@ p2d::Actor::~Actor() {
 }
 
 
-void p2d::Actor::setImage(std::string _image) {
-    // load the image
-    image = _image;
-    p2d::TextureManager::Inst()->loadTexture(_image);
+void p2d::Actor::setImage(Texture* _image) {
+    texture = _image;
     
     // get the dimensions of the image
     width = 64.0f;
@@ -74,8 +72,10 @@ void p2d::Actor::draw() {
     
     if (scale != 1.0f)
         mvp *= glm::scale(glm::mat4(1.0f), glm::vec3(scale, scale, 0.0f));
-    
-    p2d::TextureManager::Inst()->bindTexture(image);
+ 
+    // bind the texture
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, *texture->getTexture());
     
     p2d::ShaderManager::Inst()->useProgram("move_color");
     

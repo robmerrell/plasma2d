@@ -5,6 +5,7 @@
  * returns: none
  */
 function puts(str) print(str + "\n")
+function err(str) ::puts(str)
 
 
 /**
@@ -21,6 +22,19 @@ function require(filename) {
     local filepath = p2d_system["script_base_path"] + "/" + filename + ".nut"
     dofile(filepath)
     p2d_system["loaded_files"][filename] <- true
+}
+
+
+/**
+ * Store resource paths for images, fonts and sounds
+ */
+p2d_system["resource_paths"] <- {}
+p2d_system["resource_paths"]["images"] <- ""
+p2d_system["resource_paths"]["fonts"] <- ""
+p2d_system["resource_paths"]["sounds"] <- ""
+
+function setResourcePath(type, path) {
+    p2d_system["resource_paths"][type] = path
 }
 
 
@@ -117,8 +131,13 @@ function LabelFactory(text, font, x,  y) {
     return label
 }
 
+function loadTexture(texture_name) {
+    local tex = Texture()
+    local path = ::p2d_system["resource_paths"]["images"] + "/" + texture_name
+    if (!tex.loadTexture(path)) err("Error loading " + texture_name)
+    return tex
+}
 
 // run the config file, then run main to get the party started
 game_config <- {}
 require("config")
-require("main")

@@ -22,6 +22,7 @@
 #include "director.h"
 #include "label.h"
 #include "scene.h"
+#include "texture.h"
 #include "managers/texture_manager.h"
 
 namespace p2d {
@@ -61,10 +62,21 @@ namespace p2d {
         void bootstrap();
         
         /**
+         * Run main.nut
+         */
+        void runMain();
+        
+        /**
          * setter/getter for the script path
          */
         void setScriptPath(std::string _script_path);
         std::string getScriptPath();
+        
+        
+        /**
+         * Set the resource paths for images, fonts and sounds
+         */
+        void setResourcePath(const char* _type, const char* _path);
     };
     
     

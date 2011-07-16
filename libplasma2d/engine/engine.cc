@@ -42,6 +42,11 @@ void p2d::Engine::initialize(std::string _resource_path) {
     sqWrapper.setScriptPath(_resource_path + "/examples");
     sqWrapper.bindClasses();
     sqWrapper.bootstrap();
+ 
+    // set the images, fonts and sounds paths
+    sqWrapper.setResourcePath("images", (_resource_path + "/examples/assets/images").c_str());
+    
+    sqWrapper.runMain();
 }
 
 

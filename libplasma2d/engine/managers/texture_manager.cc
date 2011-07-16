@@ -46,6 +46,7 @@ void p2d::TextureManager::loadTexture(std::string _filename) {
 }
 
 
+// TODO: do we need this method?
 void p2d::TextureManager::bindTexture(std::string _filename) {
     // TODO only bind the texture if it hasn't been bound yet
     

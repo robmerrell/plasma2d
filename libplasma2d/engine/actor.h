@@ -8,6 +8,7 @@
 
 #include "display_object.h"
 #include "director.h"
+#include "texture.h"
 
 namespace p2d {
     
@@ -23,8 +24,8 @@ namespace p2d {
         float width;
         float height;
         
-        // image name
-        std::string image;
+        // texture
+        Texture* texture;
         
     public:
         /**
@@ -40,7 +41,7 @@ namespace p2d {
         /**
          * Set the actor's image
          */
-        void setImage(std::string _image);
+        void setImage(Texture* _texture);
         
         /**
          * Set the actor's width and height

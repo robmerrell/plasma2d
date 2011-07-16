@@ -1,4 +1,7 @@
 class LoadingScene extends Scene {
+    // textures
+    logo_tex = null
+    
     logo = 0
     instructions = 0
     texture_count = 0
@@ -8,10 +11,27 @@ class LoadingScene extends Scene {
         base.constructor()
         
         // load the logo image and add it to the scene
+        logo_tex = ::loadTexture("logo.png")
+        logo = ::ActorFactory(logo_tex, 200, 300)
+        logo.setAnchor(0.5, 0.5)
+        logo.setDimensions(256, 128)
+        addToScene(logo)
+
+        
+        // cache the logo, because we want to use it in other scenes
+        /*
+        ::cacheTexture(logo)
+        logo2 = ::ActorFactory(::cachedTexture("logo.png"), 200, 300)
+        ::removeFromCache("logo.png")
+         */
+        
+        
+        /*
         logo = ::ActorFactory("logo.png", 256, 128)
         logo.setAnchor(0.5, 0.5)
         logo.setDimensions(256, 128)
         addToScene(logo)
+         */
         
         // slap the instructions label on the scene
         // TODO: labels are jacked, they need to be polished

@@ -53,6 +53,12 @@ void p2d::SquirrelWrapper::bindClasses() {
     sceneClass.Func("addObjectWithAnimator", &p2d::Scene::addObjectWithAnimator);
     Sqrat::RootTable(vm).Bind("Scene", sceneClass);
     
+    // Texture
+    Sqrat::Class<p2d::Texture> textureClass(vm);
+    textureClass.Func("loadTexture", &p2d::Texture::loadTexture);
+    textureClass.Func("getGLTexture", &p2d::Texture::getTexture);
+    Sqrat::RootTable(vm).Bind("Texture", textureClass);
+    
     // Actor
     Sqrat::Class<p2d::Actor> actorClass(vm);
     actorClass.Func("setImage", &p2d::Actor::setImage);
@@ -101,6 +107,13 @@ void p2d::SquirrelWrapper::bootstrap() {
 }
 
 
+void p2d::SquirrelWrapper::runMain() {
+    Sqrat::Script script;
+    script.CompileFile(script_path + "/main.nut");
+    script.Run();
+}
+
+
 void p2d::SquirrelWrapper::setScriptPath(std::string _script_path) {
     script_path = _script_path;
 }
@@ -108,6 +121,12 @@ void p2d::SquirrelWrapper::setScriptPath(std::string _script_path) {
 
 std::string p2d::SquirrelWrapper::getScriptPath() {
     return script_path;
+}
+
+
+void p2d::SquirrelWrapper::setResourcePath(const char* _type, const char* _path) {
+    Sqrat::Function func(Sqrat::RootTable(vm), "setResourcePath");
+    func(_type, _path);
 }
 
 
