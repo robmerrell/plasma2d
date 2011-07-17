@@ -7,20 +7,21 @@
 
 p2d::Texture::~Texture() {
     glDeleteTextures(1, texture);
-    std::cout << "destroyed" << std::endl;
 }
 
 
-bool p2d::Texture::loadTexture(std::string _texture_name) {
+bool p2d::Texture::loadTexture(std::string _texture_name, std::string _full_texture_path) {
     texture_name = _texture_name;
+    full_texture_path = _full_texture_path;
     
     texture[0] = SOIL_load_OGL_texture (
-        _texture_name.c_str(),
+        _full_texture_path.c_str(),
         SOIL_LOAD_AUTO,
         SOIL_CREATE_NEW_ID,
         SOIL_FLAG_MIPMAPS
     );
     
+    // TODO: I'm sure this can be shortened
     if (texture[0] == 0)
         return false;
     else 
@@ -30,4 +31,9 @@ bool p2d::Texture::loadTexture(std::string _texture_name) {
 
 GLuint* p2d::Texture::getTexture() {
     return texture;
+}
+
+
+std::string p2d::Texture::getTextureName() {
+    return texture_name;
 }

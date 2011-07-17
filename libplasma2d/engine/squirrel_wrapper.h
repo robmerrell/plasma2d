@@ -23,6 +23,7 @@
 #include "label.h"
 #include "scene.h"
 #include "texture.h"
+#include "managers/texture_cache.h"
 #include "managers/texture_manager.h"
 
 namespace p2d {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1B5A9213D2462000CDF87E /* texture_cache.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE1B5A9013D2462000CDF87E /* texture_cache.cc */; };
+		BE1B5A9313D2462000CDF87E /* texture_cache.h in Headers */ = {isa = PBXBuildFile; fileRef = BE1B5A9113D2462000CDF87E /* texture_cache.h */; };
 		BE1E0D9513C49C6A000D88B1 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE1E0D8F13C49C6A000D88B1 /* tinystr.cpp */; };
 		BE1E0D9613C49C6A000D88B1 /* tinystr.h in Headers */ = {isa = PBXBuildFile; fileRef = BE1E0D9013C49C6A000D88B1 /* tinystr.h */; };
 		BE1E0D9713C49C6A000D88B1 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE1E0D9113C49C6A000D88B1 /* tinyxml.cpp */; };
@@ -315,6 +317,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE1B5A9013D2462000CDF87E /* texture_cache.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture_cache.cc; sourceTree = "<group>"; };
+		BE1B5A9113D2462000CDF87E /* texture_cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture_cache.h; sourceTree = "<group>"; };
 		BE1E0D8F13C49C6A000D88B1 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
 		BE1E0D9013C49C6A000D88B1 /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinystr.h; sourceTree = "<group>"; };
 		BE1E0D9113C49C6A000D88B1 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
@@ -729,6 +733,8 @@
 				D4F05DE213477E3D002A4827 /* texture_manager.h */,
 				D4BA3954134EAFD600D39D50 /* shader_manager.cc */,
 				D4BA3955134EAFD600D39D50 /* shader_manager.h */,
+				BE1B5A9013D2462000CDF87E /* texture_cache.cc */,
+				BE1B5A9113D2462000CDF87E /* texture_cache.h */,
 			);
 			path = managers;
 			sourceTree = "<group>";
@@ -1456,6 +1462,7 @@
 				BE1E0D9813C49C6A000D88B1 /* tinyxml.h in Headers */,
 				BE3647C113C5552A007CABD3 /* bitmap_font_parser.h in Headers */,
 				BEAA10E613CFF9FA00E275F2 /* texture.h in Headers */,
+				BE1B5A9313D2462000CDF87E /* texture_cache.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1654,6 +1661,7 @@
 				BE1E0D9A13C49C6A000D88B1 /* tinyxmlparser.cpp in Sources */,
 				BE3647C013C5552A007CABD3 /* bitmap_font_parser.cc in Sources */,
 				BEAA10E513CFF9FA00E275F2 /* texture.cc in Sources */,
+				BE1B5A9213D2462000CDF87E /* texture_cache.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

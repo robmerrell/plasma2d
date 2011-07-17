@@ -6,7 +6,7 @@
 #ifndef P2D_TEXTURE_H
 #define P2D_TEXTURE_H
 
-#include <iostream>
+#include <string>
 
 #include <OpenGLES/ES2/gl.h>
 #include <OpenGLES/ES2/glext.h>
@@ -21,14 +21,18 @@ namespace p2d {
         
         std::string texture_name;
         
+        std::string full_texture_path;
+        
     public:
         Texture() {};
         
         ~Texture();
         
-        bool loadTexture(std::string _texture_name);
+        bool loadTexture(std::string _texture_name, std::string _full_texture_path);
         
         GLuint* getTexture();
+        
+        std::string getTextureName();
     };
     
 }

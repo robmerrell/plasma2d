@@ -134,7 +134,7 @@ function LabelFactory(text, font, x,  y) {
 function loadTexture(texture_name) {
     local tex = Texture()
     local path = ::p2d_system["resource_paths"]["images"] + "/" + texture_name
-    if (!tex.loadTexture(path)) err("Error loading " + texture_name)
+    if (!tex.loadTexture(texture_name, path)) err("Error loading " + texture_name)
     return tex
 }
 

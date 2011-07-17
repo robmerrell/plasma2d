@@ -12,6 +12,9 @@ class LoadingScene extends Scene {
         
         // load the logo image and add it to the scene
         logo_tex = ::loadTexture("logo.png")
+        ::cacheTexture(logo_tex)
+        ::removeCachedTexture("logo.png")
+        
         logo = ::ActorFactory(logo_tex, 200, 300)
         logo.setAnchor(0.5, 0.5)
         logo.setDimensions(256, 128)
@@ -19,6 +22,7 @@ class LoadingScene extends Scene {
 
         
         // cache the logo, because we want to use it in other scenes
+
         /*
         ::cacheTexture(logo)
         logo2 = ::ActorFactory(::cachedTexture("logo.png"), 200, 300)

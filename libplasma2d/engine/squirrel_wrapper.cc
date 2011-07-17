@@ -34,6 +34,7 @@ HSQUIRRELVM p2d::SquirrelWrapper::getVM() {
 
 void p2d::SquirrelWrapper::bindClasses() { 
     // global functions
+    // TODO: Can we punt this crap and delete the entire manager
     Sqrat::RootTable().Func("preloadTexture", &p2d::BindingHelpers::TextureManager_preloadTexture);
     
     // system table used internally by the engine
@@ -57,7 +58,14 @@ void p2d::SquirrelWrapper::bindClasses() {
     Sqrat::Class<p2d::Texture> textureClass(vm);
     textureClass.Func("loadTexture", &p2d::Texture::loadTexture);
     textureClass.Func("getGLTexture", &p2d::Texture::getTexture);
+    // TODO: this has something to do with returning std::string it seems. Same thing with method below...
+//    textureClass.Func("getTextureName", &p2d::Texture::getTextureName);
     Sqrat::RootTable(vm).Bind("Texture", textureClass);
+    
+    // TextureCache
+    Sqrat::RootTable().Func("cacheTexture", &p2d::BindingHelpers::TextureCache_cacheTexture);
+    Sqrat::RootTable().Func("getCachedTexture", &p2d::BindingHelpers::TextureCache_getCachedTexture);
+    Sqrat::RootTable().Func("removeFromTextureCache", &p2d::BindingHelpers::TextureCache_removeFromCache);
     
     // Actor
     Sqrat::Class<p2d::Actor> actorClass(vm);
