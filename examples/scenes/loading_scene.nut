@@ -2,40 +2,19 @@ class LoadingScene extends Scene {
     // textures
     logo_tex = null
     
+    // game objects
     logo = 0
     instructions = 0
-    texture_count = 0
-    loaded_textures = 0
     
     constructor() {
         base.constructor()
         
         // load the logo image and add it to the scene
         logo_tex = ::loadTexture("logo.png")
-        ::cacheTexture(logo_tex)
-        ::removeFromTextureCache("logo.png")
         
         logo = ::ActorFactory(logo_tex, 200, 300)
         logo.setAnchor(0.5, 0.5)
-        logo.setDimensions(256, 128)
         addToScene(logo)
-
-        
-        // cache the logo, because we want to use it in other scenes
-
-        /*
-        ::cacheTexture(logo)
-        logo2 = ::ActorFactory(::cachedTexture("logo.png"), 200, 300)
-        ::removeFromCache("logo.png")
-         */
-        
-        
-        /*
-        logo = ::ActorFactory("logo.png", 256, 128)
-        logo.setAnchor(0.5, 0.5)
-        logo.setDimensions(256, 128)
-        addToScene(logo)
-         */
         
         // slap the instructions label on the scene
         // TODO: labels are jacked, they need to be polished
@@ -46,7 +25,6 @@ class LoadingScene extends Scene {
         // logo image for the first time. Now we want to start preloading
         // all of our other assets
         on("sceneUpdate", loadTextures.bindenv(this))
-        on("textureLoaded", updateLoadedMessage.bindenv(this))
         on("touch", onTouch.bindenv(this))
     }
     
@@ -54,24 +32,6 @@ class LoadingScene extends Scene {
         // we only want this event to fire once. We only want to load the textures once and it
         // is a very expensive event. It should be used sparingly.
         ignore("sceneUpdate")
-        
-        // Textures that we want to load. You shouldn't always load all textuers
-        // at the beginning of the game. If you have a lot of textures you may want consider
-        // loading only the required textures before each level.
-        local textures = ["logo.png"]
-        texture_count = textures.len()
-        
-        // iterate through the textures and load each one, when the texture is loaded
-        // emit the textureLoaded custom event
-        foreach (texture in textures) {
-            ::preloadTexture(texture, function(texture_name) {
-                ::emitEvent("textureLoaded")
-            })
-        }
-    }
-    
-    function updateLoadedMessage(event) {
-        loaded_textures++
     }
     
     function onTouch(event) {

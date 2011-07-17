@@ -23,8 +23,11 @@ namespace p2d {
         
         std::string full_texture_path;
         
+        int native_width;
+        int native_height;
+        
     public:
-        Texture() {};
+        Texture();
         
         ~Texture();
         
@@ -33,6 +36,9 @@ namespace p2d {
         GLuint* getTexture();
         
         std::string getTextureName();
+        
+        int getNativeWidth();
+        int getNativeHeight();
     };
     
 }

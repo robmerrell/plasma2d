@@ -18,8 +18,8 @@ void p2d::Actor::setImage(Texture* _image) {
     texture = _image;
     
     // get the dimensions of the image
-    width = 64.0f;
-    height = 64.0f;
+    width = _image->getNativeWidth();
+    height = _image->getNativeHeight();
     
     cacheVerts();
     cacheTextureCoords();

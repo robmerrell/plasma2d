@@ -157,6 +157,19 @@ unsigned int
 		unsigned int reuse_texture_ID,
 		unsigned int flags
 	);
+    
+
+// same as above, but set width and height
+unsigned int
+SOIL_load_OGL_texture_aug
+(
+ const char *filename,
+ int* width,
+ int* height,
+ int force_channels,
+ unsigned int reuse_texture_ID,
+ unsigned int flags
+);
 
 /**
 	Loads 6 images from disk into an OpenGL cubemap texture.

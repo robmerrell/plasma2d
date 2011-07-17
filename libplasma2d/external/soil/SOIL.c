@@ -109,6 +109,8 @@ unsigned int
 		unsigned int texture_check_size_enum
 	);
 
+
+
 /*	and the code magic begins here [8^)	*/
 unsigned int
 	SOIL_load_OGL_texture
@@ -139,6 +141,7 @@ unsigned int
 	}
 	/*	try to load the image	*/
 	img = SOIL_load_image( filename, &width, &height, &channels, force_channels );
+
 	/*	channels holds the original number of channels, which may have been forced	*/
 	if( (force_channels >= 1) && (force_channels <= 4) )
 	{
@@ -161,6 +164,63 @@ unsigned int
 	/*	and return the handle, such as it is	*/
 	return tex_id;
 }
+
+
+unsigned int
+SOIL_load_OGL_texture_aug
+(
+ const char *filename,
+ int* width,
+ int* height,
+ int force_channels,
+ unsigned int reuse_texture_ID,
+ unsigned int flags
+ )
+{
+	/*	variables	*/
+	unsigned char* img;
+	int channels;
+	unsigned int tex_id;
+	/*	does the user want direct uploading of the image as a DDS file?	*/
+	if( flags & SOIL_FLAG_DDS_LOAD_DIRECT )
+	{
+		/*	1st try direct loading of the image as a DDS file
+         note: direct uploading will only load what is in the
+         DDS file, no MIPmaps will be generated, the image will
+         not be flipped, etc.	*/
+		tex_id = SOIL_direct_load_DDS( filename, reuse_texture_ID, flags, 0 );
+		if( tex_id )
+		{
+			/*	hey, it worked!!	*/
+			return tex_id;
+		}
+	}
+	/*	try to load the image	*/
+	img = SOIL_load_image( filename, width, height, &channels, force_channels );
+    
+	/*	channels holds the original number of channels, which may have been forced	*/
+	if( (force_channels >= 1) && (force_channels <= 4) )
+	{
+		channels = force_channels;
+	}
+	if( NULL == img )
+	{
+		/*	image loading failed	*/
+		result_string_pointer = stbi_failure_reason();
+		return 0;
+	}
+	/*	OK, make it a texture!	*/
+	tex_id = SOIL_internal_create_OGL_texture(
+                                              img, *width, *height, channels,
+                                              reuse_texture_ID, flags,
+                                              GL_TEXTURE_2D, GL_TEXTURE_2D,
+                                              GL_MAX_TEXTURE_SIZE );
+	/*	and nuke the image data	*/
+	SOIL_free_image_data( img );
+	/*	and return the handle, such as it is	*/
+	return tex_id;
+}
+
 
 unsigned int
 	SOIL_load_OGL_HDR_texture
