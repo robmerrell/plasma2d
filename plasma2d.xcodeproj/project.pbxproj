@@ -250,8 +250,6 @@
 		D4F05DDE13477488002A4827 /* stb_image_aug.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DD413477488002A4827 /* stb_image_aug.h */; };
 		D4F05DDF13477488002A4827 /* stbi_DDS_aug_c.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DD513477488002A4827 /* stbi_DDS_aug_c.h */; };
 		D4F05DE013477488002A4827 /* stbi_DDS_aug.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DD613477488002A4827 /* stbi_DDS_aug.h */; };
-		D4F05DE313477E3E002A4827 /* texture_manager.cc in Sources */ = {isa = PBXBuildFile; fileRef = D4F05DE113477E3D002A4827 /* texture_manager.cc */; };
-		D4F05DE413477E3E002A4827 /* texture_manager.h in Headers */ = {isa = PBXBuildFile; fileRef = D4F05DE213477E3D002A4827 /* texture_manager.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -664,8 +662,6 @@
 		D4F05DD413477488002A4827 /* stb_image_aug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_image_aug.h; sourceTree = "<group>"; };
 		D4F05DD513477488002A4827 /* stbi_DDS_aug_c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_DDS_aug_c.h; sourceTree = "<group>"; };
 		D4F05DD613477488002A4827 /* stbi_DDS_aug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stbi_DDS_aug.h; sourceTree = "<group>"; };
-		D4F05DE113477E3D002A4827 /* texture_manager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture_manager.cc; sourceTree = "<group>"; };
-		D4F05DE213477E3D002A4827 /* texture_manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture_manager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -729,8 +725,6 @@
 			children = (
 				D4DEDEDF1344438F00699EA9 /* director.cc */,
 				D4DEDEE01344438F00699EA9 /* director.h */,
-				D4F05DE113477E3D002A4827 /* texture_manager.cc */,
-				D4F05DE213477E3D002A4827 /* texture_manager.h */,
 				D4BA3954134EAFD600D39D50 /* shader_manager.cc */,
 				D4BA3955134EAFD600D39D50 /* shader_manager.h */,
 				BE1B5A9013D2462000CDF87E /* texture_cache.cc */,
@@ -1329,7 +1323,6 @@
 				D4A022601345300800E1031F /* defs.h in Headers */,
 				D4A022641345303900E1031F /* animator.h in Headers */,
 				D4A0226B13453E2600E1031F /* actor.h in Headers */,
-				D4F05DE413477E3E002A4827 /* texture_manager.h in Headers */,
 				D41F2F6013484C5C00E84862 /* hash_map_defs.h in Headers */,
 				D4BA3957134EAFD600D39D50 /* shader_manager.h in Headers */,
 				D47568D9135FE03000C89D7E /* _detail.hpp in Headers */,
@@ -1650,7 +1643,6 @@
 				D4A0225F1345300800E1031F /* defs.cc in Sources */,
 				D4A022631345303900E1031F /* animator.cc in Sources */,
 				D4A0226A13453E2600E1031F /* actor.cc in Sources */,
-				D4F05DE313477E3E002A4827 /* texture_manager.cc in Sources */,
 				D4BA3956134EAFD600D39D50 /* shader_manager.cc in Sources */,
 				D47568DC135FE03000C89D7E /* dummy.cpp in Sources */,
 				D4EAC39613AAE16300ACB55C /* squirrel_wrapper.cc in Sources */,

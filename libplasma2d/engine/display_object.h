@@ -16,7 +16,6 @@
 #include "../external/glm/gtc/type_ptr.hpp"
 
 #include "defs.h"
-#include "managers/texture_manager.h"
 #include "managers/shader_manager.h"
 
 namespace p2d {

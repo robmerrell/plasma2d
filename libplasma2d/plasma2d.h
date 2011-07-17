@@ -9,6 +9,5 @@
 #include "engine/defs.h"
 #include "engine/actor.h"
 #include "engine/label.h"
-#include "engine/managers/texture_manager.h"
 #include "engine/managers/shader_manager.h"
 #include "engine/squirrel_wrapper.h"

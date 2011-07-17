@@ -23,7 +23,6 @@ p2d::Engine::~Engine() {
 
 
 void p2d::Engine::initialize(std::string _resource_path) {
-    p2d::TextureManager::Inst()->setResourcePath(_resource_path + "/examples/assets/images");
     p2d::ShaderManager::Inst()->setShaderPath(_resource_path + "/shaders");
     
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);

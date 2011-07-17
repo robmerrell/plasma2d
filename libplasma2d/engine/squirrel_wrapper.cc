@@ -32,11 +32,7 @@ HSQUIRRELVM p2d::SquirrelWrapper::getVM() {
 }
 
 
-void p2d::SquirrelWrapper::bindClasses() { 
-    // global functions
-    // TODO: Can we punt this crap and delete the entire manager
-    Sqrat::RootTable().Func("preloadTexture", &p2d::BindingHelpers::TextureManager_preloadTexture);
-    
+void p2d::SquirrelWrapper::bindClasses() {     
     // system table used internally by the engine
     Sqrat::Table p2dSystemTable(vm);
     p2dSystemTable.SetValue("script_base_path", script_path);

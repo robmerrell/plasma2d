@@ -8,9 +8,9 @@
 p2d::Label::Label() {
     text = "";
     
-    font_parser.setResourcePath("/tmp");
-    font_parser.parse("fps.fnt");
-    p2d::TextureManager::Inst()->loadTexture("../fonts/fps.png");
+//    font_parser.setResourcePath("/tmp");
+//    font_parser.parse("fps.fnt");
+//    p2d::TextureManager::Inst()->loadTexture("../fonts/fps.png");
 }
 
 
@@ -52,7 +52,7 @@ void p2d::Label::draw() {
     if (scale != 1.0f)
         mvp *= glm::scale(glm::mat4(1.0f), glm::vec3(scale, scale, 0.0f));
     
-    p2d::TextureManager::Inst()->bindTexture("../fonts/fps.png");
+//    p2d::TextureManager::Inst()->bindTexture("../fonts/fps.png");
     p2d::ShaderManager::Inst()->useProgram("move_color");
     
     GLuint vert_coords = p2d::ShaderManager::Inst()->getAttribLocation("vert_coords");

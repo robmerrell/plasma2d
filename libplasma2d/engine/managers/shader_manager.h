@@ -9,14 +9,13 @@
 #ifndef SHADER_MANAGER_H
 #define SHADER_MANAGER_H
 
-#include <OpenGLES/ES2/gl.h>
-#include <OpenGLES/ES2/glext.h>
-#include <iostream>
+#include <iostream> // TODO: do we use this?
 #include <fstream>
 #include <sstream>
 #include <ext/hash_map>
 
-#include "texture_manager.h"
+#include <OpenGLES/ES2/gl.h>
+#include <OpenGLES/ES2/glext.h>
 
 #include "hash_map_defs.h"
 

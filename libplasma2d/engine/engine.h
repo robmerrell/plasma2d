@@ -12,7 +12,6 @@
 
 #include "managers/director.h"
 #include "scene.h"
-#include "managers/texture_manager.h"
 #include "shader_manager.h"
 #include "squirrel_wrapper.h"
 

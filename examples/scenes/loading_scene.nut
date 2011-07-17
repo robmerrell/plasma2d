@@ -13,7 +13,7 @@ class LoadingScene extends Scene {
         // load the logo image and add it to the scene
         logo_tex = ::loadTexture("logo.png")
         ::cacheTexture(logo_tex)
-        ::removeCachedTexture("logo.png")
+        ::removeFromTextureCache("logo.png")
         
         logo = ::ActorFactory(logo_tex, 200, 300)
         logo.setAnchor(0.5, 0.5)
