@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BE1B5A9213D2462000CDF87E /* texture_cache.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE1B5A9013D2462000CDF87E /* texture_cache.cc */; };
 		BE1B5A9313D2462000CDF87E /* texture_cache.h in Headers */ = {isa = PBXBuildFile; fileRef = BE1B5A9113D2462000CDF87E /* texture_cache.h */; };
+		BE1B5AA313D2B99700CDF87E /* bitmap_font.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE1B5AA113D2B99600CDF87E /* bitmap_font.cc */; };
+		BE1B5AA413D2B99700CDF87E /* bitmap_font.h in Headers */ = {isa = PBXBuildFile; fileRef = BE1B5AA213D2B99700CDF87E /* bitmap_font.h */; };
 		BE1E0D9513C49C6A000D88B1 /* tinystr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE1E0D8F13C49C6A000D88B1 /* tinystr.cpp */; };
 		BE1E0D9613C49C6A000D88B1 /* tinystr.h in Headers */ = {isa = PBXBuildFile; fileRef = BE1E0D9013C49C6A000D88B1 /* tinystr.h */; };
 		BE1E0D9713C49C6A000D88B1 /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE1E0D9113C49C6A000D88B1 /* tinyxml.cpp */; };
@@ -317,6 +319,8 @@
 /* Begin PBXFileReference section */
 		BE1B5A9013D2462000CDF87E /* texture_cache.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture_cache.cc; sourceTree = "<group>"; };
 		BE1B5A9113D2462000CDF87E /* texture_cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture_cache.h; sourceTree = "<group>"; };
+		BE1B5AA113D2B99600CDF87E /* bitmap_font.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bitmap_font.cc; sourceTree = "<group>"; };
+		BE1B5AA213D2B99700CDF87E /* bitmap_font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitmap_font.h; sourceTree = "<group>"; };
 		BE1E0D8F13C49C6A000D88B1 /* tinystr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinystr.cpp; sourceTree = "<group>"; };
 		BE1E0D9013C49C6A000D88B1 /* tinystr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tinystr.h; sourceTree = "<group>"; };
 		BE1E0D9113C49C6A000D88B1 /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
@@ -893,6 +897,8 @@
 				BE3647BF13C5552A007CABD3 /* bitmap_font_parser.h */,
 				BEAA10E313CFF9FA00E275F2 /* texture.cc */,
 				BEAA10E413CFF9FA00E275F2 /* texture.h */,
+				BE1B5AA113D2B99600CDF87E /* bitmap_font.cc */,
+				BE1B5AA213D2B99700CDF87E /* bitmap_font.h */,
 			);
 			path = engine;
 			sourceTree = "<group>";
@@ -1456,6 +1462,7 @@
 				BE3647C113C5552A007CABD3 /* bitmap_font_parser.h in Headers */,
 				BEAA10E613CFF9FA00E275F2 /* texture.h in Headers */,
 				BE1B5A9313D2462000CDF87E /* texture_cache.h in Headers */,
+				BE1B5AA413D2B99700CDF87E /* bitmap_font.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1654,6 +1661,7 @@
 				BE3647C013C5552A007CABD3 /* bitmap_font_parser.cc in Sources */,
 				BEAA10E513CFF9FA00E275F2 /* texture.cc in Sources */,
 				BE1B5A9213D2462000CDF87E /* texture_cache.cc in Sources */,
+				BE1B5AA313D2B99700CDF87E /* bitmap_font.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

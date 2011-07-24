@@ -19,6 +19,7 @@
 
 // classes to bind
 #include "actor.h"
+#include "bitmap_font.h"
 #include "director.h"
 #include "label.h"
 #include "scene.h"

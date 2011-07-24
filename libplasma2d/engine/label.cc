@@ -7,10 +7,11 @@
 
 p2d::Label::Label() {
     text = "";
-    
-//    font_parser.setResourcePath("/tmp");
-//    font_parser.parse("fps.fnt");
-//    p2d::TextureManager::Inst()->loadTexture("../fonts/fps.png");
+}
+
+
+void p2d::Label::setFont(p2d::BitmapFont* _font) {
+    bitmap_font = _font;
 }
 
 
@@ -52,7 +53,8 @@ void p2d::Label::draw() {
     if (scale != 1.0f)
         mvp *= glm::scale(glm::mat4(1.0f), glm::vec3(scale, scale, 0.0f));
     
-//    p2d::TextureManager::Inst()->bindTexture("../fonts/fps.png");
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, *bitmap_font->getFontTexture()->getTexture());
     p2d::ShaderManager::Inst()->useProgram("move_color");
     
     GLuint vert_coords = p2d::ShaderManager::Inst()->getAttribLocation("vert_coords");
@@ -67,11 +69,11 @@ void p2d::Label::draw() {
     float prev_yoffset;
 
     for (int i = 0; i < text.size(); i++) {
-        char_verts = font_parser.generateVertsForLetter(text[i]);
-        tex_coords = font_parser.generateTexCoordsForLetter(text[i]);
-        xadvance = font_parser.getXAdvanceForLetter(text[i]);
-        yoffset = font_parser.getYOffsetForLetter(text[i]);
-        xoffset = font_parser.getXOffsetForLetter(text[i]);
+        char_verts = bitmap_font->generateVertsForLetter(text[i]);
+        tex_coords = bitmap_font->generateTexCoordsForLetter(text[i]);
+        xadvance = bitmap_font->getXAdvanceForLetter(text[i]);
+        yoffset = bitmap_font->getYOffsetForLetter(text[i]);
+        xoffset = bitmap_font->getXOffsetForLetter(text[i]);
         
         // horizontal advance
         mvp *= glm::translate(glm::mat4(1.0f), glm::vec3(xoffset - prev_xoffset + prev_xadvance, yoffset - prev_yoffset, 0.0f));

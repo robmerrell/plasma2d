@@ -81,6 +81,12 @@ void p2d::SquirrelWrapper::bindClasses() {
     actorClass.Func("getAnchorY", &p2d::Actor::getAnchorY);
     Sqrat::RootTable(vm).Bind("Actor", actorClass);
     
+    Sqrat::Class<p2d::BitmapFont> bitmapFontClass(vm);
+    bitmapFontClass.Func("setFontTexture", &p2d::BitmapFont::setFontTexture);
+    bitmapFontClass.Func("getFontTexture", &p2d::BitmapFont::getFontTexture);
+    bitmapFontClass.Func("loadFont", &p2d::BitmapFont::loadFont);
+    Sqrat::RootTable(vm).Bind("BitmapFont", bitmapFontClass);
+    
     // Label
     Sqrat::Class<p2d::Label> labelClass(vm);
     labelClass.Func("setText", &p2d::Label::setText);

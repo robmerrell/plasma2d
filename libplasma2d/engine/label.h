@@ -9,8 +9,7 @@
 #include <string>
 
 #include "display_object.h"
-#include "director.h"
-#include "bitmap_font_parser.h"
+#include "bitmap_font.h"
 
 namespace p2d {
     
@@ -24,10 +23,12 @@ namespace p2d {
         float width;
         float height;
         
-        p2d::BitmapFontParser font_parser;
+        p2d::BitmapFont* bitmap_font;
         
     public:
         Label();
+        
+        void setFont(BitmapFont* _font);
         
         /**
          * Setter/Getter for the text
