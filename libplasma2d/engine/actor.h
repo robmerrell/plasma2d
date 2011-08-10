@@ -34,6 +34,11 @@ namespace p2d {
         Actor();
         
         /**
+         * Constructor with texture and XY
+         */
+        Actor(Texture* _texture, float _x, float _y);
+        
+        /**
          * Destructor
          */
         ~Actor();

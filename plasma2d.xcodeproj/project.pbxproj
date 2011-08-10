@@ -32,6 +32,8 @@
 		BEBC963A13C2D3AB00C17C1F /* logo.png in Copy assets/images */ = {isa = PBXBuildFile; fileRef = BEBC963713C2D37800C17C1F /* logo.png */; };
 		BED5B0CC13C73A6300F4D4F5 /* fps.fnt in Copy assets/fonts */ = {isa = PBXBuildFile; fileRef = BEA8198213C419BB0058D983 /* fps.fnt */; };
 		BED5B0CD13C73A6300F4D4F5 /* fps.png in Copy assets/fonts */ = {isa = PBXBuildFile; fileRef = BEA8198313C419BB0058D983 /* fps.png */; };
+		BEFDE21D13EE549500192B49 /* loading_scene.cc in Sources */ = {isa = PBXBuildFile; fileRef = BEFDE21C13EE549500192B49 /* loading_scene.cc */; };
+		BEFDE21F13EE54B600192B49 /* loading_scene.h in Headers */ = {isa = PBXBuildFile; fileRef = BEFDE21E13EE54B600192B49 /* loading_scene.h */; };
 		D41F2F6013484C5C00E84862 /* hash_map_defs.h in Headers */ = {isa = PBXBuildFile; fileRef = D41F2F5F13484C5C00E84862 /* hash_map_defs.h */; };
 		D4271ABF1342E10A00553669 /* libplasma2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D465E0D31342D6E800E7D604 /* libplasma2d.a */; };
 		D427F62D1341A0480015C23D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D427F62C1341A0480015C23D /* UIKit.framework */; };
@@ -336,6 +338,8 @@
 		BEAA10E313CFF9FA00E275F2 /* texture.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cc; sourceTree = "<group>"; };
 		BEAA10E413CFF9FA00E275F2 /* texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture.h; sourceTree = "<group>"; };
 		BEBC963713C2D37800C17C1F /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		BEFDE21C13EE549500192B49 /* loading_scene.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = loading_scene.cc; sourceTree = "<group>"; };
+		BEFDE21E13EE54B600192B49 /* loading_scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loading_scene.h; sourceTree = "<group>"; };
 		D413EADE136CD6E300E0296F /* bootstrap.nut */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bootstrap.nut; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		D41F2F5F13484C5C00E84862 /* hash_map_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash_map_defs.h; sourceTree = "<group>"; };
 		D427F6281341A0480015C23D /* plasma2d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plasma2d.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -771,6 +775,23 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		BEFDE21913EE541100192B49 /* examples-cc */ = {
+			isa = PBXGroup;
+			children = (
+				BEFDE21B13EE545F00192B49 /* scenes */,
+			);
+			path = "examples-cc";
+			sourceTree = "<group>";
+		};
+		BEFDE21B13EE545F00192B49 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BEFDE21C13EE549500192B49 /* loading_scene.cc */,
+				BEFDE21E13EE54B600192B49 /* loading_scene.h */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
 		D413EADC136CD62500E0296F /* examples */ = {
 			isa = PBXGroup;
 			children = (
@@ -856,6 +877,7 @@
 		D465E0D51342D6E800E7D604 /* libplasma2d */ = {
 			isa = PBXGroup;
 			children = (
+				BEFDE21913EE541100192B49 /* examples-cc */,
 				D47B9A3A134771590002FC57 /* external */,
 				D465E0DD1342DA6B00E7D604 /* engine */,
 				D465E0D61342D6E800E7D604 /* Supporting Files */,
@@ -1463,6 +1485,7 @@
 				BEAA10E613CFF9FA00E275F2 /* texture.h in Headers */,
 				BE1B5A9313D2462000CDF87E /* texture_cache.h in Headers */,
 				BE1B5AA413D2B99700CDF87E /* bitmap_font.h in Headers */,
+				BEFDE21F13EE54B600192B49 /* loading_scene.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1662,6 +1685,7 @@
 				BEAA10E513CFF9FA00E275F2 /* texture.cc in Sources */,
 				BE1B5A9213D2462000CDF87E /* texture_cache.cc in Sources */,
 				BE1B5AA313D2B99700CDF87E /* bitmap_font.cc in Sources */,
+				BEFDE21D13EE549500192B49 /* loading_scene.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

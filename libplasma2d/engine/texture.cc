@@ -11,6 +11,13 @@ p2d::Texture::Texture() {
 }
 
 
+p2d::Texture::Texture(std::string _texture_name, std::string _full_texture_path) {
+    native_width = 0;
+    native_height = 0;
+    loadTexture(_texture_name, _full_texture_path);
+}
+
+
 p2d::Texture::~Texture() {
     glDeleteTextures(1, texture);
 }

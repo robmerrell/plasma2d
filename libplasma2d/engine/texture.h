@@ -28,7 +28,7 @@ namespace p2d {
         
     public:
         Texture();
-        
+        Texture(std::string _texture_name, std::string _full_texture_path);
         ~Texture();
         
         bool loadTexture(std::string _texture_name, std::string _full_texture_path);

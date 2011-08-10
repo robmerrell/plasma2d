@@ -38,15 +38,18 @@ void p2d::Engine::initialize(std::string _resource_path) {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    sqWrapper.setScriptPath(_resource_path + "/examples");
-    sqWrapper.bindClasses();
-    sqWrapper.bootstrap();
- 
-    // set the images, fonts and sounds paths
-    sqWrapper.setResourcePath("images", (_resource_path + "/examples/assets/images").c_str());
-    sqWrapper.setResourcePath("fonts", (_resource_path + "/examples/assets/fonts").c_str());
+//    Removing all scripting access right now
+//    sqWrapper.setScriptPath(_resource_path + "/examples");
+//    sqWrapper.bindClasses();
+//    sqWrapper.bootstrap();
+// 
+//    // set the images, fonts and sounds paths
+//    sqWrapper.setResourcePath("images", (_resource_path + "/examples/assets/images").c_str());
+//    sqWrapper.setResourcePath("fonts", (_resource_path + "/examples/assets/fonts").c_str());
+//    
+//    sqWrapper.runMain();
     
-    sqWrapper.runMain();
+    
 }
 
 
@@ -61,8 +64,8 @@ p2d::SquirrelWrapper& p2d::Engine::getSqWrapper() {
 
 
 void p2d::Engine::tick() {
-    p2d::squirrel_functions::emitSceneUpdateEvent(getSqWrapper().getVM());
-    p2d::squirrel_functions::processEventQueue(sqWrapper.getVM());
+//    p2d::squirrel_functions::emitSceneUpdateEvent(getSqWrapper().getVM());
+//    p2d::squirrel_functions::processEventQueue(sqWrapper.getVM());
     p2d::Director::Inst()->getCurrentScene()->tick(fps);
 }
 

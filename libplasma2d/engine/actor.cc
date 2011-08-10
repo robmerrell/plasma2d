@@ -9,6 +9,11 @@ p2d::Actor::Actor() {
     
 }
 
+p2d::Actor::Actor(Texture* _texture, float _x, float _y) {
+    setImage(_texture);
+    setXY(_x, _y);
+}
+
 p2d::Actor::~Actor() {
     // TODO: see if we need to remove the texture
 }
