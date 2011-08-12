@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>lua.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>plasma2d.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -24,9 +29,24 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>tolua.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>BED5306913F4A58200895FAD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BED530E813F4AACF00895FAD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D427F6271341A0480015C23D</key>
 		<dict>
 			<key>primary</key>
