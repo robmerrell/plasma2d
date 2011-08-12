@@ -98,6 +98,8 @@
 		BED5310213F4AC3C00895FAD /* tolua_push.c in Sources */ = {isa = PBXBuildFile; fileRef = BED530FC13F4AC3C00895FAD /* tolua_push.c */; };
 		BED5310313F4AC3C00895FAD /* tolua_to.c in Sources */ = {isa = PBXBuildFile; fileRef = BED530FD13F4AC3C00895FAD /* tolua_to.c */; };
 		BED5310513F4AC4A00895FAD /* tolua++.h in Headers */ = {isa = PBXBuildFile; fileRef = BED5310413F4AC4A00895FAD /* tolua++.h */; };
+		BED5310713F4F19300895FAD /* bootstrap.lua in Resources */ = {isa = PBXBuildFile; fileRef = BED5310613F4F19300895FAD /* bootstrap.lua */; };
+		BED5310813F4F23500895FAD /* bootstrap.lua in Copy main scripts */ = {isa = PBXBuildFile; fileRef = BED5310613F4F19300895FAD /* bootstrap.lua */; };
 		BED5B0CC13C73A6300F4D4F5 /* fps.fnt in Copy assets/fonts */ = {isa = PBXBuildFile; fileRef = BEA8198213C419BB0058D983 /* fps.fnt */; };
 		BED5B0CD13C73A6300F4D4F5 /* fps.png in Copy assets/fonts */ = {isa = PBXBuildFile; fileRef = BEA8198313C419BB0058D983 /* fps.png */; };
 		BEFDE21D13EE549500192B49 /* loading_scene.cc in Sources */ = {isa = PBXBuildFile; fileRef = BEFDE21C13EE549500192B49 /* loading_scene.cc */; };
@@ -364,6 +366,7 @@
 			dstPath = examples;
 			dstSubfolderSpec = 6;
 			files = (
+				BED5310813F4F23500895FAD /* bootstrap.lua in Copy main scripts */,
 				BEBC963013C2D26A00C17C1F /* bootstrap.nut in Copy main scripts */,
 				BEBC963113C2D26A00C17C1F /* config.nut in Copy main scripts */,
 				BEBC963213C2D26B00C17C1F /* main.nut in Copy main scripts */,
@@ -482,6 +485,7 @@
 		BED530FC13F4AC3C00895FAD /* tolua_push.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tolua_push.c; sourceTree = "<group>"; };
 		BED530FD13F4AC3C00895FAD /* tolua_to.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tolua_to.c; sourceTree = "<group>"; };
 		BED5310413F4AC4A00895FAD /* tolua++.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "tolua++.h"; sourceTree = "<group>"; };
+		BED5310613F4F19300895FAD /* bootstrap.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bootstrap.lua; sourceTree = "<group>"; };
 		BEFDE21C13EE549500192B49 /* loading_scene.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = loading_scene.cc; sourceTree = "<group>"; };
 		BEFDE21E13EE54B600192B49 /* loading_scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loading_scene.h; sourceTree = "<group>"; };
 		D413EADE136CD6E300E0296F /* bootstrap.nut */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bootstrap.nut; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
@@ -1038,6 +1042,7 @@
 				D413EADE136CD6E300E0296F /* bootstrap.nut */,
 				D42B8BE213B1A1E80069C8B1 /* config.nut */,
 				D42B8BE613B2C6140069C8B1 /* main.nut */,
+				BED5310613F4F19300895FAD /* bootstrap.lua */,
 			);
 			path = examples;
 			sourceTree = "<group>";
@@ -1966,6 +1971,7 @@
 				D427F6511341A0480015C23D /* plasma2dViewController.xib in Resources */,
 				BEA8198413C419BB0058D983 /* fps.fnt in Resources */,
 				BEA8198513C419BB0058D983 /* fps.png in Resources */,
+				BED5310713F4F19300895FAD /* bootstrap.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -38,6 +38,9 @@ void p2d::Engine::initialize(std::string _resource_path) {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
+    luaWrapper.setScriptPath(_resource_path + "/examples");
+    luaWrapper.bootstrap();
+    
 //    Removing all scripting access right now
 //    sqWrapper.setScriptPath(_resource_path + "/examples");
 //    sqWrapper.bindClasses();
@@ -58,8 +61,8 @@ void p2d::Engine::run() {
 }
 
 
-p2d::SquirrelWrapper& p2d::Engine::getSqWrapper() {
-    return sqWrapper;
+p2d::LuaWrapper& p2d::Engine::getLuaWrapper() {
+    return luaWrapper;
 }
 
 

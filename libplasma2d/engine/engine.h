@@ -13,7 +13,7 @@
 #include "managers/director.h"
 #include "scene.h"
 #include "shader_manager.h"
-#include "squirrel_wrapper.h"
+#include "lua_wrapper.h"
 
 namespace p2d {
     
@@ -26,7 +26,7 @@ namespace p2d {
         
         float fps;
         
-        p2d::SquirrelWrapper sqWrapper;
+        p2d::LuaWrapper luaWrapper;
         
     public:
       
@@ -55,7 +55,7 @@ namespace p2d {
         /**
          * Get the SquirrelWrapper object
          */
-        SquirrelWrapper& getSqWrapper();
+        LuaWrapper& getLuaWrapper();
         
         /**
          * Proxies "tick" to the director
