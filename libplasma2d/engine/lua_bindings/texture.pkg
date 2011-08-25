@@ -1,0 +1,14 @@
+$#include "texture.h"
+
+namespace p2d {
+    class Texture {
+    public:
+        Texture();
+        Texture(std::string _texture_name, std::string _full_texture_path);
+
+        bool loadTexture @ load_texture(std::string _texture_name, std::string _full_texture_path);
+        std::string getTextureName @ get_texture_name();
+        int getNativeWidth @ get_native_width();
+        int getNativeHeight @ get_native_height();
+    };
+}

@@ -60,3 +60,11 @@ void p2d::LuaWrapper::setScriptPath(std::string _script_path) {
 std::string p2d::LuaWrapper::getScriptPath() {
     return script_path;
 }
+
+
+void p2d::LuaWrapper::setResourcePath(const char* _type, const char* _path) {
+    lua_getglobal(lua, "set_resource_path");
+    lua_pushstring(lua, _type);
+    lua_pushstring(lua, _path);
+    lua_pcall(lua, 2, 0, 0);
+}

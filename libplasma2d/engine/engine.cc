@@ -40,20 +40,11 @@ void p2d::Engine::initialize(std::string _resource_path) {
 
     luaWrapper.setScriptPath(_resource_path + "/examples");
     luaWrapper.bootstrap();
+    
+    luaWrapper.setResourcePath("images", (_resource_path + "/examples/assets/images").c_str());
+    luaWrapper.setResourcePath("fonts", (_resource_path + "/examples/assets/fonts").c_str());
+    
     luaWrapper.runMain();
-    
-//    Removing all scripting access right now
-//    sqWrapper.setScriptPath(_resource_path + "/examples");
-//    sqWrapper.bindClasses();
-//    sqWrapper.bootstrap();
-// 
-//    // set the images, fonts and sounds paths
-//    sqWrapper.setResourcePath("images", (_resource_path + "/examples/assets/images").c_str());
-//    sqWrapper.setResourcePath("fonts", (_resource_path + "/examples/assets/fonts").c_str());
-//    
-//    sqWrapper.runMain();
-    
-    
 }
 
 

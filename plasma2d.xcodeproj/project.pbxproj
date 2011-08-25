@@ -455,6 +455,7 @@
 		BE37710F14060B160074008B /* lua_scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_scene.h; sourceTree = "<group>"; };
 		BE37711214060D6F0074008B /* main.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.lua; sourceTree = "<group>"; };
 		BE37711414060E610074008B /* loading_scene.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = loading_scene.lua; sourceTree = "<group>"; };
+		BE377118140614E70074008B /* texture.pkg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = texture.pkg; sourceTree = "<group>"; };
 		BE5E22331404BBD000C444FA /* lua_director.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_director.cc; sourceTree = "<group>"; };
 		BE5E22341404BBD000C444FA /* lua_director.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_director.h; sourceTree = "<group>"; };
 		BEA8198213C419BB0058D983 /* fps.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fps.fnt; sourceTree = "<group>"; };
@@ -1083,6 +1084,7 @@
 				BE5E22341404BBD000C444FA /* lua_director.h */,
 				BED5310A13F56EB300895FAD /* scene.pkg */,
 				BEF23DE013F659F400586E3C /* director.pkg */,
+				BE377118140614E70074008B /* texture.pkg */,
 			);
 			path = lua_bindings;
 			sourceTree = "<group>";

@@ -59,6 +59,11 @@ namespace p2d {
          */
         void setScriptPath(std::string _script_path);
         std::string getScriptPath();
+        
+        /**
+         * Set the resource paths for images, fonts and sounds
+         */
+        void setResourcePath(const char* _type, const char* _path);
     };
     
 }
