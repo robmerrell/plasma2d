@@ -28,6 +28,10 @@ end
 function load_texture(texture_name)
     local tex = p2d.Texture:new()
     local path = p2d.system.resource_paths.images .. "/" .. texture_name
-    if tex:load_texture(texture_name, path) then print("Error loading " .. texture_name) end -- TODO: err instead of print
+    
+    if tex:load_texture(texture_name, path) == false then 
+        print("Error loading " .. texture_name) -- TODO: use err instead of print and show SOIL_last_result
+    end
+    
     return tex
 end
