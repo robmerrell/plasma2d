@@ -13,4 +13,3 @@ end
 p2d.Director.play_scene = function(scene)
     return p2d.BindingHelpers.Director_playScene(scene)
 end
-

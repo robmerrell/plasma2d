@@ -1,7 +1,9 @@
 $#include "scene.h"
 
-class Scene {
-public:
-    Scene();
-    void addToScene(DisplayObject* _object);
- };
+namespace p2d {
+    class Scene {
+    public:
+        Scene();
+        void addToScene @ add_to_scene(p2d::DisplayObject* _object);
+    };
+}

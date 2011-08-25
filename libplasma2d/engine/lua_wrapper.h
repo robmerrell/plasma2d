@@ -15,6 +15,7 @@ extern "C" {
     #include "lualib.h"
     #include "lauxlib.h"
     #include "lua_director.h"
+    #include "lua_scene.h"
 }
 
 namespace p2d {
@@ -47,6 +48,11 @@ namespace p2d {
          * Run the bootstrap file
          */
         void bootstrap();
+        
+        /**
+         * Run the main file
+         */
+        void runMain();
         
         /**
          * setter/getter for the script path

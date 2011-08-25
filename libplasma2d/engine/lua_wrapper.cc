@@ -37,8 +37,16 @@ void p2d::LuaWrapper::bootstrap() {
     
     // open bound classes
     tolua_director_open(lua);
+    tolua_scene_open(lua);
     
     std::string file = script_path + "/bootstrap.lua";
+    if (luaL_dofile(lua, file.c_str()))
+        printf("%s\n", lua_tostring(lua, -1));
+}
+
+
+void p2d::LuaWrapper::runMain() {
+    std::string file = script_path + "/main.lua";
     if (luaL_dofile(lua, file.c_str()))
         printf("%s\n", lua_tostring(lua, -1));
 }

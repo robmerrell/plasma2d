@@ -40,6 +40,7 @@ void p2d::Engine::initialize(std::string _resource_path) {
 
     luaWrapper.setScriptPath(_resource_path + "/examples");
     luaWrapper.bootstrap();
+    luaWrapper.runMain();
     
 //    Removing all scripting access right now
 //    sqWrapper.setScriptPath(_resource_path + "/examples");
