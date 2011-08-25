@@ -19,6 +19,8 @@
 		BE1E0D9A13C49C6A000D88B1 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE1E0D9413C49C6A000D88B1 /* tinyxmlparser.cpp */; };
 		BE3647C013C5552A007CABD3 /* bitmap_font_parser.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE3647BE13C5552A007CABD3 /* bitmap_font_parser.cc */; };
 		BE3647C113C5552A007CABD3 /* bitmap_font_parser.h in Headers */ = {isa = PBXBuildFile; fileRef = BE3647BF13C5552A007CABD3 /* bitmap_font_parser.h */; };
+		BE37710B1405FFEB0074008B /* tables.lua in Resources */ = {isa = PBXBuildFile; fileRef = BE37710A1405FFEB0074008B /* tables.lua */; };
+		BE37710D140603D60074008B /* tables.lua in Copy support script */ = {isa = PBXBuildFile; fileRef = BE37710A1405FFEB0074008B /* tables.lua */; };
 		BE5E22351404BBD000C444FA /* lua_director.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE5E22331404BBD000C444FA /* lua_director.cc */; };
 		BE5E223B1404CAF800C444FA /* libtolua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BED530E913F4AACF00895FAD /* libtolua.a */; };
 		BEA8198413C419BB0058D983 /* fps.fnt in Resources */ = {isa = PBXBuildFile; fileRef = BEA8198213C419BB0058D983 /* fps.fnt */; };
@@ -354,6 +356,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		BE37710C1406039D0074008B /* Copy support script */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = examples/support;
+			dstSubfolderSpec = 6;
+			files = (
+				BE37710D140603D60074008B /* tables.lua in Copy support script */,
+			);
+			name = "Copy support script";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BEBC963913C2D38800C17C1F /* Copy assets/images */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -429,6 +442,7 @@
 		BE1E0D9413C49C6A000D88B1 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
 		BE3647BE13C5552A007CABD3 /* bitmap_font_parser.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bitmap_font_parser.cc; sourceTree = "<group>"; };
 		BE3647BF13C5552A007CABD3 /* bitmap_font_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitmap_font_parser.h; sourceTree = "<group>"; };
+		BE37710A1405FFEB0074008B /* tables.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tables.lua; sourceTree = "<group>"; };
 		BE5E22331404BBD000C444FA /* lua_director.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_director.cc; sourceTree = "<group>"; };
 		BE5E22341404BBD000C444FA /* lua_director.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_director.h; sourceTree = "<group>"; };
 		BEA8198213C419BB0058D983 /* fps.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fps.fnt; sourceTree = "<group>"; };
@@ -917,6 +931,14 @@
 			path = tinyxml;
 			sourceTree = "<group>";
 		};
+		BE3771081405FF7C0074008B /* support */ = {
+			isa = PBXGroup;
+			children = (
+				BE37710A1405FFEB0074008B /* tables.lua */,
+			);
+			path = support;
+			sourceTree = "<group>";
+		};
 		BE9B5F5F13CBC0CB00CE6A52 /* managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1071,6 +1093,7 @@
 		D413EADC136CD62500E0296F /* examples */ = {
 			isa = PBXGroup;
 			children = (
+				BE3771081405FF7C0074008B /* support */,
 				BEBC963413C2D2E500C17C1F /* assets */,
 				D42B8BE913B2C66D0069C8B1 /* scenes */,
 				D413EADE136CD6E300E0296F /* bootstrap.nut */,
@@ -1906,6 +1929,7 @@
 				D427F6261341A0480015C23D /* Resources */,
 				D48749CC1352549000308CD7 /* Copy Shaders */,
 				D413EADD136CD6A000E0296F /* Copy main scripts */,
+				BE37710C1406039D0074008B /* Copy support script */,
 				D42B8BED13B2DC4E0069C8B1 /* Copy scenes */,
 				BEBC963913C2D38800C17C1F /* Copy assets/images */,
 				BED5B0CA13C73A4700F4D4F5 /* Copy assets/fonts */,
@@ -2011,6 +2035,7 @@
 				BEA8198513C419BB0058D983 /* fps.png in Resources */,
 				BED5310713F4F19300895FAD /* bootstrap.lua in Resources */,
 				BED5310C13F56F5D00895FAD /* README in Resources */,
+				BE37710B1405FFEB0074008B /* tables.lua in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
