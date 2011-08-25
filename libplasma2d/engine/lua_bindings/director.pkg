@@ -1,0 +1,8 @@
+$#include "director.h"
+
+namespace p2d {
+    namespace BindingHelpers {
+        void Director_playScene(p2d::Scene* _scene);
+        p2d::Scene* Director_getCurrentScene();
+    }
+}

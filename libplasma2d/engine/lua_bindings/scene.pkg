@@ -1,0 +1,7 @@
+$#include "scene.h"
+
+class Scene {
+public:
+    Scene();
+    void addToScene(DisplayObject* _object);
+ };

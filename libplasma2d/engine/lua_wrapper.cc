@@ -7,7 +7,7 @@
 
 p2d::LuaWrapper::LuaWrapper() {
     lua = lua_open();
-	luaL_openlibs(lua);    
+	luaL_openlibs(lua);
 }
 
 
@@ -22,6 +22,22 @@ lua_State* p2d::LuaWrapper::getVM() {
 
 
 void p2d::LuaWrapper::bootstrap() {
+    // create the p2d table
+    lua_newtable(lua);
+    
+    // script base path
+    lua_pushstring(lua, script_path.c_str());
+    lua_setfield(lua, -2, "script_path");
+    
+    // version
+    lua_pushstring(lua, "0.1");
+    lua_setfield(lua, -2, "version");
+    
+    lua_setglobal(lua, "p2d");
+    
+    // open bound classes
+    tolua_director_open(lua);
+    
     std::string file = script_path + "/bootstrap.lua";
     if (luaL_dofile(lua, file.c_str()))
         printf("%s\n", lua_tostring(lua, -1));

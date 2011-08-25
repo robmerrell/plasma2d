@@ -19,6 +19,8 @@
 		BE1E0D9A13C49C6A000D88B1 /* tinyxmlparser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE1E0D9413C49C6A000D88B1 /* tinyxmlparser.cpp */; };
 		BE3647C013C5552A007CABD3 /* bitmap_font_parser.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE3647BE13C5552A007CABD3 /* bitmap_font_parser.cc */; };
 		BE3647C113C5552A007CABD3 /* bitmap_font_parser.h in Headers */ = {isa = PBXBuildFile; fileRef = BE3647BF13C5552A007CABD3 /* bitmap_font_parser.h */; };
+		BE5E22351404BBD000C444FA /* lua_director.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE5E22331404BBD000C444FA /* lua_director.cc */; };
+		BE5E223B1404CAF800C444FA /* libtolua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BED530E913F4AACF00895FAD /* libtolua.a */; };
 		BEA8198413C419BB0058D983 /* fps.fnt in Resources */ = {isa = PBXBuildFile; fileRef = BEA8198213C419BB0058D983 /* fps.fnt */; };
 		BEA8198513C419BB0058D983 /* fps.png in Resources */ = {isa = PBXBuildFile; fileRef = BEA8198313C419BB0058D983 /* fps.png */; };
 		BEA8198813C42A310058D983 /* label.cc in Sources */ = {isa = PBXBuildFile; fileRef = BEA8198613C42A310058D983 /* label.cc */; };
@@ -100,6 +102,7 @@
 		BED5310513F4AC4A00895FAD /* tolua++.h in Headers */ = {isa = PBXBuildFile; fileRef = BED5310413F4AC4A00895FAD /* tolua++.h */; };
 		BED5310713F4F19300895FAD /* bootstrap.lua in Resources */ = {isa = PBXBuildFile; fileRef = BED5310613F4F19300895FAD /* bootstrap.lua */; };
 		BED5310813F4F23500895FAD /* bootstrap.lua in Copy main scripts */ = {isa = PBXBuildFile; fileRef = BED5310613F4F19300895FAD /* bootstrap.lua */; };
+		BED5310C13F56F5D00895FAD /* README in Resources */ = {isa = PBXBuildFile; fileRef = BED5310B13F56F5D00895FAD /* README */; };
 		BED5B0CC13C73A6300F4D4F5 /* fps.fnt in Copy assets/fonts */ = {isa = PBXBuildFile; fileRef = BEA8198213C419BB0058D983 /* fps.fnt */; };
 		BED5B0CD13C73A6300F4D4F5 /* fps.png in Copy assets/fonts */ = {isa = PBXBuildFile; fileRef = BEA8198313C419BB0058D983 /* fps.png */; };
 		BEFDE21D13EE549500192B49 /* loading_scene.cc in Sources */ = {isa = PBXBuildFile; fileRef = BEFDE21C13EE549500192B49 /* loading_scene.cc */; };
@@ -327,6 +330,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BE5E22371404CABE00C444FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D427F61F1341A0470015C23D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BED530E813F4AACF00895FAD;
+			remoteInfo = tolua;
+		};
+		BE5E22391404CACB00C444FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D427F61F1341A0470015C23D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BED5306913F4A58200895FAD;
+			remoteInfo = lua;
+		};
 		BED530F413F4AAE400895FAD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D427F61F1341A0470015C23D /* Project object */;
@@ -412,6 +429,8 @@
 		BE1E0D9413C49C6A000D88B1 /* tinyxmlparser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxmlparser.cpp; sourceTree = "<group>"; };
 		BE3647BE13C5552A007CABD3 /* bitmap_font_parser.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bitmap_font_parser.cc; sourceTree = "<group>"; };
 		BE3647BF13C5552A007CABD3 /* bitmap_font_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitmap_font_parser.h; sourceTree = "<group>"; };
+		BE5E22331404BBD000C444FA /* lua_director.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_director.cc; sourceTree = "<group>"; };
+		BE5E22341404BBD000C444FA /* lua_director.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_director.h; sourceTree = "<group>"; };
 		BEA8198213C419BB0058D983 /* fps.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fps.fnt; sourceTree = "<group>"; };
 		BEA8198313C419BB0058D983 /* fps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps.png; sourceTree = "<group>"; };
 		BEA8198613C42A310058D983 /* label.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = label.cc; sourceTree = "<group>"; };
@@ -486,6 +505,9 @@
 		BED530FD13F4AC3C00895FAD /* tolua_to.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tolua_to.c; sourceTree = "<group>"; };
 		BED5310413F4AC4A00895FAD /* tolua++.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "tolua++.h"; sourceTree = "<group>"; };
 		BED5310613F4F19300895FAD /* bootstrap.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bootstrap.lua; sourceTree = "<group>"; };
+		BED5310A13F56EB300895FAD /* scene.pkg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = scene.pkg; sourceTree = "<group>"; };
+		BED5310B13F56F5D00895FAD /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		BEF23DE013F659F400586E3C /* director.pkg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = director.pkg; sourceTree = "<group>"; };
 		BEFDE21C13EE549500192B49 /* loading_scene.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = loading_scene.cc; sourceTree = "<group>"; };
 		BEFDE21E13EE54B600192B49 /* loading_scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loading_scene.h; sourceTree = "<group>"; };
 		D413EADE136CD6E300E0296F /* bootstrap.nut */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bootstrap.nut; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
@@ -855,6 +877,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5E223B1404CAF800C444FA /* libtolua.a in Frameworks */,
 				BED530E413F4A71C00895FAD /* liblua.a in Frameworks */,
 				D4DDEC89136A7A5B00F65892 /* libsquirrel.a in Frameworks */,
 				D4F05DCC1347742F002A4827 /* libsoil.a in Frameworks */,
@@ -1017,6 +1040,17 @@
 			path = "tolua++";
 			sourceTree = "<group>";
 		};
+		BED5310913F56E7E00895FAD /* lua_bindings */ = {
+			isa = PBXGroup;
+			children = (
+				BE5E22331404BBD000C444FA /* lua_director.cc */,
+				BE5E22341404BBD000C444FA /* lua_director.h */,
+				BED5310A13F56EB300895FAD /* scene.pkg */,
+				BEF23DE013F659F400586E3C /* director.pkg */,
+			);
+			path = lua_bindings;
+			sourceTree = "<group>";
+		};
 		BEFDE21913EE541100192B49 /* examples-cc */ = {
 			isa = PBXGroup;
 			children = (
@@ -1050,6 +1084,7 @@
 		D427F61D1341A0470015C23D = {
 			isa = PBXGroup;
 			children = (
+				BED5310B13F56F5D00895FAD /* README */,
 				D4DDEC32136A79A500F65892 /* libsquirrel.a */,
 				D4F05DC4134773C4002A4827 /* libsoil.a */,
 				D465E0D31342D6E800E7D604 /* libplasma2d.a */,
@@ -1142,6 +1177,7 @@
 		D465E0DD1342DA6B00E7D604 /* engine */ = {
 			isa = PBXGroup;
 			children = (
+				BED5310913F56E7E00895FAD /* lua_bindings */,
 				BE9B5F5F13CBC0CB00CE6A52 /* managers */,
 				D465E0DE1342DB3A00E7D604 /* engine.cc */,
 				D465E0DF1342DB3A00E7D604 /* engine.h */,
@@ -1894,6 +1930,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				BE5E223A1404CACB00C444FA /* PBXTargetDependency */,
+				BE5E22381404CABE00C444FA /* PBXTargetDependency */,
 			);
 			name = libplasma2d;
 			productName = libplasma2d;
@@ -1972,6 +2010,7 @@
 				BEA8198413C419BB0058D983 /* fps.fnt in Resources */,
 				BEA8198513C419BB0058D983 /* fps.png in Resources */,
 				BED5310713F4F19300895FAD /* bootstrap.lua in Resources */,
+				BED5310C13F56F5D00895FAD /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2037,6 +2076,7 @@
 				D427F6411341A0480015C23D /* plasma2dAppDelegate.mm in Sources */,
 				D427F64B1341A0480015C23D /* EAGLView.m in Sources */,
 				D427F64E1341A0480015C23D /* plasma2dViewController.mm in Sources */,
+				BE5E22351404BBD000C444FA /* lua_director.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2109,6 +2149,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BE5E22381404CABE00C444FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BED530E813F4AACF00895FAD /* tolua */;
+			targetProxy = BE5E22371404CABE00C444FA /* PBXContainerItemProxy */;
+		};
+		BE5E223A1404CACB00C444FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BED5306913F4A58200895FAD /* lua */;
+			targetProxy = BE5E22391404CACB00C444FA /* PBXContainerItemProxy */;
+		};
 		BED530F513F4AAE400895FAD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BED5306913F4A58200895FAD /* lua */;
@@ -2224,10 +2274,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				"OTHER_CFLAGS[arch=*]" = (
-					"-O2",
-					"-ansi",
-				);
+				"OTHER_CFLAGS[arch=*]" = "";
 				"OTHER_CPLUSPLUSFLAGS[arch=*]" = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2246,16 +2293,8 @@
 				GCC_PREFIX_HEADER = "tolua/tolua-Prefix.pch";
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				"OTHER_CFLAGS[arch=*]" = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"-O2",
-					"-ansi",
-				);
-				"OTHER_CPLUSPLUSFLAGS[arch=*]" = (
-					"$(OTHER_CFLAGS)",
-					"-O2",
-					"-ansi",
-				);
+				"OTHER_CFLAGS[arch=*]" = "-DNS_BLOCK_ASSERTIONS=1";
+				"OTHER_CPLUSPLUSFLAGS[arch=*]" = "$(OTHER_CFLAGS)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2324,6 +2363,12 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "plasma2d-ios/plasma2d-Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				"OTHER_CFLAGS[arch=*]" = (
+					"-DTOLUA_API='extern \"C\"'",
+				);
+				"OTHER_CPLUSPLUSFLAGS[arch=*]" = (
+					"-DTOLUA_API='extern \"C\"'",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "B3F33627-4F99-45E5-ADFE-203D69B03EFA";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B3F33627-4F99-45E5-ADFE-203D69B03EFA";
@@ -2341,6 +2386,14 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = "plasma2d-ios/plasma2d-Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				"OTHER_CFLAGS[arch=*]" = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"-DTOLUA_API='extern \"C\"'",
+				);
+				"OTHER_CPLUSPLUSFLAGS[arch=*]" = (
+					"$(OTHER_CFLAGS)",
+					"-DTOLUA_API='extern \"C\"'",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -2356,6 +2409,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "libplasma2d/libplasma2d-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/libplasma2d/external/squirrel/**";
+				"OTHER_CFLAGS[arch=*]" = (
+					"-DTOLUA_API='extern \"C\"'",
+				);
+				"OTHER_CPLUSPLUSFLAGS[arch=*]" = (
+					"-DTOLUA_API='extern \"C\"'",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = plasma2d;
 				USER_HEADER_SEARCH_PATHS = "libplasma2d/external/soil/** libplasma2d/external libplasma2d/external/squirrel/** ${SOURCE_ROOT}/libplasma2d/external/squirrel/include/**";
@@ -2371,6 +2430,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "libplasma2d/libplasma2d-Prefix.pch";
 				HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/libplasma2d/external/squirrel/**";
+				"OTHER_CFLAGS[arch=*]" = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"-DTOLUA_API='extern \"C\"'",
+				);
+				"OTHER_CPLUSPLUSFLAGS[arch=*]" = (
+					"-DTOLUA_API='extern \"C\"'",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = plasma2d;
 				USER_HEADER_SEARCH_PATHS = "libplasma2d/external/soil/** libplasma2d/external libplasma2d/external/squirrel/** ${SOURCE_ROOT}/libplasma2d/external/squirrel/include/**";
@@ -2439,6 +2505,7 @@
 				BED5307413F4A58200895FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BED530F113F4AACF00895FAD /* Build configuration list for PBXNativeTarget "tolua" */ = {
 			isa = XCConfigurationList;
@@ -2447,6 +2514,7 @@
 				BED530F313F4AACF00895FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D427F6221341A0470015C23D /* Build configuration list for PBXProject "plasma2d" */ = {
 			isa = XCConfigurationList;
