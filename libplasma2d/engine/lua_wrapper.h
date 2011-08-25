@@ -16,6 +16,7 @@ extern "C" {
     #include "lauxlib.h"
     #include "lua_director.h"
     #include "lua_scene.h"
+    #include "lua_texture.h"
 }
 
 namespace p2d {

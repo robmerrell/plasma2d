@@ -13,7 +13,6 @@ function set_resource_path(type, path)
 end
 
 
-
 -- Provide cleaner access to the binding helpers
 p2d.Director = {}
 p2d.Director.get_current_scene = function()
@@ -22,4 +21,13 @@ end
 
 p2d.Director.play_scene = function(scene)
     return p2d.BindingHelpers.Director_playScene(scene)
+end
+
+
+-- Factories
+function load_texture(texture_name)
+    local tex = p2d.Texture:new()
+    local path = p2d.system.resource_paths.images .. "/" .. texture_name
+    if tex:load_texture(texture_name, path) then print("Error loading " .. texture_name) end -- TODO: err instead of print
+    return tex
 end

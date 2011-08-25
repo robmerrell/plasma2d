@@ -3836,7 +3836,7 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>335945853.794523</real>
+		<real>335946535.03345102</real>
 		<string>{61, 1058}</string>
 		<string>{693, 0}</string>
 		<dict>
@@ -3979,9 +3979,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>335945726.75081497</real>
+		<real>335946468.63078099</real>
 		<string>{20330, 1422}</string>
-		<string>{20910, 0}</string>
+		<string>{21135, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4216,9 +4216,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>335945853.79475898</real>
+		<real>335946535.03360802</real>
 		<string>{301, 1378}</string>
-		<string>{1255, 0}</string>
+		<string>{941, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4836,9 +4836,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>335945853.79464602</real>
-		<string>{5013, 1406}</string>
-		<string>{5015, 175}</string>
+		<real>335946535.03353101</real>
+		<string>{4808, 1274}</string>
+		<string>{5014, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5172,9 +5172,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>335945853.794393</real>
-		<string>{0, 432}</string>
-		<string>{175, 0}</string>
+		<real>335946535.03337097</real>
+		<string>{0, 355}</string>
+		<string>{355, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6128,9 +6128,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>335945853.79423797</real>
-		<string>{410, 1049}</string>
-		<string>{713, 0}</string>
+		<real>335946535.03324801</real>
+		<string>{387, 1100}</string>
+		<string>{657, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6176,9 +6176,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>335944900.210666</real>
-		<string>{415, 905}</string>
-		<string>{1239, 0}</string>
+		<real>335946007.70555902</real>
+		<string>{0, 785}</string>
+		<string>{658, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8749,7 +8749,7 @@
 				<integer>664</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>335945829.97334099</real>
+			<real>335946470.06313503</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -8760,7 +8760,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 12:17 AM</string>
+		<string>Today at 12:27 AM</string>
 		<integer>234</integer>
 		<string>soil</string>
 		<dict>
@@ -8844,7 +8844,7 @@
 				<integer>671</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/robmerrell/projects/plasma2d/libplasma2d/engine/engine.cc</string>
+		<string>file://localhost/Users/robmerrell/projects/plasma2d/libplasma2d/engine/squirrel_wrapper.cc</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8862,7 +8862,7 @@
 				<integer>673</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/robmerrell/projects/plasma2d/libplasma2d/engine/lua_wrapper.cc</string>
+		<string>file://localhost/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/c++/4.2.1/bits/stl_iterator.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8880,7 +8880,7 @@
 				<integer>675</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/c++/4.2.1/bits/stl_iterator.h</string>
+		<string>file://localhost/Users/robmerrell/projects/plasma2d/libplasma2d/engine/lua_wrapper.cc</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8898,7 +8898,7 @@
 				<integer>677</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/robmerrell/projects/plasma2d/examples/bootstrap.nut</string>
+		<string>file://localhost/Users/robmerrell/projects/plasma2d/libplasma2d/engine/lua_wrapper.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8916,7 +8916,7 @@
 				<integer>679</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/robmerrell/projects/plasma2d/examples/bootstrap.lua</string>
+		<string>file://localhost/Users/robmerrell/projects/plasma2d/libplasma2d/engine/engine.cc</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8934,7 +8934,7 @@
 				<integer>681</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/robmerrell/projects/plasma2d/libplasma2d/engine/lua_wrapper.h</string>
+		<string>file://localhost/Users/robmerrell/projects/plasma2d/examples/bootstrap.nut</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8952,7 +8952,7 @@
 				<integer>683</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/robmerrell/projects/plasma2d/libplasma2d/engine/texture.h</string>
+		<string>file://localhost/Users/robmerrell/projects/plasma2d/examples/bootstrap.lua</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8970,7 +8970,7 @@
 				<integer>685</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/robmerrell/projects/plasma2d/libplasma2d/engine/squirrel_wrapper.cc</string>
+		<string>file://localhost/Users/robmerrell/projects/plasma2d/libplasma2d/engine/texture.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -51027,7 +51027,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>335945853.79775703</real>
+		<real>335946535.03618503</real>
 		<string>{61, 1058}</string>
 		<string>{693, 0}</string>
 		<dict>
@@ -56914,9 +56914,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>335945853.79570001</real>
+		<real>335946535.03426301</real>
 		<string>{301, 1378}</string>
-		<string>{1255, 0}</string>
+		<string>{941, 0}</string>
 		<string>p2d::Engine::initialize(std::string _resource_path)</string>
 		<dict>
 			<key>$class</key>
@@ -62603,9 +62603,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>335945853.79708302</real>
-		<string>{5013, 1406}</string>
-		<string>{5015, 175}</string>
+		<real>335946535.03545302</real>
+		<string>{4808, 1274}</string>
+		<string>{5014, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -73387,9 +73387,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>335945853.79868197</real>
-		<string>{0, 432}</string>
-		<string>{175, 0}</string>
+		<real>335946535.03685898</real>
+		<string>{0, 355}</string>
+		<string>{355, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -96292,7 +96292,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>5341</integer>
+					<integer>5352</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -96725,9 +96725,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>335945853.796597</real>
-		<string>{410, 1049}</string>
-		<string>{713, 0}</string>
+		<real>335946535.03490198</real>
+		<string>{387, 1100}</string>
+		<string>{657, 0}</string>
 		<string>p2d::LuaWrapper::bootstrap()</string>
 		<dict>
 			<key>$class</key>
@@ -97520,7 +97520,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>3057</integer>
+					<integer>3058</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -97532,7 +97532,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>3277</integer>
+					<integer>5341</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -97689,7 +97689,31 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>34</integer>
+					<integer>3077</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3078</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3079</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3080</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3081</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3082</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3083</integer>
 				</dict>
 			</array>
 			<key>NS.objects</key>
@@ -97697,6 +97721,45 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>5342</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>252</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>779</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>252</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>252</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>5343</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>5345</integer>
+				</dict>
+			</array>
+		</dict>
+		<string>{{0, 0}, {259, 676}}</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>59</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>5344</integer>
 				</dict>
 			</array>
 		</dict>
@@ -97710,15 +97773,216 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>5343</integer>
+					<integer>3281</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>5345</integer>
+					<integer>3006</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3282</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3283</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>780</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>5346</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>5347</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>5348</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>5349</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>5350</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>5351</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>44</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3281</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>44</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3281</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3006</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>44</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3281</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3088</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3089</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>44</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3281</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3088</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3089</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3090</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>44</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3281</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3006</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3282</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>44</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3281</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>3088</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>45</integer>
+			</dict>
+			<key>NS.keys</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>34</integer>
+				</dict>
+			</array>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>5353</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>44</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>5354</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>5356</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>5358</integer>
 				</dict>
 			</array>
 		</dict>
@@ -97747,7 +98011,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>5344</integer>
+					<integer>5355</integer>
 				</dict>
 			</array>
 		</dict>
@@ -97777,7 +98041,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>5346</integer>
+					<integer>5357</integer>
 				</dict>
 			</array>
 		</dict>
@@ -97807,7 +98071,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>5348</integer>
+					<integer>5359</integer>
 				</dict>
 			</array>
 		</dict>

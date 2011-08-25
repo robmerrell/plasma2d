@@ -5,6 +5,7 @@ function LoadingScene.new()
     
     -- called when the scene first 
     function scene:init()
+        local logo_tex = load_texture("logo.png")
     end
     
     return scene
