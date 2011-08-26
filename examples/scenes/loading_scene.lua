@@ -5,13 +5,12 @@ function LoadingScene.new()
     
     -- called when the scene first
     function scene:init()
+        -- add the logo
         local logo_tex = load_texture("logo.png")
+        local logo = ActorFactory(logo_tex, 200, 100)
+        self:add_to_scene(logo)
         
-        local actor = p2d.Actor:new()
-        actor:set_coords(100, 100)
-        actor:set_texture(logo_tex)
-        
-        self:add_to_scene(actor)
+        --
     end
     
     return scene
