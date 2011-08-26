@@ -1,0 +1,15 @@
+$#include "actor.h"
+$#include "display_object.h"
+
+namespace p2d {
+    class Actor : public DisplayObject {
+    public:
+        Actor();
+
+        // From Actor
+        void setImage @ set_texture(p2d::Texture* _texture);
+        void setDimensions @ set_dimensions(float _width, float _height);
+        float getWidth @ get_width();
+        float getHeight @ get_height();
+    };
+}

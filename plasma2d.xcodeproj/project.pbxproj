@@ -29,6 +29,10 @@
 		BE377117140610170074008B /* main.lua in Copy main scripts */ = {isa = PBXBuildFile; fileRef = BE37711214060D6F0074008B /* main.lua */; };
 		BE37711B140621350074008B /* lua_texture.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE377119140621350074008B /* lua_texture.cc */; };
 		BE37711C140621350074008B /* lua_texture.h in Headers */ = {isa = PBXBuildFile; fileRef = BE37711A140621350074008B /* lua_texture.h */; };
+		BE5B4A42140748C200DFB397 /* lua_actor.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE5B4A40140748C200DFB397 /* lua_actor.cc */; };
+		BE5B4A43140748C200DFB397 /* lua_actor.h in Headers */ = {isa = PBXBuildFile; fileRef = BE5B4A41140748C200DFB397 /* lua_actor.h */; };
+		BE5B4A4814074E1F00DFB397 /* lua_display_object.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE5B4A4614074E1F00DFB397 /* lua_display_object.cc */; };
+		BE5B4A4914074E1F00DFB397 /* lua_display_object.h in Headers */ = {isa = PBXBuildFile; fileRef = BE5B4A4714074E1F00DFB397 /* lua_display_object.h */; };
 		BE5E22351404BBD000C444FA /* lua_director.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE5E22331404BBD000C444FA /* lua_director.cc */; };
 		BE5E223B1404CAF800C444FA /* libtolua.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BED530E913F4AACF00895FAD /* libtolua.a */; };
 		BEA8198413C419BB0058D983 /* fps.fnt in Resources */ = {isa = PBXBuildFile; fileRef = BEA8198213C419BB0058D983 /* fps.fnt */; };
@@ -460,6 +464,12 @@
 		BE377118140614E70074008B /* texture.pkg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = texture.pkg; sourceTree = "<group>"; };
 		BE377119140621350074008B /* lua_texture.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_texture.cc; sourceTree = "<group>"; };
 		BE37711A140621350074008B /* lua_texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_texture.h; sourceTree = "<group>"; };
+		BE37711D140685980074008B /* actor.pkg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = actor.pkg; sourceTree = "<group>"; };
+		BE5B4A40140748C200DFB397 /* lua_actor.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_actor.cc; sourceTree = "<group>"; };
+		BE5B4A41140748C200DFB397 /* lua_actor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_actor.h; sourceTree = "<group>"; };
+		BE5B4A4514074DB200DFB397 /* display_object.pkg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = display_object.pkg; sourceTree = "<group>"; };
+		BE5B4A4614074E1F00DFB397 /* lua_display_object.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_display_object.cc; sourceTree = "<group>"; };
+		BE5B4A4714074E1F00DFB397 /* lua_display_object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_display_object.h; sourceTree = "<group>"; };
 		BE5E22331404BBD000C444FA /* lua_director.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_director.cc; sourceTree = "<group>"; };
 		BE5E22341404BBD000C444FA /* lua_director.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_director.h; sourceTree = "<group>"; };
 		BEA8198213C419BB0058D983 /* fps.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fps.fnt; sourceTree = "<group>"; };
@@ -1082,6 +1092,10 @@
 		BED5310913F56E7E00895FAD /* lua_bindings */ = {
 			isa = PBXGroup;
 			children = (
+				BE5B4A4614074E1F00DFB397 /* lua_display_object.cc */,
+				BE5B4A4714074E1F00DFB397 /* lua_display_object.h */,
+				BE5B4A40140748C200DFB397 /* lua_actor.cc */,
+				BE5B4A41140748C200DFB397 /* lua_actor.h */,
 				BE377119140621350074008B /* lua_texture.cc */,
 				BE37711A140621350074008B /* lua_texture.h */,
 				BE37710E14060B160074008B /* lua_scene.cc */,
@@ -1091,6 +1105,8 @@
 				BED5310A13F56EB300895FAD /* scene.pkg */,
 				BEF23DE013F659F400586E3C /* director.pkg */,
 				BE377118140614E70074008B /* texture.pkg */,
+				BE37711D140685980074008B /* actor.pkg */,
+				BE5B4A4514074DB200DFB397 /* display_object.pkg */,
 			);
 			path = lua_bindings;
 			sourceTree = "<group>";
@@ -1860,6 +1876,8 @@
 				BEBAC87413F3924B00D801D8 /* lua_wrapper.h in Headers */,
 				BE37711114060B160074008B /* lua_scene.h in Headers */,
 				BE37711C140621350074008B /* lua_texture.h in Headers */,
+				BE5B4A43140748C200DFB397 /* lua_actor.h in Headers */,
+				BE5B4A4914074E1F00DFB397 /* lua_display_object.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2160,6 +2178,8 @@
 				BEBAC87113F3923B00D801D8 /* lua_wrapper.cc in Sources */,
 				BE37711014060B160074008B /* lua_scene.cc in Sources */,
 				BE37711B140621350074008B /* lua_texture.cc in Sources */,
+				BE5B4A42140748C200DFB397 /* lua_actor.cc in Sources */,
+				BE5B4A4814074E1F00DFB397 /* lua_display_object.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,20 @@
+$#include "display_object.h"
+
+namespace p2d {
+	class DisplayObject {
+	public:
+	    DisplayObject();
+
+	    // From DisplayObject
+	    void setXY @ set_coords(float _x, float _y);
+	    float getX @ get_x();
+	    float getY @ get_y();
+	    void setAngle @ set_angle(float _angle);
+	    float getAngle @ get_angle();
+	    void setScale @ set_scale(float _scale);
+	    float getScale @ get_scale();
+	    void setAnchor @ set_anchor(float _x, float _y);
+	    float getAnchorX @ get_anchor_x();
+	    float getAnchorY @ get_anchor_y();
+	};
+}

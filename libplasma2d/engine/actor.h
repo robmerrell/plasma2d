@@ -46,7 +46,7 @@ namespace p2d {
         /**
          * Set the actor's image
          */
-        void setImage(Texture* _texture);
+        void setImage(Texture* _texture); // TODO: rename this to setTexture - what was I thinking?
         
         /**
          * Set the actor's width and height
