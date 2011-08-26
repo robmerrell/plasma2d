@@ -59,6 +59,7 @@ p2d::LuaWrapper& p2d::Engine::getLuaWrapper() {
 
 
 void p2d::Engine::tick() {
+    luaWrapper.processEventQueue();
 //    p2d::squirrel_functions::emitSceneUpdateEvent(getSqWrapper().getVM());
 //    p2d::squirrel_functions::processEventQueue(sqWrapper.getVM());
     p2d::Director::Inst()->getCurrentScene()->tick(fps);

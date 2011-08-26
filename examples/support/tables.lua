@@ -1,5 +1,3 @@
-local Tables = {}
-
 --[[
    Author: Julio Manuel Fernandez-Diaz
    Date:   January 12, 2007
@@ -29,7 +27,7 @@ local Tables = {}
       name is the name of the table (optional)
       indent is a first indentation (optional).
 --]]
-function Tables.inspect(t, name, indent)
+function table.inspect(t, name, indent)
    local cart     -- a container
    local autoref  -- for self references
 
@@ -106,5 +104,13 @@ function Tables.inspect(t, name, indent)
    return cart .. autoref
 end
 
-
-return Tables
+-- check if an element exists in a table
+function table.contains(table, element)
+  for _, value in pairs(table) do
+    if value == element then
+      return true
+    end
+  end
+  
+  return false
+end

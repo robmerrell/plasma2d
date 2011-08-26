@@ -3,6 +3,37 @@ package.path = package.path .. ";" .. p2d.script_path .. "/?.lua"
 -- requires
 local tables = require "support/tables"
 
+-- events
+p2d.events = {}
+p2d.events.listeners = {}
+p2d.events.queue = {}
+function register_event_listeners(listeners)
+    table.insert(p2d.events.listeners, listeners)
+end
+
+function emit(event_type, payload, env)
+    table.insert(p2d.events.queue, {event_type=event_type, payload=payload})
+end
+
+function process_events()
+    for _, event in ipairs(p2d.events.queue) do
+        for _, listener in ipairs(p2d.events.listeners) do
+            if listener[event.event_type] then
+                if listener[event.event_type][1].environment then
+                    listener[event.event_type][1].callback(listener[event.event_type][1].environment, event)
+                else
+                    listener[event.event_type][1].callback(event)
+                end
+            end
+        end
+    end
+    
+    -- empty the event queue. Assume that all events were processed
+    -- for a frame. This won't bet the case after I solidify the
+    -- event arch
+    p2d.events.queue = {}   
+end
+
 
 -- set resource paths for assets: textures, fonts
 p2d.system = {}

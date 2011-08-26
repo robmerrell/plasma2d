@@ -70,3 +70,9 @@ void p2d::LuaWrapper::setResourcePath(const char* _type, const char* _path) {
     lua_pushstring(lua, _path);
     lua_pcall(lua, 2, 0, 0);
 }
+
+
+void p2d::LuaWrapper::processEventQueue() {
+    lua_getglobal(lua, "process_events");
+    lua_pcall(lua, 0, 0, 0);
+}

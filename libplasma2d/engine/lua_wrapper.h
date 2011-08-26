@@ -66,6 +66,11 @@ namespace p2d {
          * Set the resource paths for images, fonts and sounds
          */
         void setResourcePath(const char* _type, const char* _path);
+        
+        /**
+         * process the event queue
+         */
+        void processEventQueue();
     };
     
 }
