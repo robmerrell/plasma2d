@@ -71,6 +71,13 @@ namespace p2d {
          * process the event queue
          */
         void processEventQueue();
+        
+        
+        /**
+         * Event proxies from device specific code
+         */
+        void proxyTouchesBeganOrEndedEvent(std::string _proxy_function, float _x, float _y, int _tap_count);
+        void proxyTouchesMoved(float _prev_x, float _prev_y, float _current_x, float _current_y);
     };
     
 }

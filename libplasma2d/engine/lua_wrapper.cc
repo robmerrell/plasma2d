@@ -76,3 +76,22 @@ void p2d::LuaWrapper::processEventQueue() {
     lua_getglobal(lua, "process_events");
     lua_pcall(lua, 0, 0, 0);
 }
+
+
+void p2d::LuaWrapper::proxyTouchesBeganOrEndedEvent(std::string _proxy_function, float _x, float _y, int _tap_count) {
+    lua_getglobal(lua, _proxy_function.c_str());
+    lua_pushnumber(lua, _x);
+    lua_pushnumber(lua, _y);
+    lua_pushnumber(lua, _tap_count);
+    lua_pcall(lua, 3, 0, 0);    
+}
+
+
+void p2d::LuaWrapper::proxyTouchesMoved(float _prev_x, float _prev_y, float _current_x, float _current_y) {
+    lua_getglobal(lua, "event_proxy_touches_moved");
+    lua_pushnumber(lua, _prev_x);
+    lua_pushnumber(lua, _prev_y);
+    lua_pushnumber(lua, _current_x);
+    lua_pushnumber(lua, _current_y);
+    lua_pcall(lua, 4, 0, 0);    
+}

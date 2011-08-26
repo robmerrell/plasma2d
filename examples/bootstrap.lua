@@ -11,7 +11,7 @@ function register_event_listeners(listeners)
     table.insert(p2d.events.listeners, listeners)
 end
 
-function emit(event_type, payload, env)
+function emit(event_type, payload)
     table.insert(p2d.events.queue, {event_type=event_type, payload=payload})
 end
 
@@ -34,6 +34,34 @@ function process_events()
     p2d.events.queue = {}   
 end
 
+-- event proxies
+function event_proxy_touches_began(x, y, tap_count)
+    emit("touch", {
+        stage = "began",
+        x = x,
+        y = y,
+        tap_count = tap_count
+    })
+end
+
+function event_proxy_touches_ended(x, y, tap_count)
+    emit("touch", {
+        stage = "ended",
+        x = x,
+        y = y,
+        tap_count = tap_count
+    })
+end
+
+function event_proxy_touches_moved(previous_x, previous_y, current_x, current_y)
+    emit("touch", {
+        stage = "moved",
+        previous_x = previous_x,
+        previous_y = previous_y,
+        current_x = current_x,
+        current_y = current_y,
+    })
+end
 
 -- set resource paths for assets: textures, fonts
 p2d.system = {}

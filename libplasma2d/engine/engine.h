@@ -66,7 +66,6 @@ namespace p2d {
          * Set the FPS. Only the display system should call this
          */
         void setFPS(float _fps);
-        
     };
 
 }

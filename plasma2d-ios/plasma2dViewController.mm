@@ -142,24 +142,24 @@
 
 - (void) touchesBegan: (NSSet*) touches withEvent: (UIEvent*) event
 {
-//    UITouch* touch = [touches anyObject];
-//    CGPoint location  = [touch locationInView: self.view];
-//    p2d::squirrel_functions::emitTouchesBeganOrEndedEvent(engine.getSqWrapper().getVM(), "eventProxyTouchesBegan", location.x, location.y, [touch tapCount]);
+    UITouch* touch = [touches anyObject];
+    CGPoint location  = [touch locationInView: self.view];
+    engine.getLuaWrapper().proxyTouchesBeganOrEndedEvent("event_proxy_touches_began", location.x, location.y, [touch tapCount]);
 }
 
 - (void) touchesEnded: (NSSet*) touches withEvent: (UIEvent*) event
 {
-//    UITouch* touch = [touches anyObject];
-//    CGPoint location  = [touch locationInView: self.view];
-//    p2d::squirrel_functions::emitTouchesBeganOrEndedEvent(engine.getSqWrapper().getVM(), "eventProxyTouchesEnded", location.x, location.y, [touch tapCount]);
+    UITouch* touch = [touches anyObject];
+    CGPoint location  = [touch locationInView: self.view];
+    engine.getLuaWrapper().proxyTouchesBeganOrEndedEvent("event_proxy_touches_ended", location.x, location.y, [touch tapCount]);
 }
 
 - (void) touchesMoved: (NSSet*) touches withEvent: (UIEvent*) event
 {
-//    UITouch* touch = [touches anyObject];
-//    CGPoint previous  = [touch previousLocationInView: self.view];
-//    CGPoint current  = [touch locationInView: self.view];
-//    p2d::squirrel_functions::emitTouchesMoved(engine.getSqWrapper().getVM(), previous.x, previous.y, current.x, current.y);
+    UITouch* touch = [touches anyObject];
+    CGPoint previous  = [touch previousLocationInView: self.view];
+    CGPoint current  = [touch locationInView: self.view];
+    engine.getLuaWrapper().proxyTouchesMoved(previous.x, previous.y, current.x, current.y);
 }
 
 @end
