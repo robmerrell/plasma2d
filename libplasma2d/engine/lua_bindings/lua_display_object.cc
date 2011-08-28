@@ -1,6 +1,6 @@
 /*
 ** Lua binding: display_object
-** Generated automatically by tolua++-1.0.92 on Thu Aug 25 21:44:20 2011.
+** Generated automatically by tolua++-1.0.92 on Sat Aug 27 20:57:56 2011.
 */
 
 #ifndef __cplusplus
@@ -87,6 +87,186 @@ static int tolua_display_object_p2d_DisplayObject_new00_local(lua_State* tolua_S
  tolua_error(tolua_S,"#ferror in function 'new'.",&tolua_err);
  return 0;
 #endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* get function: x of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_get_p2d__DisplayObject_x
+static int tolua_get_p2d__DisplayObject_x(lua_State* tolua_S)
+{
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'x'",NULL);
+#endif
+  tolua_pushnumber(tolua_S,(lua_Number)self->x);
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* set function: x of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_set_p2d__DisplayObject_x
+static int tolua_set_p2d__DisplayObject_x(lua_State* tolua_S)
+{
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  tolua_Error tolua_err;
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'x'",NULL);
+  if (!tolua_isnumber(tolua_S,2,0,&tolua_err))
+   tolua_error(tolua_S,"#vinvalid type in variable assignment.",&tolua_err);
+#endif
+  self->x = ((float)  tolua_tonumber(tolua_S,2,0))
+;
+ return 0;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* get function: y of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_get_p2d__DisplayObject_y
+static int tolua_get_p2d__DisplayObject_y(lua_State* tolua_S)
+{
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'y'",NULL);
+#endif
+  tolua_pushnumber(tolua_S,(lua_Number)self->y);
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* set function: y of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_set_p2d__DisplayObject_y
+static int tolua_set_p2d__DisplayObject_y(lua_State* tolua_S)
+{
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  tolua_Error tolua_err;
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'y'",NULL);
+  if (!tolua_isnumber(tolua_S,2,0,&tolua_err))
+   tolua_error(tolua_S,"#vinvalid type in variable assignment.",&tolua_err);
+#endif
+  self->y = ((float)  tolua_tonumber(tolua_S,2,0))
+;
+ return 0;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* get function: angle of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_get_p2d__DisplayObject_angle
+static int tolua_get_p2d__DisplayObject_angle(lua_State* tolua_S)
+{
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'angle'",NULL);
+#endif
+  tolua_pushnumber(tolua_S,(lua_Number)self->angle);
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* set function: angle of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_set_p2d__DisplayObject_angle
+static int tolua_set_p2d__DisplayObject_angle(lua_State* tolua_S)
+{
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  tolua_Error tolua_err;
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'angle'",NULL);
+  if (!tolua_isnumber(tolua_S,2,0,&tolua_err))
+   tolua_error(tolua_S,"#vinvalid type in variable assignment.",&tolua_err);
+#endif
+  self->angle = ((float)  tolua_tonumber(tolua_S,2,0))
+;
+ return 0;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* get function: scale of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_get_p2d__DisplayObject_scale
+static int tolua_get_p2d__DisplayObject_scale(lua_State* tolua_S)
+{
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'scale'",NULL);
+#endif
+  tolua_pushnumber(tolua_S,(lua_Number)self->scale);
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* set function: scale of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_set_p2d__DisplayObject_scale
+static int tolua_set_p2d__DisplayObject_scale(lua_State* tolua_S)
+{
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  tolua_Error tolua_err;
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'scale'",NULL);
+  if (!tolua_isnumber(tolua_S,2,0,&tolua_err))
+   tolua_error(tolua_S,"#vinvalid type in variable assignment.",&tolua_err);
+#endif
+  self->scale = ((float)  tolua_tonumber(tolua_S,2,0))
+;
+ return 0;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* get function: anchor_x of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_get_p2d__DisplayObject_anchor_x
+static int tolua_get_p2d__DisplayObject_anchor_x(lua_State* tolua_S)
+{
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'anchor_x'",NULL);
+#endif
+  tolua_pushnumber(tolua_S,(lua_Number)self->anchor_x);
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* set function: anchor_x of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_set_p2d__DisplayObject_anchor_x
+static int tolua_set_p2d__DisplayObject_anchor_x(lua_State* tolua_S)
+{
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  tolua_Error tolua_err;
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'anchor_x'",NULL);
+  if (!tolua_isnumber(tolua_S,2,0,&tolua_err))
+   tolua_error(tolua_S,"#vinvalid type in variable assignment.",&tolua_err);
+#endif
+  self->anchor_x = ((float)  tolua_tonumber(tolua_S,2,0))
+;
+ return 0;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* get function: anchor_y of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_get_p2d__DisplayObject_anchor_y
+static int tolua_get_p2d__DisplayObject_anchor_y(lua_State* tolua_S)
+{
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'anchor_y'",NULL);
+#endif
+  tolua_pushnumber(tolua_S,(lua_Number)self->anchor_y);
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* set function: anchor_y of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_set_p2d__DisplayObject_anchor_y
+static int tolua_set_p2d__DisplayObject_anchor_y(lua_State* tolua_S)
+{
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  tolua_Error tolua_err;
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'anchor_y'",NULL);
+  if (!tolua_isnumber(tolua_S,2,0,&tolua_err))
+   tolua_error(tolua_S,"#vinvalid type in variable assignment.",&tolua_err);
+#endif
+  self->anchor_y = ((float)  tolua_tonumber(tolua_S,2,0))
+;
+ return 0;
 }
 #endif //#ifndef TOLUA_DISABLE
 
@@ -436,6 +616,12 @@ TOLUA_API int tolua_display_object_open (lua_State* tolua_S)
     tolua_function(tolua_S,"new",tolua_display_object_p2d_DisplayObject_new00);
     tolua_function(tolua_S,"new_local",tolua_display_object_p2d_DisplayObject_new00_local);
     tolua_function(tolua_S,".call",tolua_display_object_p2d_DisplayObject_new00_local);
+    tolua_variable(tolua_S,"x",tolua_get_p2d__DisplayObject_x,tolua_set_p2d__DisplayObject_x);
+    tolua_variable(tolua_S,"y",tolua_get_p2d__DisplayObject_y,tolua_set_p2d__DisplayObject_y);
+    tolua_variable(tolua_S,"angle",tolua_get_p2d__DisplayObject_angle,tolua_set_p2d__DisplayObject_angle);
+    tolua_variable(tolua_S,"scale",tolua_get_p2d__DisplayObject_scale,tolua_set_p2d__DisplayObject_scale);
+    tolua_variable(tolua_S,"anchor_x",tolua_get_p2d__DisplayObject_anchor_x,tolua_set_p2d__DisplayObject_anchor_x);
+    tolua_variable(tolua_S,"anchor_y",tolua_get_p2d__DisplayObject_anchor_y,tolua_set_p2d__DisplayObject_anchor_y);
     tolua_function(tolua_S,"set_coords",tolua_display_object_p2d_DisplayObject_set_coords00);
     tolua_function(tolua_S,"get_x",tolua_display_object_p2d_DisplayObject_get_x00);
     tolua_function(tolua_S,"get_y",tolua_display_object_p2d_DisplayObject_get_y00);

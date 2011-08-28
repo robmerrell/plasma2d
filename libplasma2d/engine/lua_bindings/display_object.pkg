@@ -4,8 +4,15 @@ namespace p2d {
 	class DisplayObject {
 	public:
 	    DisplayObject();
+	    
+	    // properties
+      float x;
+      float y;
+      float angle;
+      float scale;
+      float anchor_x;
+      float anchor_y;
 
-	    // From DisplayObject
 	    void setXY @ set_coords(float _x, float _y);
 	    float getX @ get_x();
 	    float getY @ get_y();

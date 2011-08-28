@@ -17,6 +17,7 @@ extern "C" {
     #include "lua_director.h"
     #include "lua_scene.h"
     #include "lua_texture.h"
+    #include "lua_display_object.h"
     #include "lua_actor.h"
 }
 

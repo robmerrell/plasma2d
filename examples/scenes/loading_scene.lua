@@ -15,7 +15,8 @@ function LoadingScene.new()
     function scene:init()
         -- add the logo
         local logo_tex = load_texture("logo.png")
-        logo = ActorFactory(logo_tex, 200, 100)
+        logo = p2d.Actor:new(logo_tex, 300, 300)
+        logo.scale = 2
         logo:set_anchor(0.5, 0.5)
         self:add_to_scene(logo)
         
@@ -31,6 +32,8 @@ function LoadingScene.new()
         elseif event.payload.stage == "moved" then
             logo:set_coords(event.payload.current_x, event.payload.current_y)
         end
+        
+        print(logo.x .. ", " .. logo.y)
     end
     
     

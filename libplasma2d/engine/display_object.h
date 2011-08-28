@@ -21,7 +21,9 @@
 namespace p2d {
     
     class DisplayObject {
-    protected:
+    public:
+        // bindings look and feel better accessing these properties publicly. Since they are simple types
+        // I'm leaving the public.
         float x;
         float y;
         float angle; // degrees
@@ -32,7 +34,6 @@ namespace p2d {
         float anchor_x;
         float anchor_y;
         
-    public:
         /**
          * Constructor
          */

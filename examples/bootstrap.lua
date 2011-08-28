@@ -94,10 +94,3 @@ function load_texture(texture_name)
     
     return tex
 end
-
-function ActorFactory(texture, x, y)
-    local actor = p2d.Actor:new()
-    actor:set_texture(texture)
-    actor:set_coords(x, y)
-    return actor
-end

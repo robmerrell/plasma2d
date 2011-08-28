@@ -1,6 +1,6 @@
 /*
 ** Lua binding: display_object
-** Generated automatically by tolua++-1.0.92 on Thu Aug 25 21:44:20 2011.
+** Generated automatically by tolua++-1.0.92 on Sat Aug 27 20:57:56 2011.
 */
 
 /* Exported function */

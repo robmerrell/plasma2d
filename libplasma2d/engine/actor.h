@@ -20,14 +20,14 @@ namespace p2d {
         // texture coords
         glm::mat4 tex_coords;
         
-        // image dimensions
-        float width;
-        float height;
-        
         // texture
         Texture* texture;
         
     public:
+        // image dimensions
+        float width;
+        float height;
+        
         /**
          * Default constructor
          */
