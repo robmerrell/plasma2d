@@ -19,19 +19,13 @@ function LoadingScene.new()
         logo:set_anchor(0.5, 0.5)
         self:add_to_scene(logo)
         
-        -- with environment
-        events.on("custom", self.handle_custom, self)
-        emit("custom", "payload")
-        
-        events.on("without", something)
-        emit("without", "my payload")
-        
         -- system events
         events.on("touch", self.handle_touch, self)
     end
     
     
     function scene:handle_touch(event)
+        -- drag the logo when moving a finger
         if event.payload.stage == "began" then
             logo:set_coords(event.payload.x, event.payload.y)
         elseif event.payload.stage == "moved" then
@@ -49,14 +43,5 @@ function LoadingScene.new()
     return scene
 end
 
--- Event handlers
-function something(e)
-    print("in something")
-    print(table.inspect(e))
-end
-
-function touch(e)
-    print("in touch " .. e.payload.stage)
-end
 
 return LoadingScene
