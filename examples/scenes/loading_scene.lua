@@ -15,7 +15,9 @@ function LoadingScene.new()
     function scene:init()
         -- add the logo
         local logo_tex = load_texture("logo.png")
-        logo = p2d.Actor:new(logo_tex, 300, 300)
+        p2d.TextureCache.cache_texture(logo_tex)
+        
+        logo = p2d.Actor:new(p2d.TextureCache.get_cached_texture("logo.png"), 300, 300)
         logo.scale = 2
         logo:set_anchor(0.5, 0.5)
         self:add_to_scene(logo)

@@ -39,6 +39,7 @@ void p2d::LuaWrapper::bootstrap() {
     tolua_director_open(lua);
     tolua_scene_open(lua);
     tolua_texture_open(lua);
+    tolua_texture_cache_open(lua);
     tolua_display_object_open(lua);
     tolua_actor_open(lua);
     tolua_bitmap_font_open(lua);

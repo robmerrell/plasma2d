@@ -74,12 +74,26 @@ end
 
 -- Provide cleaner access to the binding helpers
 p2d.Director = {}
+p2d.TextureCache = {}
+
 p2d.Director.get_current_scene = function()
     return p2d.BindingHelpers.Director_getCurrentScene()
 end
 
 p2d.Director.play_scene = function(scene)
     return p2d.BindingHelpers.Director_playScene(scene)
+end
+
+p2d.TextureCache.cache_texture = function(texture)
+    return p2d.BindingHelpers.TextureCache_cacheTexture(texture)
+end
+
+p2d.TextureCache.get_cached_texture = function(texture_name)
+    return p2d.BindingHelpers.TextureCache_getCachedTexture(texture_name)
+end
+
+p2d.TextureCache.remove_from_cache = function(texture_name)
+    return p2d.BindingHelpers.TextureCache_removeFromCache(texture_name)
 end
 
 

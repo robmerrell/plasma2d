@@ -1,0 +1,9 @@
+$#include "texture_cache.h"
+
+namespace p2d {
+    namespace BindingHelpers {
+      void TextureCache_cacheTexture(p2d::Texture* _texture);
+      p2d::Texture* TextureCache_getCachedTexture(std::string _texture_name);
+      void TextureCache_removeFromCache(std::string _texture_name);
+    }
+}

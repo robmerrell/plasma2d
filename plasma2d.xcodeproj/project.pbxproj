@@ -39,6 +39,8 @@
 		BE6005DA140A130600FE21AB /* lua_bitmap_font.h in Headers */ = {isa = PBXBuildFile; fileRef = BE6005D6140A130600FE21AB /* lua_bitmap_font.h */; };
 		BE6005DB140A130600FE21AB /* lua_label.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE6005D7140A130600FE21AB /* lua_label.cc */; };
 		BE6005DC140A130600FE21AB /* lua_label.h in Headers */ = {isa = PBXBuildFile; fileRef = BE6005D8140A130600FE21AB /* lua_label.h */; };
+		BE6005E0140B51A700FE21AB /* lua_texture_cache.cc in Sources */ = {isa = PBXBuildFile; fileRef = BE6005DE140B51A600FE21AB /* lua_texture_cache.cc */; };
+		BE6005E1140B51A700FE21AB /* lua_texture_cache.h in Headers */ = {isa = PBXBuildFile; fileRef = BE6005DF140B51A600FE21AB /* lua_texture_cache.h */; };
 		BEA8198413C419BB0058D983 /* fps.fnt in Resources */ = {isa = PBXBuildFile; fileRef = BEA8198213C419BB0058D983 /* fps.fnt */; };
 		BEA8198513C419BB0058D983 /* fps.png in Resources */ = {isa = PBXBuildFile; fileRef = BEA8198313C419BB0058D983 /* fps.png */; };
 		BEA8198813C42A310058D983 /* label.cc in Sources */ = {isa = PBXBuildFile; fileRef = BEA8198613C42A310058D983 /* label.cc */; };
@@ -485,6 +487,9 @@
 		BE6005D6140A130600FE21AB /* lua_bitmap_font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_bitmap_font.h; sourceTree = "<group>"; };
 		BE6005D7140A130600FE21AB /* lua_label.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_label.cc; sourceTree = "<group>"; };
 		BE6005D8140A130600FE21AB /* lua_label.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_label.h; sourceTree = "<group>"; };
+		BE6005DD140B507C00FE21AB /* texture_cache.pkg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = texture_cache.pkg; sourceTree = "<group>"; };
+		BE6005DE140B51A600FE21AB /* lua_texture_cache.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_texture_cache.cc; sourceTree = "<group>"; };
+		BE6005DF140B51A600FE21AB /* lua_texture_cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_texture_cache.h; sourceTree = "<group>"; };
 		BEA8198213C419BB0058D983 /* fps.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fps.fnt; sourceTree = "<group>"; };
 		BEA8198313C419BB0058D983 /* fps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps.png; sourceTree = "<group>"; };
 		BEA8198613C42A310058D983 /* label.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = label.cc; sourceTree = "<group>"; };
@@ -1107,6 +1112,8 @@
 		BED5310913F56E7E00895FAD /* lua_bindings */ = {
 			isa = PBXGroup;
 			children = (
+				BE6005DE140B51A600FE21AB /* lua_texture_cache.cc */,
+				BE6005DF140B51A600FE21AB /* lua_texture_cache.h */,
 				BE6005D5140A130600FE21AB /* lua_bitmap_font.cc */,
 				BE6005D6140A130600FE21AB /* lua_bitmap_font.h */,
 				BE6005D7140A130600FE21AB /* lua_label.cc */,
@@ -1128,6 +1135,7 @@
 				BE5B4A4514074DB200DFB397 /* display_object.pkg */,
 				BE6005D21409EE2300FE21AB /* label.pkg */,
 				BE6005D4140A120100FE21AB /* bitmap_font.pkg */,
+				BE6005DD140B507C00FE21AB /* texture_cache.pkg */,
 			);
 			path = lua_bindings;
 			sourceTree = "<group>";
@@ -1901,6 +1909,7 @@
 				BE5B4A4914074E1F00DFB397 /* lua_display_object.h in Headers */,
 				BE6005DA140A130600FE21AB /* lua_bitmap_font.h in Headers */,
 				BE6005DC140A130600FE21AB /* lua_label.h in Headers */,
+				BE6005E1140B51A700FE21AB /* lua_texture_cache.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2206,6 +2215,7 @@
 				BE5B4A4814074E1F00DFB397 /* lua_display_object.cc in Sources */,
 				BE6005D9140A130600FE21AB /* lua_bitmap_font.cc in Sources */,
 				BE6005DB140A130600FE21AB /* lua_label.cc in Sources */,
+				BE6005E0140B51A700FE21AB /* lua_texture_cache.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
