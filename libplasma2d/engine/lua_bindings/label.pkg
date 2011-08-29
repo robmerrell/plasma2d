@@ -1,0 +1,22 @@
+$#include "label.h"
+$#include "display_object.h"
+$pfile "display_object.pkg"
+
+namespace p2d {
+    class Label : public DisplayObject {
+    public:
+        Label();
+        
+        // properties
+        std::string text;
+        float width;
+        float height;
+
+        void setFont @ set_font(p2d::BitmapFont* _font);
+        void setText @ set_text(std::string _text);
+        std::string getText @ get_text();
+        void setDimensions @ set_dimensions(float _width, float _height);
+        float getWidth @ get_width();
+        float getHeight @ get_height();
+    };
+}

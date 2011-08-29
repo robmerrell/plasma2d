@@ -84,13 +84,35 @@ end
 
 
 -- Factories
-function load_texture(texture_name)
+function load_texture(texture_name, resource)
+    if resource == nil then
+        resource = "images"
+    end
+    
     local tex = p2d.Texture:new()
-    local path = p2d.system.resource_paths.images .. "/" .. texture_name
+    local path = p2d.system.resource_paths[resource] .. "/" .. texture_name
     
     if tex:load_texture(texture_name, path) == false then 
         print("Error loading " .. texture_name) -- TODO: use err instead of print and show SOIL_last_result
     end
     
     return tex
+end
+
+function label_factory(text, font, x, y)
+    local font_texture = load_texture(font .. ".png", "fonts")
+    
+    local path = p2d.system.resource_paths.fonts .. "/" .. font .. ".fnt"
+    
+    local bmfont = p2d.BitmapFont:new()
+    bmfont:set_font_texture(font_texture)
+    bmfont:load_font(font, path)
+    
+    local label = p2d.Label:new()
+    label:set_font(bmfont)
+    label.text = text
+    label.x = x
+    label.y = y
+    
+    return label
 end

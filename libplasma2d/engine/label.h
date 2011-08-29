@@ -14,7 +14,10 @@
 namespace p2d {
     
     class Label : public DisplayObject {
-    private:
+    private:        
+        p2d::BitmapFont* bitmap_font;
+        
+    public:
         // text to be rendered by the label. It doesn't support
         // wrapping, so the programmer needs to handle that automatically
         std::string text;
@@ -23,9 +26,6 @@ namespace p2d {
         float width;
         float height;
         
-        p2d::BitmapFont* bitmap_font;
-        
-    public:
         Label();
         
         void setFont(BitmapFont* _font);

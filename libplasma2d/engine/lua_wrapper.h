@@ -19,6 +19,8 @@ extern "C" {
     #include "lua_texture.h"
     #include "lua_display_object.h"
     #include "lua_actor.h"
+    #include "lua_bitmap_font.h"
+    #include "lua_label.h"
 }
 
 namespace p2d {

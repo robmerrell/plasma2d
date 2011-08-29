@@ -20,6 +20,9 @@ function LoadingScene.new()
         logo:set_anchor(0.5, 0.5)
         self:add_to_scene(logo)
         
+        local label = label_factory("0.123456789", "fps", 200, 200)
+        self:add_to_scene(label)
+        
         -- system events
         events.on("touch", self.handle_touch, self)
     end

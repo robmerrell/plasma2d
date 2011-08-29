@@ -1,0 +1,12 @@
+$#include "bitmap_font.h"
+
+namespace p2d {
+    class BitmapFont {
+    public:
+        BitmapFont();
+        void loadFont @ load_font(std::string _font_name, std::string _full_font_path);
+        void setFontTexture @ set_font_texture(p2d::Texture*);
+        void parse();
+        int getFontSize @ get_font_size();
+    };
+}
