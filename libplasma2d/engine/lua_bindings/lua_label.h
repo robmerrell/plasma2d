@@ -1,6 +1,6 @@
 /*
 ** Lua binding: label
-** Generated automatically by tolua++-1.0.92 on Sun Aug 28 00:08:51 2011.
+** Generated automatically by tolua++-1.0.92 on Sun Aug 28 19:48:09 2011.
 */
 
 /* Exported function */

@@ -10,6 +10,14 @@ p2d::Label::Label() {
 }
 
 
+p2d::Label::Label(std::string _text, p2d::BitmapFont* _font, float _x, float _y) {
+    text = _text;
+    bitmap_font = _font;
+    x = _x;
+    y = _y;
+}
+
+
 void p2d::Label::setFont(p2d::BitmapFont* _font) {
     bitmap_font = _font;
 }

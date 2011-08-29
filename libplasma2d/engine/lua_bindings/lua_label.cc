@@ -1,6 +1,6 @@
 /*
 ** Lua binding: label
-** Generated automatically by tolua++-1.0.92 on Sun Aug 28 00:08:51 2011.
+** Generated automatically by tolua++-1.0.92 on Sun Aug 28 19:48:09 2011.
 */
 
 #ifndef __cplusplus
@@ -666,6 +666,69 @@ static int tolua_label_p2d_Label_new00_local(lua_State* tolua_S)
 }
 #endif //#ifndef TOLUA_DISABLE
 
+/* method: new of class  p2d::Label */
+#ifndef TOLUA_DISABLE_tolua_label_p2d_Label_new01
+static int tolua_label_p2d_Label_new01(lua_State* tolua_S)
+{
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertable(tolua_S,1,"p2d::Label",0,&tolua_err) ||
+     !tolua_iscppstring(tolua_S,2,0,&tolua_err) ||
+     !tolua_isusertype(tolua_S,3,"p2d::BitmapFont",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,4,0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,5,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,6,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+ {
+  std::string _text = ((std::string)  tolua_tocppstring(tolua_S,2,0));
+  p2d::BitmapFont* _font = ((p2d::BitmapFont*)  tolua_tousertype(tolua_S,3,0));
+  float _x = ((float)  tolua_tonumber(tolua_S,4,0));
+  float _y = ((float)  tolua_tonumber(tolua_S,5,0));
+  {
+   p2d::Label* tolua_ret = (p2d::Label*)  Mtolua_new((p2d::Label)(_text,_font,_x,_y));
+    tolua_pushusertype(tolua_S,(void*)tolua_ret,"p2d::Label");
+  }
+ }
+ return 1;
+tolua_lerror:
+ return tolua_label_p2d_Label_new00(tolua_S);
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: new_local of class  p2d::Label */
+#ifndef TOLUA_DISABLE_tolua_label_p2d_Label_new01_local
+static int tolua_label_p2d_Label_new01_local(lua_State* tolua_S)
+{
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertable(tolua_S,1,"p2d::Label",0,&tolua_err) ||
+     !tolua_iscppstring(tolua_S,2,0,&tolua_err) ||
+     !tolua_isusertype(tolua_S,3,"p2d::BitmapFont",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,4,0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,5,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,6,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+ {
+  std::string _text = ((std::string)  tolua_tocppstring(tolua_S,2,0));
+  p2d::BitmapFont* _font = ((p2d::BitmapFont*)  tolua_tousertype(tolua_S,3,0));
+  float _x = ((float)  tolua_tonumber(tolua_S,4,0));
+  float _y = ((float)  tolua_tonumber(tolua_S,5,0));
+  {
+   p2d::Label* tolua_ret = (p2d::Label*)  Mtolua_new((p2d::Label)(_text,_font,_x,_y));
+    tolua_pushusertype(tolua_S,(void*)tolua_ret,"p2d::Label");
+    tolua_register_gc(tolua_S,lua_gettop(tolua_S));
+  }
+ }
+ return 1;
+tolua_lerror:
+ return tolua_label_p2d_Label_new00_local(tolua_S);
+}
+#endif //#ifndef TOLUA_DISABLE
+
 /* get function: text of class  p2d::Label */
 #ifndef TOLUA_DISABLE_tolua_get_p2d__Label_text
 static int tolua_get_p2d__Label_text(lua_State* tolua_S)
@@ -1000,6 +1063,9 @@ TOLUA_API int tolua_label_open (lua_State* tolua_S)
     tolua_function(tolua_S,"new",tolua_label_p2d_Label_new00);
     tolua_function(tolua_S,"new_local",tolua_label_p2d_Label_new00_local);
     tolua_function(tolua_S,".call",tolua_label_p2d_Label_new00_local);
+    tolua_function(tolua_S,"new",tolua_label_p2d_Label_new01);
+    tolua_function(tolua_S,"new_local",tolua_label_p2d_Label_new01_local);
+    tolua_function(tolua_S,".call",tolua_label_p2d_Label_new01_local);
     tolua_variable(tolua_S,"text",tolua_get_p2d__Label_text,tolua_set_p2d__Label_text);
     tolua_variable(tolua_S,"width",tolua_get_p2d__Label_width,tolua_set_p2d__Label_width);
     tolua_variable(tolua_S,"height",tolua_get_p2d__Label_height,tolua_set_p2d__Label_height);

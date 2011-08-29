@@ -47,6 +47,7 @@ namespace p2d {
         
     public:
         BitmapFont() {};
+        BitmapFont(std::string _text, Texture* _texture, float _x, float _y);
         
         void loadFont(std::string _font_name, std::string _full_font_path);
         

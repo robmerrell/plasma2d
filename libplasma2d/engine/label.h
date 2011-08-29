@@ -27,6 +27,7 @@ namespace p2d {
         float height;
         
         Label();
+        Label(std::string _text, p2d::BitmapFont* _font, float _x, float _y);
         
         void setFont(BitmapFont* _font);
         

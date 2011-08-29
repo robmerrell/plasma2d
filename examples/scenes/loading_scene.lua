@@ -20,7 +20,10 @@ function LoadingScene.new()
         logo:set_anchor(0.5, 0.5)
         self:add_to_scene(logo)
         
-        local label = label_factory("0.123456789", "fps", 200, 200)
+        -- add the label
+        local fps_tex = load_texture("fps.png", "fonts")
+        local bitmap_font = load_bitmap_font("fps", fps_tex)
+        local label = p2d.Label:new("0.987654321", bitmap_font, 200, 200)
         self:add_to_scene(label)
         
         -- system events

@@ -99,20 +99,11 @@ function load_texture(texture_name, resource)
     return tex
 end
 
-function label_factory(text, font, x, y)
-    local font_texture = load_texture(font .. ".png", "fonts")
-    
-    local path = p2d.system.resource_paths.fonts .. "/" .. font .. ".fnt"
-    
-    local bmfont = p2d.BitmapFont:new()
-    bmfont:set_font_texture(font_texture)
-    bmfont:load_font(font, path)
-    
-    local label = p2d.Label:new()
-    label:set_font(bmfont)
-    label.text = text
-    label.x = x
-    label.y = y
-    
-    return label
+function load_bitmap_font(font_name, texture)
+    local path = p2d.system.resource_paths.fonts .. "/" .. font_name .. ".fnt"
+    local bitmap_font = p2d.BitmapFont:new()
+    bitmap_font:set_font_texture(texture)
+    bitmap_font:load_font(font_name, path)
+
+    return bitmap_font
 end

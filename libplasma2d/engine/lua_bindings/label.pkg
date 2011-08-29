@@ -6,6 +6,7 @@ namespace p2d {
     class Label : public DisplayObject {
     public:
         Label();
+        Label(std::string _text, p2d::BitmapFont* _font, float _x, float _y);
         
         // properties
         std::string text;
