@@ -84,6 +84,10 @@ p2d.Director.play_scene = function(scene)
     return p2d.BindingHelpers.Director_playScene(scene)
 end
 
+p2d.Director.get_fps = function()
+    return p2d.BindingHelpers.Director_getFPS()
+end
+
 p2d.TextureCache.cache_texture = function(texture)
     return p2d.BindingHelpers.TextureCache_cacheTexture(texture)
 end

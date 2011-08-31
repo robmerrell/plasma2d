@@ -1,6 +1,6 @@
 /*
 ** Lua binding: director
-** Generated automatically by tolua++-1.0.92 on Wed Aug 24 21:44:31 2011.
+** Generated automatically by tolua++-1.0.92 on Wed Aug 31 00:54:19 2011.
 */
 
 #ifndef __cplusplus
@@ -76,6 +76,33 @@ static int tolua_director_p2d_BindingHelpers_Director_getCurrentScene00(lua_Stat
 }
 #endif //#ifndef TOLUA_DISABLE
 
+/* function: p2d::BindingHelpers::Director_getFPS */
+#ifndef TOLUA_DISABLE_tolua_director_p2d_BindingHelpers_Director_getFPS00
+static int tolua_director_p2d_BindingHelpers_Director_getFPS00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isnoobj(tolua_S,1,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  {
+   float tolua_ret = (float)  p2d::BindingHelpers::Director_getFPS();
+   tolua_pushnumber(tolua_S,(lua_Number)tolua_ret);
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'Director_getFPS'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
 /* Open function */
 TOLUA_API int tolua_director_open (lua_State* tolua_S)
 {
@@ -89,6 +116,7 @@ TOLUA_API int tolua_director_open (lua_State* tolua_S)
    tolua_beginmodule(tolua_S,"BindingHelpers");
     tolua_function(tolua_S,"Director_playScene",tolua_director_p2d_BindingHelpers_Director_playScene00);
     tolua_function(tolua_S,"Director_getCurrentScene",tolua_director_p2d_BindingHelpers_Director_getCurrentScene00);
+    tolua_function(tolua_S,"Director_getFPS",tolua_director_p2d_BindingHelpers_Director_getFPS00);
    tolua_endmodule(tolua_S);
   tolua_endmodule(tolua_S);
  tolua_endmodule(tolua_S);

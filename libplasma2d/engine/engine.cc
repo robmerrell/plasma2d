@@ -68,4 +68,5 @@ void p2d::Engine::tick() {
 
 void p2d::Engine::setFPS(float _fps) {
     fps = _fps;
+    p2d::Director::Inst()->setFPS(_fps);
 }

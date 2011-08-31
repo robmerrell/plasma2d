@@ -25,6 +25,8 @@ namespace p2d {
         // the currently running scene
         p2d::Scene* current_scene;
         
+        float fps;
+        
     public:
         /**
          * Get instance of the director
@@ -47,11 +49,18 @@ namespace p2d {
          * Get the current scene
          */
         Scene* getCurrentScene();
+        
+        /**
+         * Get and set frames per second. // TODO: why is this here?
+         */
+        void setFPS(float _fps);
+        float getFPS();
     };
     
     namespace BindingHelpers {
         void Director_playScene(Scene* _scene);
         Scene* Director_getCurrentScene();
+        float Director_getFPS();
     }
     
 }

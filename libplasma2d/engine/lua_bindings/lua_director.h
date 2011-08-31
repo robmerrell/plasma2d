@@ -1,6 +1,6 @@
 /*
 ** Lua binding: director
-** Generated automatically by tolua++-1.0.92 on Wed Aug 24 21:44:31 2011.
+** Generated automatically by tolua++-1.0.92 on Wed Aug 31 00:54:19 2011.
 */
 
 /* Exported function */

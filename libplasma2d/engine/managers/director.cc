@@ -39,6 +39,15 @@ p2d::Scene* p2d::Director::getCurrentScene() {
 }
 
 
+void p2d::Director::setFPS(float _fps) {
+    fps = _fps;
+}
+float p2d::Director::getFPS() {
+    return fps;
+}
+
+
 // Binding helpers
 void p2d::BindingHelpers::Director_playScene(p2d::Scene* _scene) { p2d::Director::Inst()->playScene(_scene); }
 p2d::Scene* p2d::BindingHelpers::Director_getCurrentScene() { return p2d::Director::Inst()->getCurrentScene(); }
+float p2d::BindingHelpers::Director_getFPS() { return p2d::Director::Inst()->getFPS(); }

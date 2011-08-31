@@ -41,7 +41,8 @@ function LoadingScene.new()
             logo:set_coords(event.payload.current_x, event.payload.current_y)
         end
         
-        print(logo.x .. ", " .. logo.y)
+        -- print(logo.x .. ", " .. logo.y)
+        print(p2d.Director.get_fps())
     end
     
     
