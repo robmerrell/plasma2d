@@ -35,6 +35,10 @@ function process_events()
 end
 
 -- event proxies
+function event_proxy_scene_update()
+    emit("scene_update", {})
+end
+
 function event_proxy_touches_began(x, y, tap_count)
     emit("touch", {
         stage = "began",

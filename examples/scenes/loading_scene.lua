@@ -9,6 +9,7 @@ function LoadingScene.new()
     
     -- actors
     local logo
+    local label
     
     
     -- called when the scene first
@@ -25,11 +26,12 @@ function LoadingScene.new()
         -- add the label
         local fps_tex = load_texture("fps.png", "fonts")
         local bitmap_font = load_bitmap_font("fps", fps_tex)
-        local label = p2d.Label:new("0.987654321", bitmap_font, 200, 200)
+        label = p2d.Label:new("0.987654321", bitmap_font, 200, 200)
         self:add_to_scene(label)
         
         -- system events
         events.on("touch", self.handle_touch, self)
+        events.on("scene_update", self.scene_update, self)
     end
     
     
@@ -41,8 +43,12 @@ function LoadingScene.new()
             logo:set_coords(event.payload.current_x, event.payload.current_y)
         end
         
-        -- print(logo.x .. ", " .. logo.y)
-        print(p2d.Director.get_fps())
+        print(logo.x .. ", " .. logo.y)
+    end
+    
+    
+    function scene:scene_update(event)
+        label:set_text(p2d.Director.get_fps())
     end
     
     

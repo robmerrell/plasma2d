@@ -76,6 +76,11 @@ namespace p2d {
          */
         void processEventQueue();
         
+        /**
+         * emit engine specific events
+         */
+        void emitSceneUpdateEvent();
+        
         
         /**
          * Event proxies from device specific code

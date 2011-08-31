@@ -82,6 +82,12 @@ void p2d::LuaWrapper::processEventQueue() {
 }
 
 
+void p2d::LuaWrapper::emitSceneUpdateEvent() {
+    lua_getglobal(lua, "event_proxy_scene_update");
+    lua_pcall(lua, 0, 0, 0);
+}
+
+
 void p2d::LuaWrapper::proxyTouchesBeganOrEndedEvent(std::string _proxy_function, float _x, float _y, int _tap_count) {
     lua_getglobal(lua, _proxy_function.c_str());
     lua_pushnumber(lua, _x);
