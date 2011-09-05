@@ -1,6 +1,6 @@
 /*
 ** Lua binding: display_object
-** Generated automatically by tolua++-1.0.92 on Sat Aug 27 20:57:56 2011.
+** Generated automatically by tolua++-1.0.92 on Mon Sep  5 10:03:18 2011.
 */
 
 #ifndef __cplusplus
@@ -598,6 +598,103 @@ static int tolua_display_object_p2d_DisplayObject_get_anchor_y00(lua_State* tolu
 }
 #endif //#ifndef TOLUA_DISABLE
 
+/* method: setupTween of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_display_object_p2d_DisplayObject_setup_tween00
+static int tolua_display_object_p2d_DisplayObject_setup_tween00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"p2d::DisplayObject",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'setupTween'", NULL);
+#endif
+  {
+   self->setupTween();
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'setup_tween'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: addProperty of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_display_object_p2d_DisplayObject_add_property00
+static int tolua_display_object_p2d_DisplayObject_add_property00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"p2d::DisplayObject",0,&tolua_err) ||
+     !tolua_iscppstring(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,3,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,4,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+  std::string _property = ((std::string)  tolua_tocppstring(tolua_S,2,0));
+  float _value = ((float)  tolua_tonumber(tolua_S,3,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'addProperty'", NULL);
+#endif
+  {
+   self->addProperty(_property,_value);
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'add_property'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: startTween of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_display_object_p2d_DisplayObject_start_tween00
+static int tolua_display_object_p2d_DisplayObject_start_tween00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"p2d::DisplayObject",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'startTween'", NULL);
+#endif
+  {
+   self->startTween();
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'start_tween'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
 /* Open function */
 TOLUA_API int tolua_display_object_open (lua_State* tolua_S)
 {
@@ -632,6 +729,9 @@ TOLUA_API int tolua_display_object_open (lua_State* tolua_S)
     tolua_function(tolua_S,"set_anchor",tolua_display_object_p2d_DisplayObject_set_anchor00);
     tolua_function(tolua_S,"get_anchor_x",tolua_display_object_p2d_DisplayObject_get_anchor_x00);
     tolua_function(tolua_S,"get_anchor_y",tolua_display_object_p2d_DisplayObject_get_anchor_y00);
+    tolua_function(tolua_S,"setup_tween",tolua_display_object_p2d_DisplayObject_setup_tween00);
+    tolua_function(tolua_S,"add_property",tolua_display_object_p2d_DisplayObject_add_property00);
+    tolua_function(tolua_S,"start_tween",tolua_display_object_p2d_DisplayObject_start_tween00);
    tolua_endmodule(tolua_S);
   tolua_endmodule(tolua_S);
  tolua_endmodule(tolua_S);

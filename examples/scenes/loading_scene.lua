@@ -10,6 +10,7 @@ function LoadingScene.new()
     -- actors
     local logo
     local label
+    local expanded = false
     
     
     -- called when the scene first
@@ -19,7 +20,7 @@ function LoadingScene.new()
         p2d.TextureCache.cache_texture(logo_tex)
         
         logo = p2d.Actor:new(p2d.TextureCache.get_cached_texture("logo.png"), 300, 300)
-        logo.scale = 2
+        logo.scale = 1
         logo:set_anchor(0.5, 0.5)
         self:add_to_scene(logo)
         
@@ -36,14 +37,31 @@ function LoadingScene.new()
     
     
     function scene:handle_touch(event)
-        -- drag the logo when moving a finger
-        if event.payload.stage == "began" then
-            logo:set_coords(event.payload.x, event.payload.y)
-        elseif event.payload.stage == "moved" then
-            logo:set_coords(event.payload.current_x, event.payload.current_y)
+        print(logo.scale)
+        if event.payload.stage == "ended" then
+            logo:setup_tween()
+            
+            logo:add_property("x", event.payload.x)
+            logo:add_property("y", event.payload.y)
+            
+            if expanded then
+                logo:add_property("scale", 1)
+                expanded = false
+            else
+                logo:add_property("scale", 2)
+                expanded = true
+            end
+            
+            logo:start_tween()
         end
+        -- drag the logo when moving a finger
+        -- if event.payload.stage == "began" then
+        --     logo:set_coords(event.payload.x, event.payload.y)
+        -- elseif event.payload.stage == "moved" then
+        --     logo:set_coords(event.payload.current_x, event.payload.current_y)
+        -- end
         
-        print(logo.x .. ", " .. logo.y)
+        -- print(logo.x .. ", " .. logo.y)
     end
     
     

@@ -41,6 +41,7 @@ void p2d::Scene::tick(float _delta_time) {
     
     std::vector<DisplayObject*>::iterator iter;
     for (iter = display_objects.begin(); iter != display_objects.end(); iter++) {
+        (*iter)->stepTween(_delta_time * 1000);
         (*iter)->update(_delta_time);
         (*iter)->draw();
     }

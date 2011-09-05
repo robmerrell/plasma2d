@@ -23,5 +23,9 @@ namespace p2d {
 	    void setAnchor @ set_anchor(float _x, float _y);
 	    float getAnchorX @ get_anchor_x();
 	    float getAnchorY @ get_anchor_y();
+	    
+      void setupTween @ setup_tween();
+      void addProperty @ add_property(std::string _property, float _value);
+      void startTween @ start_tween();
 	};
 }

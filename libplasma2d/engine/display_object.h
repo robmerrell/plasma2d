@@ -15,12 +15,20 @@
 #include "../external/glm/gtc/matrix_transform.hpp"
 #include "../external/glm/gtc/type_ptr.hpp"
 
+#include "../external/cpptweener/CppTweener.h"
+
 #include "defs.h"
 #include "managers/shader_manager.h"
 
 namespace p2d {
     
     class DisplayObject {
+    private:
+        tween::Tweener tweener;
+        tween::TweenerParam param;
+        
+        bool tweening;
+        
     public:
         // bindings look and feel better accessing these properties publicly. Since they are simple types
         // I'm leaving the public.
@@ -64,6 +72,24 @@ namespace p2d {
         void setAnchor(float _x, float _y);
         float getAnchorX();
         float getAnchorY();
+        
+        /**
+         * set up the tweening system
+         */
+        void setupTween();
+        
+        /**
+         * Add properties to be tweened
+         */
+        void addProperty(std::string _property, float _value);
+        
+        /**
+         * Start tweening
+         */
+        void startTween();
+        
+        void testTween();
+        void stepTween(float _delta_time);
         
         /**
          * Transform the position of an object to it's anchor

@@ -12,6 +12,7 @@ p2d::DisplayObject::DisplayObject() {
     anchor_y = 0.0f;
     angle = 0.0f;
     scale = 1.0f;
+    tweening = false;
 }
 
 
@@ -64,4 +65,42 @@ float p2d::DisplayObject::getAnchorX() {
 
 float p2d::DisplayObject::getAnchorY() {
     return anchor_y;
+}
+
+
+void p2d::DisplayObject::setupTween() {
+    param = tween::TweenerParam(500, tween::ELASTIC, tween::EASE_OUT);
+}
+
+
+void p2d::DisplayObject::addProperty(std::string _property, float _value) {
+    if (_property == "x")
+        param.addProperty(&x, _value);
+    else if (_property == "y")
+        param.addProperty(&y, _value);
+    else if (_property == "scale")
+        param.addProperty(&scale, _value);
+    else if (_property == "angle")
+        param.addProperty(&angle, _value);
+}
+
+
+void p2d::DisplayObject::startTween() {
+    tweening = true;
+    tweener.addTween(param);
+}
+
+
+void p2d::DisplayObject::testTween() {
+    tweening = true;
+    param = tween::TweenerParam(3000, tween::LINEAR, tween::EASE_OUT);
+    param.addProperty(&x, 600);
+    param.addProperty(&y, 600);
+    param.addProperty(&angle, 185);
+    tweener.addTween(param);
+}
+
+void p2d::DisplayObject::stepTween(float _delta_time) {
+    if (tweening)
+        tweener.step(_delta_time);
 }
