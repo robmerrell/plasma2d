@@ -60,7 +60,7 @@ namespace p2d {
         /**
          * Proxies "tick" to the director
          */
-        void tick();
+        void tick(float _delta_time);
         
         /**
          * Set the FPS. Only the display system should call this

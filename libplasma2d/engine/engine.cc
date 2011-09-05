@@ -58,12 +58,10 @@ p2d::LuaWrapper& p2d::Engine::getLuaWrapper() {
 }
 
 
-void p2d::Engine::tick() {
+void p2d::Engine::tick(float _delta_time) {
     luaWrapper.processEventQueue();
     luaWrapper.emitSceneUpdateEvent();
-//    p2d::squirrel_functions::emitSceneUpdateEvent(getSqWrapper().getVM());
-//    p2d::squirrel_functions::processEventQueue(sqWrapper.getVM());
-    p2d::Director::Inst()->getCurrentScene()->tick(fps);
+    p2d::Director::Inst()->getCurrentScene()->tick(_delta_time);
 }
 
 

@@ -20,6 +20,7 @@
     EAGLContext *context;
     
     p2d::Engine engine;
+    float last_timestamp;
     
     BOOL animating;
     NSInteger animationFrameInterval;

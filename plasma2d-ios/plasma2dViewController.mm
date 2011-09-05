@@ -116,6 +116,7 @@
         [aDisplayLink setFrameInterval:animationFrameInterval];
         [aDisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
         self.displayLink = aDisplayLink;
+        last_timestamp = 0.0f;
         
         animating = TRUE;
     }
@@ -135,7 +136,9 @@
     [(EAGLView *)self.view setFramebuffer];
     
     engine.setFPS(1.0f / (self.displayLink.duration * self.displayLink.frameInterval));
-    engine.tick();
+    float delta_time = self.displayLink.timestamp - last_timestamp;
+    last_timestamp = self.displayLink.timestamp;
+    engine.tick(delta_time);
     
     [(EAGLView *)self.view presentFramebuffer];
 }
