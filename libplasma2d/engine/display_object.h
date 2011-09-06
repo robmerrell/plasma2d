@@ -27,7 +27,7 @@ namespace p2d {
         tween::Tweener tweener;
         tween::TweenerParam param;
         
-        bool tweening;
+        bool tweening; // TODO: do we need this?
         
     public:
         // bindings look and feel better accessing these properties publicly. Since they are simple types
@@ -76,7 +76,7 @@ namespace p2d {
         /**
          * set up the tweening system
          */
-        void setupTween();
+        void setupTween(int _time, int _transition, int _easing_equation);
         
         /**
          * Add properties to be tweened
@@ -88,7 +88,9 @@ namespace p2d {
          */
         void startTween();
         
-        void testTween();
+        /**
+         * Step through tweeing animations
+         */
         void stepTween(float _delta_time);
         
         /**

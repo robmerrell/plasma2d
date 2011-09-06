@@ -114,3 +114,14 @@ function table.contains(table, element)
   
   return false
 end
+
+-- check if a key exists in a table
+function table.haskey(table, key)
+    for table_key, _ in pairs(table) do
+        if table_key == key then
+            return true
+        end
+    end
+    
+    return false
+end

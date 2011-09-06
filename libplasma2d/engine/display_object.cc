@@ -68,8 +68,8 @@ float p2d::DisplayObject::getAnchorY() {
 }
 
 
-void p2d::DisplayObject::setupTween() {
-    param = tween::TweenerParam(500, tween::ELASTIC, tween::EASE_OUT);
+void p2d::DisplayObject::setupTween(int _time, int _transition, int _easing_equation) {
+    param = tween::TweenerParam(_time, _transition, _easing_equation);
 }
 
 
@@ -90,15 +90,6 @@ void p2d::DisplayObject::startTween() {
     tweener.addTween(param);
 }
 
-
-void p2d::DisplayObject::testTween() {
-    tweening = true;
-    param = tween::TweenerParam(3000, tween::LINEAR, tween::EASE_OUT);
-    param.addProperty(&x, 600);
-    param.addProperty(&y, 600);
-    param.addProperty(&angle, 185);
-    tweener.addTween(param);
-}
 
 void p2d::DisplayObject::stepTween(float _delta_time) {
     if (tweening)

@@ -1,0 +1,26 @@
+$#include "../../external/cpptweener/CppTweener.h"
+
+namespace tween {
+  
+  enum {
+      LINEAR,
+      SINE,
+      QUINT,
+      QUART,
+      QUAD,
+      EXPO,
+      ELASTIC,
+      CUBIC,
+      CIRC,
+      BOUNCE,
+      BACK
+
+  };
+
+  enum {
+      EASE_IN,
+      EASE_OUT,
+      EASE_IN_OUT
+  };
+  
+};

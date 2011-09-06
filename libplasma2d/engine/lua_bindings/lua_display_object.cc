@@ -1,6 +1,6 @@
 /*
 ** Lua binding: display_object
-** Generated automatically by tolua++-1.0.92 on Mon Sep  5 10:03:18 2011.
+** Generated automatically by tolua++-1.0.92 on Mon Sep  5 10:53:28 2011.
 */
 
 #ifndef __cplusplus
@@ -606,18 +606,24 @@ static int tolua_display_object_p2d_DisplayObject_setup_tween00(lua_State* tolua
  tolua_Error tolua_err;
  if (
      !tolua_isusertype(tolua_S,1,"p2d::DisplayObject",0,&tolua_err) ||
-     !tolua_isnoobj(tolua_S,2,&tolua_err)
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,3,0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,4,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,5,&tolua_err)
  )
   goto tolua_lerror;
  else
 #endif
  {
   p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+  int _time = ((int)  tolua_tonumber(tolua_S,2,0));
+  int _transition = ((int)  tolua_tonumber(tolua_S,3,0));
+  int _easing_equation = ((int)  tolua_tonumber(tolua_S,4,0));
 #ifndef TOLUA_RELEASE
   if (!self) tolua_error(tolua_S,"invalid 'self' in function 'setupTween'", NULL);
 #endif
   {
-   self->setupTween();
+   self->setupTween(_time,_transition,_easing_equation);
   }
  }
  return 0;

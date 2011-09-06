@@ -129,3 +129,20 @@ function load_bitmap_font(font_name, texture)
 
     return bitmap_font
 end
+
+function tween_to(obj, params)
+    if params == nil then return nil end
+    
+    params.time = params.time or 1000
+    params.transition = params.transition or tween.LINEAR
+    params.easing = params.easing or tween.EASE_OUT
+
+    obj:setup_tween(params.time, params.transition, params.easing)
+    
+    if table.haskey(params, "x") then obj:add_property("x", params.x) end
+    if table.haskey(params, "y") then obj:add_property("y", params.y) end
+    if table.haskey(params, "scale") then obj:add_property("scale", params.scale) end
+    if table.haskey(params, "angle") then obj:add_property("angle", params.angle) end
+    
+    obj:start_tween()
+end

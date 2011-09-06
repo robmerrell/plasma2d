@@ -37,31 +37,17 @@ function LoadingScene.new()
     
     
     function scene:handle_touch(event)
-        print(logo.scale)
         if event.payload.stage == "ended" then
-            logo:setup_tween()
-            
-            logo:add_property("x", event.payload.x)
-            logo:add_property("y", event.payload.y)
-            
+            local scale
             if expanded then
-                logo:add_property("scale", 1)
-                expanded = false
+                scale = 1
             else
-                logo:add_property("scale", 2)
-                expanded = true
+                scale = 2
             end
+            expanded = not expanded
             
-            logo:start_tween()
+            tween_to(logo, {time=750, x=event.payload.x, y=event.payload.y, scale=scale, transition=tween.ELASTIC})
         end
-        -- drag the logo when moving a finger
-        -- if event.payload.stage == "began" then
-        --     logo:set_coords(event.payload.x, event.payload.y)
-        -- elseif event.payload.stage == "moved" then
-        --     logo:set_coords(event.payload.current_x, event.payload.current_y)
-        -- end
-        
-        -- print(logo.x .. ", " .. logo.y)
     end
     
     

@@ -123,6 +123,8 @@
 		BED5B0CD13C73A6300F4D4F5 /* fps.png in Copy assets/fonts */ = {isa = PBXBuildFile; fileRef = BEA8198313C419BB0058D983 /* fps.png */; };
 		BEEFFA1D1415231000619C50 /* CppTweener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEEFFA1B1415231000619C50 /* CppTweener.cpp */; };
 		BEEFFA1E1415231000619C50 /* CppTweener.h in Headers */ = {isa = PBXBuildFile; fileRef = BEEFFA1C1415231000619C50 /* CppTweener.h */; };
+		BEEFFA221415350500619C50 /* lua_tweening.cc in Sources */ = {isa = PBXBuildFile; fileRef = BEEFFA201415350500619C50 /* lua_tweening.cc */; };
+		BEEFFA231415350500619C50 /* lua_tweening.h in Headers */ = {isa = PBXBuildFile; fileRef = BEEFFA211415350500619C50 /* lua_tweening.h */; };
 		BEFAE63214075904002A2033 /* events.lua in Resources */ = {isa = PBXBuildFile; fileRef = BEFAE63114075904002A2033 /* events.lua */; };
 		BEFAE634140765E5002A2033 /* events.lua in Copy support script */ = {isa = PBXBuildFile; fileRef = BEFAE63114075904002A2033 /* events.lua */; };
 		D41F2F6013484C5C00E84862 /* hash_map_defs.h in Headers */ = {isa = PBXBuildFile; fileRef = D41F2F5F13484C5C00E84862 /* hash_map_defs.h */; };
@@ -497,6 +499,9 @@
 		BED5310B13F56F5D00895FAD /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		BEEFFA1B1415231000619C50 /* CppTweener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CppTweener.cpp; sourceTree = "<group>"; };
 		BEEFFA1C1415231000619C50 /* CppTweener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CppTweener.h; sourceTree = "<group>"; };
+		BEEFFA1F141530FE00619C50 /* tweening.pkg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tweening.pkg; sourceTree = "<group>"; };
+		BEEFFA201415350500619C50 /* lua_tweening.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = lua_tweening.cc; sourceTree = "<group>"; };
+		BEEFFA211415350500619C50 /* lua_tweening.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_tweening.h; sourceTree = "<group>"; };
 		BEF23DE013F659F400586E3C /* director.pkg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = director.pkg; sourceTree = "<group>"; };
 		BEFAE63114075904002A2033 /* events.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = events.lua; sourceTree = "<group>"; };
 		D41F2F5F13484C5C00E84862 /* hash_map_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hash_map_defs.h; sourceTree = "<group>"; };
@@ -964,6 +969,8 @@
 		BED5310913F56E7E00895FAD /* lua_bindings */ = {
 			isa = PBXGroup;
 			children = (
+				BEEFFA201415350500619C50 /* lua_tweening.cc */,
+				BEEFFA211415350500619C50 /* lua_tweening.h */,
 				BE6005DE140B51A600FE21AB /* lua_texture_cache.cc */,
 				BE6005DF140B51A600FE21AB /* lua_texture_cache.h */,
 				BE6005D5140A130600FE21AB /* lua_bitmap_font.cc */,
@@ -988,6 +995,7 @@
 				BE6005D21409EE2300FE21AB /* label.pkg */,
 				BE6005D4140A120100FE21AB /* bitmap_font.pkg */,
 				BE6005DD140B507C00FE21AB /* texture_cache.pkg */,
+				BEEFFA1F141530FE00619C50 /* tweening.pkg */,
 			);
 			path = lua_bindings;
 			sourceTree = "<group>";
@@ -1615,6 +1623,7 @@
 				BE6005DC140A130600FE21AB /* lua_label.h in Headers */,
 				BE6005E1140B51A700FE21AB /* lua_texture_cache.h in Headers */,
 				BEEFFA1E1415231000619C50 /* CppTweener.h in Headers */,
+				BEEFFA231415350500619C50 /* lua_tweening.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1870,6 +1879,7 @@
 				BE6005DB140A130600FE21AB /* lua_label.cc in Sources */,
 				BE6005E0140B51A700FE21AB /* lua_texture_cache.cc in Sources */,
 				BEEFFA1D1415231000619C50 /* CppTweener.cpp in Sources */,
+				BEEFFA221415350500619C50 /* lua_tweening.cc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
