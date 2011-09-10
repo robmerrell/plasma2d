@@ -23,6 +23,8 @@
 
 - (void)awakeFromNib
 {
+    ip_address = @"192.168.1.74";
+    
     EAGLContext *aContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
 
     if (!aContext)
@@ -36,19 +38,25 @@
     [(EAGLView *)self.view setContext:context];
     [(EAGLView *)self.view setFramebuffer];
     
-    ip_address = @"192.168.1.74";
-    
     UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(wasSwiped)];
     swipeDown.numberOfTouchesRequired = 1;
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
     [self.view addGestureRecognizer:swipeDown];
     
+    // initial seed
+    [self wasSwiped];
+    
     animating = FALSE;
     animationFrameInterval = 1;
     self.displayLink = nil;
     
-    NSString* bundlePath = [[NSBundle mainBundle] resourcePath];
-    engine.initialize([bundlePath UTF8String]);
+    // read from the documents path instead of the main bundle
+    NSString* bundlePath = [[NSBundle mainBundle] resourcePath];    
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *path = [paths objectAtIndex:0];
+    engine.initialize([bundlePath UTF8String], [path UTF8String]);
+    
     engine.run();
 }
 
@@ -90,26 +98,13 @@
     NSString *download_url_string = [NSString stringWithFormat:@"http://%@:4567/download", ip_address];
     NSURL *url = [NSURL URLWithString:download_url_string];
     
-    ASIHTTPRequest *request = [ASIFormDataRequest requestWithURL:url];
-    [request setPostValue:filename forKey:@"filename"];
-    [request startSynchronous];
-    
-    NSError *error = [request error];
-    if (!error) {
-        NSString *response = [request responseString];
-        [self writeFile:filename content:response];
-    }
-}
-
-- (void)writeFile: (NSString*) destination content: (NSString*) content 
-{    
     // create the directory if it doesn't exist
     NSString *path;
-    NSString *directory_name = [destination stringByDeletingLastPathComponent];
+    NSString *directory_name = [filename stringByDeletingLastPathComponent];
     NSString *full_path;
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	path = [[paths objectAtIndex:0] stringByAppendingPathComponent:directory_name];
-    full_path = [[paths objectAtIndex:0] stringByAppendingPathComponent:destination];
+    full_path = [[paths objectAtIndex:0] stringByAppendingPathComponent:filename];
 	NSError *error;
 	if (![[NSFileManager defaultManager] fileExistsAtPath:path])
 	{
@@ -118,7 +113,11 @@
         }
 	}
     
-    [content writeToFile:full_path atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    // request the file
+    ASIHTTPRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setPostValue:filename forKey:@"filename"];
+    [request setDownloadDestinationPath:full_path];
+    [request startSynchronous];
 }
 
 - (void)didReceiveMemoryWarning

@@ -22,8 +22,8 @@ p2d::Engine::~Engine() {
 }
 
 
-void p2d::Engine::initialize(std::string _resource_path) {
-    p2d::ShaderManager::Inst()->setShaderPath(_resource_path + "/shaders");
+void p2d::Engine::initialize(std::string _system_resource_path, std::string _user_resource_path) {
+    p2d::ShaderManager::Inst()->setShaderPath(_system_resource_path + "/shaders");
     
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     
@@ -38,11 +38,11 @@ void p2d::Engine::initialize(std::string _resource_path) {
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-    luaWrapper.setScriptPath(_resource_path + "/examples");
+    luaWrapper.setScriptPath(_user_resource_path);
     luaWrapper.bootstrap();
     
-    luaWrapper.setResourcePath("images", (_resource_path + "/examples/assets/images").c_str());
-    luaWrapper.setResourcePath("fonts", (_resource_path + "/examples/assets/fonts").c_str());
+    luaWrapper.setResourcePath("images", (_user_resource_path + "/assets/images").c_str());
+    luaWrapper.setResourcePath("fonts", (_user_resource_path + "/assets/fonts").c_str());
     
     luaWrapper.runMain();
 }
