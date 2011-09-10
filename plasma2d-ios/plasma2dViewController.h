@@ -13,14 +13,18 @@
 #import <OpenGLES/ES2/gl.h>
 #import <OpenGLES/ES2/glext.h>
 
+#import "asihttprequest/ASIHTTPRequest.h"
+#import "asihttprequest/ASIFormDataRequest.h"
+
 #include "plasma2d.h"
 
-@interface plasma2dViewController : UIViewController {
+@interface plasma2dViewController : UIViewController <UIGestureRecognizerDelegate> {
 @private
     EAGLContext *context;
     
     p2d::Engine engine;
     float last_timestamp;
+    NSString *ip_address;
     
     BOOL animating;
     NSInteger animationFrameInterval;
@@ -32,5 +36,7 @@
 
 - (void)startAnimation;
 - (void)stopAnimation;
+- (void)wasSwiped;
+- (void)writeFile: (NSString*) destination content: (NSString*) content;
 
 @end

@@ -11,6 +11,7 @@
 #import "plasma2dViewController.h"
 #import "EAGLView.h"
 
+
 @interface plasma2dViewController ()
 @property (nonatomic, retain) EAGLContext *context;
 @property (nonatomic, assign) CADisplayLink *displayLink;
@@ -24,7 +25,6 @@
 {
     EAGLContext *aContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
 
-    
     if (!aContext)
         NSLog(@"Failed to create ES context");
     else if (![EAGLContext setCurrentContext:aContext])
@@ -35,6 +35,13 @@
 	
     [(EAGLView *)self.view setContext:context];
     [(EAGLView *)self.view setFramebuffer];
+    
+    ip_address = @"192.168.1.74";
+    
+    UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(wasSwiped)];
+    swipeDown.numberOfTouchesRequired = 1;
+    swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
+    [self.view addGestureRecognizer:swipeDown];
     
     animating = FALSE;
     animationFrameInterval = 1;
@@ -54,6 +61,64 @@
     [context release];
     
     [super dealloc];
+}
+
+-(void)wasSwiped
+{    
+    // get a list of changed files
+    NSString *changed_url_string = [NSString stringWithFormat:@"http://%@:4567/list/changed", ip_address];
+    NSURL *url = [NSURL URLWithString:changed_url_string];
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request startSynchronous];
+    NSError *error = [request error];
+    
+    if (!error) {
+        NSString *response = [request responseString];
+        if ([response length] > 0) {
+            NSArray *filenames = [response componentsSeparatedByString:@","];
+            
+            for (int i = 0; i < [filenames count]; i++) {
+                NSString *filename = [filenames objectAtIndex:i];
+                [self downloadFile:filename];
+            }
+        }
+    }
+}
+
+-(void)downloadFile: (NSString*) filename
+{
+    NSString *download_url_string = [NSString stringWithFormat:@"http://%@:4567/download", ip_address];
+    NSURL *url = [NSURL URLWithString:download_url_string];
+    
+    ASIHTTPRequest *request = [ASIFormDataRequest requestWithURL:url];
+    [request setPostValue:filename forKey:@"filename"];
+    [request startSynchronous];
+    
+    NSError *error = [request error];
+    if (!error) {
+        NSString *response = [request responseString];
+        [self writeFile:filename content:response];
+    }
+}
+
+- (void)writeFile: (NSString*) destination content: (NSString*) content 
+{    
+    // create the directory if it doesn't exist
+    NSString *path;
+    NSString *directory_name = [destination stringByDeletingLastPathComponent];
+    NSString *full_path;
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	path = [[paths objectAtIndex:0] stringByAppendingPathComponent:directory_name];
+    full_path = [[paths objectAtIndex:0] stringByAppendingPathComponent:destination];
+	NSError *error;
+	if (![[NSFileManager defaultManager] fileExistsAtPath:path])
+	{
+        if (![[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:&error]) {
+            NSLog(@"Create directory error: %@", error);
+        }
+	}
+    
+    [content writeToFile:full_path atomically:YES encoding:NSUTF8StringEncoding error:NULL];
 }
 
 - (void)didReceiveMemoryWarning
