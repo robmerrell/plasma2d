@@ -39,7 +39,7 @@
     [(EAGLView *)self.view setFramebuffer];
     
     UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(wasSwiped)];
-    swipeDown.numberOfTouchesRequired = 1;
+    swipeDown.numberOfTouchesRequired = 3;
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
     [self.view addGestureRecognizer:swipeDown];
     
@@ -50,14 +50,19 @@
     animationFrameInterval = 1;
     self.displayLink = nil;
     
-    // read from the documents path instead of the main bundle
+    [self initEngine];
+}
+
+- (void)initEngine
+{
     NSString* bundlePath = [[NSBundle mainBundle] resourcePath];    
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *path = [paths objectAtIndex:0];
-    engine.initialize([bundlePath UTF8String], [path UTF8String]);
+    engine = new p2d::Engine();
+    engine->initialize([bundlePath UTF8String], [path UTF8String]);
     
-    engine.run();
+    engine->run();
 }
 
 - (void)dealloc
@@ -91,6 +96,11 @@
             }
         }
     }
+    
+    // clear the engine
+    delete engine;
+    engine = new p2d::Engine();
+    [self initEngine];
 }
 
 -(void)downloadFile: (NSString*) filename
@@ -199,10 +209,10 @@
 {
     [(EAGLView *)self.view setFramebuffer];
     
-    engine.setFPS(1.0f / (self.displayLink.duration * self.displayLink.frameInterval));
+    engine->setFPS(1.0f / (self.displayLink.duration * self.displayLink.frameInterval));
     float delta_time = self.displayLink.timestamp - last_timestamp;
     last_timestamp = self.displayLink.timestamp;
-    engine.tick(delta_time);
+    engine->tick(delta_time);
     
     [(EAGLView *)self.view presentFramebuffer];
 }
@@ -211,14 +221,14 @@
 {
     UITouch* touch = [touches anyObject];
     CGPoint location  = [touch locationInView: self.view];
-    engine.getLuaWrapper().proxyTouchesBeganOrEndedEvent("event_proxy_touches_began", location.x, location.y, [touch tapCount]);
+    engine->getLuaWrapper().proxyTouchesBeganOrEndedEvent("event_proxy_touches_began", location.x, location.y, [touch tapCount]);
 }
 
 - (void) touchesEnded: (NSSet*) touches withEvent: (UIEvent*) event
 {
     UITouch* touch = [touches anyObject];
     CGPoint location  = [touch locationInView: self.view];
-    engine.getLuaWrapper().proxyTouchesBeganOrEndedEvent("event_proxy_touches_ended", location.x, location.y, [touch tapCount]);
+    engine->getLuaWrapper().proxyTouchesBeganOrEndedEvent("event_proxy_touches_ended", location.x, location.y, [touch tapCount]);
 }
 
 - (void) touchesMoved: (NSSet*) touches withEvent: (UIEvent*) event
@@ -226,7 +236,7 @@
     UITouch* touch = [touches anyObject];
     CGPoint previous  = [touch previousLocationInView: self.view];
     CGPoint current  = [touch locationInView: self.view];
-    engine.getLuaWrapper().proxyTouchesMoved(previous.x, previous.y, current.x, current.y);
+    engine->getLuaWrapper().proxyTouchesMoved(previous.x, previous.y, current.x, current.y);
 }
 
 @end

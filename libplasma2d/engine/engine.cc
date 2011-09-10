@@ -14,9 +14,10 @@ p2d::Engine::Engine() {
 p2d::Engine::~Engine() {
     // shutdown systems
     
-    // TODO: unload all textures
+    // TODO: unload all textures caches
     
     // TODO: unload all shader programs
+    
     
     // TODO: destroy all shaders
 }

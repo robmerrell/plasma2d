@@ -22,7 +22,7 @@
 @private
     EAGLContext *context;
     
-    p2d::Engine engine;
+    p2d::Engine* engine;
     float last_timestamp;
     NSString *ip_address;
     
@@ -36,7 +36,8 @@
 
 - (void)startAnimation;
 - (void)stopAnimation;
+- (void)initEngine;
 - (void)wasSwiped;
-- (void)writeFile: (NSString*) destination content: (NSString*) content;
+- (void)downloadFile: (NSString*) filename;
 
 @end
