@@ -14,6 +14,8 @@ extern "C" {
     #include "lua.h"
     #include "lualib.h"
     #include "lauxlib.h"
+    #include "luasocket.h"
+    #include "mime.h"
     #include "lua_director.h"
     #include "lua_scene.h"
     #include "lua_texture.h"

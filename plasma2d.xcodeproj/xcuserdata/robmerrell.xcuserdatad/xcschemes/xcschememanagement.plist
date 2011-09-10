@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>luasocket.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>plasma2d.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -37,6 +42,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>BE888D22141BF43A00C366F2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BED5306913F4A58200895FAD</key>
 		<dict>
 			<key>primary</key>

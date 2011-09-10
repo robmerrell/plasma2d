@@ -8,6 +8,8 @@
 p2d::LuaWrapper::LuaWrapper() {
     lua = lua_open();
 	luaL_openlibs(lua);
+    luaopen_socket_core(lua);
+    luaopen_mime_core(lua);
 }
 
 
