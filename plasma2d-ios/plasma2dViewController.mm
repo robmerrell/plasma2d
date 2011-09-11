@@ -49,8 +49,6 @@
     animating = FALSE;
     animationFrameInterval = 1;
     self.displayLink = nil;
-    
-    [self initEngine];
 }
 
 - (void)initEngine
@@ -99,7 +97,6 @@
     
     // clear the engine
     delete engine;
-    engine = new p2d::Engine();
     [self initEngine];
 }
 
