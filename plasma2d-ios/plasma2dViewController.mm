@@ -23,6 +23,7 @@
 
 - (void)awakeFromNib
 {
+    pull_all_documents = YES;
     ip_address = @"192.168.1.74";
     
     EAGLContext *aContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
@@ -43,6 +44,9 @@
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
     [self.view addGestureRecognizer:swipeDown];
     
+    // delete all files in the documents directory to start with a clean slate
+    [self deleteAllDocuments];
+    
     // initial seed
     engine = NULL;
     [self wasSwiped];
@@ -50,6 +54,21 @@
     animating = FALSE;
     animationFrameInterval = 1;
     self.displayLink = nil;
+}
+
+- (void)deleteAllDocuments {
+    NSFileManager *fileMgr = [NSFileManager defaultManager];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *path = [paths objectAtIndex:0];
+    NSError *error = nil;
+    
+    NSArray *directoryContents = [fileMgr contentsOfDirectoryAtPath:path error:&error];
+    if (error == nil) {
+        for (NSString *filepath in directoryContents) {
+            NSString *fullPath = [path stringByAppendingPathComponent:filepath];
+            BOOL removeSuccess = [fileMgr removeItemAtPath:fullPath error:&error];
+        }
+    }
 }
 
 - (void)initEngine
@@ -78,7 +97,15 @@
 -(void)wasSwiped
 {    
     // get a list of changed files
-    NSString *changed_url_string = [NSString stringWithFormat:@"http://%@:4567/list/changed", ip_address];
+    NSString *action;
+    if (pull_all_documents) {
+        action = @"all";
+        pull_all_documents = NO;
+    } else {
+        action = @"changed";
+    }
+    
+    NSString *changed_url_string = [NSString stringWithFormat:@"http://%@:4567/list/%@", ip_address, action];
     NSURL *url = [NSURL URLWithString:changed_url_string];
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
     [request startSynchronous];

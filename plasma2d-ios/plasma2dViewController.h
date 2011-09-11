@@ -25,6 +25,7 @@
     p2d::Engine* engine;
     float last_timestamp;
     NSString *ip_address;
+    BOOL pull_all_documents;
     
     BOOL animating;
     NSInteger animationFrameInterval;
@@ -38,6 +39,7 @@
 - (void)stopAnimation;
 - (void)initEngine;
 - (void)wasSwiped;
+- (void)deleteAllDocuments;
 - (void)downloadFile: (NSString*) filename;
 
 @end
