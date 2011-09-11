@@ -495,7 +495,7 @@
 			</dict>
 		</dict>
 		<string>file://localhost/Users/robmerrell/projects/plasma2d/plasma2d.xcodeproj/</string>
-		<real>337402850.096066</real>
+		<real>337402909.72284198</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4763,7 +4763,7 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>337402850.0959</real>
+		<real>337402909.72237998</real>
 		<string>{0, 1291}</string>
 		<string>{126, 0}</string>
 		<dict>
@@ -7628,9 +7628,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>337402850.096021</real>
-		<string>{5355, 1900}</string>
-		<string>{5947, 0}</string>
+		<real>337402909.72267401</real>
+		<string>{1494, 1991}</string>
+		<string>{2781, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -11023,7 +11023,7 @@
 				<integer>820</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>337402827.720474</real>
+			<real>337402908.522448</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -11034,9 +11034,9 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 9:00 PM</string>
+		<string>Today at 9:01 PM</string>
 		<integer>234</integer>
-		<string>lua</string>
+		<string>soil</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -57685,7 +57685,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>15</integer>
+					<integer>291</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -58390,7 +58390,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>1064</real>
+		<real>1420</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -58999,10 +58999,10 @@
 				</dict>
 			</array>
 		</dict>
-		<real>337402850.09678298</real>
-		<string>{5355, 1900}</string>
-		<string>{5947, 0}</string>
-		<string>@implementation plasma2dViewController</string>
+		<real>337402909.72430497</real>
+		<string>{1494, 1991}</string>
+		<string>{2781, 0}</string>
+		<string>-wasSwiped</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -59035,7 +59035,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {1064, 952}}</string>
+		<string>{{0, 0}, {1420, 930}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -59215,7 +59215,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>358</real>
+		<real>478</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -59245,7 +59245,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>705</real>
+		<real>941</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -59314,7 +59314,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>358</real>
+		<real>478</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -59344,7 +59344,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>705</real>
+		<real>941</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -62746,7 +62746,7 @@
 				<integer>3719</integer>
 			</dict>
 		</dict>
-		<real>337402850.09767902</real>
+		<real>337402909.72622102</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -82958,7 +82958,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>337402850.09723699</real>
+		<real>337402909.72527498</real>
 		<string>{0, 1291}</string>
 		<string>{126, 0}</string>
 		<dict>

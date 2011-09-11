@@ -44,6 +44,7 @@
     [self.view addGestureRecognizer:swipeDown];
     
     // initial seed
+    engine = NULL;
     [self wasSwiped];
     
     animating = FALSE;
@@ -96,7 +97,7 @@
     }
     
     // clear the engine
-    delete engine;
+    if (engine != NULL) delete engine;
     [self initEngine];
 }
 
