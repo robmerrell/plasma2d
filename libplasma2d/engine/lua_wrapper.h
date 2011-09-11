@@ -34,6 +34,15 @@ namespace p2d {
         lua_State* lua;
         
         std::string script_path;
+        std::string last_error;
+        
+        /**
+         * handle error processing for protected calls
+         * sets last_error if there was an error while processing
+         * return true if there was an error while processing
+         * return false if there was no error while processing
+         */
+        bool error(int _call_results);
         
     public:
         /**
@@ -55,13 +64,15 @@ namespace p2d {
         
         /**
          * Run the bootstrap file
+         * returns true on error
          */
-        void bootstrap();
+        bool bootstrap();
         
         /**
          * Run the main file
+         * returns true on error
          */
-        void runMain();
+        bool runMain();
         
         /**
          * setter/getter for the script path
@@ -71,25 +82,29 @@ namespace p2d {
         
         /**
          * Set the resource paths for images, fonts and sounds
+         * returns true on error
          */
-        void setResourcePath(const char* _type, const char* _path);
+        bool setResourcePath(const char* _type, const char* _path);
         
         /**
          * process the event queue
+         * returns true on error
          */
-        void processEventQueue();
+        bool processEventQueue();
         
         /**
          * emit engine specific events
+         * returns true on error
          */
-        void emitSceneUpdateEvent();
+        bool emitSceneUpdateEvent();
         
         
         /**
          * Event proxies from device specific code
+         * returns true on error
          */
-        void proxyTouchesBeganOrEndedEvent(std::string _proxy_function, float _x, float _y, int _tap_count);
-        void proxyTouchesMoved(float _prev_x, float _prev_y, float _current_x, float _current_y);
+        bool proxyTouchesBeganOrEndedEvent(std::string _proxy_function, float _x, float _y, int _tap_count);
+        bool proxyTouchesMoved(float _prev_x, float _prev_y, float _current_x, float _current_y);
     };
     
 }

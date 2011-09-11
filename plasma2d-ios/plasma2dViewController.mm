@@ -40,12 +40,12 @@
     [(EAGLView *)self.view setFramebuffer];
     
     UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(wasSwiped)];
-    swipeDown.numberOfTouchesRequired = 3;
+    swipeDown.numberOfTouchesRequired = 1;
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
     [self.view addGestureRecognizer:swipeDown];
     
     // delete all files in the documents directory to start with a clean slate
-    [self deleteAllDocuments];
+//    [self deleteAllDocuments];
     
     // initial seed
     engine = NULL;
@@ -246,14 +246,16 @@
 {
     UITouch* touch = [touches anyObject];
     CGPoint location  = [touch locationInView: self.view];
-    engine->getLuaWrapper().proxyTouchesBeganOrEndedEvent("event_proxy_touches_began", location.x, location.y, [touch tapCount]);
+    bool res = engine->getLuaWrapper().proxyTouchesBeganOrEndedEvent("event_proxy_touches_began", location.x, location.y, [touch tapCount]);
+    if (!res) engine->stopProcessing();
 }
 
 - (void) touchesEnded: (NSSet*) touches withEvent: (UIEvent*) event
 {
     UITouch* touch = [touches anyObject];
     CGPoint location  = [touch locationInView: self.view];
-    engine->getLuaWrapper().proxyTouchesBeganOrEndedEvent("event_proxy_touches_ended", location.x, location.y, [touch tapCount]);
+    bool res = engine->getLuaWrapper().proxyTouchesBeganOrEndedEvent("event_proxy_touches_ended", location.x, location.y, [touch tapCount]);
+    if (!res) engine->stopProcessing();
 }
 
 - (void) touchesMoved: (NSSet*) touches withEvent: (UIEvent*) event
@@ -261,7 +263,8 @@
     UITouch* touch = [touches anyObject];
     CGPoint previous  = [touch previousLocationInView: self.view];
     CGPoint current  = [touch locationInView: self.view];
-    engine->getLuaWrapper().proxyTouchesMoved(previous.x, previous.y, current.x, current.y);
+    bool res = engine->getLuaWrapper().proxyTouchesMoved(previous.x, previous.y, current.x, current.y);
+    if (!res) engine->stopProcessing();
 }
 
 @end

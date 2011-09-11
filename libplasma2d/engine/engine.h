@@ -25,6 +25,7 @@ namespace p2d {
         Engine& operator=(const Engine&);
         
         float fps;
+        bool processing;
         
         p2d::LuaWrapper luaWrapper;
         
@@ -66,6 +67,11 @@ namespace p2d {
          * Set the FPS. Only the display system should call this
          */
         void setFPS(float _fps);
+        
+        /**
+         * Stop processing. Usually we only want to call this when an eror occures
+         */
+        void stopProcessing();
     };
 
 }

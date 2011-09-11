@@ -8,6 +8,7 @@
 
 p2d::Engine::Engine() {
     fps = 0.0f;
+    processing = true;
 }
 
 
@@ -40,12 +41,12 @@ void p2d::Engine::initialize(std::string _system_resource_path, std::string _use
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     luaWrapper.setScriptPath(_user_resource_path);
-    luaWrapper.bootstrap();
+    if (!luaWrapper.bootstrap()) stopProcessing();
     
-    luaWrapper.setResourcePath("images", (_user_resource_path + "/assets/images").c_str());
-    luaWrapper.setResourcePath("fonts", (_user_resource_path + "/assets/fonts").c_str());
+    if (!luaWrapper.setResourcePath("images", (_user_resource_path + "/assets/images").c_str())) stopProcessing();
+    if (!luaWrapper.setResourcePath("fonts", (_user_resource_path + "/assets/fonts").c_str())) stopProcessing();
     
-    luaWrapper.runMain();
+    if (!luaWrapper.runMain()) stopProcessing();
 }
 
 
@@ -60,13 +61,20 @@ p2d::LuaWrapper& p2d::Engine::getLuaWrapper() {
 
 
 void p2d::Engine::tick(float _delta_time) {
-    luaWrapper.processEventQueue();
-    luaWrapper.emitSceneUpdateEvent();
-    p2d::Director::Inst()->getCurrentScene()->tick(_delta_time);
+    if (processing) {
+        if (!luaWrapper.processEventQueue()) stopProcessing();
+        if (!luaWrapper.emitSceneUpdateEvent()) stopProcessing();
+        p2d::Director::Inst()->getCurrentScene()->tick(_delta_time);
+    }
 }
 
 
 void p2d::Engine::setFPS(float _fps) {
     fps = _fps;
     p2d::Director::Inst()->setFPS(_fps);
+}
+
+
+void p2d::Engine::stopProcessing() {
+    processing = false;
 }
