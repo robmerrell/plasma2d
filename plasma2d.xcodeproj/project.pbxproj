@@ -85,6 +85,7 @@
 		BE888D65141BF53900C366F2 /* usocket.h in Headers */ = {isa = PBXBuildFile; fileRef = BE888D4A141BF53900C366F2 /* usocket.h */; };
 		BE888D68141C080300C366F2 /* libluasocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE888D23141BF43A00C366F2 /* libluasocket.a */; };
 		BE888D6A141C084F00C366F2 /* mime.c in Sources */ = {isa = PBXBuildFile; fileRef = BE888D69141C084F00C366F2 /* mime.c */; };
+		BE888D6C141D8F7000C366F2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE888D6B141D8F7000C366F2 /* Settings.bundle */; };
 		BEA8198413C419BB0058D983 /* fps.fnt in Resources */ = {isa = PBXBuildFile; fileRef = BEA8198213C419BB0058D983 /* fps.fnt */; };
 		BEA8198513C419BB0058D983 /* fps.png in Resources */ = {isa = PBXBuildFile; fileRef = BEA8198313C419BB0058D983 /* fps.png */; };
 		BEA8198813C42A310058D983 /* label.cc in Sources */ = {isa = PBXBuildFile; fileRef = BEA8198613C42A310058D983 /* label.cc */; };
@@ -537,6 +538,7 @@
 		BE888D49141BF53900C366F2 /* usocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = usocket.c; sourceTree = "<group>"; };
 		BE888D4A141BF53900C366F2 /* usocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = usocket.h; sourceTree = "<group>"; };
 		BE888D69141C084F00C366F2 /* mime.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mime.c; sourceTree = "<group>"; };
+		BE888D6B141D8F7000C366F2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BEA8198213C419BB0058D983 /* fps.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fps.fnt; sourceTree = "<group>"; };
 		BEA8198313C419BB0058D983 /* fps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps.png; sourceTree = "<group>"; };
 		BEA8198613C42A310058D983 /* label.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = label.cc; sourceTree = "<group>"; };
@@ -1288,6 +1290,7 @@
 				D427F64D1341A0480015C23D /* plasma2dViewController.mm */,
 				D427F64F1341A0480015C23D /* plasma2dViewController.xib */,
 				D427F6371341A0480015C23D /* Supporting Files */,
+				BE888D6B141D8F7000C366F2 /* Settings.bundle */,
 			);
 			path = "plasma2d-ios";
 			sourceTree = "<group>";
@@ -2040,6 +2043,7 @@
 				BE37711314060D6F0074008B /* main.lua in Resources */,
 				BE37711514060E610074008B /* loading_scene.lua in Resources */,
 				BEFAE63214075904002A2033 /* events.lua in Resources */,
+				BE888D6C141D8F7000C366F2 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

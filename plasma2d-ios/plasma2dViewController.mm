@@ -24,7 +24,8 @@
 - (void)awakeFromNib
 {
     pull_all_documents = YES;
-    ip_address = @"192.168.1.103";
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    ip_address = [defaults stringForKey:@"debug_host"];
     
     EAGLContext *aContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
 
@@ -47,7 +48,7 @@
     
     // swipe up
     UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipedUp)];
-    swipeUp.numberOfTouchesRequired = 3;
+    swipeUp.numberOfTouchesRequired = 1;
     swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
     [self.view addGestureRecognizer:swipeUp];
     
@@ -137,7 +138,9 @@
 
 -(void)swipedUp
 {
-
+    // clear the engine and restart
+    if (engine != NULL) delete engine;
+    [self initEngine];
 }
 
 -(void)downloadFile: (NSString*) filename
