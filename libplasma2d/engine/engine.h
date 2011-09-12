@@ -45,7 +45,7 @@ namespace p2d {
         /**
          * Initialize the game engine and the display system
          */
-        void initialize(std::string _system_resource_path, std::string _user_resource_path);
+        void initialize(std::string _system_resource_path, std::string _user_resource_path, std::string _debug_host);
         
         /**
          * TODO: is this even correct?

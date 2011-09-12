@@ -80,6 +80,26 @@ bool p2d::LuaWrapper::setResourcePath(const char* _type, const char* _path) {
 }
 
 
+bool p2d::LuaWrapper::setDebugHost(std::string _debug_host) {
+    lua_getglobal(lua, "set_debug_host");
+    lua_pushstring(lua, _debug_host.c_str());
+    int err = lua_pcall(lua, 1, 0, 0);
+    return error(err);    
+}
+
+
+std::string p2d::LuaWrapper::getLastError() {
+    return last_error;
+}
+
+
+void p2d::LuaWrapper::sendLastError() {
+    lua_getglobal(lua, "rlog");
+    lua_pushstring(lua, last_error.c_str());
+    lua_pcall(lua, 1, 0, 0);    
+}
+
+
 bool p2d::LuaWrapper::processEventQueue() {
     lua_getglobal(lua, "process_events");
     int err = lua_pcall(lua, 0, 0, 0);

@@ -24,7 +24,7 @@ p2d::Engine::~Engine() {
 }
 
 
-void p2d::Engine::initialize(std::string _system_resource_path, std::string _user_resource_path) {
+void p2d::Engine::initialize(std::string _system_resource_path, std::string _user_resource_path, std::string _debug_host) {
     p2d::ShaderManager::Inst()->setShaderPath(_system_resource_path + "/shaders");
     
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
@@ -41,12 +41,13 @@ void p2d::Engine::initialize(std::string _system_resource_path, std::string _use
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     luaWrapper.setScriptPath(_user_resource_path);
-    if (!luaWrapper.bootstrap()) stopProcessing();
+    if (luaWrapper.bootstrap()) stopProcessing();
     
-    if (!luaWrapper.setResourcePath("images", (_user_resource_path + "/assets/images").c_str())) stopProcessing();
-    if (!luaWrapper.setResourcePath("fonts", (_user_resource_path + "/assets/fonts").c_str())) stopProcessing();
+    if (luaWrapper.setResourcePath("images", (_user_resource_path + "/assets/images").c_str())) stopProcessing();
+    if (luaWrapper.setResourcePath("fonts", (_user_resource_path + "/assets/fonts").c_str())) stopProcessing();
+    if (luaWrapper.setDebugHost(_debug_host)) stopProcessing();
     
-    if (!luaWrapper.runMain()) stopProcessing();
+    if (luaWrapper.runMain()) stopProcessing();
 }
 
 
@@ -62,8 +63,8 @@ p2d::LuaWrapper& p2d::Engine::getLuaWrapper() {
 
 void p2d::Engine::tick(float _delta_time) {
     if (processing) {
-        if (!luaWrapper.processEventQueue()) stopProcessing();
-        if (!luaWrapper.emitSceneUpdateEvent()) stopProcessing();
+        if (luaWrapper.processEventQueue()) stopProcessing();
+        if (luaWrapper.emitSceneUpdateEvent()) stopProcessing();
         p2d::Director::Inst()->getCurrentScene()->tick(_delta_time);
     }
 }
@@ -77,4 +78,5 @@ void p2d::Engine::setFPS(float _fps) {
 
 void p2d::Engine::stopProcessing() {
     processing = false;
+    luaWrapper.sendLastError();
 }

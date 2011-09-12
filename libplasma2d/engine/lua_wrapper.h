@@ -87,6 +87,22 @@ namespace p2d {
         bool setResourcePath(const char* _type, const char* _path);
         
         /**
+         * Set the host to send remote debugging messages
+         */
+        bool setDebugHost(std::string _debug_host);
+        
+        /**
+         * Get the last error
+         */
+        std::string getLastError();
+        
+        /**
+         * Send the last error to a
+         * remote server
+         */
+        void sendLastError();
+        
+        /**
          * process the event queue
          * returns true on error
          */
@@ -97,7 +113,6 @@ namespace p2d {
          * returns true on error
          */
         bool emitSceneUpdateEvent();
-        
         
         /**
          * Event proxies from device specific code

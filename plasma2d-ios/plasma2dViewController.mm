@@ -24,7 +24,7 @@
 - (void)awakeFromNib
 {
     pull_all_documents = YES;
-    ip_address = @"192.168.1.74";
+    ip_address = @"192.168.1.103";
     
     EAGLContext *aContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
 
@@ -39,17 +39,24 @@
     [(EAGLView *)self.view setContext:context];
     [(EAGLView *)self.view setFramebuffer];
     
-    UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(wasSwiped)];
-    swipeDown.numberOfTouchesRequired = 1;
+    // swipe down
+    UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipedDown)];
+    swipeDown.numberOfTouchesRequired = 3;
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
     [self.view addGestureRecognizer:swipeDown];
+    
+    // swipe up
+    UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipedUp)];
+    swipeUp.numberOfTouchesRequired = 3;
+    swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
+    [self.view addGestureRecognizer:swipeUp];
     
     // delete all files in the documents directory to start with a clean slate
 //    [self deleteAllDocuments];
     
     // initial seed
     engine = NULL;
-    [self wasSwiped];
+    [self swipedDown];
     
     animating = FALSE;
     animationFrameInterval = 1;
@@ -78,7 +85,7 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *path = [paths objectAtIndex:0];
     engine = new p2d::Engine();
-    engine->initialize([bundlePath UTF8String], [path UTF8String]);
+    engine->initialize([bundlePath UTF8String], [path UTF8String], [ip_address UTF8String]);
     
     engine->run();
 }
@@ -94,7 +101,7 @@
     [super dealloc];
 }
 
--(void)wasSwiped
+-(void)swipedDown
 {    
     // get a list of changed files
     NSString *action;
@@ -126,6 +133,11 @@
     // clear the engine
     if (engine != NULL) delete engine;
     [self initEngine];
+}
+
+-(void)swipedUp
+{
+
 }
 
 -(void)downloadFile: (NSString*) filename
@@ -246,16 +258,16 @@
 {
     UITouch* touch = [touches anyObject];
     CGPoint location  = [touch locationInView: self.view];
-    bool res = engine->getLuaWrapper().proxyTouchesBeganOrEndedEvent("event_proxy_touches_began", location.x, location.y, [touch tapCount]);
-    if (!res) engine->stopProcessing();
+    bool err = engine->getLuaWrapper().proxyTouchesBeganOrEndedEvent("event_proxy_touches_began", location.x, location.y, [touch tapCount]);
+    if (err) engine->stopProcessing();
 }
 
 - (void) touchesEnded: (NSSet*) touches withEvent: (UIEvent*) event
 {
     UITouch* touch = [touches anyObject];
     CGPoint location  = [touch locationInView: self.view];
-    bool res = engine->getLuaWrapper().proxyTouchesBeganOrEndedEvent("event_proxy_touches_ended", location.x, location.y, [touch tapCount]);
-    if (!res) engine->stopProcessing();
+    bool err = engine->getLuaWrapper().proxyTouchesBeganOrEndedEvent("event_proxy_touches_ended", location.x, location.y, [touch tapCount]);
+    if (err) engine->stopProcessing();
 }
 
 - (void) touchesMoved: (NSSet*) touches withEvent: (UIEvent*) event
@@ -263,8 +275,8 @@
     UITouch* touch = [touches anyObject];
     CGPoint previous  = [touch previousLocationInView: self.view];
     CGPoint current  = [touch locationInView: self.view];
-    bool res = engine->getLuaWrapper().proxyTouchesMoved(previous.x, previous.y, current.x, current.y);
-    if (!res) engine->stopProcessing();
+    bool err = engine->getLuaWrapper().proxyTouchesMoved(previous.x, previous.y, current.x, current.y);
+    if (err) engine->stopProcessing();
 }
 
 @end

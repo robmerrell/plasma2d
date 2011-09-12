@@ -18,7 +18,7 @@
 
 #include "plasma2d.h"
 
-@interface plasma2dViewController : UIViewController <UIGestureRecognizerDelegate> {
+@interface plasma2dViewController : UIViewController <UIGestureRecognizerDelegate, UIAlertViewDelegate> {
 @private
     EAGLContext *context;
     
@@ -38,7 +38,8 @@
 - (void)startAnimation;
 - (void)stopAnimation;
 - (void)initEngine;
-- (void)wasSwiped;
+- (void)swipedDown;
+- (void)swipedUp;
 - (void)deleteAllDocuments;
 - (void)downloadFile: (NSString*) filename;
 
