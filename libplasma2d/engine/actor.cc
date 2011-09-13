@@ -65,18 +65,20 @@ void p2d::Actor::cacheTextureCoords() {
 
 void p2d::Actor::draw() {
     // change the anchor point
-    float calc_anchor_x = width * scale * -anchor_x;
-    float calc_anchor_y = height * scale * -anchor_y;
+    float calc_anchor_x = width * scale * anchor_x;
+    float calc_anchor_y = height * scale * anchor_y;
+    
+    // center of the sprite
+    glm::vec3 center = glm::vec3(scale * width / 2.0f, scale * height / 2.0f, 0.0f);
     
     // transformations
-    glm::mat4 trans = glm::translate(glm::mat4(1.0f), glm::vec3(x + calc_anchor_x, y + calc_anchor_y, 0.0f));
-    glm::mat4 mvp = PROJECTION * trans;
+    glm::mat4 translate_view = glm::translate(glm::mat4(1.0f), center + glm::vec3(x - calc_anchor_x, y - calc_anchor_y, 0.0f));
+    glm::mat4 angle_view = glm::rotate(translate_view, angle, glm::vec3(0.0f, 0.0f, 1.0f));
+    glm::mat4 post_angle_translate = glm::translate(angle_view, -center); // translae back after the rotation
+    glm::mat4 scale_view = glm::scale(glm::mat4(1.0f), glm::vec3(scale, scale, 0.0f));
     
-    if (angle != 0.0f)
-        mvp *= glm::rotate(trans, angle, glm::vec3(0.0f, 0.0f, 1.0f));
-    
-    if (scale != 1.0f)
-        mvp *= glm::scale(glm::mat4(1.0f), glm::vec3(scale, scale, 0.0f));
+    glm::mat4 mvp = PROJECTION * post_angle_translate * scale_view;
+
  
     // bind the texture
     glActiveTexture(GL_TEXTURE0);
