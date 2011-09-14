@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>box2d.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>libplasma2d.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -42,6 +47,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>BE5ED81B142061130099AC0E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BE888D22141BF43A00C366F2</key>
 		<dict>
 			<key>primary</key>
