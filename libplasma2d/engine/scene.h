@@ -6,13 +6,14 @@
 #ifndef P2D_SCENE_H
 #define P2D_SCENE_H
 
+#include <vector>
 #include <OpenGLES/ES2/gl.h>
 #include <OpenGLES/ES2/glext.h>
 
 #include "display_object.h"
 #include "animator.h"
 
-#include <vector>
+#include "chipmunk.h"
 
 namespace p2d {
     
@@ -25,9 +26,9 @@ namespace p2d {
         // multi-dim container or graph
         std::vector<DisplayObject*> display_objects;
         
-//        Label* fps;
-        
     public:
+        cpSpace* space;
+        
         /**
          * Constructor
          * Stub
@@ -58,6 +59,11 @@ namespace p2d {
          * float delta time
          */
         void tick(float _delta_time);
+        
+        /**
+         * initialize the physics engine
+         */
+        void initPhysics();
     };
     
 }

@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
+		<key>chipmunk.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>libplasma2d.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -47,6 +52,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>BE147FD714340418005DB415</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BE5ED81B142061130099AC0E</key>
 		<dict>
 			<key>primary</key>

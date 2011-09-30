@@ -25,6 +25,7 @@ extern "C" {
     #include "lua_bitmap_font.h"
     #include "lua_label.h"
     #include "lua_tweening.h"
+    #include "lua_chipmunk.h"
 }
 
 namespace p2d {

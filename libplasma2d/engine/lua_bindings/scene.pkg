@@ -3,7 +3,9 @@ $#include "scene.h"
 namespace p2d {
     class Scene {
     public:
+        cpSpace* space;
         Scene();
         void addToScene @ add_to_scene(p2d::DisplayObject* _object);
+        void initPhysics @ init_physics();
     };
 }

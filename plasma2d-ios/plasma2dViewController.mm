@@ -42,7 +42,7 @@
     
     // swipe down
     UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipedDown)];
-    swipeDown.numberOfTouchesRequired = 3;
+    swipeDown.numberOfTouchesRequired = 1;
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
     [self.view addGestureRecognizer:swipeDown];
     

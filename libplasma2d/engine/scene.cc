@@ -7,9 +7,6 @@
 
 p2d::Scene::Scene() {
     default_animator = Animator();
-//    fps.setText("123");
-//    fps.setXY(100.0f, 100.0f);
-//    fps.setText();
 }
 
 
@@ -45,6 +42,10 @@ void p2d::Scene::tick(float _delta_time) {
         (*iter)->update(_delta_time);
         (*iter)->draw();
     }
-    
-//    fps.draw();
+}
+
+
+void p2d::Scene::initPhysics() {
+    cpInitChipmunk();
+    space = cpSpaceNew();
 }

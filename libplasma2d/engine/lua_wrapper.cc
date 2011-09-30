@@ -47,6 +47,7 @@ bool p2d::LuaWrapper::bootstrap() {
     tolua_bitmap_font_open(lua);
     tolua_label_open(lua);
     tolua_tweening_open(lua);
+    tolua_chipmunk_open(lua);
     
     std::string file = script_path + "/bootstrap.lua";    
     int err = luaL_dofile(lua, file.c_str());
