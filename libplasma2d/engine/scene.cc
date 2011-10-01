@@ -34,6 +34,8 @@ void p2d::Scene::addObjectWithAnimator(DisplayObject* _object, char* _animator) 
 
 
 void p2d::Scene::tick(float _delta_time) {
+    cpSpaceStep(space, 1.0f/60.0f); // TODO: this needs to use a timestep accumulator
+    
     glClear(GL_COLOR_BUFFER_BIT);
     
     std::vector<DisplayObject*>::iterator iter;

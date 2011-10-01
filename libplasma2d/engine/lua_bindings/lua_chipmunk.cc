@@ -1,6 +1,6 @@
 /*
 ** Lua binding: chipmunk
-** Generated automatically by tolua++-1.0.92 on Fri Sep 30 10:06:24 2011.
+** Generated automatically by tolua++-1.0.92 on Sat Oct  1 10:47:33 2011.
 */
 
 #ifndef __cplusplus
@@ -79,6 +79,66 @@ static void tolua_reg_types (lua_State* tolua_S)
  tolua_usertype(tolua_S,"cpCollisionSeparateFunc");
  tolua_usertype(tolua_S,"cpCollisionType");
 }
+
+/* get function: x of class  cpVect */
+#ifndef TOLUA_DISABLE_tolua_get_cpVect_x
+static int tolua_get_cpVect_x(lua_State* tolua_S)
+{
+  cpVect* self = (cpVect*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'x'",NULL);
+#endif
+  tolua_pushnumber(tolua_S,(lua_Number)self->x);
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* set function: x of class  cpVect */
+#ifndef TOLUA_DISABLE_tolua_set_cpVect_x
+static int tolua_set_cpVect_x(lua_State* tolua_S)
+{
+  cpVect* self = (cpVect*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  tolua_Error tolua_err;
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'x'",NULL);
+  if (!tolua_isnumber(tolua_S,2,0,&tolua_err))
+   tolua_error(tolua_S,"#vinvalid type in variable assignment.",&tolua_err);
+#endif
+  self->x = ((  float)  tolua_tonumber(tolua_S,2,0))
+;
+ return 0;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* get function: y of class  cpVect */
+#ifndef TOLUA_DISABLE_tolua_get_cpVect_y
+static int tolua_get_cpVect_y(lua_State* tolua_S)
+{
+  cpVect* self = (cpVect*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'y'",NULL);
+#endif
+  tolua_pushnumber(tolua_S,(lua_Number)self->y);
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* set function: y of class  cpVect */
+#ifndef TOLUA_DISABLE_tolua_set_cpVect_y
+static int tolua_set_cpVect_y(lua_State* tolua_S)
+{
+  cpVect* self = (cpVect*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  tolua_Error tolua_err;
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'y'",NULL);
+  if (!tolua_isnumber(tolua_S,2,0,&tolua_err))
+   tolua_error(tolua_S,"#vinvalid type in variable assignment.",&tolua_err);
+#endif
+  self->y = ((  float)  tolua_tonumber(tolua_S,2,0))
+;
+ return 0;
+}
+#endif //#ifndef TOLUA_DISABLE
 
 /* get function: cpvzero */
 #ifndef TOLUA_DISABLE_tolua_get_chipmunk_cpvzero
@@ -5240,6 +5300,15 @@ TOLUA_API int tolua_chipmunk_open (lua_State* tolua_S)
   tolua_module(tolua_S,"chipmunk",1);
   tolua_beginmodule(tolua_S,"chipmunk");
    tolua_constant(tolua_S,"INFINITY",INFINITY);
+   #ifdef __cplusplus
+   tolua_cclass(tolua_S,"cpVect","cpVect","",tolua_collect_cpVect);
+   #else
+   tolua_cclass(tolua_S,"cpVect","cpVect","",NULL);
+   #endif
+   tolua_beginmodule(tolua_S,"cpVect");
+    tolua_variable(tolua_S,"x",tolua_get_cpVect_x,tolua_set_cpVect_x);
+    tolua_variable(tolua_S,"y",tolua_get_cpVect_y,tolua_set_cpVect_y);
+   tolua_endmodule(tolua_S);
    tolua_variable(tolua_S,"cpvzero",tolua_get_chipmunk_cpvzero,NULL);
    tolua_function(tolua_S,"cpv",tolua_chipmunk_chipmunk_cpv00);
    tolua_function(tolua_S,"cpvlength",tolua_chipmunk_chipmunk_cpvlength00);

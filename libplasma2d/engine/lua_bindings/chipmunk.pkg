@@ -6,6 +6,7 @@ module chipmunk {
     // chipmunk_types.h
     typedef float cpFloat;
     #define INFINITY (__builtin_inf())
+    typedef struct cpVect{cpFloat x,y;} cpVect;
     // #define cpfsqrt sqrtf;
     // #define cpfsin sinf;
     // #define cpfcos cosf;
