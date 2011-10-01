@@ -16,6 +16,7 @@
 #include "chipmunk.h"
 
 namespace p2d {
+    void updatePhysicsShapes(void* _data, void* _unused);
     
     class Scene {
     private:

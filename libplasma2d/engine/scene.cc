@@ -51,3 +51,29 @@ void p2d::Scene::initPhysics() {
     cpInitChipmunk();
     space = cpSpaceNew();
 }
+
+
+void p2d::updatePhysicsShapes(void* _data, void* _unused) {
+    cpShape *shape = (cpShape*)_data;
+    
+    // make sure the shape is constructed correctly
+    if(shape == NULL || shape->body == NULL || shape->data == NULL) {
+        // TODO: add debugging here
+        return;
+    }
+    
+    DisplayObject *entity = (DisplayObject*)shape->data;
+    
+    entity->setXY(shape->body->p.x, shape->body->p.y);
+    entity->setAngle(RAD2DEG(shape->body->a));
+    
+//    Sprite *sprite = (Sprite*)shape->data;
+//    
+//    sprite->setX(shape->body->p.x);
+//    sprite->setY(shape->body->p.y);
+//    
+//    // rotate certain objects
+//    if (sprite->getTag() == BOX_TAG || sprite->getTag() == GEAR_TAG || sprite->getTag() == PLATFORM_TAG) {
+//        sprite->setAngle(RAD2DEG(shape->body->a));
+//    }
+}

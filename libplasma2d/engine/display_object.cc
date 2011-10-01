@@ -13,6 +13,14 @@ p2d::DisplayObject::DisplayObject() {
     angle = 0.0f;
     scale = 1.0f;
     tweening = false;
+    uses_physics = false;
+    
+    body = NULL;
+}
+
+
+p2d::DisplayObject::~DisplayObject() {
+    // TODO: clean up physics
 }
 
 
@@ -94,4 +102,25 @@ void p2d::DisplayObject::startTween() {
 void p2d::DisplayObject::stepTween(float _delta_time) {
     if (tweening)
         tweener.step(_delta_time);
+}
+
+
+void p2d::DisplayObject::setBody(cpBody* _body) {
+    body = _body;
+    uses_physics = true;
+    body->data = this;
+}
+
+
+cpBody* p2d::DisplayObject::getBody() {
+    return body;
+}
+
+void p2d::DisplayObject::update(float _delta_time) {
+    if (uses_physics) {
+        x = body->p.x;
+        y = body->p.y;
+
+        angle = RAD2DEG(body->a);
+    }
 }

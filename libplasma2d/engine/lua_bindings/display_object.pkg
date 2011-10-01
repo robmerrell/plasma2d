@@ -3,29 +3,33 @@ $#include "display_object.h"
 namespace p2d {
 	class DisplayObject {
 	public:
-	    DisplayObject();
-	    
-	    // properties
-      float x;
-      float y;
-      float angle;
-      float scale;
-      float anchor_x;
-      float anchor_y;
+        DisplayObject();
 
-	    void setXY @ set_coords(float _x, float _y);
-	    float getX @ get_x();
-	    float getY @ get_y();
-	    void setAngle @ set_angle(float _angle);
-	    float getAngle @ get_angle();
-	    void setScale @ set_scale(float _scale);
-	    float getScale @ get_scale();
-	    void setAnchor @ set_anchor(float _x, float _y);
-	    float getAnchorX @ get_anchor_x();
-	    float getAnchorY @ get_anchor_y();
-	    
-      void setupTween @ setup_tween(int _time, int _transition, int _easing_equation);
-      void addProperty @ add_property(std::string _property, float _value);
-      void startTween @ start_tween();
+        // properties
+        float x;
+        float y;
+        float angle;
+        float scale;
+        float anchor_x;
+        float anchor_y;
+        float uses_physics;
+
+        void setXY @ set_coords(float _x, float _y);
+        float getX @ get_x();
+        float getY @ get_y();
+        void setAngle @ set_angle(float _angle);
+        float getAngle @ get_angle();
+        void setScale @ set_scale(float _scale);
+        float getScale @ get_scale();
+        void setAnchor @ set_anchor(float _x, float _y);
+        float getAnchorX @ get_anchor_x();
+        float getAnchorY @ get_anchor_y();
+
+        void setupTween @ setup_tween(int _time, int _transition, int _easing_equation);
+        void addProperty @ add_property(std::string _property, float _value);
+        void startTween @ start_tween();
+        
+        void setBody @ set_body(cpBody* _body);
+        cpBody* getBody @ get_body();
 	};
 }

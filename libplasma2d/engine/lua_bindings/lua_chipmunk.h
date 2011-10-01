@@ -1,6 +1,6 @@
 /*
 ** Lua binding: chipmunk
-** Generated automatically by tolua++-1.0.92 on Sat Oct  1 10:47:33 2011.
+** Generated automatically by tolua++-1.0.92 on Sat Oct  1 15:31:35 2011.
 */
 
 /* Exported function */

@@ -17,6 +17,8 @@
 
 #include "../external/cpptweener/CppTweener.h"
 
+#include "chipmunk.h"
+
 #include "defs.h"
 #include "managers/shader_manager.h"
 
@@ -29,13 +31,16 @@ namespace p2d {
         
         bool tweening; // TODO: do we need this?
         
+        // physics
+        cpBody* body;
     public:
         // bindings look and feel better accessing these properties publicly. Since they are simple types
-        // I'm leaving the public.
+        // I'm leaving them public.
         float x;
         float y;
         float angle; // degrees
         float scale; // defaults to 1.0f
+        bool uses_physics;
         
         // anchors are the transformation point of an object
         // Can be 0.0f,0.0f (top left) to 1.0f,1.0f (bottom right)
@@ -46,6 +51,11 @@ namespace p2d {
          * Constructor
          */
         DisplayObject();
+        
+        /**
+         * Destructor
+         */
+        ~DisplayObject();
         
         /**
          * Set/Get position
@@ -91,8 +101,14 @@ namespace p2d {
         /**
          * Step through tweeing animations
          */
-        void stepTween(float _delta_time);
+        void stepTween(float _delta_time);        
         
+        /**
+         * Set/Get physics body
+         */
+        void setBody(cpBody* _body);
+        cpBody* getBody();
+                
         /**
          * Transform the position of an object to it's anchor
          */
@@ -103,7 +119,7 @@ namespace p2d {
          * update method that should be defined in the scripted
          * display object.
          */
-        virtual void update(float _delta_time) {};
+        void update(float _delta_time);
         
         /**
          * draw method that should be defined in the children

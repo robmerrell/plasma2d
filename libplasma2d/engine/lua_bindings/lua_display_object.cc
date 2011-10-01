@@ -1,6 +1,6 @@
 /*
 ** Lua binding: display_object
-** Generated automatically by tolua++-1.0.92 on Mon Sep  5 10:53:28 2011.
+** Generated automatically by tolua++-1.0.92 on Sat Oct  1 12:05:41 2011.
 */
 
 #ifndef __cplusplus
@@ -31,6 +31,7 @@ static int tolua_collect_p2d__DisplayObject (lua_State* tolua_S)
 static void tolua_reg_types (lua_State* tolua_S)
 {
  tolua_usertype(tolua_S,"p2d::DisplayObject");
+ tolua_usertype(tolua_S,"cpBody");
 }
 
 /* method: new of class  p2d::DisplayObject */
@@ -265,6 +266,36 @@ static int tolua_set_p2d__DisplayObject_anchor_y(lua_State* tolua_S)
    tolua_error(tolua_S,"#vinvalid type in variable assignment.",&tolua_err);
 #endif
   self->anchor_y = ((float)  tolua_tonumber(tolua_S,2,0))
+;
+ return 0;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* get function: uses_physics of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_get_p2d__DisplayObject_uses_physics
+static int tolua_get_p2d__DisplayObject_uses_physics(lua_State* tolua_S)
+{
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'uses_physics'",NULL);
+#endif
+  tolua_pushnumber(tolua_S,(lua_Number)self->uses_physics);
+ return 1;
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* set function: uses_physics of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_set_p2d__DisplayObject_uses_physics
+static int tolua_set_p2d__DisplayObject_uses_physics(lua_State* tolua_S)
+{
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  tolua_Error tolua_err;
+  if (!self) tolua_error(tolua_S,"invalid 'self' in accessing variable 'uses_physics'",NULL);
+  if (!tolua_isnumber(tolua_S,2,0,&tolua_err))
+   tolua_error(tolua_S,"#vinvalid type in variable assignment.",&tolua_err);
+#endif
+  self->uses_physics = ((float)  tolua_tonumber(tolua_S,2,0))
 ;
  return 0;
 }
@@ -701,6 +732,71 @@ static int tolua_display_object_p2d_DisplayObject_start_tween00(lua_State* tolua
 }
 #endif //#ifndef TOLUA_DISABLE
 
+/* method: setBody of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_display_object_p2d_DisplayObject_set_body00
+static int tolua_display_object_p2d_DisplayObject_set_body00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"p2d::DisplayObject",0,&tolua_err) ||
+     !tolua_isusertype(tolua_S,2,"cpBody",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,3,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+  cpBody* _body = ((cpBody*)  tolua_tousertype(tolua_S,2,0));
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'setBody'", NULL);
+#endif
+  {
+   self->setBody(_body);
+  }
+ }
+ return 0;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'set_body'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
+/* method: getBody of class  p2d::DisplayObject */
+#ifndef TOLUA_DISABLE_tolua_display_object_p2d_DisplayObject_get_body00
+static int tolua_display_object_p2d_DisplayObject_get_body00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"p2d::DisplayObject",0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,2,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  p2d::DisplayObject* self = (p2d::DisplayObject*)  tolua_tousertype(tolua_S,1,0);
+#ifndef TOLUA_RELEASE
+  if (!self) tolua_error(tolua_S,"invalid 'self' in function 'getBody'", NULL);
+#endif
+  {
+   cpBody* tolua_ret = (cpBody*)  self->getBody();
+    tolua_pushusertype(tolua_S,(void*)tolua_ret,"cpBody");
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'get_body'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
 /* Open function */
 TOLUA_API int tolua_display_object_open (lua_State* tolua_S)
 {
@@ -725,6 +821,7 @@ TOLUA_API int tolua_display_object_open (lua_State* tolua_S)
     tolua_variable(tolua_S,"scale",tolua_get_p2d__DisplayObject_scale,tolua_set_p2d__DisplayObject_scale);
     tolua_variable(tolua_S,"anchor_x",tolua_get_p2d__DisplayObject_anchor_x,tolua_set_p2d__DisplayObject_anchor_x);
     tolua_variable(tolua_S,"anchor_y",tolua_get_p2d__DisplayObject_anchor_y,tolua_set_p2d__DisplayObject_anchor_y);
+    tolua_variable(tolua_S,"uses_physics",tolua_get_p2d__DisplayObject_uses_physics,tolua_set_p2d__DisplayObject_uses_physics);
     tolua_function(tolua_S,"set_coords",tolua_display_object_p2d_DisplayObject_set_coords00);
     tolua_function(tolua_S,"get_x",tolua_display_object_p2d_DisplayObject_get_x00);
     tolua_function(tolua_S,"get_y",tolua_display_object_p2d_DisplayObject_get_y00);
@@ -738,6 +835,8 @@ TOLUA_API int tolua_display_object_open (lua_State* tolua_S)
     tolua_function(tolua_S,"setup_tween",tolua_display_object_p2d_DisplayObject_setup_tween00);
     tolua_function(tolua_S,"add_property",tolua_display_object_p2d_DisplayObject_add_property00);
     tolua_function(tolua_S,"start_tween",tolua_display_object_p2d_DisplayObject_start_tween00);
+    tolua_function(tolua_S,"set_body",tolua_display_object_p2d_DisplayObject_set_body00);
+    tolua_function(tolua_S,"get_body",tolua_display_object_p2d_DisplayObject_get_body00);
    tolua_endmodule(tolua_S);
   tolua_endmodule(tolua_S);
  tolua_endmodule(tolua_S);

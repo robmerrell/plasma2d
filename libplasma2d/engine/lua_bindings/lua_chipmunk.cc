@@ -1,6 +1,6 @@
 /*
 ** Lua binding: chipmunk
-** Generated automatically by tolua++-1.0.92 on Sat Oct  1 10:47:33 2011.
+** Generated automatically by tolua++-1.0.92 on Sat Oct  1 15:31:35 2011.
 */
 
 #ifndef __cplusplus
@@ -5290,6 +5290,39 @@ static int tolua_chipmunk_chipmunk_cpSegmentShapeSetNeighbors00(lua_State* tolua
 }
 #endif //#ifndef TOLUA_DISABLE
 
+/* function: cpBoxShapeNew */
+#ifndef TOLUA_DISABLE_tolua_chipmunk_chipmunk_cpBoxShapeNew00
+static int tolua_chipmunk_chipmunk_cpBoxShapeNew00(lua_State* tolua_S)
+{
+#ifndef TOLUA_RELEASE
+ tolua_Error tolua_err;
+ if (
+     !tolua_isusertype(tolua_S,1,"cpBody",0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,2,0,&tolua_err) ||
+     !tolua_isnumber(tolua_S,3,0,&tolua_err) ||
+     !tolua_isnoobj(tolua_S,4,&tolua_err)
+ )
+  goto tolua_lerror;
+ else
+#endif
+ {
+  cpBody* body = ((cpBody*)  tolua_tousertype(tolua_S,1,0));
+   float width = ((  float)  tolua_tonumber(tolua_S,2,0));
+   float height = ((  float)  tolua_tonumber(tolua_S,3,0));
+  {
+   cpShape* tolua_ret = (cpShape*)  cpBoxShapeNew(body,width,height);
+    tolua_pushusertype(tolua_S,(void*)tolua_ret,"cpShape");
+  }
+ }
+ return 1;
+#ifndef TOLUA_RELEASE
+ tolua_lerror:
+ tolua_error(tolua_S,"#ferror in function 'cpBoxShapeNew'.",&tolua_err);
+ return 0;
+#endif
+}
+#endif //#ifndef TOLUA_DISABLE
+
 /* Open function */
 TOLUA_API int tolua_chipmunk_open (lua_State* tolua_S)
 {
@@ -5480,6 +5513,7 @@ TOLUA_API int tolua_chipmunk_open (lua_State* tolua_S)
    tolua_function(tolua_S,"cpSegmentShapeInit",tolua_chipmunk_chipmunk_cpSegmentShapeInit00);
    tolua_function(tolua_S,"cpSegmentShapeNew",tolua_chipmunk_chipmunk_cpSegmentShapeNew00);
    tolua_function(tolua_S,"cpSegmentShapeSetNeighbors",tolua_chipmunk_chipmunk_cpSegmentShapeSetNeighbors00);
+   tolua_function(tolua_S,"cpBoxShapeNew",tolua_chipmunk_chipmunk_cpBoxShapeNew00);
   tolua_endmodule(tolua_S);
  tolua_endmodule(tolua_S);
  return 1;
