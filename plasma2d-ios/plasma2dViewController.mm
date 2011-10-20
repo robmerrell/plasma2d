@@ -42,7 +42,7 @@
     
     // swipe down
     UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipedDown)];
-    swipeDown.numberOfTouchesRequired = 1;
+    swipeDown.numberOfTouchesRequired = 3;
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
     [self.view addGestureRecognizer:swipeDown];
     
@@ -53,7 +53,7 @@
     [self.view addGestureRecognizer:swipeUp];
     
     // delete all files in the documents directory to start with a clean slate
-//    [self deleteAllDocuments];
+    [self deleteAllDocuments];
     
     // initial seed
     engine = NULL;

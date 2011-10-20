@@ -27,6 +27,8 @@ namespace p2d {
         // multi-dim container or graph
         std::vector<DisplayObject*> display_objects;
         
+        bool uses_physics;
+        
     public:
         cpSpace* space;
         

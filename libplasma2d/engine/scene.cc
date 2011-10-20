@@ -7,6 +7,7 @@
 
 p2d::Scene::Scene() {
     default_animator = Animator();
+    uses_physics = false;
 }
 
 
@@ -34,7 +35,8 @@ void p2d::Scene::addObjectWithAnimator(DisplayObject* _object, char* _animator) 
 
 
 void p2d::Scene::tick(float _delta_time) {
-    cpSpaceStep(space, 1.0f/60.0f); // TODO: this needs to use a timestep accumulator
+    if (uses_physics)
+        cpSpaceStep(space, 1.0f/60.0f); // TODO: this needs to use a timestep accumulator
     
     glClear(GL_COLOR_BUFFER_BIT);
     
@@ -66,14 +68,4 @@ void p2d::updatePhysicsShapes(void* _data, void* _unused) {
     
     entity->setXY(shape->body->p.x, shape->body->p.y);
     entity->setAngle(RAD2DEG(shape->body->a));
-    
-//    Sprite *sprite = (Sprite*)shape->data;
-//    
-//    sprite->setX(shape->body->p.x);
-//    sprite->setY(shape->body->p.y);
-//    
-//    // rotate certain objects
-//    if (sprite->getTag() == BOX_TAG || sprite->getTag() == GEAR_TAG || sprite->getTag() == PLATFORM_TAG) {
-//        sprite->setAngle(RAD2DEG(shape->body->a));
-//    }
 }
