@@ -18,7 +18,7 @@
 
 #include "plasma2d.h"
 
-@interface plasma2dViewController : UIViewController <UIGestureRecognizerDelegate, UIAlertViewDelegate> {
+@interface plasma2dViewController : UIViewController <UIGestureRecognizerDelegate, UIAccelerometerDelegate> {
 @private
     EAGLContext *context;
     

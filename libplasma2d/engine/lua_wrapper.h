@@ -121,6 +121,7 @@ namespace p2d {
          */
         bool proxyTouchesBeganOrEndedEvent(std::string _proxy_function, float _x, float _y, int _tap_count);
         bool proxyTouchesMoved(float _prev_x, float _prev_y, float _current_x, float _current_y);
+        bool proxyAccelerometer(float _x, float _y, float _z);
     };
     
 }

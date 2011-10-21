@@ -136,6 +136,16 @@ bool p2d::LuaWrapper::proxyTouchesMoved(float _prev_x, float _prev_y, float _cur
 }
 
 
+bool p2d::LuaWrapper::proxyAccelerometer(float _x, float _y, float _z) {
+    lua_getglobal(lua, "event_proxy_accelerometer");
+    lua_pushnumber(lua, _x);
+    lua_pushnumber(lua, _y);
+    lua_pushnumber(lua, _z);
+    int err = lua_pcall(lua, 3, 0, 0);    
+    return error(err);    
+}
+
+
 bool p2d::LuaWrapper::error(int _call_results) {
     if (_call_results) {
         last_error = lua_tostring(lua, -1);

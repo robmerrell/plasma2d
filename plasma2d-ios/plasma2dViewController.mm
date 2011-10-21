@@ -23,6 +23,11 @@
 
 - (void)awakeFromNib
 {
+    // accelerometer
+    UIAccelerometer *accel = [UIAccelerometer sharedAccelerometer];
+    accel.delegate = self;
+    accel.updateInterval = 1.0f/60.0f;
+    
     pull_all_documents = YES;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     ip_address = [defaults stringForKey:@"debug_host"];
@@ -279,6 +284,11 @@
     CGPoint previous  = [touch previousLocationInView: self.view];
     CGPoint current  = [touch locationInView: self.view];
     bool err = engine->getLuaWrapper().proxyTouchesMoved(previous.x, previous.y, current.x, current.y);
+    if (err) engine->stopProcessing();
+}
+
+- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
+    bool err = engine->getLuaWrapper().proxyAccelerometer(acceleration.x, acceleration.y, acceleration.z);
     if (err) engine->stopProcessing();
 }
 
