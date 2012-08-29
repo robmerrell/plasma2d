@@ -1,4 +1,1 @@
-To build lua pkgs:
-
-tolua++ -o lua_texture.cc -H lua_texture.h texture.pkg
-tolua++ -o lua_actor.cc -H lua_actor.h actor.pkg
+Totally unfinished and unused game engine I was working on a while ago. Might have some useful code for somebody.
